@@ -27,6 +27,6 @@ class HomeController extends Controller
     }
     
     public function home(){
-        return view('admin.layout.home');
+        return view('admin.home');
     }
 }
