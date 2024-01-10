@@ -13,8 +13,7 @@ class AproposController extends Controller
      */
     public function apropos()
     {
-        return view('admin.pages.apropos');
-        //
+        return view('apropos');
     }
 
     /**
@@ -24,12 +23,12 @@ class AproposController extends Controller
      */
     public function contacts()
     {
-        return view('admin.pages.contacts');
+        return view('contacts');
         //
     }
 
     public function avisclient(){
-        return view('admin.pages.avisclient');
+        return view('avisclient');
     }
 
     /**

@@ -1,18 +1,7 @@
 
-    
+@extends('layouts.layout')
 
-@include('admin.layout.head')
-
-    @include('admin.layout.header')
-<center><h1>A-propos de nous</h1></center>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, recusandae tempore ut quod provident reprehenderit sit quisquam rerum, fuga porro explicabo doloremque officiis repellat voluptatum, praesentium dolores enim excepturi necessitatibus.</p>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, odit repellat? Cupiditate laudantium voluptatem ipsum perspiciatis veniam dolorum mollitia omnis saepe tenetur quos architecto cumque amet, non sunt ipsa sapiente.</p>
-
-
-<hr>
-<hr>
-
-
+@section('content')
 <section   class="testemonial">
     <div class="container">
 
@@ -21,7 +10,7 @@
                 clients reviews
             </h2>
             <p>
-                Duis aute irure dolor in  velit esse cillum dolore eu fugiat nulla. 
+                Duis aute irure dolor in  velit esse cillum dolore eu fugiat nulla.
             </p>
 
         </div><!--/.gallery-header-->
@@ -38,7 +27,7 @@
                             <i class="fa fa-quote-left" aria-hidden="true"></i>
                         </span>
                         <p>
-                            Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam. 
+                            Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam.
                         </p>
                         <h3>
                             <a href="#">
@@ -46,7 +35,7 @@
                             </a>
                         </h3>
                         <h4>Korhogo, Côte d'ivoire</h4>
-                    </div><!--/.home1-testm-txt-->	
+                    </div><!--/.home1-testm-txt-->
                 </div><!--/.home1-testm-single-->
 
             </div><!--/.item-->
@@ -61,7 +50,7 @@
                             <i class="fa fa-quote-left" aria-hidden="true"></i>
                         </span>
                         <p>
-                            Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam. 
+                            Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam.
                         </p>
                         <h3>
                             <a href="#">
@@ -69,7 +58,7 @@
                             </a>
                         </h3>
                         <h4>london, england</h4>
-                    </div><!--/.home1-testm-txt-->	
+                    </div><!--/.home1-testm-txt-->
                 </div><!--/.home1-testm-single-->
 
             </div><!--/.item-->
@@ -84,7 +73,7 @@
                             <i class="fa fa-quote-left" aria-hidden="true"></i>
                         </span>
                         <p>
-                            Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam. 
+                            Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam.
                         </p>
                         <h3>
                             <a href="#">
@@ -92,7 +81,7 @@
                             </a>
                         </h3>
                         <h4>london, england</h4>
-                    </div><!--/.home1-testm-txt-->	
+                    </div><!--/.home1-testm-txt-->
                 </div><!--/.home1-testm-single-->
 
             </div><!--/.item-->
@@ -107,7 +96,7 @@
                             <i class="fa fa-quote-left" aria-hidden="true"></i>
                         </span>
                         <p>
-                            Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam. 
+                            Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam.
                         </p>
                         <h3>
                             <a href="#">
@@ -115,7 +104,7 @@
                             </a>
                         </h3>
                         <h4>london, england</h4>
-                    </div><!--/.home1-testm-txt-->	
+                    </div><!--/.home1-testm-txt-->
                 </div><!--/.home1-testm-single-->
 
             </div><!--/.item-->
@@ -130,7 +119,7 @@
                             <i class="fa fa-quote-left" aria-hidden="true"></i>
                         </span>
                         <p>
-                            Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam. 
+                            Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam.
                         </p>
                         <h3>
                             <a href="#">
@@ -138,7 +127,7 @@
                             </a>
                         </h3>
                         <h4>london, england</h4>
-                    </div><!--/.home1-testm-txt-->	
+                    </div><!--/.home1-testm-txt-->
                 </div><!--/.home1-testm-single-->
 
             </div><!--/.item-->
@@ -153,7 +142,7 @@
                             <i class="fa fa-quote-left" aria-hidden="true"></i>
                         </span>
                         <p>
-                            Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam. 
+                            Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam.
                         </p>
                         <h3>
                             <a href="#">
@@ -161,7 +150,7 @@
                             </a>
                         </h3>
                         <h4>london, england</h4>
-                    </div><!--/.home1-testm-txt-->	
+                    </div><!--/.home1-testm-txt-->
                 </div><!--/.home1-testm-single-->
 
             </div><!--/.item-->
@@ -176,7 +165,7 @@
                             <i class="fa fa-quote-left" aria-hidden="true"></i>
                         </span>
                         <p>
-                            Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam. 
+                            Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam.
                         </p>
                         <h3>
                             <a href="#">
@@ -184,7 +173,7 @@
                             </a>
                         </h3>
                         <h4>london, england</h4>
-                    </div><!--/.home1-testm-txt-->	
+                    </div><!--/.home1-testm-txt-->
                 </div><!--/.home1-testm-single-->
 
             </div><!--/.item-->
@@ -199,7 +188,7 @@
                             <i class="fa fa-quote-left" aria-hidden="true"></i>
                         </span>
                         <p>
-                            Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam. 
+                            Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam.
                         </p>
                         <h3>
                             <a href="#">
@@ -207,7 +196,7 @@
                             </a>
                         </h3>
                         <h4>london, england</h4>
-                    </div><!--/.home1-testm-txt-->	
+                    </div><!--/.home1-testm-txt-->
                 </div><!--/.home1-testm-single-->
 
             </div><!--/.item-->
@@ -222,7 +211,7 @@
                             <i class="fa fa-quote-left" aria-hidden="true"></i>
                         </span>
                         <p>
-                            Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam. 
+                            Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam.
                         </p>
                         <h3>
                             <a href="#">
@@ -230,7 +219,7 @@
                             </a>
                         </h3>
                         <h4>london, england</h4>
-                    </div><!--/.home1-testm-txt-->	
+                    </div><!--/.home1-testm-txt-->
                 </div><!--/.home1-testm-single-->
 
             </div><!--/.item-->
@@ -238,9 +227,7 @@
         </div><!--/.testemonial-carousel-->
     </div><!--/.container-->
 
-</section><!--/.testimonial-->	
-<!-- testemonial End -->
+</section><!--/.testimonial-->
+@endsection
 
-@include('admin.layout.footer') 
-@include('admin.layout.script')
 

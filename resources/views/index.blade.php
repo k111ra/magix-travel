@@ -1,25 +1,8 @@
-<!doctype html>
-<html class="no-js"  lang="en">
+@extends('layouts.layout')
 
-	<head>
-		<!-- META DATA -->
-	    @include('admin.layout.head')
-	</head>
 
-	<body>
-	
-		<!--[if lte IE 9]>
-		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
-			your browser</a> to improve your experience and security.</p>
-		<![endif]-->
+@section('content')
 
-		<!-- main-menu Start -->
-		<header class="top-area">
-	    @include('admin.layout.header')
-		</header><!-- /.top-area-->
-		<!-- main-menu End -->
-
-		
 		<!--about-us start -->
 		<section id="home" class="about-us">
 			<div class="container">
@@ -29,7 +12,7 @@
 							<div class="single-about-us">
 								<div class="about-us-txt">
 									<h2>
-										Explore the Beauty of the Beautiful World 
+										Explore the Beauty of the Beautiful World
 
 									</h2>
 									<div class="about-btn">
@@ -42,7 +25,7 @@
 						</div><!--/.col-->
 						<div class="col-sm-0">
 							<div class="single-about-us">
-								
+
 							</div><!--/.single-about-us-->
 						</div><!--/.col-->
 					</div><!--/.row-->
@@ -196,7 +179,7 @@
 																<div class="travel-filter">
 																	<div class="info_widget">
 																		<div class="price_filter">
-																			
+
 																			<div id="slider-range"></div><!--/.slider-range-->
 
 																			<div class="price_slider_amount">
@@ -212,7 +195,7 @@
 												<div class="clo-sm-7">
 													<div class="about-btn travel-mrt-0 pull-right">
 														<button  class="about-view travel-btn">
-															search	
+															search
 														</button><!--/.travel-btn-->
 													</div><!--/.about-btn-->
 												</div><!--/.col-->
@@ -326,7 +309,7 @@
 												<div class="clo-sm-7">
 													<div class="about-btn travel-mrt-0 pull-right">
 														<button  class="about-view travel-btn">
-															search	
+															search
 														</button><!--/.travel-btn-->
 													</div><!--/.about-btn-->
 												</div><!--/.col-->
@@ -481,11 +464,11 @@
 												<div class="clo-sm-5">
 													<div class="about-btn pull-right">
 														<button  class="about-view travel-btn">
-															search	
+															search
 														</button><!--/.travel-btn-->
 													</div><!--/.about-btn-->
 												</div><!--/.col-->
-												
+
 											</div><!--/.row-->
 
 										</div>
@@ -557,7 +540,7 @@
 						</div><!--/.single-service-box-->
 					</div><!--/.col-->
 
-				</div><!--/.statistics-counter-->	
+				</div><!--/.statistics-counter-->
 			</div><!--/.container-->
 
 		</section><!--/.service-->
@@ -572,7 +555,7 @@
 							top destination
 						</h2>
 						<p>
-							Duis aute irure dolor in  velit esse cillum dolore eu fugiat nulla.  
+							Duis aute irure dolor in  velit esse cillum dolore eu fugiat nulla.
 						</p>
 					</div><!--/.gallery-header-->
 					<div class="gallery-box">
@@ -621,7 +604,7 @@
 											<img src="{{asset('admin/assets/images/gallary/g4.jpg')}}" alt="portfolio image'"/>
 											<div class="item-title">
 												<a href="#">
-													australia 
+													australia
 												</a>
 												<p><span>18 tours</span><span>9 places</span></p>
 											</div> <!-- /.item-title-->
@@ -710,7 +693,7 @@
 						special packages
 					</h2>
 					<p>
-						Duis aute irure dolor in  velit esse cillum dolore eu fugiat nulla.  
+						Duis aute irure dolor in  velit esse cillum dolore eu fugiat nulla.
 					</p>
 				</div><!--/.gallery-header-->
 				<div class="packages-content">
@@ -793,7 +776,7 @@
 							</div><!--/.single-package-item-->
 
 						</div><!--/.col-->
-						
+
 						<div class="col-md-4 col-sm-6">
 							<div class="single-package-item">
 								<img src="{{asset('admin/assets/images/packages/p3.jpg')}}" alt="package-place">
@@ -832,7 +815,7 @@
 							</div><!--/.single-package-item-->
 
 						</div><!--/.col-->
-						
+
 						<div class="col-md-4 col-sm-6">
 							<div class="single-package-item">
 								<img src="{{asset('admin/assets/images/packages/p4.jpg')}}" alt="package-place">
@@ -871,7 +854,7 @@
 							</div><!--/.single-package-item-->
 
 						</div><!--/.col-->
-						
+
 						<div class="col-md-4 col-sm-6">
 							<div class="single-package-item">
 								<img src="{{asset('admin/assets/images/packages/p5.jpg')}}" alt="package-place">
@@ -910,7 +893,7 @@
 							</div><!--/.single-package-item-->
 
 						</div><!--/.col-->
-						
+
 						<div class="col-md-4 col-sm-6">
 							<div class="single-package-item">
 								<img src="{{asset('admin/assets/images/packages/p6.jpg')}}" alt="package-place">
@@ -966,7 +949,7 @@
 						clients reviews
 					</h2>
 					<p>
-						Duis aute irure dolor in  velit esse cillum dolore eu fugiat nulla. 
+						Duis aute irure dolor in  velit esse cillum dolore eu fugiat nulla.
 					</p>
 
 				</div><!--/.gallery-header-->
@@ -983,7 +966,7 @@
 									<i class="fa fa-quote-left" aria-hidden="true"></i>
 								</span>
 								<p>
-									Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam. 
+									Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam.
 								</p>
 								<h3>
 									<a href="#">
@@ -991,7 +974,7 @@
 									</a>
 								</h3>
 								<h4>london, england</h4>
-							</div><!--/.home1-testm-txt-->	
+							</div><!--/.home1-testm-txt-->
 						</div><!--/.home1-testm-single-->
 
 					</div><!--/.item-->
@@ -1006,7 +989,7 @@
 									<i class="fa fa-quote-left" aria-hidden="true"></i>
 								</span>
 								<p>
-									Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam. 
+									Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam.
 								</p>
 								<h3>
 									<a href="#">
@@ -1014,7 +997,7 @@
 									</a>
 								</h3>
 								<h4>london, england</h4>
-							</div><!--/.home1-testm-txt-->	
+							</div><!--/.home1-testm-txt-->
 						</div><!--/.home1-testm-single-->
 
 					</div><!--/.item-->
@@ -1029,7 +1012,7 @@
 									<i class="fa fa-quote-left" aria-hidden="true"></i>
 								</span>
 								<p>
-									Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam. 
+									Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam.
 								</p>
 								<h3>
 									<a href="#">
@@ -1037,7 +1020,7 @@
 									</a>
 								</h3>
 								<h4>london, england</h4>
-							</div><!--/.home1-testm-txt-->	
+							</div><!--/.home1-testm-txt-->
 						</div><!--/.home1-testm-single-->
 
 					</div><!--/.item-->
@@ -1052,7 +1035,7 @@
 									<i class="fa fa-quote-left" aria-hidden="true"></i>
 								</span>
 								<p>
-									Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam. 
+									Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam.
 								</p>
 								<h3>
 									<a href="#">
@@ -1060,7 +1043,7 @@
 									</a>
 								</h3>
 								<h4>london, england</h4>
-							</div><!--/.home1-testm-txt-->	
+							</div><!--/.home1-testm-txt-->
 						</div><!--/.home1-testm-single-->
 
 					</div><!--/.item-->
@@ -1075,7 +1058,7 @@
 									<i class="fa fa-quote-left" aria-hidden="true"></i>
 								</span>
 								<p>
-									Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam. 
+									Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam.
 								</p>
 								<h3>
 									<a href="#">
@@ -1083,7 +1066,7 @@
 									</a>
 								</h3>
 								<h4>london, england</h4>
-							</div><!--/.home1-testm-txt-->	
+							</div><!--/.home1-testm-txt-->
 						</div><!--/.home1-testm-single-->
 
 					</div><!--/.item-->
@@ -1098,7 +1081,7 @@
 									<i class="fa fa-quote-left" aria-hidden="true"></i>
 								</span>
 								<p>
-									Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam. 
+									Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam.
 								</p>
 								<h3>
 									<a href="#">
@@ -1106,7 +1089,7 @@
 									</a>
 								</h3>
 								<h4>london, england</h4>
-							</div><!--/.home1-testm-txt-->	
+							</div><!--/.home1-testm-txt-->
 						</div><!--/.home1-testm-single-->
 
 					</div><!--/.item-->
@@ -1121,7 +1104,7 @@
 									<i class="fa fa-quote-left" aria-hidden="true"></i>
 								</span>
 								<p>
-									Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam. 
+									Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam.
 								</p>
 								<h3>
 									<a href="#">
@@ -1129,7 +1112,7 @@
 									</a>
 								</h3>
 								<h4>london, england</h4>
-							</div><!--/.home1-testm-txt-->	
+							</div><!--/.home1-testm-txt-->
 						</div><!--/.home1-testm-single-->
 
 					</div><!--/.item-->
@@ -1144,7 +1127,7 @@
 									<i class="fa fa-quote-left" aria-hidden="true"></i>
 								</span>
 								<p>
-									Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam. 
+									Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam.
 								</p>
 								<h3>
 									<a href="#">
@@ -1152,7 +1135,7 @@
 									</a>
 								</h3>
 								<h4>london, england</h4>
-							</div><!--/.home1-testm-txt-->	
+							</div><!--/.home1-testm-txt-->
 						</div><!--/.home1-testm-single-->
 
 					</div><!--/.item-->
@@ -1167,7 +1150,7 @@
 									<i class="fa fa-quote-left" aria-hidden="true"></i>
 								</span>
 								<p>
-									Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam. 
+									Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam.
 								</p>
 								<h3>
 									<a href="#">
@@ -1175,7 +1158,7 @@
 									</a>
 								</h3>
 								<h4>london, england</h4>
-							</div><!--/.home1-testm-txt-->	
+							</div><!--/.home1-testm-txt-->
 						</div><!--/.home1-testm-single-->
 
 					</div><!--/.item-->
@@ -1183,7 +1166,7 @@
 				</div><!--/.testemonial-carousel-->
 			</div><!--/.container-->
 
-		</section><!--/.testimonial-->	
+		</section><!--/.testimonial-->
 		<!-- testemonial End -->
 
 
@@ -1224,10 +1207,10 @@
 											</span>
 											<span>
 												<i class="fa fa-angle-right"></i>  food facilities
-											</span>  
+											</span>
 										</p>
 										<p class="offer-para">
-											Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tem ut labore et dolore magna  aliqua. Ut enim ad minim veniam, quis nostrud exercitation una <br> ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tem ut labore et dolore magna  aliqua. Ut enim ad minim veniam, quis nostrud exercitation una <br> ullamco laboris nisi ut aliquip ex ea commodo consequat.
 										</p>
 									</div><!--/.packages-para-->
 									<div class="offer-btn-group">
@@ -1273,7 +1256,7 @@
 								latest news
 							</h2>
 							<p>
-								Travel News from all over the world 
+								Travel News from all over the world
 							</p>
 						</div><!--/.gallery-header-->
 						<div class="blog-content">
@@ -1285,9 +1268,9 @@
 										<div class="thumbnail-img">
 											<img src="{{asset('admin/assets/images/blog/b1.jpg')}}" alt="blog-img">
 											<div class="thumbnail-img-overlay"></div><!--/.thumbnail-img-overlay-->
-										
+
 										</div><!--/.thumbnail-img-->
-									  
+
 										<div class="caption">
 											<div class="blog-txt">
 												<h3>
@@ -1296,7 +1279,7 @@
 													</a>
 												</h3>
 												<p>
-													Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam 
+													Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam
 												</p>
 												<a href="#">Read More</a>
 											</div><!--/.blog-txt-->
@@ -1311,7 +1294,7 @@
 										<div class="thumbnail-img">
 											<img src="{{asset('admin/assets/images/blog/b2.jpg')}}" alt="blog-img">
 											<div class="thumbnail-img-overlay"></div><!--/.thumbnail-img-overlay-->
-										
+
 										</div><!--/.thumbnail-img-->
 										<div class="caption">
 											<div class="blog-txt">
@@ -1321,7 +1304,7 @@
 													</a>
 												</h3>
 												<p>
-													Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam 
+													Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam
 												</p>
 												<a href="#">Read More</a>
 											</div><!--/.blog-txt-->
@@ -1336,13 +1319,13 @@
 										<div class="thumbnail-img">
 											<img src="{{asset('admin/assets/images/blog/b3.jpg')}}" alt="blog-img">
 											<div class="thumbnail-img-overlay"></div><!--/.thumbnail-img-overlay-->
-										
+
 										</div><!--/.thumbnail-img-->
 										<div class="caption">
 											<div class="blog-txt">
 												<h3><a href="#">10 Most Natural place to Discover</a></h3>
 												<p>
-													Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam 
+													Lorem ipsum dolor sit amet, contur adip elit, sed do mod incid ut labore et dolore magna aliqua. Ut enim ad minim veniam
 												</p>
 												<a href="#">Read More</a>
 											</div><!--/.blog-txt-->
@@ -1359,7 +1342,7 @@
 		</section><!--/.blog-->
 		<!--blog end-->
 
-		
+
 		<!--subscribe start-->
 		<section id="subs" class="subscribe">
 			<div class="container">
@@ -1368,7 +1351,7 @@
 						Join our Subscribers List to Get Regular Update
 					</h2>
 					<p>
-						Subscribe Now. We will send you Best offer for your Trip 
+						Subscribe Now. We will send you Best offer for your Trip
 					</p>
 				</div>
 				<form>
@@ -1389,15 +1372,6 @@
 		</section>
 		<!--subscribe end-->
 
-		<!-- footer-copyright start -->
-		<footer  class="footer-copyright">
-            @include('admin.layout.footer')
 
-		</footer><!-- /.footer-copyright-->
-		<!-- footer-copyright end -->
+@endsection
 
-        @include('admin.layout.script')
-		@yield('content')
-	</body>
-
-</html>

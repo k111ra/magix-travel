@@ -23,8 +23,8 @@ class HomeController extends Controller
      */
     public function home()
     {
-        return view ('admin.pages.home');
-    
+        return view ('index');
+
     }
     // public function home(){
 //         return view('admin.layout.home');
