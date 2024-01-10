@@ -12,7 +12,7 @@
 		<title>Travel</title>
 
 		<!-- favicon img -->
-		<link rel="shortcut icon" type="{{asset('admin/assets/image/icon')}}" href="{{asset('admin/assets/logo/favicon.png')}}"/>
+		<link rel="shortcut icon" type="{{asset('admin/assets/image/icon')}}" href="{{asset('admin/assets/logo/logo.png')}}"/>
 
 		<!--font-awesome.min.css-->
 		<link rel="stylesheet" href="{{asset('admin/assets/css/font-awesome.min.css')}}" />
