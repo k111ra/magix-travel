@@ -1,9 +1,9 @@
 
     
 
-@include('admin.layout.head')
+@include('partial.head')
 
-    @include('admin.layout.header')
+    @include('partial.header')
 <center><h1>A-propos de nous</h1></center>
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, recusandae tempore ut quod provident reprehenderit sit quisquam rerum, fuga porro explicabo doloremque officiis repellat voluptatum, praesentium dolores enim excepturi necessitatibus.</p>
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, odit repellat? Cupiditate laudantium voluptatem ipsum perspiciatis veniam dolorum mollitia omnis saepe tenetur quos architecto cumque amet, non sunt ipsa sapiente.</p>
@@ -241,6 +241,6 @@
 </section><!--/.testimonial-->	
 <!-- testemonial End -->
 
-@include('admin.layout.footer') 
-@include('admin.layout.script')
+@include('partial.footer') 
+@include('partial.script')
 

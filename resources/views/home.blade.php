@@ -3,7 +3,7 @@
 
 	<head>
 		<!-- META DATA -->
-	    @include('admin.layout.head')
+	    @include('partial.head')
 	</head>
 
 	<body>
@@ -15,7 +15,7 @@
 
 		<!-- main-menu Start -->
 		<header class="top-area">
-	    @include('admin.layout.header')
+	    @include('partial.header')
 		</header><!-- /.top-area-->
 		<!-- main-menu End -->
 
@@ -1391,12 +1391,12 @@
 
 		<!-- footer-copyright start -->
 		<footer  class="footer-copyright">
-            @include('admin.layout.footer')
+            @include('partial.footer')
 
 		</footer><!-- /.footer-copyright-->
 		<!-- footer-copyright end -->
 
-        @include('admin.layout.script')
+        @include('partial.script')
 		@yield('content')
 	</body>
 
