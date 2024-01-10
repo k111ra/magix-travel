@@ -41,4 +41,4 @@
         <div class="home-border"></div><!-- /.home-border-->
     </div><!-- /.container-->
 </div><!-- /.header-area -->
-@yield('content')
+
