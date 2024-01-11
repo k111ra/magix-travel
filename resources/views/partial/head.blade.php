@@ -9,7 +9,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
 
 		<!-- TITLE OF SITE -->
-		<title>Travel</title>
+		<title>Magix-Travel & Services</title>
 
 		<!-- favicon img -->
 		<link rel="shortcut icon" type="{{asset('admin/assets/image/icon')}}" href="{{asset('admin/assets/logo/logo.png')}}"/>
