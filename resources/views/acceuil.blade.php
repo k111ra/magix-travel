@@ -1397,7 +1397,7 @@
 		<!-- footer-copyright end -->
 
         @include('partial.script')
-		@yield('content')
+	
 	</body>
 
 </html>
