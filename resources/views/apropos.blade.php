@@ -1,8 +1,6 @@
-
 @extends('layouts.layout')
-
 @section('content')
-<section   class="testemonial">
+<section class="testemonial">
     <div class="container">
 
         <div class="gallary-header text-center">
@@ -228,6 +226,7 @@
     </div><!--/.container-->
 
 </section><!--/.testimonial-->
+
 @endsection
 
 

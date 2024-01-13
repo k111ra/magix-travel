@@ -15,7 +15,7 @@
 
 		<!-- main-menu Start -->
 		<header class="top-area">
-	    @include('admin.layout.header')
+	    	@include('admin.layout.header')
 		</header><!-- /.top-area-->
 		<!-- main-menu End -->
         @yield('content')
@@ -23,7 +23,6 @@
 		<!-- footer-copyright start -->
 		<footer  class="footer-copyright">
             @include('admin.layout.footer')
-
 		</footer><!-- /.footer-copyright-->
 		<!-- footer-copyright end -->
 

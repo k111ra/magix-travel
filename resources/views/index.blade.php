@@ -1,6 +1,4 @@
 @extends('layouts.layout')
-
-
 @section('content')
 
 		<!--about-us start -->
