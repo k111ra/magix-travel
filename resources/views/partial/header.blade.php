@@ -26,9 +26,10 @@
                             {{-- <li class="smooth-me nu"><a href="#pack">Packages </a></li> --}}
                             {{-- <li class="smooth-me nu"><a href="#spo">Special Offers</a></li> --}}
                             <li class="smooth-me nu"><a href="{{route('apropos')}}">A-propos </a></li>
-                            <li class="smooth-me nu"><a href="{{route('contacts')}}">Contacts</a></li>
+                           
                             {{-- <li class="smooth-menu"><a href="#subs">subscription</a></li> --}}
                             <li class="smooth-me nu"><a href="/">Service</a></li>
+                            <li class="smooth-me nu"><a href="{{route('contacts')}}">Contacts</a></li>
                             {{-- <li>
                                 <button class="book-btn">book now
                                 </button>
