@@ -11,26 +11,7 @@ class AproposController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function apropos()
-    {
-        return view('apropos');
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function contacts()
-    {
-        return view('contacts');
-        //
-    }
-
-    public function avisclient(){
-        return view('avisclient');
-    }
-
+   
     /**
      * Store a newly created resource in storage.
      *

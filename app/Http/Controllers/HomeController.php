@@ -26,6 +26,23 @@ class HomeController extends Controller
         return view ('index');
 
     }
+
+    public function apropos()
+    {
+        return view('frontend.pages.Apropos.index');
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function contacts()
+    {
+        return view('frontend.pages.Contact.index');
+        //
+    }
+
     // public function home(){
 //         return view('admin.layout.home');
 //     }
