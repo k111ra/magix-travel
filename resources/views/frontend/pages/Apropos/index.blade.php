@@ -18,7 +18,7 @@
             <div class="home1-testm item">
                 <div class="home1-testm-single text-center">
                     <div class="home1-testm-img">
-                        <img src="{{asset('admin/assets/images/client/testimonial1.jpg')}}" alt="img"/>
+                        <img src="{{asset('frontend/assets/images/client/testimonial1.jpg')}}" alt="img"/>
                     </div><!--/.home1-testm-img-->
                     <div class="home1-testm-txt">
                         <span class="icon section-icon">
@@ -41,7 +41,7 @@
             <div class="home1-testm item">
                 <div class="home1-testm-single text-center">
                     <div class="home1-testm-img">
-                        <img src="{{asset('admin/assets/images/client/testimonial2.jpg')}}" alt="img"/>
+                        <img src="{{asset('frontend/assets/images/client/testimonial2.jpg')}}" alt="img"/>
                     </div><!--/.home1-testm-img-->
                     <div class="home1-testm-txt">
                         <span class="icon section-icon">
@@ -64,7 +64,7 @@
             <div class="home1-testm item">
                 <div class="home1-testm-single text-center">
                     <div class="home1-testm-img">
-                        <img src="{{asset('admin/assets/images/client/testimonial1.jpg')}}" alt="img"/>
+                        <img src="{{asset('frontend/assets/images/client/testimonial1.jpg')}}" alt="img"/>
                     </div><!--/.home1-testm-img-->
                     <div class="home1-testm-txt">
                         <span class="icon section-icon">
@@ -87,7 +87,7 @@
             <div class="home1-testm item">
                 <div class="home1-testm-single text-center">
                     <div class="home1-testm-img">
-                        <img src="{{asset('admin/assets/images/client/testimonial1.jpg')}}" alt="img"/>
+                        <img src="{{asset('frontend/assets/images/client/testimonial1.jpg')}}" alt="img"/>
                     </div><!--/.home1-testm-img-->
                     <div class="home1-testm-txt">
                         <span class="icon section-icon">
@@ -110,7 +110,7 @@
             <div class="home1-testm item">
                 <div class="home1-testm-single text-center">
                     <div class="home1-testm-img">
-                        <img src="{{asset('admin/assets/images/client/testimonial2.jpg')}}" alt="img"/>
+                        <img src="{{asset('frontend/assets/images/client/testimonial2.jpg')}}" alt="img"/>
                     </div><!--/.home1-testm-img-->
                     <div class="home1-testm-txt">
                         <span class="icon section-icon">
@@ -133,7 +133,7 @@
             <div class="home1-testm item">
                 <div class="home1-testm-single text-center">
                     <div class="home1-testm-img">
-                        <img src="{{asset('admin/assets/images/client/testimonial1.jpg')}}" alt="img"/>
+                        <img src="{{asset('frontend/assets/images/client/testimonial1.jpg')}}" alt="img"/>
                     </div><!--/.home1-testm-img-->
                     <div class="home1-testm-txt">
                         <span class="icon section-icon">
@@ -156,7 +156,7 @@
             <div class="home1-testm item">
                 <div class="home1-testm-single text-center">
                     <div class="home1-testm-img">
-                        <img src="{{asset('admin/assets/images/client/testimonial1.jpg')}}" alt="img"/>
+                        <img src="{{asset('frontend/assets/images/client/testimonial1.jpg')}}" alt="img"/>
                     </div><!--/.home1-testm-img-->
                     <div class="home1-testm-txt">
                         <span class="icon section-icon">
@@ -179,7 +179,7 @@
             <div class="home1-testm item">
                 <div class="home1-testm-single text-center">
                     <div class="home1-testm-img">
-                        <img src="{{asset('admin/assets/images/client/testimonial2.jpg')}}" alt="img"/>
+                        <img src="{{asset('frontend/assets/images/client/testimonial2.jpg')}}" alt="img"/>
                     </div><!--/.home1-testm-img-->
                     <div class="home1-testm-txt">
                         <span class="icon section-icon">
@@ -202,7 +202,7 @@
             <div class="home1-testm item">
                 <div class="home1-testm-single text-center">
                     <div class="home1-testm-img">
-                        <img src="{{asset('admin/assets/images/client/testimonial1.jpg')}}" alt="img"/>
+                        <img src="{{asset('frontend/assets/images/client/testimonial1.jpg')}}" alt="img"/>
                     </div><!--/.home1-testm-img-->
                     <div class="home1-testm-txt">
                         <span class="icon section-icon">

@@ -12,38 +12,38 @@
 		<title>Travel</title>
 
 		<!-- favicon img -->
-		<link rel="shortcut icon" type="{{asset('admin/assets/image/icon')}}" href="{{asset('admin/assets/logo/logo.png')}}"/>
+		<link rel="shortcut icon" type="{{asset('frontend/assets/image/icon')}}" href="{{asset('frontend/assets/logo/logo.png')}}"/>
 
 		<!--font-awesome.min.css-->
-		<link rel="stylesheet" href="{{asset('admin/assets/css/font-awesome.min.css')}}" />
+		<link rel="stylesheet" href="{{asset('frontend/assets/css/font-awesome.min.css')}}" />
 
 		<!--animate.css-->
-		<link rel="stylesheet" href="{{asset('admin/assets/css/animate.css')}}" />
+		<link rel="stylesheet" href="{{asset('frontend/assets/css/animate.css')}}" />
 
 		<!--hover.css-->
-		<link rel="stylesheet" href="{{asset('admin/assets/css/hover-min.css')}}">
+		<link rel="stylesheet" href="{{asset('frontend/assets/css/hover-min.css')}}">
 
 		<!--datepicker.css-->
-		<link rel="stylesheet"  href="{{asset('admin/assets/css/datepicker.css')}}" >
+		<link rel="stylesheet"  href="{{asset('frontend/assets/css/datepicker.css')}}" >
 
 		<!--owl.carousel.css-->
-        <link rel="stylesheet" href="{{asset('admin/assets/css/owl.carousel.min.css')}}">
-		<link rel="stylesheet" href="{{asset('admin/assets/css/owl.theme.default.min.css')}}"/>
+        <link rel="stylesheet" href="{{asset('frontend/assets/css/owl.carousel.min.css')}}">
+		<link rel="stylesheet" href="{{asset('frontend/assets/css/owl.theme.default.min.css')}}"/>
 
 		<!-- range css-->
-        <link rel="stylesheet" href="{{asset('admin/assets/css/jquery-ui.min.css')}}" />
+        <link rel="stylesheet" href="{{asset('frontend/assets/css/jquery-ui.min.css')}}" />
 
 		<!--bootstrap.min.css-->
-		<link rel="stylesheet" href="{{asset('admin/assets/css/bootstrap.min.css')}}" />
+		<link rel="stylesheet" href="{{asset('frontend/assets/css/bootstrap.min.css')}}" />
 
 		<!-- bootsnav -->
-		<link rel="stylesheet" href="{{asset('admin/assets/css/bootsnav.css')}}"/>
+		<link rel="stylesheet" href="{{asset('frontend/assets/css/bootsnav.css')}}"/>
 
 		<!--style.css-->
-		<link rel="stylesheet" href="{{asset('admin/assets/css/style.css')}}" />
+		<link rel="stylesheet" href="{{asset('frontend/assets/css/style.css')}}" />
 
 		<!--responsive.css-->
-		<link rel="stylesheet" href="{{asset('admin/assets/css/responsive.css')}}" />
+		<link rel="stylesheet" href="{{asset('frontend/assets/css/responsive.css')}}" />
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
