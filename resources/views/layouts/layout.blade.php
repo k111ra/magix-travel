@@ -8,11 +8,6 @@
 
 	<body>
 
-		<!--[if lte IE 9]>
-		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
-			your browser</a> to improve your experience and security.</p>
-		<![endif]-->
-
 		<!-- main-menu Start -->
 		<header class="top-area">
 	    	@include('frontend.layout.header')
@@ -56,7 +51,6 @@
             @include('frontend.layout.footer')
 		</footer><!-- /.footer-copyright-->
 		<!-- footer-copyright end -->
-
         @include('frontend.layout.script')
 	</body>
 

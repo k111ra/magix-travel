@@ -43,8 +43,8 @@ class HomeController extends Controller
         //
     }
 
-    // public function home(){
-//         return view('admin.layout.home');
-//     }
+    public function dashboard(){
+        return view('admin.index');
+    }
  }
 

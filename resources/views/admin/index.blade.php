@@ -40,11 +40,7 @@
    	</div>
     <!-- /.container-wrapper-->
     <footer class="sticky-footer">
-      <div class="container">
-        <div class="text-center">
-          <small>Copyright © PANAGEA 2018</small>
-        </div>
-      </div>
+        @include('admin.layout.footer')
     </footer>
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded" href="#page-top">
@@ -69,6 +65,5 @@
       </div>
     </div>
     @include('admin.layout.script')
-	
 </body>
 </html>
