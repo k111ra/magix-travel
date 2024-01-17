@@ -21,14 +21,20 @@
 						<div class="col-sm-12">
 							<div class="single-about-us">
 								<div class="about-us-txt">
-									<h2>
-										Explore the Beauty of the Beautiful World
+									<div class="cards">
 
-									</h2>
-									<div class="about-btn">
+										<div class="logo-card"><span class="magix">Magix </span> <span class="travel">Travel<span class="and">&</span>Service</span></div>
+
+										<div class="card1">
+										
+											
+											Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam beatae placeat neque sequi aperiam minima praesentium! Accusamus dolores nihil voluptatum, quisquam animi, qui debitis, quos eum corrupti maxime deleniti vero!
+										</div>
+									</div>
+									{{-- <div class="about-btn">
 										<button  class="about-view">
 											explore now
-										</button>
+										</button> --}}
 									</div><!--/.about-btn-->
 								</div><!--/.about-us-txt-->
 							</div><!--/.single-about-us-->
@@ -42,7 +48,8 @@
 				</div><!--/.about-us-content-->
 			</div><!--/.container-->
 
-		</section><!--/.about-us-->
+		</section>
+		<!--/.about-us-->
 		<!--about-us end -->
         @yield('content')
 			

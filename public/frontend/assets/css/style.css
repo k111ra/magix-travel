@@ -260,7 +260,7 @@ html,body{
 }
 .main-menu .navbar-default .navbar-toggle:focus, 
 .main-menu .navbar-default .navbar-toggle:hover {
-    background-color: transparent;
+     background-color: transparent; 
 }
 
 
@@ -301,7 +301,7 @@ html,body{
     justify-content: center;
     align-items: center;
 	position: relative;
-	/* background: url(../../assets/images/home/banner.jpg)no-repeat; */
+	background: url(../../assets/images/home/travel.jpg)no-repeat;
 	background-size: cover;
 	background-position: center;
 	min-height: 1000px;
@@ -320,13 +320,53 @@ html,body{
 .about-us-content{
 	margin: -175px 0 0 0;
 }
-.about-us h2 {
-	color:#fff;	
-	font-size:84px;
-	text-transform: inherit;
-	max-width: 800px;
-	font-weight: 600;
-	line-height: 1.22;
+
+.cards{ 
+    margin: 50px;
+    /* background: url(../../assets/images/home/home-about.jpg) no-repeat;
+    background-size:400px 300px; */
+    width: 500;
+    height: 500;
+   
+    border-radius: 10px;
+    box-shadow: 5em #222222;
+    border: 1px white solid;
+}
+.card1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: start;
+    width: 500;
+    height: 100;
+    margin: 10px;
+    max-width: 100%;
+    font-size: 30px;
+    color: wheat;
+    background-color: transparent;
+
+}
+.logo-card{
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    background-color: aliceblue;
+    width: 250px;
+    font-size: x-large;
+}
+
+.logo-card  .and{
+    color:green;
+    font-size: 1em;
+}
+
+.logo-card  .magix{
+    color:orangered;
+    font-size: 1em;
+}
+.logo-card .travel, .service{
+    color:blue;
+    font-size: 1em;
 }
 .about-us h2 span{
 	color:#2bdab5;
@@ -1291,7 +1331,7 @@ html,body{
 .subscribe .subscribe-title {
     margin-bottom: 45px;
 }
-.subscribe-title h2{
+.subscribe-title h4{
     color:#fff;
     font-size:38px;
     font-family: 'Poppins', sans-serif;
