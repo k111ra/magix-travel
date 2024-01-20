@@ -5,7 +5,7 @@
             <div class="col-sm-2">
                 <div class="logo">
                     <a href="/">
-                        <img src="{{ asset('frontend/assets/logo/logo.png') }}" alt="package-place" width="100px">
+                        <img src="{{ asset('frontend/assets/logo/logo.png') }}" alt="package-place" width="150px">
                         <!-- tour<span>Nest</span> -->
                     </a>
                 </div><!-- /.logo-->

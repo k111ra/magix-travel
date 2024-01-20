@@ -6,7 +6,7 @@
 							<div class="single-footer-item">
 								<div class="footer-logo">
 									<a href="index.html">
-										tour<span>Nest</span>
+									<img src="{{ asset('frontend/assets/logo/logo.png') }}" alt="package-place" width="250px">
 									</a>
 									<p>
 										best travel agency

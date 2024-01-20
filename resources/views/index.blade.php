@@ -3,7 +3,45 @@
 		<!--about-us start -->
 		<!--/.about-us-->
 		<!--about-us end -->
+		<!--about-us start -->
+		<section id="home" class="about-us">
+			<div class="container">
+				<div class="about-us-content">
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="single-about-us">
+								<div class="about-us-txt">
+								<div class="cards">
+										<div class="logo-card">
+										<img src="{{ asset('frontend/assets/logo/logo.png') }}" alt="package-place" width="100px">
+                        				</div>
+									<div class="card1">
+										
+											
+									 PRESENTATION DE L'ENTREPRISE  
 
+									 
+									</div>
+									{{-- <div class="about-btn">
+										<button  class="about-view">
+											explore now
+										</button> --}}
+									</div><!--/.about-btn-->
+								</div><!--/.about-us-txt-->
+							</div><!--/.single-about-us-->
+						</div><!--/.col-->
+						<div class="col-sm-0">
+							<div class="single-about-us">
+
+							</div><!--/.single-about-us-->
+						</div><!--/.col-->
+					</div><!--/.row-->
+				</div><!--/.about-us-content-->
+			</div><!--/.container-->
+
+		</section>
+		<!--/.about-us-->
+		<!--about-us end -->
 		<!--travel-box start-->
 		<section  class="travel-box">
         	<div class="container">
@@ -453,7 +491,13 @@
 
         </section><!--/.travel-box-->
 		<!--travel-box end-->
-
+          <div class="cards">
+			<div class="home-cards">
+				<div class="card1">
+				
+				</div>
+			</div>
+		  </div>
         <!--service start-->
 		<section id="service" class="service">
 			<div class="container">
@@ -1214,7 +1258,7 @@
 							<div class="single-special-offer">
 								<div class="single-special-offer-bg">
 									<img src="{{asset('frontend/assets/images/offer/offer-shape.png')}}" alt="offer-shape">
-								</div><!--/.single-special-offer-bg-->
+								</div><!--/.-specialsingle-offer-bg-->
 								<div class="single-special-shape-txt">
 									<h3>special offer</h3>
 									<h4><span>40%</span><br>off</h4>
