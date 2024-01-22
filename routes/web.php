@@ -23,7 +23,7 @@ Route::get('/', [HomeController::class, 'home'])->name('home');
 
 Auth::routes();
 
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/service', [HomeController::class, 'service'])->name('service');
 Route::get('/apropos', [HomeController::class, 'apropos'])->name('apropos');
 Route::get('/contacts', [HomeController::class, 'contacts'])->name('contacts');
 Route::get('/dashboard', [HomeController::class, 'dashboard'])->name('dashboard');

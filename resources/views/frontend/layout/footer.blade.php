@@ -47,10 +47,12 @@
 							<div class="single-footer-item text-center">
 								<h2 class="text-left">contacts</h2>
 								<div class="single-footer-txt text-left">
+									<div class="footer-text">
 									<p>+225 21 37 70 38</p>
 									<p class="foot-email"><a href="#">info@magixtravel.com</a></p>
 									<p>Treichville</p>
 									<p>Abidjan, Côte d'ivoire </p>
+								</div>
 								</div><!--/.single-footer-txt-->
 							</div><!--/.single-footer-item-->
 						</div><!--/.col-->

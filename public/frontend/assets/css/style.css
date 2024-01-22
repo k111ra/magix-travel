@@ -145,6 +145,7 @@ html,body{
 .header-area{
     position:relative;
     width: 100%;
+    background: #2222224d;
 }
 
 /*.sticky-wrapper */
@@ -326,7 +327,7 @@ html,body{
     justify-content: center;
     align-items: center;
 	position: relative;
-    background: #3b5999;
+    background: #3e1bda;
 	/* background: url(../../assets/images/home/travel.jpg)no-repeat; */
 	background-size: cover;
 	background-position: center;
@@ -379,6 +380,20 @@ html,body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 100%;
     color: orangered;
+}
+/*==== for service ======*/
+
+.apropos-us{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	position: relative;
+    background: #fff;
+	/* background: url(../../assets/images/home/travel.jpg)no-repeat; */
+	background-size: cover;
+	background-position: center;
+	min-height: 450px;
+    border-end-end-radius: 15px;
 }
 .logo-card{
     display: flex;
@@ -439,7 +454,6 @@ html,body{
 .single-travel-boxes {
     margin-top: -0.5px;
     background: #fff;
-    height: 800px;
 }
 .tab-para p {
     font-size: 24px;
@@ -747,8 +761,9 @@ html,body{
     background: #f9f9f9;
 }
 .gallery-details{
-    margin-top:117px;
-    margin-bottom:109px;
+    /* margin-top:117px;
+    margin-bottom:109px; */
+    padding: auto;
 }
 .gallery-content {
     margin-top:62px;
@@ -756,6 +771,7 @@ html,body{
 
 /* gallary-header  */
 .gallary-header h2{
+    margin-top: 100px;
     position:relative;
     color:#565a5c;  
     font-size:30px;
@@ -1450,20 +1466,21 @@ html,body{
         13.  Footer-copyright
 --------------------------------------*/
 .footer-copyright{
-    background:#f9f9f9;
+    background:#3e1bda;
     padding: 0 0 60px;
 }
 .footer-content{
-    padding:120px 0;
+    padding:6px 0;
 }
 
 /*single-footer-item*/
 .single-footer-item{
     font-family: 'Poppins', sans-serif;
     text-transform: capitalize;
+    color: #fff;
 }
 .single-footer-item h2{
-    color:#565a5c;
+    color:#fff;
     font-size:16px;
     font-weight: 600;
     margin-bottom:40px;
@@ -1474,7 +1491,7 @@ html,body{
     padding-top: 76px;
 }
 .footer-logo a, .footer-logo a:hover,.footer-logo a:focus {
-    color: #565a5c;
+    color: #fff;
     font-size:24px;
     font-family: 'Poppins', sans-serif;
     text-transform: capitalize;
@@ -1487,7 +1504,7 @@ html,body{
     text-transform: capitalize;
 } 
 .footer-logo p{
-    color: #aaa;
+    color: #fff;
     font-size:16px;
     font-family: 'Poppins', sans-serif;
     text-transform: capitalize;
@@ -1499,7 +1516,7 @@ html,body{
     margin-bottom:8px;
 }
 .single-footer-txt p a{
-    color:#565a5c;
+    color:#fff;
     font-size:16px;
     -webkit-transition: .5s ease-in-out; 
     -moz-transition:.5s ease-in-out; 
@@ -1507,6 +1524,10 @@ html,body{
     -o-transition:.5s ease-in-out;
     transition: .5s ease-in-out;
     
+}
+
+.single-footer-txt .text-left , .footer-text p{
+    color: #fff;
 }
 .single-footer-txt p a:hover{
     -webkit-transition:scaleX(1.2);
