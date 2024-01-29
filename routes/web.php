@@ -27,4 +27,6 @@ Route::get('/service', [HomeController::class, 'service'])->name('service');
 Route::get('/apropos', [HomeController::class, 'apropos'])->name('apropos');
 Route::get('/contacts', [HomeController::class, 'contacts'])->name('contacts');
 Route::get('/dashboard', [HomeController::class, 'dashboard'])->name('dashboard');
+Route::get('/login', [HomeController::class, 'login'])->name('login');
+
 

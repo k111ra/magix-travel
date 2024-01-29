@@ -30,7 +30,7 @@
                             <li class="smooth-me nu"><a href="{{route('contacts')}}">Contacts</a></li>
                             {{-- <li class="smooth-menu"><a href="#subs">subscription</a></li> --}}
                             <li class="smooth-me nu"><a href="{{route('service')}}">Service</a></li>
-                            <li class="smooth-me nu"><a href="{{route('dashboard')}}">Connexion</a></li>
+                            <li class="smooth-me nu"><a href="{{route('login')}}">Connexion</a></li>
                             {{-- <li>
                                 <button class="book-btn">book now
                                 </button>
