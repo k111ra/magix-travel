@@ -43,8 +43,15 @@ class HomeController extends Controller
         //
     }
 
+
+    public function service(){
+        return view('frontend.pages.service.index');
+    }
+
     public function dashboard(){
         return view('admin.index');
     }
+
+    
  }
 

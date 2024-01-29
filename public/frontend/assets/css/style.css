@@ -145,6 +145,7 @@ html,body{
 .header-area{
     position:relative;
     width: 100%;
+    background: #2222224d;
 }
 
 /*.sticky-wrapper */
@@ -153,9 +154,9 @@ html,body{
     z-index: 2;
     transition:.7s;
 }
-.is-sticky .header-area{
+/* .is-sticky .header-area{
 
-}
+} */
 .is-sticky .header-area:after{
     position:absolute;
     content:'';
@@ -186,7 +187,7 @@ html,body{
     padding: 10px 0 0 0;
 }
 .logo a span{
-    color: #00d8ff;
+    color: orangered;
     text-transform: capitalize;
 }
 
@@ -222,7 +223,7 @@ html,body{
 .main-menu  .nav  li.active a,
 .main-menu  .nav  li a:hover,
 .main-menu .nav  li a:focus{
-    color: #00d8ff;
+    color: orangered;
     background-color:transparent;
 }
 .main-menu .nav a:before{
@@ -242,7 +243,7 @@ html,body{
 }
 .main-menu .nav li.active  a:before,
 .main-menu .nav a:hover:before{
-    background: #00d8ff;
+    background: orangered;
     width: 100%;
 }
 
@@ -256,11 +257,11 @@ html,body{
     float:left;
 }
 .main-menu .navbar-toggle {
-    color: #00d8ff;
+    color: orangered;
 }
 .main-menu .navbar-default .navbar-toggle:focus, 
 .main-menu .navbar-default .navbar-toggle:hover {
-    background-color: transparent;
+     background-color: transparent; 
 }
 
 
@@ -270,8 +271,8 @@ html,body{
 
 /*book-btn*/
 .book-btn {
-	background: #00d8ff;
-    border: 1px solid #00d8ff;
+	background: orangered;
+    border: 1px solid orangered;
     width: 120px;
     height: 40px;
     white-space: nowrap;
@@ -301,10 +302,10 @@ html,body{
     justify-content: center;
     align-items: center;
 	position: relative;
-	/* background: url(../../assets/images/home/banner.jpg)no-repeat; */
+	background: url(../../assets/images/home/travel.jpg)no-repeat;
 	background-size: cover;
 	background-position: center;
-	min-height: 1000px;
+	min-height: 450px;
 }
 .about-us:before{
 	position: absolute;
@@ -320,14 +321,88 @@ html,body{
 .about-us-content{
 	margin: -175px 0 0 0;
 }
-.about-us h2 {
-	color:#fff;	
-	font-size:84px;
-	text-transform: inherit;
-	max-width: 800px;
-	font-weight: 600;
-	line-height: 1.22;
+
+.apropos-us{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	position: relative;
+    background: #3e1bda;
+	/* background: url(../../assets/images/home/travel.jpg)no-repeat; */
+	background-size: cover;
+	background-position: center;
+	min-height: 450px;
+    border-end-end-radius: 15px;
 }
+.apropos-us:before{
+	position: absolute;
+	content: "";
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,122,207,.4);
+}
+
+/*about-us-content*/
+.apropos-us-content{
+	margin: -175px 0 0 0;
+}
+
+.cards{ 
+    margin: 50px;
+    /* background: url(../../assets/images/home/home-about.jpg) no-repeat;
+    background-size:400px 300px; */
+    width: 500;
+    height: 500;
+   
+    border-radius: 10px;
+    box-shadow: 5em #222222;
+    
+}
+.card1, .apropos-card1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    width: 500;
+    height: 100;
+    margin: 10px;
+    max-width: 100%;
+    font-size: xx-large;
+    color: white;
+    background-color: transparent;
+
+}
+
+.apropos-card1 h3{
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 100%;
+    color: orangered;
+}
+/*==== for service ======*/
+
+.apropos-us{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	position: relative;
+    background: #fff;
+	/* background: url(../../assets/images/home/travel.jpg)no-repeat; */
+	background-size: cover;
+	background-position: center;
+	min-height: 450px;
+    border-end-end-radius: 15px;
+}
+.logo-card{
+    display: flex;
+    justify-content:right;
+    /* align-items: start; */
+    width: 250px;
+    font-size: x-large;
+}
+
 .about-us h2 span{
 	color:#2bdab5;
 	margin-top: -11px;
@@ -345,8 +420,8 @@ html,body{
 	display: flex;
     justify-content: center;
     align-items: center;
-    background: #00d8ff;
-    border: 1px solid #00d8ff;
+    background: orangered;
+    border: 1px solid orangered;
     width: 200px;
     height: 60px;
     white-space: nowrap;
@@ -377,7 +452,7 @@ html,body{
 		4. 	Travel-box
 --------------------------------------*/
 .single-travel-boxes {
-    margin-top: -125px;
+    margin-top: -0.5px;
     background: #fff;
 }
 .tab-para p {
@@ -395,7 +470,7 @@ html,body{
 
 .desc-tabs .nav-tabs>li.active>a{
 	color: #fff;
-    background: #00d8ff;
+    background: orangered;
     cursor: default;
     font-size: 20px;
     font-weight: 500;
@@ -414,7 +489,7 @@ html,body{
 }
 .desc-tabs .nav-tabs>li>a{
 	color: #fff;
-    background: #00d8ff;
+    background: orangered;
     cursor: default;
     font-size: 20px;
     font-weight: 500;
@@ -565,7 +640,7 @@ html,body{
 }
 
 .single-trip-circle input[type="radio"]:checked + label span.round-boarder1{
-     background-color:#00d8ff;
+     background-color:orangered;
 }
 
 .single-trip-circle input[type="radio"] + label span.round-boarder1,
@@ -601,8 +676,8 @@ html,body{
 	border-radius: 5px;
 }
 .price_filter .ui-slider-handle.ui-state-default.ui-corner-all {
-    background: #00d8ff none repeat scroll 0 0;
-    border: 0px solid #00d8ff;
+    background: orangered none repeat scroll 0 0;
+    border: 0px solid orangered;
     border-radius:50%;
     height: 12px;
     width: 12px;
@@ -610,7 +685,7 @@ html,body{
     cursor: pointer;
     z-index: 1;
 }
-.price_filter .ui-slider-range {background: #00d8ff none repeat scroll 0 0;}
+.price_filter .ui-slider-range {background: orangered none repeat scroll 0 0;}
 .price_slider_amount > input[type="text"] {
     font-weight: 500;
     font-size: 14px;
@@ -686,8 +761,9 @@ html,body{
     background: #f9f9f9;
 }
 .gallery-details{
-    margin-top:117px;
-    margin-bottom:109px;
+    /* margin-top:117px;
+    margin-bottom:109px; */
+    padding: auto;
 }
 .gallery-content {
     margin-top:62px;
@@ -695,6 +771,7 @@ html,body{
 
 /* gallary-header  */
 .gallary-header h2{
+    margin-top: 100px;
     position:relative;
     color:#565a5c;  
     font-size:30px;
@@ -931,7 +1008,7 @@ html,body{
     text-transform: capitalize;
 }
 .about-view.packages-btn{
-    width: 110px;
+    width: 150px;
     height: 35px;
     font-size: 14px;
     color: #fff;
@@ -1007,7 +1084,7 @@ html,body{
     background: #aaa; 
 }
 .testemonial .owl-theme .owl-dots .owl-dot.active span{
-    background: #00d8ff;
+    background: orangered;
 }/*owl-carousel*/
 
 /*home1-testm-txt*/
@@ -1024,7 +1101,7 @@ html,body{
 }
 .home1-testm-txt h3 a{
     display: block;
-    color: #00d8ff;
+    color: orangered;
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
@@ -1081,7 +1158,7 @@ html,body{
     z-index: 1;
 }
 .single-special-offer-bg img {
-    height: 807px;
+    height: 450px;
 }
 
 .single-special-shape-txt {
@@ -1291,7 +1368,7 @@ html,body{
 .subscribe .subscribe-title {
     margin-bottom: 45px;
 }
-.subscribe-title h2{
+.subscribe-title h4{
     color:#fff;
     font-size:38px;
     font-family: 'Poppins', sans-serif;
@@ -1343,7 +1420,7 @@ html,body{
 
 /*appsLand-btn*/
 .appsLand-btn {
-    background: #00d8ff;
+    background: orangered;
     display: inline-block;
     padding: 17px 54px;
     text-decoration: none;
@@ -1372,7 +1449,7 @@ html,body{
 }
 .appsLand-btn:hover {
     box-shadow: 0 3px 25px rgba(2, 3, 3, 0.25);
-    background: #00d8ff;
+    background: orangered;
 }
 
 .appsLand-btn.appsLand-btn-larg {
@@ -1389,20 +1466,21 @@ html,body{
         13.  Footer-copyright
 --------------------------------------*/
 .footer-copyright{
-    background:#f9f9f9;
+    background:#3e1bda;
     padding: 0 0 60px;
 }
 .footer-content{
-    padding:120px 0;
+    padding:6px 0;
 }
 
 /*single-footer-item*/
 .single-footer-item{
     font-family: 'Poppins', sans-serif;
     text-transform: capitalize;
+    color: #fff;
 }
 .single-footer-item h2{
-    color:#565a5c;
+    color:#fff;
     font-size:16px;
     font-weight: 600;
     margin-bottom:40px;
@@ -1413,7 +1491,7 @@ html,body{
     padding-top: 76px;
 }
 .footer-logo a, .footer-logo a:hover,.footer-logo a:focus {
-    color: #565a5c;
+    color: #fff;
     font-size:24px;
     font-family: 'Poppins', sans-serif;
     text-transform: capitalize;
@@ -1422,11 +1500,11 @@ html,body{
     padding: 10px 0 0 0;
 }
 .footer-logo a>span {
-    color: #00d8ff;
+    color: orangered;
     text-transform: capitalize;
 } 
 .footer-logo p{
-    color: #aaa;
+    color: #fff;
     font-size:16px;
     font-family: 'Poppins', sans-serif;
     text-transform: capitalize;
@@ -1438,7 +1516,7 @@ html,body{
     margin-bottom:8px;
 }
 .single-footer-txt p a{
-    color:#565a5c;
+    color:#fff;
     font-size:16px;
     -webkit-transition: .5s ease-in-out; 
     -moz-transition:.5s ease-in-out; 
@@ -1447,14 +1525,20 @@ html,body{
     transition: .5s ease-in-out;
     
 }
+
+.single-footer-txt .text-left , .footer-text p{
+    color: #fff;
+}
 .single-footer-txt p a:hover{
     -webkit-transition:scaleX(1.2);
     -moz-transition:scaleX(1.2);
     -ms-transition:scaleX(1.2);
     -o-transition:scaleX(1.2);
     transform:scaleX(1.2);
-    color: #00d8ff;
-}/*single-footer-txt*/
+    color: orangered;
+}
+
+/*single-footer-txt*/
 
 .footer-copyright hr{
     border-top: 1px solid #ebebeb;
@@ -1514,7 +1598,7 @@ html,body{
     margin-top:28px;
 }
 .foot-icons p a,.foot-icons p a:hover,.foot-icons p a:focus{
-    color:#00d8ff;
+    color:orangered;
     font-size:16px;
     margin-top:28px;
 }/*foot-icons*/
@@ -1536,8 +1620,8 @@ html,body{
     cursor: pointer;
     z-index:15;
     color: #fff;
-    background:#00d8ff;
-	border:1px solid #00d8ff;
+    background:orangered;
+	border:1px solid orangered;
 	border-radius:5px;
 	-webkit-transition: .5s; 
 	-moz-transition:.5s; 
@@ -1549,7 +1633,7 @@ html,body{
 }
 
 #scroll-Top  .return-to-top:hover {
-    background:#2cdbb5;
+    background:blue;
     color: #fff;
 	border-radius:50%;
 

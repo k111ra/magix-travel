@@ -5,7 +5,7 @@
             <div class="col-sm-2">
                 <div class="logo">
                     <a href="/">
-                        <img src="{{ asset('frontend/assets/logo/logo.png') }}" alt="package-place" width="100px">
+                        <img src="{{ asset('frontend/assets/logo/logo.png') }}" alt="package-place" width="150px">
                         <!-- tour<span>Nest</span> -->
                     </a>
                 </div><!-- /.logo-->
@@ -29,7 +29,7 @@
                             <li class="smooth-me nu"><a href="{{route('apropos')}}">A-propos </a></li>
                             <li class="smooth-me nu"><a href="{{route('contacts')}}">Contacts</a></li>
                             {{-- <li class="smooth-menu"><a href="#subs">subscription</a></li> --}}
-                            <li class="smooth-me nu"><a href="/">Service</a></li>
+                            <li class="smooth-me nu"><a href="{{route('service')}}">Service</a></li>
                             <li class="smooth-me nu"><a href="{{route('dashboard')}}">Connexion</a></li>
                             {{-- <li>
                                 <button class="book-btn">book now
