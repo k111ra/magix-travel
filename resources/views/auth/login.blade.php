@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <!-- Design by foolishdeveloper.com -->
-    <title>Glassmorphism login Form Tutorial in html css</title>
+    <title>Login</title>
  
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -17,7 +17,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color: #080710;
+    background-color: blue;
 }
 .background{
     width: 430px;
@@ -109,30 +109,7 @@ button{
     border-radius: 5px;
     cursor: pointer;
 }
-.social{
-  margin-top: 30px;
-  display: flex;
-}
-.social div{
-  background: red;
-  width: 150px;
-  border-radius: 3px;
-  padding: 5px 10px 10px 5px;
-  background-color: rgba(255,255,255,0.27);
-  color: #eaf0fb;
-  text-align: center;
-}
-.social div:hover{
-  background-color: rgba(255,255,255,0.47);
-}
-.social .fb{
-  margin-left: 25px;
-}
-.social i{
-  margin-right: 4px;
-}
-
-    </style>
+</style>
 </head>
 <body>
     <div class="background">
@@ -141,15 +118,11 @@ button{
     </div>
     <form>
         <h3>Connexion</h3>
-
-        <label for="username">Username</label>
-        <input type="text" placeholder="Email or Phone" id="username">
-
-        <label for="password">Password</label>
-        <input type="password" placeholder="Password" id="password">
-
-        <button ><a href="{{route('dashboard')}}" type="submit" style="color: black; text-decoration:none">Connexion</a></button>
-
+        <label for="username">E-mail</label>
+        <input type="text" placeholder="E-mail" id="username">
+        <label for="password">Mot de passe</label>
+        <input type="password" placeholder="Mot de passe" id="password">
+        <button><a href="{{route('dashboard')}}" type="submit" style="color: black; text-decoration:none">Connexion</a></button>
     </form>
 </body>
 </html>
