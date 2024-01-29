@@ -14,7 +14,8 @@
 
   <!-- GOOGLE WEB FONT -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800" rel="stylesheet">
-	
+	<link href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" rel="stylesheet"/>
+
   <!-- Bootstrap core CSS-->
   <link href="{{ asset('admin/vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
   <!-- Main styles -->
