@@ -62,7 +62,7 @@ form{
     backdrop-filter: blur(10px);
     border: 2px solid rgba(255,255,255,0.1);
     box-shadow: 0 0 40px rgba(8,7,16,0.6);
-    padding: 50px 35px;
+    padding: 40px 35px;
 }
 form *{
     font-family: 'Poppins',sans-serif;
@@ -86,9 +86,9 @@ label{
 }
 input{
     display: block;
-    height: 50px;
+    height: 40px;
     width: 100%;
-    background-color: rgba(255,255,255,0.07);
+    background-color: #fff;
     border-radius: 3px;
     padding: 0 10px;
     margin-top: 8px;
@@ -96,18 +96,40 @@ input{
     font-weight: 300;
 }
 ::placeholder{
-    color: #e5e5e5;
+    color: #080710;
+    font-size: 16px;
 }
 button{
     margin-top: 50px;
     width: 100%;
-    background-color: #ffffff;
+    background-color: green;
     color: #080710;
     padding: 15px 0;
     font-size: 18px;
     font-weight: 600;
     border-radius: 5px;
     cursor: pointer;
+}
+
+button:hover{
+    margin-top: 50px;
+    width: 100%;
+    background-color: orangered;
+    color: blue;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+a:hover{
+    color: blue; 
+    text-decoration:none;
+    
+}
+a{
+    color: white; 
+    text-decoration:none;
 }
 </style>
 </head>
@@ -122,7 +144,7 @@ button{
         <input type="text" placeholder="E-mail" id="username">
         <label for="password">Mot de passe</label>
         <input type="password" placeholder="Mot de passe" id="password">
-        <button><a href="{{route('dashboard')}}" type="submit" style="color: black; text-decoration:none">Connexion</a></button>
+        <button><a href="{{route('dashboard')}}" type="submit" >Connexion</a></button>
     </form>
 </body>
 </html>
