@@ -1163,3 +1163,37 @@ label.fix_spacing {
 .sbOptions .sbSub {
   padding-left: 17px;
 }
+ 
+/* *** style button and search *** */
+
+.card-button-search{
+    display:flex; 
+    justify-content: space-between;   
+    padding:10px
+
+}
+
+.card-rearch input{
+    font-size:15px;
+    border-radius: 5px;
+   
+}
+
+.card-button input{
+  width: 150px;
+  height: 35px;
+  background: blue;
+  border: blue;
+  border-radius: 16px;
+  font-size: x-large;
+  color: orangered;
+  box-shadow: #171a1d 1px 4px 3px;
+}
+
+.card-button input:hover {
+    letter-spacing: 10px;
+    background: orangered;
+  border: orangered;
+  color: blue;
+  font-size: x-large;
+}

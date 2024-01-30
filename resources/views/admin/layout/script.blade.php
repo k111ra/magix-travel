@@ -14,3 +14,4 @@
     <script src="{{ asset('admin/js/admin.js')}}"></script>
 	<!-- Custom scripts for this page-->
     <script src="{{ asset('admin/js/admin-charts.js')}}"></script>
+    
