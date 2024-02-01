@@ -66,7 +66,7 @@ form{
 }
 form *{
     font-family: 'Poppins',sans-serif;
-    color: #000;
+    color: #fff;
     letter-spacing: 0.5px;
     outline: none;
     border: none;
@@ -94,6 +94,7 @@ input{
     margin-top: 8px;
     font-size: 14px;
     font-weight: 300;
+    color: #000;
 }
 ::placeholder{
     color: #080710;
