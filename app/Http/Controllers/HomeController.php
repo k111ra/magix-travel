@@ -48,6 +48,11 @@ class HomeController extends Controller
         return view('frontend.pages.service.index');
     }
 
+    // public function dashboard(){
+
+    //     return view('admin.index');
+    // }
+
     public function dashboard(){
 
         return view('admin.index');

@@ -1,4 +1,4 @@
-<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+{{-- <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
           <a class="nav-link" href="index.html">
             <i class="fa fa-fw fa-dashboard"></i>
             <span class="nav-link-text">Dashboard</span>
@@ -82,4 +82,30 @@
           </li> 
         </ul>
        </li> 
-     
+      --}}
+
+      <aside id="sidebar-wrapper">
+        <div class="sidebar-brand">
+          <a href="index.html"> <img alt="image" src="{{ asset('admin/assets/img/logo.png')}}" class="header-logo" /> <span
+              class="logo-name">Magick Travel</span>
+          </a>
+        </div>
+        <ul class="sidebar-menu">
+          <li class="dropdown active">
+            <a href="{{route('dashboard')}}" class="nav-link"><i data-feather="monitor"></i><span>Tableau de Bord</span></a>
+          </li>
+          <li><a class="nav-link" href=" {{route('user.index')}} "><i data-feather="user"></i><span>Utilisateurs</span></a></li>
+          <li><a class="nav-link" href=" {{route('client.index')}} "><i data-feather="user"></i><span>Clients</span></a></li>
+          <li class="dropdown">
+            <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="copy"></i><span>Basic
+                Components</span></a>
+            <ul class="dropdown-menu">
+              <li><a class="nav-link" href="alert.html">Alert</a></li>
+              <li><a class="nav-link" href="badge.html">Badge</a></li>
+              <li><a class="nav-link" href="breadcrumb.html">Breadcrumb</a></li>
+              <li><a class="nav-link" href="buttons.html">Buttons</a></li>
+            </ul>
+          </li>
+         
+        </ul>
+      </aside>

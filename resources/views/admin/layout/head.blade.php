@@ -1,4 +1,4 @@
-<meta charset="utf-8">
+{{-- <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
@@ -26,4 +26,16 @@
   <link href="{{ asset('admin/vendor/datatables/dataTables.bootstrap4.css')}}" rel="stylesheet">
   <!-- Your custom styles -->
   <link href="{{ asset('admin/css/custom.css')}}" rel="stylesheet">
-  <link href="{{ asset('admin/vendor/datatables/dataTables.bootstrap4.css')}}" rel="stylesheet">
+  <link href="{{ asset('admin/vendor/datatables/dataTables.bootstrap4.css')}}" rel="stylesheet"> --}}
+
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>Magick Travel - Admin Dashboard</title>
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="{{ asset('admin/assets/css/app.min.css')}}">
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="{{ asset('admin/assets/css/style.css')}}">
+  <link rel="stylesheet" href="{{ asset('admin/assets/css/components.css')}}">
+  <!-- Custom style CSS -->
+  <link rel="stylesheet" href="{{ asset('admin/assets/css/custom.css')}}">
+  <link rel='shortcut icon' type='image/x-icon' href="{{ asset('admin/assets/img/favicon.ico')}}" />

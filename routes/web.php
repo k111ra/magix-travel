@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ClientController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Auth;
@@ -16,7 +17,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/dashboard/utilisateurs',[UsersController::class,'index'])->name('tableUtilisateur');
+Route::get('/dashboard/liste-user',[UsersController::class,'index'])->name('user.index');
+Route::get('/dashboard/create-user',[UsersController::class,'create'])->name('user.create');
+
+
+Route::get('/dashboard/liste-client',[ClientController::class,'index'])->name('client.index');
+Route::get('/dashboard/create-client',[ClientController::class,'create'])->name('client.create');
 
 Route::get('/', [HomeController::class, 'home'])->name('home');
 
