@@ -503,8 +503,8 @@ html,body{
 	-o-transition:.5s;
     transition: .5s;
 }
-.single-travel-boxes .nav>li>a:focus, 
-.single-travel-boxes .nav>li>a:hover {
+.single-travel-boxes .nav>li>a:focus
+/* ,.single-travel-boxes .nav>li>a:hover  */{
 	color: #565a5c;
 	background: #fff;
 	border: 0;
