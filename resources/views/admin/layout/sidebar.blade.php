@@ -87,7 +87,7 @@
       <aside id="sidebar-wrapper">
         <div class="sidebar-brand">
           <a href="index.html"> <img alt="image" src="{{ asset('admin/assets/img/logo.png')}}" class="header-logo" /> <span
-              class="logo-name">Magick Travel</span>
+              class="logo-name">Magix Travel</span>
           </a>
         </div>
         <ul class="sidebar-menu">
@@ -95,14 +95,14 @@
             <a href="{{route('dashboard')}}" class="nav-link"><i data-feather="monitor"></i><span>Tableau de Bord</span></a>
           </li>
           <li><a class="nav-link" href=" {{route('user.index')}} "><i data-feather="user"></i><span>Utilisateurs</span></a></li>
-          <li><a class="nav-link" href=" {{route('client.index')}} "><i data-feather="user"></i><span>Clients</span></a></li>
+          <li><a class="nav-link" href=" {{route('client.index')}} "><i data-feather="users"></i><span>Clients</span></a></li>
           <li class="dropdown">
-            <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="copy"></i><span>Basic
-                Components</span></a>
+            <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="settings"></i><span>Parametre
+                </span></a>
             <ul class="dropdown-menu">
-              <li><a class="nav-link" href="alert.html">Alert</a></li>
-              <li><a class="nav-link" href="badge.html">Badge</a></li>
-              <li><a class="nav-link" href="breadcrumb.html">Breadcrumb</a></li>
+              <li><a class="nav-link" href="alert.html">Rôle</a></li>
+              <li><a class="nav-link" href="badge.html">Categorie</a></li>
+              <li><a class="nav-link" href="breadcrumb.html">Postes</a></li>
               <li><a class="nav-link" href="buttons.html">Buttons</a></li>
             </ul>
           </li>
