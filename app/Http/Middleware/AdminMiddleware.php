@@ -17,6 +17,11 @@ class AdminMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
+
+    /**
+     * cette fonction s'assure que seuls les utilisateurs authentifiés qui sont des administrateurs peuvent accéder à la route ou à l'action pour laquelle ce middleware est appliqué
+     * Sinon, l'utilisateur est redirigé vers la page de connexion
+     */
         if(auth()->check() && auth()->user()->is_admin == 1){
             return $next($request);
          }
@@ -25,7 +30,4 @@ class AdminMiddleware
          }       
     }
 
-    // php artisan db:seed --class=PermissionSeeder
-    // php artisan db:seed --class=UsersTableSeeder
-    // php artisan db:seed --class=RolesTableSeede
 }

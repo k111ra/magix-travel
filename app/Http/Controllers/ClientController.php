@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ClientController extends Controller
 {
@@ -13,7 +14,8 @@ class ClientController extends Controller
      */
     public function index()
     {
-        return view('admin.client.index');
+            return view('admin.client.index');
+        
     }
 
     /**
@@ -23,7 +25,8 @@ class ClientController extends Controller
      */
     public function create()
     {
-        return view('admin.client.create');
+            return view('admin.client.create');
+       
     }
 
     /**
@@ -80,5 +83,11 @@ class ClientController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function NonAutorise()
+    {
+        Auth::logout();
+        return redirect()->route('login');
     }
 }

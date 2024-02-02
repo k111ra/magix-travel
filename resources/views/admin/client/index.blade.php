@@ -1,10 +1,13 @@
 @extends('admin.layout.layout')
 @section('content')
+<section class="section">
+  <div class="section-body">
+    <div class="row">
 
     <div class="col-12">
       <div class="card">
         <div class="card-header">
-          <h4>Liste des Utilisateurs</h4>
+          <h4>Liste des Clients</h4>
         </div>
         <div class="card-body">
           <div class="float-left">
@@ -80,5 +83,7 @@
         </div>
       </div>
     </div>
-
+ </div>
+    </div>
+  </section>
   @endsection

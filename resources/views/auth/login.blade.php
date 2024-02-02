@@ -181,27 +181,27 @@ a{
                 <h4>Connexion</h4>
               </div>
               <div class="card-body">
-                <form method="POST" action="#" class="needs-validation" novalidate="">
+                <form method="POST" action="{{url('login.store')}}" class="needs-validation" novalidate="">
                   @csrf
                     <div class="form-group">
                     <label for="email">Email</label>
                     <input id="email" type="email" class="form-control" name="email" tabindex="1" required autofocus>
-                    <div class="invalid-feedback">
+                    {{-- <div class="invalid-feedback">
                       Please fill in your email
-                    </div>
+                    </div> --}}
                   </div>
                   <div class="form-group">
                     <div class="d-block">
                       <label for="password" class="control-label">Password</label>
                     </div>
                     <input id="password" type="password" class="form-control" name="password" tabindex="2" required>
-                    <div class="invalid-feedback">
+                    {{-- <div class="invalid-feedback">
                       please fill in your password
-                    </div>
+                    </div> --}}
                   </div>
                   <div class="form-group">
                     <button class="btn btn-primary btn-lg btn-block" type="submit">
-                        <a href="{{route('dashboard')}}" style="color: white; text-decoration:none">Connexion</a>
+                      Connexion
                     </button>
                   </div>
                 </form>

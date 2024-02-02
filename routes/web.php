@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UsersController;
@@ -17,21 +19,31 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/dashboard/liste-user',[UsersController::class,'index'])->name('user.index');
-Route::get('/dashboard/create-user',[UsersController::class,'create'])->name('user.create');
+//////Les routes protegées sont utilisé côté admin du système 
+Route::middleware(['auth'])->prefix('admin')->group(function(){
+    
+    Route::get('/dashboard', [HomeController::class, 'dashboard'])->name('dashboard');
+    Route::get('/deconnexion', [LogoutController::class, 'deconnexion'])->name('deconnexion');
+    
+    ////////////Routes des utilisateurs////////////
+    Route::get('/liste-user',[UsersController::class,'index'])->name('user.index');
+    Route::get('/create-user',[UsersController::class,'create'])->name('user.create');
+
+    ////////////Routes des clients////////////
+    Route::get('/liste-client',[ClientController::class,'index'])->name('client.index');
+    Route::get('/create-client',[ClientController::class,'create'])->name('client.create');
+
+});
 
 
-Route::get('/dashboard/liste-client',[ClientController::class,'index'])->name('client.index');
-Route::get('/dashboard/create-client',[ClientController::class,'create'])->name('client.create');
-
-Route::get('/', [HomeController::class, 'home'])->name('home');
-
-Auth::routes();
-
-Route::get('/service', [HomeController::class, 'service'])->name('service');
-Route::get('/apropos', [HomeController::class, 'apropos'])->name('apropos');
-Route::get('/contacts', [HomeController::class, 'contacts'])->name('contacts');
-Route::get('/dashboard', [HomeController::class, 'dashboard'])->name('dashboard');
+///////////Les routes de connexion et deconnexion
+Route::post('/login.store', [LoginController::class, 'store'])->name('login.store');
 Route::get('/login', [HomeController::class, 'login'])->name('login');
 
 
+Route::get('/', [HomeController::class, 'home'])->name('home');
+Route::get('/service', [HomeController::class, 'service'])->name('service');
+Route::get('/apropos', [HomeController::class, 'apropos'])->name('apropos');
+Route::get('/contacts', [HomeController::class, 'contacts'])->name('contacts');
+
+Auth::routes();
