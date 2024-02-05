@@ -5,7 +5,7 @@
   </div> --}}
 
   <div class="footer-left">
-    <a href="templateshub.net">Templateshub</a></a>
+    <a href="{{route('home')}}">Magix Travel</a></a>
   </div>
   <div class="footer-right">
   </div>
