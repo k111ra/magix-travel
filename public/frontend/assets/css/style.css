@@ -1831,3 +1831,158 @@ html,body{
     }
   }
   
+  /* ===================about us body=========================== */
+  
+a {
+	/* Typography Declrations */
+	font-weight: bold;
+	text-decoration: none;
+	color: #D1DBBD;
+}
+
+a:hover {
+	/* Tyopography Declarations */
+	color: #FCFFF5;
+}
+
+a:visited {
+	/* Typography Declarations */
+	color: #D1DBBD;
+}
+
+h1 {
+  color: #3E606F;
+}
+
+h2 {
+  color: #193441;
+}
+.masthead-heading,
+.masthead-intro {
+  text-align: center;
+  color: #FFF;
+}
+.masthead {
+  padding: 6em 0;
+  background-image: url('https://bit.ly/1Yf2Psj');
+  background-color: #1FAAFF;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+}
+.masthead-intro {
+  margin-bottom: 0.1em;
+  font-family: "Gentium Book Basic", Georgia, serif;
+  font-size: 2em;}
+
+.masthead-heading {
+  margin-top: -0.2em;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+  font-size: 6em;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+.questions-section h2 {
+  font-family: "Gentium Book Basic", Georgia, serif;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.introduction-section, 
+.location-section,
+.questions-section {
+  max-width: 38em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+}
+
+/* =========================Contact us================================= */
+
+.contact {
+    padding: 130px 0;
+}
+
+.contact .heading h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+
+}
+
+.contact .heading h2 span {
+    color: orangered;
+}
+
+.contact .heading h2 .h2 {
+    color: blue;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+
+}
+
+
+.contact .heading p {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #999999;
+    margin: 20px 0 60px;
+    padding: 0;
+}
+
+.contact .form-control {
+    padding: 25px;
+    font-size: 13px;
+    margin-bottom: 10px;
+    background: #f9f9f9;
+    border: 1px solid black ;
+    border-radius: 10px;
+}
+
+.contact button.btn {
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    background: orangered;
+    color: #ffffff;
+}
+
+.contact .title h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.contact .title p {
+    font-size: 14px;
+    font-weight: 400;
+    color: #999;
+    line-height: 1.6;
+    margin: 0 0 40px;
+}
+
+.contact .content .info {
+    margin-top: 30px;
+}
+.contact .content .info i {
+    font-size: 30px;
+    padding: 0;
+    margin: 0;
+    color: #02434b;
+    margin-right: 20px;
+    text-align: center;
+    width: 20px;
+}
+.contact .content .info h4 {
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.contact .content .info h4 span {
+    font-size: 13px;
+    font-weight: 300;
+    color: #999999;
+}
