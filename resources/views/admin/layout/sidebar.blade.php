@@ -53,7 +53,7 @@
         </li>
 		<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Devis">
           <a class="nav-link" href="add-listing.html">
-          <i class="fa fa-calculator"></i>
+          <i class="fas fa-calculator"></i>
             <span class="nav-link-text">Devis</span>
           </a>
         </li>
@@ -96,6 +96,12 @@
           </li>
           <li><a class="nav-link" href=" {{route('user.index')}} "><i data-feather="user"></i><span>Utilisateurs</span></a></li>
           <li><a class="nav-link" href=" {{route('client.index')}} "><i data-feather="users"></i><span>Clients</span></a></li>
+          
+          <li><a class="nav-link" href=" {{route('user.index')}} "><i data-feather="shopping-cart"></i><span>Commandes</span></a></li>
+          <li><a class="nav-link" href=" {{route('client.index')}} "><i data-feather="shopping-bag"></i><span>Produits</span></a></li>
+          <li><a class="nav-link" href=" {{route('user.index')}} "><i class="fas fa-calculator"></i><span>Devis</span></a></li>
+          <li><a class="nav-link" href=" {{route('client.index')}} "><i class="fas fa-building"></i><span>Tours</span></a></li>
+          
           <li class="dropdown">
             <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="settings"></i><span>Parametre
                 </span></a>
