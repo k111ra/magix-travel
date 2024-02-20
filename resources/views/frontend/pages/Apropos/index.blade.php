@@ -1,43 +1,59 @@
 @extends('layouts.layout')
 @section('content')
 
-<header class="masthead">
-  <p class="masthead-intro">Hi! I am</p>
-  <h1 class="masthead-heading">Alex</h1>  
-</header>
+<!--about-us start -->
+<section id="home" class="apropos-us">
+			<div class="container">
+				<div class="apropos-us-content">
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="single-apropos-us">
+								<div class="apropos-us-txt">
+								<div class="cards">
+										<!-- <div class="logo-card">
+										<img src="{{ asset('frontend/assets/logo/logo.png') }}" alt="package-place" width="100px">
+                        				</div> -->
+									<div class="apropos-card1">
+										
+											
+									 <h3> A propos de nous </h3>
 
-<section class="introduction-section">
-    <h1>About me</h1>
-    <p>DevOps evangelist by day and a wannabe Full Stack web developer / entrepreneur by night. Co-founder of my son with my wonderful wife Michelle.</p>
-    <p>Be true to yourself. Aspire to be successful. Give 100%.
-  </section>
+									 
+									</div>
+									{{-- <div class="about-btn">
+										<button  class="about-view">
+											explore now
+										</button> --}}
+									</div><!--/.about-btn-->
+								</div><!--/.about-us-txt-->
+							</div><!--/.single-about-us-->
+						</div><!--/.col-->
+						<div class="col-sm-0">
+							<div class="single-apropos-us">
 
-  <section class="location-section">
-    <h1>Where is Alex from</h1>
-    <p>I am originally from Italy. I was born in a city called Trieste, right by the beach. In 2009, I moved to the U.S. where I completed my M.S. in Information Technologyin 2011 at <a href="http://www.hood.edu/">Hood College</a>, in Maryland. After moving here and there, now i live in Savannah, GA with my wife and my son.</p>
-    <p>I currently work as a DevOps engineer for a financial company based in California. Independently, I pursue the idea of becoming a full-stack developer and start my own business.</p>
-  </section>
+							</div><!--/.single-about-us-->
+						</div><!--/.col-->
+					</div><!--/.row-->
+				</div><!--/.about-us-content-->
+			</div><!--/.container-->
 
-  <section class="questions-section">
-    <h1>More about me</h1>
-    <h2>What is your dream job</h2>
-    <p>Visionary entrepreneur leading innovation with scalable, cloud-based, web based applications.</p>
-    <h2>What are your favorite hobbies?</h2>
-    <p>I love reading, soccer and keeping up with new tech.</p>
-    <h2>What music have you been listening to lately?</h2>
-    <p>Lots of classical music and electro: both help me work and study, at a different pace.</p>
-  </section>
+		</section>
+		<!--/.about-us-->
+		<!--about-us end -->
+<section class="testemonial">
+ 
 
-  <footer class="site-padding">
-    <p>Say hi to me via social media</p>
-    <ul class="social">
-      <li><a href="https://github.com/ciandro/">Github</a></li>
-      <li><a href="https://twitter.com/alexdemitri">Twitter</a></li>
-      <li><a href="https://plus.google.com/+AlexDemitri/posts">Google+</a></li>
-    </ul>
-    <p>Cover image via <a href="https://unsplash.com/" alt="unsplash"><strong>Unsplash</strong></a></p>
-  </footer>
+             <h2>  PRESENTATION DE L'ENTREPRISE (MAGIX TRAVEL) </h2> 
+            Magix-Travel est spécialisée dans la vente de billets d’avion pour des voyages d’affaires
+            et d’agréments, l’entreprise offre un large choix de compagnies et tarifs en fonction du
+            budget et de la destination.
+            L’agence met à la disposition de ses clients une gamme variée d’hôtels, de
+            l’économique au luxe selon les besoins du client.
+            Magix-Travel propose à ses clients de ne plus se déplacer pour les courses liées à
+            l’obtention d’un visa et se charge de récupérer et transmettre les documents requis
+            pour cette procédure. 
 
+</section><!--/.testimonial-->
 
 @endsection
 
