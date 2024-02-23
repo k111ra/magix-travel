@@ -3,8 +3,14 @@
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\CommandesController;
+use App\Http\Controllers\DevisController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProduitsController;
+use App\Http\Controllers\RolesController;
+use App\Http\Controllers\ToursController;
 use App\Http\Controllers\UsersController;
+use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -33,6 +39,22 @@ Route::middleware(['auth'])->prefix('admin')->group(function(){
     Route::get('/liste-client',[ClientController::class,'index'])->name('client.index');
     Route::get('/create-client',[ClientController::class,'create'])->name('client.create');
 
+    ///////////////Routes des Rôles////////////////////
+    Route::get('/roles',[RolesController::class, 'index'])->name('Roles.index');
+
+
+    ////////////Routes des commandes///////////
+    Route::get('/commandes',[CommandesController::class, 'index'])->name('commandes.index');
+
+    /////////Routes des produits//////////
+    Route::get('/produit',[ProduitsController::class, 'index'])->name('produits.index');
+
+    /////////Routes des devis////////
+    Route::get('/devis',[DevisController::class,'index'])->name('devis.index');
+
+    
+    /////////Routes des Tours////////
+    Route::get('/tours',[ToursController::class,'index'])->name('tours.index');
 });
 
 

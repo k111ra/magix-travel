@@ -87,7 +87,7 @@
       <aside id="sidebar-wrapper">
         <div class="sidebar-brand">
           <a href="index.html"> <img alt="image" src="{{ asset('admin/assets/img/logo.png')}}" class="header-logo" /> <span
-              class="logo-name">Magix Travel</span>
+              class="logo-name"> <a href="{{route('home')}}"> Magix Travel</a></span>
           </a>
         </div>
         <ul class="sidebar-menu">
@@ -97,16 +97,16 @@
           <li><a class="nav-link" href=" {{route('user.index')}} "><i data-feather="user"></i><span>Utilisateurs</span></a></li>
           <li><a class="nav-link" href=" {{route('client.index')}} "><i data-feather="users"></i><span>Clients</span></a></li>
           
-          <li><a class="nav-link" href=" {{route('user.index')}} "><i data-feather="shopping-cart"></i><span>Commandes</span></a></li>
-          <li><a class="nav-link" href=" {{route('client.index')}} "><i data-feather="shopping-bag"></i><span>Produits</span></a></li>
-          <li><a class="nav-link" href=" {{route('user.index')}} "><i class="fas fa-calculator"></i><span>Devis</span></a></li>
-          <li><a class="nav-link" href=" {{route('client.index')}} "><i class="fas fa-building"></i><span>Tours</span></a></li>
+          <li><a class="nav-link" href=" {{route('commandes.index')}} "><i data-feather="shopping-cart"></i><span>Commandes</span></a></li>
+          <li><a class="nav-link" href=" {{route('produits.index')}} "><i data-feather="shopping-bag"></i><span>Produits</span></a></li>
+          <li><a class="nav-link" href=" {{route('devis.index')}} "><i class="fas fa-calculator"></i><span>Devis</span></a></li>
+          <li><a class="nav-link" href=" {{route('tours.index')}} "><i class="fas fa-building"></i><span>Tours</span></a></li>
           
           <li class="dropdown">
             <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="settings"></i><span>Parametre
                 </span></a>
             <ul class="dropdown-menu">
-              <li><a class="nav-link" href="alert.html">Rôle</a></li>
+              <li><a class="nav-link" href="{{route('Roles.index')}}">Rôle</a></li>
               <li><a class="nav-link" href="badge.html">Categorie</a></li>
               <li><a class="nav-link" href="breadcrumb.html">Postes</a></li>
               <li><a class="nav-link" href="buttons.html">Buttons</a></li>
