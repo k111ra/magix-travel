@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('devis_poduits', function (Blueprint $table) {
             $table->bigInteger('devis_id');
             $table->bigInteger('produit_id');
-            $table->primary(['devis_id', 'produits_id']);
+            $table->primary(['devis_id', 'produit_id']);
         });
     }
 

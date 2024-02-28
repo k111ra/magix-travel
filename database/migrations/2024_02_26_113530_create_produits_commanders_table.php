@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('produits_commanders', function (Blueprint $table) {
             $table->bigInteger('commandes_id');
             $table->bigInteger('produit_id');
-            $table->primary(['commandes_id', 'produits_id']);
+            $table->primary(['commandes_id', 'produit_id']);
         });
     }
 
