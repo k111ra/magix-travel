@@ -14,9 +14,9 @@ return new class extends Migration
     public function up()
     {
         Schema::create('model_has_permissions', function (Blueprint $table) {
-            $table->bigInteger('permission_id');
+            $table->bigInteger('permission_id')->constrained();
             $table->string('model_type', 255);
-            $table->bigInteger('model_id');
+            $table->bigInteger('model_id')->constrained();
             $table->index(['model_id', 'model_type']);
             $table->primary(['permission_id', 'model_id', 'model_type']);
         });

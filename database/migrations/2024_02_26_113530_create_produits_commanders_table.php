@@ -14,9 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('produits_commanders', function (Blueprint $table) {
-            $table->bigInteger('commandes_id');
-            $table->bigInteger('produit_id');
-            $table->primary(['commandes_id', 'produits_id']);
+            $table->id();
+            $table->foreignId('commandes_id')->constrained();
+            $table->foreignId('produit_id')->constrained();
+            
         });
     }
 

@@ -10,7 +10,7 @@
         </div>
         <div class="card-body">
           <div class="float-left">
-            <a href=" {{route('user.create')}} " type="button" class="btn btn-primary">Nouveau</a>
+            <a href=" {{route('produit.create')}} " type="button" class="btn btn-primary">Nouveau</a>
           </div>
           <div class="float-right">
             <form>

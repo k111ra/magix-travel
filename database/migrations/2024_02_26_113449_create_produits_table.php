@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('reference');
             $table->string('designation');
             $table->foreignId('users_id')->constrained();
+            $table->foreignId('categorie_produits_id')->constrained();
             $table->timestamps();
         });
     }

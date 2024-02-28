@@ -14,8 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::create('ajputer_postes', function (Blueprint $table) {
-            $table->bigInteger('users_id');
-            $table->bigInteger('postes_id');
+            $table->foreignId('users_id')->constrained();
+            $table->foreignId('postes_id')->constrained();
             $table->primary(['users_id', 'postes_id']);
         });
     }

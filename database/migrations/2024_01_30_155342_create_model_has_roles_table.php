@@ -14,9 +14,9 @@ return new class extends Migration
     public function up()
     {
         Schema::create('model_has_roles', function (Blueprint $table) {
-                $table->bigInteger('role_id');
+                $table->bigInteger('role_id')->constrained();
                 $table->string('model_type', 255);
-                $table->bigInteger('model_id');
+                $table->bigInteger('model_id')->constrained();
                 $table->index(['model_id', 'model_type']);
                 $table->primary(['role_id', 'model_id', 'model_type']);
         });

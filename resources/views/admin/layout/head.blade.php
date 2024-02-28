@@ -32,6 +32,8 @@
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
   <title>Magick Travel - Admin Dashboard</title>
   <!-- General CSS Files -->
+  <link rel="stylesheet" href="{{ asset('admin/assets/bundles/select2/dist/css/select2.min.css')}}">
+  <link rel="stylesheet" href="{{ asset('admin/assets/bundles/summernote/summernote-bs4.css')}}">
   <link rel="stylesheet" href="{{ asset('admin/assets/css/app.min.css')}}">
   <!-- Template CSS -->
   <link rel="stylesheet" href="{{ asset('admin/assets/css/style.css')}}">

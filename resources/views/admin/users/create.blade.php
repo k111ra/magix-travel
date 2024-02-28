@@ -40,16 +40,18 @@
                     <label for="password2" class="d-block">Password Confirmation</label>
                     <input id="password2" type="password" class="form-control" name="password-confirm">
                   </div>
-                </div>
+                </div> 
 
                 <div class="form-group">
-                    <label for="email">Rôle</label>
-                    <select id="inputState" class="form-control">
-                        <option selected>Choose...</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                    </select>
+                      <label>Rôles</label>
+                      <select class="form-control select2" multiple="">
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                        <option>Option 3</option>
+                        <option>Option 4</option>
+                        <option>Option 5</option>
+                        <option>Option 6</option>
+                      </select>
                     </div>
                 <div class="form-group">
                   <button type="submit" class="btn btn-primary btn-lg btn-block">

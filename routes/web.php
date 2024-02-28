@@ -6,6 +6,7 @@ use App\Http\Controllers\ClientController;
 use App\Http\Controllers\CommandesController;
 use App\Http\Controllers\DevisController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PostesController;
 use App\Http\Controllers\ProduitsController;
 use App\Http\Controllers\RolesController;
 use App\Http\Controllers\ToursController;
@@ -42,13 +43,16 @@ Route::middleware(['auth'])->prefix('admin')->group(function(){
     ///////////////Routes des Rôles////////////////////
     Route::get('/roles',[RolesController::class, 'index'])->name('Roles.index');
 
+     ///////////////Routes des Rôles////////////////////
+    Route::get('/postes',[RolesController::class, 'index'])->name('postes.index');
+    Route::get('/postes_create',[PostesController::class,'create'])->name('postes.create');
 
     ////////////Routes des commandes///////////
     Route::get('/commandes',[CommandesController::class, 'index'])->name('commandes.index');
 
     /////////Routes des produits//////////
     Route::get('/produit',[ProduitsController::class, 'index'])->name('produits.index');
-
+    Route::get('/create',[ProduitsController::class,'create'])->name('produit.create');
     /////////Routes des devis////////
     Route::get('/devis',[DevisController::class,'index'])->name('devis.index');
 

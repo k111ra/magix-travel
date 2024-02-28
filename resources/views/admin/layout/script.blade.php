@@ -19,6 +19,8 @@
       <!-- General JS Scripts -->
   <script src="{{ asset('admin/assets/js/app.min.js')}}"></script>
   <!-- JS Libraies -->
+  <script src="{{ asset('admin/assets/bundles/select2/dist/js/select2.full.min.js')}}"></script>
+  <script src="{{ asset('admin/assets/bundles/summernote/summernote-bs4.js')}}"></script>
   <script src="{{ asset('admin/assets/bundles/apexcharts/apexcharts.min.js')}}"></script>
   <!-- Page Specific JS File -->
   <script src="{{ asset('admin/assets/js/page/index.js')}}"></script>
