@@ -25,12 +25,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//////Les routes protegées sont utilisé côté admin du système 
+//////Les routes protegées sont utilisé côté admin du système
 Route::middleware(['auth'])->prefix('admin')->group(function(){
-    
+
+    //----------------------------TOURS------------------------------------//
+
+    Route::get('/tours', [ToursController::class, 'index'])->name('tours.index');
+    Route::get('/tours/create', [ToursController::class, 'create'])->name('tours.create');
+    Route::post('/tours', [ToursController::class, 'store'])->name('tours.store');
+    Route::get('/tours/{tour}', [ToursController::class, 'show'])->name('tours.show');
+    Route::get('/tours/{tour}/edit', [ToursController::class, 'edit'])->name('tours.edit');
+    Route::delete('/tours/{tour}', [ToursController::class, 'destroy'])->name('tours.destroy');
+    Route::put('/tours/{tour}', [ToursController::class, 'update'])->name('tours.update');
+
     Route::get('/dashboard', [HomeController::class, 'dashboard'])->name('dashboard');
     Route::get('/deconnexion', [LogoutController::class, 'deconnexion'])->name('deconnexion');
-    
+
     ////////////Routes des utilisateurs////////////
     Route::get('/liste-user',[UsersController::class,'index'])->name('user.index');
     Route::get('/create-user',[UsersController::class,'create'])->name('user.create');
@@ -52,7 +62,7 @@ Route::middleware(['auth'])->prefix('admin')->group(function(){
     /////////Routes des devis////////
     Route::get('/devis',[DevisController::class,'index'])->name('devis.index');
 
-    
+
     /////////Routes des Tours////////
     Route::get('/tours',[ToursController::class,'index'])->name('tours.index');
 });

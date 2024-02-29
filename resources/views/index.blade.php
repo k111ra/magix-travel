@@ -16,11 +16,11 @@
 										<img src="{{ asset('frontend/assets/logo/logo.png') }}" alt="package-place" width="100px">
                         				</div>
 									<div class="card1">
-										
-											
-									 PRESENTATION DE L'ENTREPRISE  
 
-									 
+
+									 PRESENTATION DE L'ENTREPRISE
+
+
 									</div>
 									{{-- <div class="about-btn">
 										<button  class="about-view">
@@ -494,7 +494,7 @@
           <div class="cards">
 			<div class="home-cards">
 				<div class="card1">
-				
+
 				</div>
 			</div>
 		  </div>
@@ -707,263 +707,58 @@
 			<!-- /.container-->
 
 		<!-- </section> -->
-		 
+
 		<!-- /.discount-offer-->
 		<!--discount-offer end-->
 
 		<!--packages start-->
 		<section id="pack" class="packages">
-			<div class="container">
-				<div class="gallary-header text-center">
-					<h2>
-						special packages
-					</h2>
-					<p>
-						Duis aute irure dolor in  velit esse cillum dolore eu fugiat nulla.
-					</p>
-				</div><!--/.gallery-header-->
-				<div class="packages-content">
-					<div class="row">
+            <div class="container">
+                <div class="gallary-header text-center">
+                    <h2>Special Packages</h2>
+                    <p>Duis aute irure dolor in velit esse cillum dolore eu fugiat nulla.</p>
+                </div><!--/.gallery-header-->
+                <div class="packages-content">
+                    <div class="row">
 
-						<div class="col-md-4 col-sm-6">
-							<div class="single-package-item">
-								<img src="{{asset('frontend/assets/images/packages/p1.jpg')}}" alt="package-place">
-								<div class="single-package-item-txt">
-									<h3>italy <span class="pull-right">$499</span></h3>
-									<div class="packages-para">
-										<p>
-											<span>
-												<i class="fa fa-angle-right"></i> 5 daays 6 nights
-											</span>
-											<i class="fa fa-angle-right"></i>  5 star accomodation
-										</p>
-										<p>
-											<span>
-												<i class="fa fa-angle-right"></i>  transportation
-											</span>
-											<i class="fa fa-angle-right"></i>  food facilities
-										 </p>
-									</div><!--/.packages-para-->
-									<div class="packages-review">
-										<p>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<span>2544 review</span>
-										</p>
-									</div><!--/.packages-review-->
-									<div class="about-btn">
-										<button  class="about-view packages-btn">
-											book now
-										</button>
-									</div><!--/.about-btn-->
-								</div><!--/.single-package-item-txt-->
-							</div><!--/.single-package-item-->
+                        @foreach ($tours as $tour)
+                        <div class="col-md-4 col-sm-6">
+                            <div class="single-package-item">
+                                <img src="{{ asset('storage/' . $tour->images[0]) }}" alt="package-place">
+                                <div class="single-package-item-txt">
+                                    <h3>{{ $tour->nom }} <span class="pull-right">{{ number_format($tour->prix, 0, ',', ' ') }} CFA</span></h3>
+                                    <div class="packages-para">
+                                        <p><span><i class="fa fa-angle-right"></i> {{ $tour->duree }} Jours {{ $tour->duree > 1 ? 'nights' : 'night' }}</span>
+                                            {{-- <i class="fa fa-angle-right"></i> 5 star accommodation --}}
+                                        </p>
+                                        <p><span><i class="fa fa-angle-right"></i> Moyen de transport: {{ $tour->moyen_transport }}</span>
+                                            {{-- <i class="fa fa-angle-right"></i> Food facilities </p> --}}
+                                    </div>
+                                    <!--/.packages-para-->
+                                    {{-- <div class="packages-review">
+                                        <p>
+                                            @for ($i = 0; $i < 5; $i++)
+                                                <i class="fa fa-star{{ $i < $tour->rating ? ' filled' : '' }}"></i>
+                                            @endfor
+                                            <span>{{ $tour->reviews }} reviews</span>
+                                        </p>
+                                    </div> --}}
+                                    <!--/.packages-review-->
+                                    <div class="about-btn">
+                                        <button class="about-view packages-btn">
+                                            Reserve maintenant
+                                        </button>
+                                    </div><!--/.about-btn-->
+                                </div><!--/.single-package-item-txt-->
+                            </div><!--/.single-package-item-->
+                        </div><!--/.col-->
+                        @endforeach
 
-						</div><!--/.col-->
-
-						<div class="col-md-4 col-sm-6">
-							<div class="single-package-item">
-								<img src="{{asset('frontend/assets/images/packages/p2.jpg')}}" alt="package-place">
-								<div class="single-package-item-txt">
-									<h3>england <span class="pull-right">$1499</span></h3>
-									<div class="packages-para">
-										<p>
-											<span>
-												<i class="fa fa-angle-right"></i> 5 daays 6 nights
-											</span>
-											<i class="fa fa-angle-right"></i>  5 star accomodation
-										</p>
-										<p>
-											<span>
-												<i class="fa fa-angle-right"></i>  transportation
-											</span>
-											<i class="fa fa-angle-right"></i>  food facilities
-										 </p>
-									</div><!--/.packages-para-->
-									<div class="packages-review">
-										<p>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<span>2544 review</span>
-										</p>
-									</div><!--/.packages-review-->
-									<div class="about-btn">
-										<button  class="about-view packages-btn">
-											book now
-										</button>
-									</div><!--/.about-btn-->
-								</div><!--/.single-package-item-txt-->
-							</div><!--/.single-package-item-->
-
-						</div><!--/.col-->
-
-						<div class="col-md-4 col-sm-6">
-							<div class="single-package-item">
-								<img src="{{asset('frontend/assets/images/packages/p3.jpg')}}" alt="package-place">
-								<div class="single-package-item-txt">
-									<h3>france <span class="pull-right">$1199</span></h3>
-									<div class="packages-para">
-										<p>
-											<span>
-												<i class="fa fa-angle-right"></i> 5 daays 6 nights
-											</span>
-											<i class="fa fa-angle-right"></i>  5 star accomodation
-										</p>
-										<p>
-											<span>
-												<i class="fa fa-angle-right"></i>  transportation
-											</span>
-											<i class="fa fa-angle-right"></i>  food facilities
-										 </p>
-									</div><!--/.packages-para-->
-									<div class="packages-review">
-										<p>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<span>2544 review</span>
-										</p>
-									</div><!--/.packages-review-->
-									<div class="about-btn">
-										<button  class="about-view packages-btn">
-											book now
-										</button>
-									</div><!--/.about-btn-->
-								</div><!--/.single-package-item-txt-->
-							</div><!--/.single-package-item-->
-
-						</div><!--/.col-->
-
-						<div class="col-md-4 col-sm-6">
-							<div class="single-package-item">
-								<img src="{{asset('frontend/assets/images/packages/p4.jpg')}}" alt="package-place">
-								<div class="single-package-item-txt">
-									<h3>india <span class="pull-right">$799</span></h3>
-									<div class="packages-para">
-										<p>
-											<span>
-												<i class="fa fa-angle-right"></i> 5 daays 6 nights
-											</span>
-											<i class="fa fa-angle-right"></i>  5 star accomodation
-										</p>
-										<p>
-											<span>
-												<i class="fa fa-angle-right"></i>  transportation
-											</span>
-											<i class="fa fa-angle-right"></i>  food facilities
-										 </p>
-									</div><!--/.packages-para-->
-									<div class="packages-review">
-										<p>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<span>2544 review</span>
-										</p>
-									</div><!--/.packages-review-->
-									<div class="about-btn">
-										<button  class="about-view packages-btn">
-											book now
-										</button>
-									</div><!--/.about-btn-->
-								</div><!--/.single-package-item-txt-->
-							</div><!--/.single-package-item-->
-
-						</div><!--/.col-->
-
-						<div class="col-md-4 col-sm-6">
-							<div class="single-package-item">
-								<img src="{{asset('frontend/assets/images/packages/p5.jpg')}}" alt="package-place">
-								<div class="single-package-item-txt">
-									<h3>spain <span class="pull-right">$999</span></h3>
-									<div class="packages-para">
-										<p>
-											<span>
-												<i class="fa fa-angle-right"></i> 5 daays 6 nights
-											</span>
-											<i class="fa fa-angle-right"></i>  5 star accomodation
-										</p>
-										<p>
-											<span>
-												<i class="fa fa-angle-right"></i>  transportation
-											</span>
-											<i class="fa fa-angle-right"></i>  food facilities
-										 </p>
-									</div><!--/.packages-para-->
-									<div class="packages-review">
-										<p>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<span>2544 review</span>
-										</p>
-									</div><!--/.packages-review-->
-									<div class="about-btn">
-										<button  class="about-view packages-btn">
-											book now
-										</button>
-									</div><!--/.about-btn-->
-								</div><!--/.single-package-item-txt-->
-							</div><!--/.single-package-item-->
-
-						</div><!--/.col-->
-
-						<div class="col-md-4 col-sm-6">
-							<div class="single-package-item">
-								<img src="{{asset('frontend/assets/images/packages/p6.jpg')}}" alt="package-place">
-								<div class="single-package-item-txt">
-									<h3>thailand <span class="pull-right">$799</span></h3>
-									<div class="packages-para">
-										<p>
-											<span>
-												<i class="fa fa-angle-right"></i> 5 daays 6 nights
-											</span>
-											<i class="fa fa-angle-right"></i>  5 star accomodation
-										</p>
-										<p>
-											<span>
-												<i class="fa fa-angle-right"></i>  transportation
-											</span>
-											<i class="fa fa-angle-right"></i>  food facilities
-										 </p>
-									</div><!--/.packages-para-->
-									<div class="packages-review">
-										<p>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<i class="fa fa-star"></i>
-											<span>2544 review</span>
-										</p>
-									</div><!--/.packages-review-->
-									<div class="about-btn">
-										<button  class="about-view packages-btn">
-											book now
-										</button>
-									</div><!--/.about-btn-->
-								</div><!--/.single-package-item-txt-->
-							</div><!--/.single-package-item-->
-
-						</div><!--/.col-->
-
-					</div><!--/.row-->
-				</div><!--/.packages-content-->
-			</div><!--/.container-->
-
-		</section><!--/.packages-->
+                    </div><!--/.row-->
+                </div><!--/.packages-content-->
+            </div><!--/.container-->
+        </section>
+        <!--/.packages-->
 		<!--packages end-->
 
 		<!-- testemonial Start -->

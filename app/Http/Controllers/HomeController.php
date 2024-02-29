@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Tour;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -24,8 +25,9 @@ class HomeController extends Controller
      */
     public function home()
     {
-        return view ('index');
+        $tours = Tour::all(); // Retrieve all tours from the database
 
+        return view('index', compact('tours')); // Assuming 'front.home' is your view file
     }
 
     public function apropos()
@@ -45,7 +47,8 @@ class HomeController extends Controller
     }
 
 
-    public function service(){
+    public function service()
+    {
         return view('frontend.pages.service.index');
     }
 
@@ -54,15 +57,17 @@ class HomeController extends Controller
     //     return view('admin.index');
     // }
 
-    public function dashboard(){
-            return view('admin.index');
-        
+    public function dashboard()
+    {
+        return view('admin.index');
+
     }
 
-    public function login(){
+    public function login()
+    {
 
         return view('auth.login');
     }
 
- }
+}
 
