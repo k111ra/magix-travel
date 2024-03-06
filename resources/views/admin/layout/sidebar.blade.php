@@ -75,43 +75,66 @@
 			<li>
               <a href="tables.html">Categorie</a>
             </li>
-      
-        <li>    
+
+        <li>
             <li>
               <a href="charts.html">Postes</a>
-          </li> 
+          </li>
         </ul>
-       </li> 
+       </li>
       --}}
 
       <aside id="sidebar-wrapper">
         <div class="sidebar-brand">
-          <a href="index.html"> <img alt="image" src="{{ asset('admin/assets/img/logo.png')}}" class="header-logo" /> <span
-              class="logo-name"> <a href="{{route('home')}}"> Magix Travel</a></span>
-          </a>
+            <a href="{{ route('home') }}">
+                <img alt="image" src="{{ asset('admin/assets/img/logo.png')}}" class="header-logo" />
+                <span class="logo-name"> <a href="{{route('home')}}"> Magix Travel</a></span>
+            </a>
         </div>
         <ul class="sidebar-menu">
-          <li class="dropdown active">
-            <a href="{{route('dashboard')}}" class="nav-link"><i data-feather="monitor"></i><span>Tableau de Bord</span></a>
-          </li>
-          <li><a class="nav-link" href=" {{route('user.index')}} "><i data-feather="user"></i><span>Utilisateurs</span></a></li>
-          <li><a class="nav-link" href=" {{route('client.index')}} "><i data-feather="users"></i><span>Clients</span></a></li>
-          
-          <li><a class="nav-link" href=" {{route('commandes.index')}} "><i data-feather="shopping-cart"></i><span>Commandes</span></a></li>
-          <li><a class="nav-link" href=" {{route('produits.index')}} "><i data-feather="shopping-bag"></i><span>Produits</span></a></li>
-          <li><a class="nav-link" href=" {{route('devis.index')}} "><i class="fas fa-calculator"></i><span>Devis</span></a></li>
-          <li><a class="nav-link" href=" {{route('tours.index')}} "><i class="fas fa-building"></i><span>Tours</span></a></li>
-          
-          <li class="dropdown">
-            <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="settings"></i><span>Parametre
-                </span></a>
-            <ul class="dropdown-menu">
-              <li><a class="nav-link" href="{{route('Roles.index')}}">Rôle</a></li>
-              <li><a class="nav-link" href="badge.html">Categorie</a></li>
-              <li><a class="nav-link" href="breadcrumb.html">Postes</a></li>
-              <li><a class="nav-link" href="buttons.html">Buttons</a></li>
-            </ul>
-          </li>
-         
+            <li class="dropdown @if(request()->routeIs('dashboard')) active @endif">
+                <a href="{{ route('dashboard') }}" class="nav-link">
+                    <i data-feather="monitor"></i>
+                    <span>Tableau de Bord</span>
+                </a>
+            </li>
+            <li class="@if(request()->routeIs('user.index')) active @endif">
+                <a class="nav-link" href="{{ route('user.index') }}">
+                    <i data-feather="user"></i>
+                    <span>Utilisateurs</span>
+                </a>
+            </li>
+            <li class="@if(request()->routeIs('client.index')) active @endif">
+                <a class="nav-link" href="{{ route('client.index') }}">
+                    <i data-feather="users"></i>
+                    <span>Clients</span>
+                </a>
+            </li>
+
+            <!-- Add similar checks for other menu items -->
+
+            <li class="dropdown">
+                <a href="#" class="menu-toggle nav-link has-dropdown">
+                    <i data-feather="shopping-bag"></i>
+                    <span>Produits</span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="nav-link @if(request()->routeIs('tours.index')) active @endif" href="{{ route('tours.index') }}">Tours</a></li>
+                    <li><a class="nav-link @if(request()->routeIs('hotels.index')) active @endif" href="{{ route('hotels.index') }}">Hotels</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#" class="menu-toggle nav-link has-dropdown">
+                    <i data-feather="settings"></i>
+                    <span>Parametre</span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="nav-link @if(request()->routeIs('Roles.index')) active @endif" href="{{ route('Roles.index') }}">Rôle</a></li>
+                    {{-- <li><a class="nav-link @if(request()->routeIs('some_other_route')) active @endif" href="{{ route('some_other_route') }}">Some Other Route</a></li> --}}
+                    <!-- Add similar checks for other parametre menu items -->
+                </ul>
+            </li>
         </ul>
-      </aside>
+    </aside>
+

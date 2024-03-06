@@ -6,6 +6,7 @@ use App\Http\Controllers\ClientController;
 use App\Http\Controllers\CommandesController;
 use App\Http\Controllers\DevisController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\HotelsController;
 use App\Http\Controllers\ProduitsController;
 use App\Http\Controllers\RolesController;
 use App\Http\Controllers\ToursController;
@@ -26,7 +27,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 //////Les routes protegées sont utilisé côté admin du système
-Route::middleware(['auth'])->prefix('admin')->group(function(){
+Route::middleware(['auth'])->prefix('admin')->group(function () {
 
     //----------------------------TOURS------------------------------------//
 
@@ -38,33 +39,46 @@ Route::middleware(['auth'])->prefix('admin')->group(function(){
     Route::delete('/tours/{tour}', [ToursController::class, 'destroy'])->name('tours.destroy');
     Route::put('/tours/{tour}', [ToursController::class, 'update'])->name('tours.update');
 
+    //----------------------------HOTEL------------------------------------//
+
+    Route::get('/hotels', [HotelsController::class, 'index'])->name('hotels.index');
+    Route::get('/hotels/create', [HotelsController::class, 'create'])->name('hotels.create');
+    Route::post('/hotels', [HotelsController::class, 'store'])->name('hotels.store');
+    Route::get('/hotels/{hotel}', [HotelsController::class, 'show'])->name('hotels.show');
+    Route::get('/hotels/{hotel}/edit', [HotelsController::class, 'edit'])->name('hotels.edit');
+    Route::delete('/hotels/{hotel}', [HotelsController::class, 'destroy'])->name('hotels.destroy');
+    Route::put('/hotels/{hotel}', [HotelsController::class, 'update'])->name('hotels.update');
+
+
+
+
     Route::get('/dashboard', [HomeController::class, 'dashboard'])->name('dashboard');
     Route::get('/deconnexion', [LogoutController::class, 'deconnexion'])->name('deconnexion');
 
     ////////////Routes des utilisateurs////////////
-    Route::get('/liste-user',[UsersController::class,'index'])->name('user.index');
-    Route::get('/create-user',[UsersController::class,'create'])->name('user.create');
+    Route::get('/liste-user', [UsersController::class, 'index'])->name('user.index');
+    Route::get('/create-user', [UsersController::class, 'create'])->name('user.create');
 
     ////////////Routes des clients////////////
-    Route::get('/liste-client',[ClientController::class,'index'])->name('client.index');
-    Route::get('/create-client',[ClientController::class,'create'])->name('client.create');
+    Route::get('/liste-client', [ClientController::class, 'index'])->name('client.index');
+    Route::get('/create-client', [ClientController::class, 'create'])->name('client.create');
 
     ///////////////Routes des Rôles////////////////////
-    Route::get('/roles',[RolesController::class, 'index'])->name('Roles.index');
+    Route::get('/roles', [RolesController::class, 'index'])->name('Roles.index');
 
 
     ////////////Routes des commandes///////////
-    Route::get('/commandes',[CommandesController::class, 'index'])->name('commandes.index');
+    Route::get('/commandes', [CommandesController::class, 'index'])->name('commandes.index');
 
     /////////Routes des produits//////////
-    Route::get('/produit',[ProduitsController::class, 'index'])->name('produits.index');
+    Route::get('/produit', [ProduitsController::class, 'index'])->name('produits.index');
 
     /////////Routes des devis////////
-    Route::get('/devis',[DevisController::class,'index'])->name('devis.index');
+    Route::get('/devis', [DevisController::class, 'index'])->name('devis.index');
 
 
     /////////Routes des Tours////////
-    Route::get('/tours',[ToursController::class,'index'])->name('tours.index');
+    Route::get('/tours', [ToursController::class, 'index'])->name('tours.index');
 });
 
 
