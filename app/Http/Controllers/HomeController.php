@@ -29,7 +29,7 @@ class HomeController extends Controller
     {
         $tours = Tour::all(); // Retrieve all tours from the database
 
-        return view('index', compact('tours')); // Assuming 'front.home' is your view file
+        return view('home', compact('tours')); // Assuming 'front.home' is your view file
     }
 
     public function apropos()

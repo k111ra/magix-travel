@@ -1,54 +1,30 @@
+
 		<meta charset="utf-8">
+		<!-- Responsive -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
-		<!--font-family-->
-		<link href="https://fonts.googleapis.com/css?family=Rufina:400,700" rel="stylesheet" />
-
-		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
-
-		<!-- TITLE OF SITE -->
-		<title>Travel</title>
-
-		<!-- favicon img -->
-		<link rel="shortcut icon" type="{{asset('frontend/assets/image/icon')}}" href="{{asset('frontend/assets/logo/logo.png')}}"/>
-
-		<!--font-awesome.min.css-->
-		<link rel="stylesheet" href="{{asset('frontend/assets/css/font-awesome.min.css')}}" />
-
-		<!--animate.css-->
-		<link rel="stylesheet" href="{{asset('frontend/assets/css/animate.css')}}" />
-
-		<!--hover.css-->
-		<link rel="stylesheet" href="{{asset('frontend/assets/css/hover-min.css')}}">
-
-		<!--datepicker.css-->
-		<link rel="stylesheet"  href="{{asset('frontend/assets/css/datepicker.css')}}" >
-
-		<!--owl.carousel.css-->
-        <link rel="stylesheet" href="{{asset('frontend/assets/css/owl.carousel.min.css')}}">
-		<link rel="stylesheet" href="{{asset('frontend/assets/css/owl.theme.default.min.css')}}"/>
-
-		<!-- range css-->
-        <link rel="stylesheet" href="{{asset('frontend/assets/css/jquery-ui.min.css')}}" />
-
-		<!--bootstrap.min.css-->
-		<link rel="stylesheet" href="{{asset('frontend/assets/css/bootstrap.min.css')}}" />
-
-		<!-- bootsnav -->
-		<link rel="stylesheet" href="{{asset('frontend/assets/css/bootsnav.css')}}"/>
-
-		<!--style.css-->
-		<link rel="stylesheet" href="{{asset('frontend/assets/css/style.css')}}" />
-
-		<!--responsive.css-->
-		<link rel="stylesheet" href="{{asset('frontend/assets/css/responsive.css')}}" />
-
-		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-
-		<!--[if lt IE 9]>
-		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+		<title>Magix Travel </title>
+	
+		<link href="{{asset('frontend/assets/images/favicon.png')}}" rel="shortcut icon" type="image/x-icon">
+	
+		<!-- Google Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com/">
+		<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;display=swap" rel="stylesheet">
+	
+		<!-- Stylesheets -->
+		<link href="{{asset('frontend/assets/css/lib/bootstrap/bootstrap.min.css')}}" rel="stylesheet">
+		<link href="{{asset('frontend/assets/css/lib/fontawesome/css/fontawesome.min.css')}}" rel="stylesheet">
+		<link href="{{asset('frontend/assets/css/lib/fontawesome/css/brands.css')}}" rel="stylesheet">
+		<link href="{{asset('frontend/assets/css/lib/fontawesome/css/solid.css')}}" rel="stylesheet">
+		<link href="{{asset('frontend/assets/css/lib/simple-line-icons/css/simple-line-icons.min.css')}}" rel="stylesheet">
+		<link href="{{asset('frontend/assets/css/lib/flaticon/css/flaticon.min.css')}}" rel="stylesheet">
+		<link href="{{asset('frontend/assets/css/lib/animate.min.css')}}" rel="stylesheet">
+		<link href="{{asset('frontend/assets/css/lib/slick.min.css')}}" rel="stylesheet">
+		<link href="{{asset('frontend/assets/css/lib/swiper.min.css')}}" rel="stylesheet">
+		<link href="{{asset('frontend/assets/css/lib/jquery-ui.min.css')}}" rel="stylesheet">
+		<link href="{{asset('frontend/assets/css/lib/jquery.fancybox.min.css')}}" rel="stylesheet">
+		<link href="{{asset('frontend/assets/css/custom-animate.css')}}" rel="stylesheet">
+		<link href="{{asset('frontend/assets/css/style.css')}}" rel="stylesheet">
+		<link href="{{asset('frontend/assets/css/responsive.css')}}" rel="stylesheet">

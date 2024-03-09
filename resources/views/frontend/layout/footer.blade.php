@@ -1,75 +1,118 @@
-<div class="container">
-				<div class="footer-content">
-					<div class="row">
 
-						<div class="col-sm-3">
-							<div class="single-footer-item">
-								<div class="footer-logo">
-									<a href="index.html">
-									<img src="{{ asset('frontend/assets/logo/logo.png') }}" alt="package-place" width="250px">
-									</a>
-									<p>
-										best travel agency
-									</p>
+			<div class="upper-section">
+				<div class="footer-subscribe">
+					<div class="title-box centered">
+						<div class="subtitle">Get Regular Updates</div>
+						<h2>Subscribe to our Newsletter</h2>
+					</div>
+					<div class="form-box subscribe-form">
+						<form method="post" action="https://jufailitech.com/envatoitems/travilo/html/contact.html">
+							<div class="form-group">
+								<div class="field-inner">
+									<input type="email" name="email" value="" placeholder="Type your email here"
+										required>
 								</div>
-							</div><!--/.single-footer-item-->
-						</div><!--/.col-->
-
-						<div class="col-sm-3">
-							<div class="single-footer-item">
-								<h2>link</h2>
-								<div class="single-footer-txt">
-									<p><a href="{{route('home')}}">Acueil</a></p>
-									<p><a href="{{route('apropos')}}">A-propos</a></p>
-									<p><a href="#">Service</a></p>
-									<!-- <p><a href="#">special offers</a></p>
-									<p><a href="#">blog</a></p> -->
-									<p><a href="{{route('contacts')}}">contacts</a></p>
-								</div><!--/.single-footer-txt-->
-							</div><!--/.single-footer-item-->
-
-						</div><!--/.col-->
-
-						<div class="col-sm-3">
-							<div class="single-footer-item">
-								<h2>popular destination</h2>
-								<div class="single-footer-txt">
-									<p><a href="#">china</a></p>
-									<p><a href="#">venezuela</a></p>
-									<p><a href="#">brazil</a></p>
-									<p><a href="#">australia</a></p>
-									<p><a href="#">london</a></p>
-								</div><!--/.single-footer-txt-->
-							</div><!--/.single-footer-item-->
-						</div><!--/.col-->
-
-						<div class="col-sm-3">
-							<div class="single-footer-item text-center">
-								<h2 class="text-left">contacts</h2>
-								<div class="single-footer-txt text-left">
-									<div class="footer-text">
-									<p>+225 21 37 70 38</p>
-									<p class="foot-email"><a href="#">info@magixtravel.com</a></p>
-									<p>Treichville</p>
-									<p>Abidjan, Côte d'ivoire </p>
+								<button type="submit" class="theme-btn"><span>Subscribe</span></button>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="auto-container">
+					<div class="content-box">
+						<div class="row clearfix">
+							<div class="footer-column col-xl-4 col-lg-3 col-md-6 col-sm-12">
+								<div class="footer-widget about-widget">
+									<div class="footer-logo"><a href="index-2.html" title="Travilo"><img
+												src="assets/images/logo-white.png" alt="" title="Travilo"></a></div>
+									<div class="footer-info">
+										<ul class="info">
+											<li class="address"><a href="#"><i class="icon fa fa-map-marker-alt"></i>
+													20, Love Street, Muscat, Oman</a></li>
+											<li class="phone"><a href="tel:+96899999000"><i
+														class="icon fa-solid fa-phone"></i>
+													+96899999000</a></li>
+											<li class="email"><a href="mailto:hello@travilo.com"><i
+														class="icon fa fa-envelope"></i>
+													hello@travilo.com</a></li>
+										</ul>
+										<ul class="social-links clearfix">
+											<li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+											<li><a href="#" class="twitter"><i class="fab fa-twitter"></i></a></li>
+											<li><a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+											<li><a href="#" class="youtube"><i class="fab fa-youtube"></i></a></li>
+										</ul>
+									</div>
 								</div>
-								</div><!--/.single-footer-txt-->
-							</div><!--/.single-footer-item-->
-						</div><!--/.col-->
+							</div>
+							<div class="col-xl-5 col-lg-6 col-md-6 col-sm-12">
+								<div class="row clearfix">
 
-					</div><!--/.row-->
-				</div><!--/.footer-content-->
-				<hr>
-				<div class="foot-icons ">
-					<ul class="footer-social-links list-inline list-unstyled">
-		                <li><a href="#" target="_blank" class="foot-icon-bg-1"><i class="fa fa-facebook"></i></a></li>
-		                <li><a href="#" target="_blank" class="foot-icon-bg-2"><i class="fa fa-twitter"></i></a></li>
-		                <li><a href="#" target="_blank" class="foot-icon-bg-3"><i class="fa fa-instagram"></i></a></li>
-		        	</ul>
-		        	<p>&copy; 2017 <a href="https://www.themesine.com">ThemeSINE</a>. All Right Reserved</p>
+									<div class="footer-column col-lg-6 col-md-6 col-sm-12">
+										<div class="footer-widget links-widget">
+											<h4>Top Destination</h4>
+											<div class="links">
+												<ul>
+													<li><a href="#">New York</a></li>
+													<li><a href="#">London</a></li>
+													<li><a href="#">Rome</a></li>
+													<li><a href="#">Mascot</a></li>
+													<li><a href="#">Dhaka</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
 
-		        </div><!--/.foot-icons-->
-				<div id="scroll-Top">
-					<i class="fa fa-angle-double-up return-to-top" id="scroll-top" data-toggle="tooltip" data-placement="top" title="" data-original-title="Back to Top" aria-hidden="true"></i>
-				</div><!--/.scroll-Top-->
-			</div><!-- /.container-->
+									<div class="footer-column col-lg-6 col-md-6 col-sm-12">
+										<div class="footer-widget links-widget">
+											<h4>Useful Links</h4>
+											<div class="links">
+												<ul>
+													<li><a href="#">About Us</a></li>
+													<li><a href="#">Company Profile</a></li>
+													<li><a href="#">Team Members</a></li>
+													<li><a href="#">Support</a></li>
+													<li><a href="#">Career</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+							<div class="footer-column col-xl-3 col-lg-3 col-md-6 col-sm-12">
+								<div class="footer-widget app-widget">
+									<h4>Download App</h4>
+									<!--Logo-->
+									<div class="app-info">
+										<p class="travilo-text">Download our user-friendly app for seamless access to
+											real-time updates, and
+											exclusive offers on the go.</p>
+										<div class="links">
+											<div class="link"><a href="#"><img src="assets/images/apple-store.png"
+														alt=""></a></div>
+											<div class="link"><a href="#"><img src="assets/images/play-store.png"
+														alt=""></a></div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="f-bottom">
+				<div class="auto-container">
+					<div class="inner clearfix">
+						<div class="copyright">All rights researved <strong>Travilo</strong> &copy; 2023</div>
+						<div class="bottom-links">
+							<ul class="clearfix">
+								<li><a href="#">Terms & Conditions</a></li>
+								<li><a href="#">Privacy Policy</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
