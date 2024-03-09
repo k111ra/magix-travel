@@ -76,7 +76,11 @@
 
 								<!-- Tab panes -->
 								<div class="tab-content">
-
+									<!-- Debut du Formulaire de Recherche des Tours -->
+									{{-- 
+										<input type="text" name="recherche" id="">
+										<button type="submit">Recherche</button>
+									 --}}<form action="recherche" method="get">
 									<div role="tabpanel" class="tab-pane active fade in" id="tours">
 										<div class="tab-para">
 
@@ -85,17 +89,13 @@
 													<div class="single-tab-select-box">
 
 														<h2>destination</h2>
-
 														<div class="travel-select-icon">
-															<select class="form-control ">
-
-															  	<option value="default">enter your destination country</option><!-- /.option-->
-
-															  	<option value="turkey">turkey</option><!-- /.option-->
-
-															  	<option value="russia">russia</option><!-- /.option-->
-															  	<option value="egept">egypt</option><!-- /.option-->
-
+															<select class="form-control " name="recherche">
+																
+															  	<option value="default">Entrez votre destination</option><!-- /.option-->
+																	@foreach ($tours as $tour)
+															  	<option value="{{$tour->destination}}">{{$tour->destination}}</option><!-- /.option-->
+																 @endforeach
 															</select><!-- /.select-->
 														</div><!-- /.travel-select-icon -->
 
@@ -103,12 +103,9 @@
 															<select class="form-control ">
 
 															  	<option value="default">enter your destination location</option><!-- /.option-->
-
-															  	<option value="istambul">istambul</option><!-- /.option-->
-
-															  	<option value="mosko">mosko</option><!-- /.option-->
-															  	<option value="cairo">cairo</option><!-- /.option-->
-
+																  @foreach ($tours as $tour)
+															  	<option value="{{$tour->destination}}">{{$tour->destination}}</option><!-- /.option-->
+																 @endforeach
 															</select><!-- /.select-->
 														</div><!-- /.travel-select-icon -->
 
@@ -211,7 +208,13 @@
 
 										</div><!--/.tab-para-->
 
-									</div><!--/.tabpannel-->
+									</div></form><!--/.tabpannel-->
+
+									<!-- Fin du formulaire de Recherche des Tours -->
+
+										<!-- ////////////////////////////////////////// -->
+
+									<!-- Debut du Formulaire de Recherche des Hotels -->
 
 									<div role="tabpanel" class="tab-pane fade in" id="hotels">
 										<div class="tab-para">
@@ -326,6 +329,12 @@
 										</div><!--/.tab-para-->
 
 									</div><!--/.tabpannel-->
+
+									<!-- Fin du Formulaire de Recherche des Hotels -->
+
+										<!-- /////////////////////////////////////////// -->
+
+									<!-- Debut du Formulaire de Recherche des vols -->
 
 									<div role="tabpanel" class="tab-pane fade in" id="flights">
 										<div class="tab-para">
@@ -481,6 +490,10 @@
 										</div>
 
 									</div><!--/.tabpannel-->
+
+									<!-- Fin du Formulaire de Recherche des vols -->
+
+									<!-- ///////////////////////////////////////////////// -->
 
 								</div><!--/.tab content-->
 							</div><!--/.desc-tabs-->

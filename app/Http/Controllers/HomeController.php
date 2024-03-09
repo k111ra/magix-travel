@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Hotel;
-use App\Models\Tour;
 use Carbon\Carbon;
+use App\Models\Tour;
+use App\Models\Hotel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+use Symfony\Component\Console\Input\Input;
 
 class HomeController extends Controller
 {
@@ -32,6 +34,14 @@ class HomeController extends Controller
         return view('index', compact('tours')); // Assuming 'front.home' is your view file
     }
 
+    ////////recherche function///////////
+    public function recherche(Request $request){
+       $data = $request->input('recherche');
+       
+      $tours = DB::table('tours')->where('destination', 'like', '%'. $data .'%')->get();
+      return view('produit', compact('tours'));
+    }
+
     public function apropos()
     {
         return view('frontend.pages.Apropos.index');
@@ -51,7 +61,9 @@ class HomeController extends Controller
 
     public function service()
     {
-        return view('frontend.pages.service.index');
+         $hotels = Hotel::all();
+        $tours = Tour::all();
+        return view('frontend.pages.service.index',compact('tours'),compact('hotels'));
     }
 
     // public function dashboard(){
