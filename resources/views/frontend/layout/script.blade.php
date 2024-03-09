@@ -1,37 +1,13 @@
 
-<script src="{{asset('frontend/assets/js/jquery.js')}}"></script>
-		<!-- Include all compiled plugins (below), or include individual files as needed -->
 
-		<!--modernizr.min.js-->
-		<script  src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-
-
-		<!--bootstrap.min.js-->
-		<script  src="{{asset('frontend/assets/js/bootstrap.min.js')}}"></script>
-
-		<!-- bootsnav js -->
-		<script src="{{asset('frontend/assets/js/bootsnav.js')}}"></script>
-
-		<!-- jquery.filterizr.min.js -->
-		<script src="{{asset('frontend/assets/js/jquery.filterizr.min.js')}}"></script>
-
-		<script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-
-		<!--jquery-ui.min.js-->
-        <script src="{{asset('frontend/assets/js/jquery-ui.min.js')}}"></script>
-
-        <!-- counter js -->
-		<script src="{{asset('frontend/assets/js/jquery.counterup.min.js')}}"></script>
-		<script src="{{asset('frontend/assets/js/waypoints.min.js')}}"></script>
-
-		<!--owl.carousel.js-->
-        <script  src="{{asset('frontend/assets/js/owl.carousel.min.js')}}"></script>
-
-        <!-- jquery.sticky.js -->
-		<script src="{{asset('frontend/assets/js/jquery.sticky.js')}}"></script>
-
-        <!--datepicker.js-->
-        <script  src="{{asset('frontend/assets/js/datepicker.js')}}"></script>
-
-		<!--Custom JS-->
-		<script src="{{asset('frontend/assets/js/custom.js')}}"></script>
+	<script src="{{asset('frontend/assets/js/lib/jquery.min.js')}}"></script>
+	<script src="{{asset('frontend/assets/js/lib/popper.min.js')}}"></script>
+	<script src="{{asset('frontend/assets/js/lib/bootstrap/bootstrap.min.js')}}"></script>
+	<script src="{{asset('frontend/assets/js/lib/jquery-ui.min.js')}}"></script>
+	<script src="{{asset('frontend/assets/js/lib/jquery.fancybox.min.js')}}"></script>
+	<script src="{{asset('frontend/assets/js/lib/isotope.min.js')}}"></script>
+	<script src="{{asset('frontend/assets/js/lib/slick.min.js')}}"></script>
+	<script src="{{asset('frontend/assets/js/lib/appear.min.js')}}"></script>
+	<script src="{{asset('frontend/assets/js/lib/wow.min.js')}}"></script>
+	<script src="{{asset('frontend/assets/js/lib/swiper.min.js')}}"></script>
+	<script src="{{asset('frontend/assets/js/custom-script.js')}}"></script>

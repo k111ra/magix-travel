@@ -1,46 +1,111 @@
 
-<div class="header-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-2">
-                <div class="logo">
-                    <a href="/">
-                        <img src="{{ asset('frontend/assets/logo/logo.png') }}" alt="package-place" width="150px">
-                        <!-- tour<span>Nest</span> -->
-                    </a>
-                </div><!-- /.logo-->
-            </div><!-- /.col-->
-            <div class="col-sm-10">
-                <div class="main-menu">
+<div class="header-top">
+    <div class="auto-container">
+        <div class="inner clearfix">
+            <div class="top-left clearfix">
+                <ul class="info clearfix">
+                    <li><i class="icon fa fa-envelope"></i> <a
+                            href="mailto:hello@travilo.com">hello@travilo.com</a></li>
+                    <li><i class="icon fa fa-map-marker-alt"></i> <a href="#">20, Love Street, Muscat,
+                            Oman</a></li>
+                </ul>
+            </div>
+            <div class="top-right clearfix">
+                <div class="login"><a href="#">Login / Signup</a></div>
+                <div class="lang-box">
+                    <div class="lang-btn clearfix"><span class="txt">En</span><span
+                            class="icon far fa-angle-down"></span>
+                    </div>
+                    <ul class="lang-list">
+                        <li><a href="#">Tur</a></li>
+                        <li><a href="#">Esp</a></li>
+                        <li><a href="#">Rus</a></li>
+                        <li><a href="#">Hin</a></li>
+                    </ul>
+                </div>
+                <div class="social">
+                    <ul class="social-links clearfix">
+                        <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#" class="twitter"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="#" class="youtube"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Header Upper -->
+<div class="header-upper">
+    <div class="auto-container">
+        <!-- Main Box -->
+        <div class="main-box clearfix">
+            <!--Logo-->
+            <div class="logo-box">
+                <div class="logo"><a href="index-2.html" title="Travilo"><img src="{{asset('frontend/assets/images/logo.png')}}"
+                            alt="" title="Travilo"></a></div>
+            </div>
 
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse"
-                            data-target=".navbar-collapse">
-                            <i class="fa fa-bars"></i>
-                        </button><!-- / button-->
-                    </div><!-- /.navbar-header-->
-                    <div class="collapse navbar-collapse">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li class="smooth-me nu"><a href="/">Accueil</a></li>
-                            {{-- <li class="smooth-me nu"><a href="#gallery">Destination</a></li> --}}
-                            {{-- <li class="smooth-me nu"><a href="#pack">Packages </a></li> --}}
-                            {{-- <li class="smooth-me nu"><a href="#spo">Special Offers</a></li> --}}
-                            <li class="smooth-me nu"><a href="{{route('apropos')}}">A-propos </a></li>
-                            <li class="smooth-me nu"><a href="{{route('contacts')}}">Contacts</a></li>
-                            {{-- <li class="smooth-menu"><a href="#subs">subscription</a></li> --}}
-                            <li class="smooth-me nu"><a href="{{route('service')}}">Service</a></li>
-                            <li class="smooth-me nu"><a href="{{route('login')}}">Connexion</a></li>
-                            <li class="smooth-me nu"><a href="{{route('login')}}">S'inscrire</a></li>
-                            {{-- <li>
-                                <button class="book-btn">book now
-                                </button>
-                            </li><!--/.project-btn--> --}}
-                        </ul>
-                    </div><!-- /.navbar-collapse -->
-                </div><!-- /.main-menu-->
-            </div><!-- /.col-->
-        </div><!-- /.row -->
-        <div class="home-border"></div><!-- /.home-border-->
-    </div><!-- /.container-->
-</div><!-- /.header-area -->
+            <div class="outer clearfix">
+                <div class="nav-box clearfix">
+                    <!--Nav Outer-->
+                    <div class="nav-outer clearfix">
+                        <nav class="main-menu">
+                            <ul class="navigation clearfix">
+                                <li class="current dropdown"><a href="index-2.html">Home</a>
+                                    <ul>
+                                        <li><a href="index-2.html">Home 01</a></li>
+                                        <li><a href="index-3.html">Home 02</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="tour-list.html">Tours</a>
+                                    <ul>
+                                        <li><a href="tour-list.html">Tours List</a></li>
+                                        <li><a href="tour-packages.html">Tour Packages</a></li>
+                                        <li><a href="tour-single.html">Tour Details</a></li>
+                                        <li><a href="activities.html">Activities</a></li>
+                                        <li><a href="activity-single.html">Activity Details</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown"><a href="destinations.html">Destination</a>
+                                    <ul>
+                                        <li><a href="destinations.html">All Destinations</a></li>
+                                        <li><a href="destination-single.html">Destination Single</a></li>
+                                        <li><a href="hotels.html">Hotels</a></li>
+                                        <li><a href="hotel-single.html">Hotel Details</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="about.html">About</a></li>
+                                <li class="dropdown"><a href="blog.html">News</a>
+                                    <ul>
+                                        <li><a href="blog.html">Our Blog</a></li>
+                                        <li><a href="blog-single.html">Blog Details</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="{{route('login')}}">Connexion</a></li>
+                            </ul>
+                        </nav>
+                        <!-- Main Menu End-->
+                    </div>
+                    <!--Nav Outer End-->
+
+                </div>
+
+                <div class="links-box clearfix">
+                    <div class="link call-to">
+                        <a href="tel:+96899999000"><i class="icon fa-solid fa-phone"></i> Call Us <span
+                                class="nmbr">+96899999000</span></a>
+                    </div>
+                </div>
+
+                <!-- Hidden Nav Toggler -->
+                <div class="nav-toggler">
+                    <button class="hidden-bar-opener"><span class="icon"><img
+                                src="{{asset('frontend/assets/images/icons/menu-icon.svg')}}" alt=""></span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Header Upper -->
