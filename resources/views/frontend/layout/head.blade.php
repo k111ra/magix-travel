@@ -6,7 +6,7 @@
 	
 		<title>Magix Travel </title>
 	
-		<link href="{{asset('frontend/assets/images/favicon.png')}}" rel="shortcut icon" type="image/x-icon">
+		<link href="{{asset('frontend/assets/images/logo1.png')}}" rel="shortcut icon" type="image/x-icon">
 	
 		<!-- Google Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com/">

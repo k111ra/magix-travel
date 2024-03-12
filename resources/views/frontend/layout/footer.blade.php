@@ -23,17 +23,17 @@
 							<div class="footer-column col-xl-4 col-lg-3 col-md-6 col-sm-12">
 								<div class="footer-widget about-widget">
 									<div class="footer-logo"><a href="index-2.html" title="Travilo"><img
-												src="assets/images/logo-white.png" alt="" title="Travilo"></a></div>
+												src="{{asset('frontend/assets/images/logo1.png')}}" alt="" title="Magix Travel" width="200px" height="150px"></a></div>
 									<div class="footer-info">
 										<ul class="info">
 											<li class="address"><a href="#"><i class="icon fa fa-map-marker-alt"></i>
-													20, Love Street, Muscat, Oman</a></li>
+													20, Love Street, Abidjan, Côte D'ivoire</a></li>
 											<li class="phone"><a href="tel:+96899999000"><i
 														class="icon fa-solid fa-phone"></i>
 													+96899999000</a></li>
-											<li class="email"><a href="mailto:hello@travilo.com"><i
+											<li class="email"><a href="info@magixtravel.com"><i
 														class="icon fa fa-envelope"></i>
-													hello@travilo.com</a></li>
+														info@magixtravel.com</a></li>
 										</ul>
 										<ul class="social-links clearfix">
 											<li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a></li>

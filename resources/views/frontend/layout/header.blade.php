@@ -5,7 +5,7 @@
             <div class="top-left clearfix">
                 <ul class="info clearfix">
                     <li><i class="icon fa fa-envelope"></i> <a
-                            href="mailto:hello@travilo.com">hello@travilo.com</a></li>
+                            href="info@magixtravel.com">info@magixtravel.com</a></li>
                     <li><i class="icon fa fa-map-marker-alt"></i> <a href="#">20, Love Street, Muscat,
                             Oman</a></li>
                 </ul>
@@ -42,8 +42,8 @@
         <div class="main-box clearfix">
             <!--Logo-->
             <div class="logo-box">
-                <div class="logo"><a href="index-2.html" title="Travilo"><img src="{{asset('frontend/assets/images/logo.png')}}"
-                            alt="" title="Travilo"></a></div>
+                <div class="logo"><a href="{{route('home')}}" title="Magix Travel"><img src="{{asset('frontend/assets/images/logo1.png')}}"
+                            alt="" title="Magix Travel"></a></div>
             </div>
 
             <div class="outer clearfix">
@@ -52,13 +52,13 @@
                     <div class="nav-outer clearfix">
                         <nav class="main-menu">
                             <ul class="navigation clearfix">
-                                <li class="current dropdown"><a href="index-2.html">Home</a>
-                                    <ul>
-                                        <li><a href="index-2.html">Home 01</a></li>
+                                <li class="current dropdown"><a href="{{route('home')}}">Home</a>
+                                    {{-- <ul>
+                                        <li><a href="{{route('home')}}">Home 01</a></li>
                                         <li><a href="index-3.html">Home 02</a></li>
-                                    </ul>
+                                    </ul> --}}
                                 </li>
-                                <li class="dropdown"><a href="tour-list.html">Tours</a>
+                                {{-- <li class="dropdown"><a href="tour-list.html">Tours</a>
                                     <ul>
                                         <li><a href="tour-list.html">Tours List</a></li>
                                         <li><a href="tour-packages.html">Tour Packages</a></li>
@@ -66,24 +66,35 @@
                                         <li><a href="activities.html">Activities</a></li>
                                         <li><a href="activity-single.html">Activity Details</a></li>
                                     </ul>
-                                </li>
-                                <li class="dropdown"><a href="destinations.html">Destination</a>
+                                </li> --}}
+                                {{-- <li class="dropdown"><a href="destinations.html">Destination</a>
                                     <ul>
                                         <li><a href="destinations.html">All Destinations</a></li>
                                         <li><a href="destination-single.html">Destination Single</a></li>
                                         <li><a href="hotels.html">Hotels</a></li>
                                         <li><a href="hotel-single.html">Hotel Details</a></li>
                                     </ul>
-                                </li>
-                                <li><a href="about.html">About</a></li>
-                                <li class="dropdown"><a href="blog.html">News</a>
+                                </li> --}}
+                                <li><a href="about.html">A-propos de nous</a></li>
+                                {{-- <li class="dropdown"><a href="blog.html">News</a>
                                     <ul>
                                         <li><a href="blog.html">Our Blog</a></li>
                                         <li><a href="blog-single.html">Blog Details</a></li>
                                     </ul>
-                                </li>
+                                </li> --}}
+                                <li><a href="contact.html">Service</a></li>
                                 <li><a href="contact.html">Contact</a></li>
-                                <li><a href="{{route('login')}}">Connexion</a></li>
+
+                                  @auth
+                                    <!-- Afficher le profil de l'utilisateur -->
+                                    <li><a href="{{route('dashboard')}}" title="Tableau de bord"><i class="icon fa-solid fa-home" style="color: orangered"></i></a></li>
+                                @else
+                                    <!-- Afficher le bouton de connexion -->
+                                     <li><a href="{{route('login')}}">Connexion</a></li>
+                                @endauth
+
+
+                               
                             </ul>
                         </nav>
                         <!-- Main Menu End-->

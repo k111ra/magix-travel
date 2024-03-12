@@ -8,7 +8,7 @@
 						<!--Slide Item-->
 						<div class="swiper-slide slide-item">
 							<div class="image-layer"
-								style="background-image: url({{asset('frontend/assets/images/resources/slider/main-slider-1.jpg')}});"></div>
+								style="background-image: url({{asset('frontend/assets/images/resources/slider/main-slider-1.jpg')}})"></div>
 							<div class="auto-container">
 								<div class="content-box">
 									<div class="content">
