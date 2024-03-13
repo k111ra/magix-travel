@@ -3,16 +3,16 @@
 		<!-- Responsive -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
+
 		<title>Magix Travel </title>
-	
+
 		<link href="{{asset('frontend/assets/images/favicon.png')}}" rel="shortcut icon" type="image/x-icon">
-	
+
 		<!-- Google Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com/">
 		<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;display=swap" rel="stylesheet">
-	
+
 		<!-- Stylesheets -->
 		<link href="{{asset('frontend/assets/css/lib/bootstrap/bootstrap.min.css')}}" rel="stylesheet">
 		<link href="{{asset('frontend/assets/css/lib/fontawesome/css/fontawesome.min.css')}}" rel="stylesheet">
