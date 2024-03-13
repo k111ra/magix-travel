@@ -121,84 +121,37 @@
             </div>
             <div class="row clearfix">
                 <!--Block-->
+                @foreach ($tours as $tour)
                 <div class="package-block col-lg-4 col-md-6 col-sm-12">
                     <div class="inner-box">
                         <div class="image-box">
-                            <div class="image"><a href="tour-single.html"><img src="{{asset('frontend/assets/images/resources/destinations/helsinki.jpg')}}" alt="Helsinki"></a>
+                            <div class="image"><a href="tour-single.html">
+                                
+                                    
+                                
+                                
+                        <img src="{{ asset('storage/' . $tour->images[0]) }}" width="200px" alt="Tour Image" class="img-thumbnail">
+                    </a>
                             </div>
                         </div>
                         <div class="lower-box">
-                            <div class="p-icon"><img src="assets/images/icons/t-icon-1.png" alt=""><span class="icon flaticon-adventure"></span></div>
-                            <div class="location">Helsinki</div>
-                            <h5><a href="tour-single.html">Nordic Elegance and Urban Charms</a></h5>
+                            <div class="p-icon"><img src="{{asset('frontend/assets/images/icons/t-icon-1.png')}}" alt=""><span class="icon flaticon-adventure"></span></div>
+                            <div class="location">{{ $tour->destination }}</div>
+                            <h5><a href="tour-single.html">{{ $tour->description }}</a></h5>
                             <div class="info clearfix">
-                                <div class="duration"><i class="fa-solid fa-clock"></i> 5 Days 6 Nights</div>
+                                <div class="duration"><i class="fa-solid fa-clock"></i> {{ $tour->duree }} Days {{ $tour->duree }} Nights</div>
                                 <div class="persons"><i class="fa-solid fa-user"></i> 12</div>
                             </div>
                             <div class="bottom-box clearfix">
                                 <div class="rating"><a href="#" class="theme-btn"><i class="fa-solid fa-star"></i>
                                         <strong>4.8</strong> &ensp; <span class="count">4570 Reviews</span></a>
                                 </div>
-                                <div class="price">Start from &ensp;<span class="amount">$399</span></div>
+                                <div class="price">Start from &ensp;<span class="amount">{{ number_format($tour->prix, 0, ',', ' ') }} CFA</span></div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!--Block-->
-                <div class="package-block col-lg-4 col-md-6 col-sm-12">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <div class="image"><a href="tour-single.html"><img src="{{asset('frontend/assets/images/resources/destinations/kuala-lumpore.jpg')}}" alt="Kuala Lumpore"></a></div>
-                        </div>
-                        <div class="lower-box">
-                            <div class="p-icon"><img src="{{asset('frontend/assets/images/icons/t-icon-2.png')}}" alt=""><span class="icon flaticon-hiking"></span></div>
-                            <div class="location">Kuala Lumpore</div>
-                            <h5><a href="tour-single.html">Embrace Skylines and Heritage in Kuala Lumpur</a>
-                            </h5>
-                            <div class="info clearfix">
-                                <div class="duration"><i class="fa-solid fa-clock"></i> 5 Days 6 Nights</div>
-                                <div class="persons"><i class="fa-solid fa-user"></i> 6</div>
-                            </div>
-                            <div class="bottom-box clearfix">
-                                <div class="rating"><a href="#" class="theme-btn"><i class="fa-solid fa-star"></i>
-                                        <strong>4.6</strong> &ensp; <span class="count">7865 Reviews</span></a>
-                                </div>
-                                <div class="price">Start from &ensp;<span class="amount">$755</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!--Block-->
-                @foreach ($tours as $tour)
-                    
-                
-                <div class="package-block col-lg-4 col-md-6 col-sm-12">
-                    <div class="inner-box">
-                        <div class="image-box">
-                            <div class="image"><a href="tour-single.html"><img src="{{asset('frontend/assets/images/resources/destinations/maldives.jpg')}}" alt="Maldives"></a>
-                            </div>
-                        </div>
-                        <div class="lower-box">
-                            <div class="p-icon"><img src="{{asset('frontend/assets/images/icons/t-icon-3.png')}}" alt=""><span class="icon flaticon-family"></span></div>
-                            <div class="location">Maldives</div>
-                            <h5><a href="tour-single.html">Unveiling the Serenity of Maldivian Islands</a></h5>
-                            <div class="info clearfix">
-                                <div class="duration"><i class="fa-solid fa-clock"></i> 6 Days 7 Nights</div>
-                                <div class="persons"><i class="fa-solid fa-user"></i> 4</div>
-                            </div>
-                            <div class="bottom-box clearfix">
-                                <div class="rating"><a href="#" class="theme-btn"><i class="fa-solid fa-star"></i>
-                                        <strong>4.8</strong> &ensp; <span class="count">9678 Reviews</span></a>
-                                </div>
-                                <div class="price">Start from &ensp;<span class="amount">$469</span></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-              @endforeach
-
+                @endforeach
             </div>
 
             <div class="styled-pagination centered">
