@@ -127,6 +127,17 @@
             <li class="dropdown">
                 <a href="#" class="menu-toggle nav-link has-dropdown">
                     <i data-feather="settings"></i>
+                    <span>Contenu du site</span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="nav-link @if(request()->routeIs('Roles.index')) active @endif" href="{{ route('Roles.index') }}">Slide</a></li>
+                    {{-- <li><a class="nav-link @if(request()->routeIs('some_other_route')) active @endif" href="{{ route('some_other_route') }}">Some Other Route</a></li> --}}
+                    <!-- Add similar checks for other parametre menu items -->
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="menu-toggle nav-link has-dropdown">
+                    <i data-feather="settings"></i>
                     <span>Parametre</span>
                 </a>
                 <ul class="dropdown-menu">
