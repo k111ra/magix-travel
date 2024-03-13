@@ -152,7 +152,7 @@
 										<div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
 											<div class="field-label">Destination</div>
 											<div class="field-inner">
-												<input type="text" name="field-name" value="" placeholder="Where to go?"
+												<input type="text" name="destination" value="destination" placeholder="Where to go?"
 													>
 												<i class="alt-icon fa fa-map-marker-alt"></i>
 											</div>
