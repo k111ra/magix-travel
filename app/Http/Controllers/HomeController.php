@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Hotel;
-use App\Models\Tour;
 use Carbon\Carbon;
+use App\Models\Tour;
+use App\Models\Hotel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
@@ -87,6 +88,13 @@ class HomeController extends Controller
 
 
     //recherche
+    ////////recherche function///////////
+    public function recherche(Request $request){
+        $data = $request->input('recherche');
+        
+       $tours = DB::table('tours')->where('destination', 'like', '%'. $data .'%')->get();
+       return view('frontend.pages.recherche.tours.index', compact('tours'));
+     }
 
 
 }

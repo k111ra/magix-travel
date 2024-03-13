@@ -95,7 +95,7 @@ Route::get('/contacts', [HomeController::class, 'contacts'])->name('contacts');
 
 ////////////////////ROUTES DES RECHERCHES//////////////////
 
-Route::get('/recherche', [HomeController::class, 'contacts'])->name('contacts');
+Route::get('/recherche', [HomeController::class, 'recherche'])->name('contacts');
 
 
 Auth::routes();
