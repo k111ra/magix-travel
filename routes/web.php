@@ -92,4 +92,10 @@ Route::get('/service', [HomeController::class, 'service'])->name('service');
 Route::get('/apropos', [HomeController::class, 'apropos'])->name('apropos');
 Route::get('/contacts', [HomeController::class, 'contacts'])->name('contacts');
 
+
+////////////////////ROUTES DES RECHERCHES//////////////////
+
+Route::get('/recherche', [HomeController::class, 'contacts'])->name('contacts');
+
+
 Auth::routes();

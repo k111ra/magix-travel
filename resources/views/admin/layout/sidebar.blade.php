@@ -88,7 +88,7 @@
         <div class="sidebar-brand">
             <a href="{{ route('home') }}">
                 <img alt="image" src="{{ asset('admin/assets/img/logo.png')}}" class="header-logo" />
-                <span class="logo-name"> <a href="{{route('home')}}"> Magix Travel</a></span>
+                <span class="logo-name"> <a href="{{route('dashboard')}}"> Magix Travel</a></span>
             </a>
         </div>
         <ul class="sidebar-menu">
