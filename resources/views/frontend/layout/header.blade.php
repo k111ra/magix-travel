@@ -44,7 +44,7 @@
             <div class="logo-box">
                 <div class="logo">
                     <a href="{{route('home')}}" title="Magix Travel"><img src="{{asset('frontend/assets/images/magix-travel-logo.png')}}"
-                            alt="" width="250px" title="Magix Travel">
+                            alt="" width="150px" title="Magix Travel">
                     </a>
                 </div>
             </div>
@@ -61,7 +61,7 @@
                                         <li><a href="index-3.html">Home 02</a></li>
                                     </ul>
                                 </li>
-                                <li class="dropdown"><a href="tour-list.html">Tours</a>
+                                <!-- <li class="dropdown"><a href="tour-list.html">Tours</a>
                                     <ul>
                                         <li><a href="tour-list.html">Tours List</a></li>
                                         <li><a href="tour-packages.html">Tour Packages</a></li>
@@ -77,7 +77,7 @@
                                         <li><a href="hotels.html">Hotels</a></li>
                                         <li><a href="hotel-single.html">Hotel Details</a></li>
                                     </ul>
-                                </li> --}}
+                                </li>  -->
                                 <li><a href="{{route('apropos')}}">A-propos de nous</a></li>
                                 {{-- <li class="dropdown"><a href="blog.html">News</a>
                                     <ul>
