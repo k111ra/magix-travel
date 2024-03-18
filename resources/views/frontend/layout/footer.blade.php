@@ -22,8 +22,10 @@
 						<div class="row clearfix">
 							<div class="footer-column col-xl-4 col-lg-3 col-md-6 col-sm-12">
 								<div class="footer-widget about-widget">
-									<div class="footer-logo"><a href="index-2.html" title="Travilo"><img
-												src="{{asset('frontend/assets/images/logo1.png')}}" alt="" title="Magix Travel" width="200px" height="150px"></a></div>
+									<div class="footer-logo">
+										<a href="index-2.html" title="Travilo">
+										<img src="{{asset('frontend/assets/images/logo1.png')}}"  alt="" title="Magix Travel" style="max-height: 80px;">
+									</a></div>
 									<div class="footer-info">
 										<ul class="info">
 											<li class="address"><a href="#"><i class="icon fa fa-map-marker-alt"></i>
@@ -106,7 +108,8 @@
 			<div class="f-bottom">
 				<div class="auto-container">
 					<div class="inner clearfix">
-						<div class="copyright">All rights researved <strong>Travilo</strong> &copy; 2023</div>
+						<div class="copyright">All rights researved <a href="{{route('home')}}"><strong>Magix Travel</strong></a> &copy;
+						@php echo $today = date('Y'); @endphp</div>
 						<div class="bottom-links">
 							<ul class="clearfix">
 								<li><a href="#">Terms & Conditions</a></li>

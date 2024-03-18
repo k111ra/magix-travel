@@ -75,7 +75,7 @@
                                         <li><a href="hotel-single.html">Hotel Details</a></li>
                                     </ul>
                                 </li> --}}
-                                <li><a href="about.html">A-propos de nous</a></li>
+                                <li><a href="{{route('apropos')}}">A-propos de nous</a></li>
                                 {{-- <li class="dropdown"><a href="blog.html">News</a>
                                     <ul>
                                         <li><a href="blog.html">Our Blog</a></li>
@@ -83,7 +83,7 @@
                                     </ul>
                                 </li> --}}
                                 <li><a href="contact.html">Service</a></li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="{{route('contact')}}">Contact</a></li>
 
                                   @auth
                                     <!-- Afficher le profil de l'utilisateur -->

@@ -152,7 +152,7 @@
 										<div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
 											<div class="field-label">Destination</div>
 											<div class="field-inner">
-												<input type="text" name="destination" value="destination" placeholder="Where to go?"
+												<input type="text" name="recherche" value="" placeholder="Where to go?"
 													>
 												<i class="alt-icon fa fa-map-marker-alt"></i>
 											</div>
@@ -880,30 +880,32 @@
 						<div class="tab" id="pkg-tab-2">
 							<div class="row clearfix justify-content-center">
 								<!--Block-->
+								@foreach ($tours as $tour)
 								<div class="package-block alt col-lg-4 col-md-6 col-sm-12">
 									<div class="inner-box">
 										<div class="image-box">
 											<div class="image"><a href="tour-single.html"><img
-														src="{{asset('frontend/assets/images/resources/destinations/long-walk-marrakech.jpg')}}"
+														src="{{ asset('storage/' . $tour->images[0]) }}"
 														alt="A Long Walk in Old Medina"></a></div>
 											<div class="b-title featured"><span>Featured</span></div>
 											<div class="fav-btn"><a href="#"><span class="far fa-heart"></span></a>
 											</div>
 										</div>
 										<div class="lower-box">
-											<div class="location">Marrakech</div>
+											<div class="location">{{ $tour->nom }}</div>
 											<h5><a href="tour-single.html">A Long Walk in Old Medina</a></h5>
 											<div class="bottom-box clearfix">
 												<div class="rating"><a href="#" class="theme-btn"><i
 															class="fa-solid fa-star"></i>
 														<strong>4.8</strong> &ensp;
 														<span class="count">5235 Reviews</span></a></div>
-												<div class="price">Start from &ensp;<span class="amount">$399</span>
+												<div class="price">Start from &ensp;<span class="amount">{{ number_format($tour->prix, 0, ',', ' ') }} CFA</span>
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
+								@endforeach
 								<!--Block-->
 								<div class="package-block alt col-lg-4 col-md-6 col-sm-12">
 									<div class="inner-box">
