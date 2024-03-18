@@ -42,8 +42,11 @@
         <div class="main-box clearfix">
             <!--Logo-->
             <div class="logo-box">
-                <div class="logo"><a href="{{route('home')}}" title="Magix Travel"><img src="{{asset('frontend/assets/images/logo1.png')}}"
-                            alt="" title="Magix Travel"></a></div>
+                <div class="logo">
+                    <a href="{{route('home')}}" title="Magix Travel"><img src="{{asset('frontend/assets/images/magix-travel-logo.png')}}"
+                            alt="" width="250px" title="Magix Travel">
+                    </a>
+                </div>
             </div>
 
             <div class="outer clearfix">
@@ -53,12 +56,12 @@
                         <nav class="main-menu">
                             <ul class="navigation clearfix">
                                 <li class="current dropdown"><a href="{{route('home')}}">Home</a>
-                                    {{-- <ul>
+                                    <ul>
                                         <li><a href="{{route('home')}}">Home 01</a></li>
                                         <li><a href="index-3.html">Home 02</a></li>
-                                    </ul> --}}
+                                    </ul>
                                 </li>
-                                {{-- <li class="dropdown"><a href="tour-list.html">Tours</a>
+                                <li class="dropdown"><a href="tour-list.html">Tours</a>
                                     <ul>
                                         <li><a href="tour-list.html">Tours List</a></li>
                                         <li><a href="tour-packages.html">Tour Packages</a></li>
@@ -66,8 +69,8 @@
                                         <li><a href="activities.html">Activities</a></li>
                                         <li><a href="activity-single.html">Activity Details</a></li>
                                     </ul>
-                                </li> --}}
-                                {{-- <li class="dropdown"><a href="destinations.html">Destination</a>
+                                </li>
+                                <li class="dropdown"><a href="destinations.html">Destination</a>
                                     <ul>
                                         <li><a href="destinations.html">All Destinations</a></li>
                                         <li><a href="destination-single.html">Destination Single</a></li>
