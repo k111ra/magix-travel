@@ -38,7 +38,7 @@ class HotelsController extends Controller
         $hotel->save();
 
         // Redirect to the index page or show the created hotel
-        return redirect()->back()->with('success', 'Hotel created successfully');
+        return redirect()->route('hotels.index')->with('success', 'Hotel created successfully');
     }
 
     public function show(Hotel $hotel)

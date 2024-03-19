@@ -4,86 +4,104 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Destination;
-use Illuminate\Support\Facades\Storage;
-use RealRashid\SweetAlert\Facades\Alert;
+use Illuminate\Support\Str;
 
 class DestinationController extends Controller
 {
+    /**
+     * Affiche une liste des destinations.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
         $destinations = Destination::all();
         return view('admin.destinations.index', compact('destinations'));
     }
 
+    /**
+     * Affiche le formulaire pour créer une nouvelle destination.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function create()
     {
         return view('admin.destinations.create');
     }
 
+    /**
+     * Stocke une nouvelle destination dans la base de données.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
     public function store(Request $request)
     {
-
+        // Validez les données du formulaire
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
             'description' => 'required|string',
             'images' => 'required|array',
             'images.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-            'slug' => 'required|string|unique:destinations',
             // Ajoutez d'autres règles de validation selon votre schéma
         ]);
 
+        // Créez une nouvelle destination avec les données validées et le slug
+        $destination = Destination::create([
+            'name' => $validatedData['name'],
+            'description' => $validatedData['description'],
+            'images' => $validatedData['images'],
+            'slug' => Str::slug($validatedData['name'], '-')
+        ]);
 
-        // Enregistrez la destination dans la base de données
-        $destination = new Destination($validatedData);
-
-        // Gérez l'upload des images
-        $uploadedImages = [];
-
-        foreach ($request->file('images') as $image) {
-            $path = $image->store('images', 'public');
-            $uploadedImages[] = $path;
-        }
-
-        // Convertissez les images en tableau avant de les enregistrer
-        $destination->images = $uploadedImages;
-
-        // Associez les images à la destination dans la base de données
-        $destination->save();
-
-        // Utilisez SweetAlert pour afficher une alerte
-        Alert::success('Succès', 'La destination a été créée avec succès.');
-
-        // Redirigez vers la liste des destinations ou une autre page après la création
-        return redirect()->route('destinations.index');
+        // Redirigez vers la page de détails de la destination créée
+        return redirect()->route('destinations.index', $destination);
     }
 
-
-    public function show($id)
+    /**
+     * Affiche une destination spécifique.
+     *
+     * @param  \App\Models\Destination  $destination
+     * @return \Illuminate\Http\Response
+     */
+    public function show(Destination $destination)
     {
-        $destination = Destination::findOrFail($id);
         return view('admin.destinations.show', compact('destination'));
     }
 
-    public function edit($id)
+    /**
+     * Affiche le formulaire pour éditer une destination spécifique.
+     *
+     * @param  \App\Models\Destination  $destination
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(Destination $destination)
     {
-        $destination = Destination::findOrFail($id);
         return view('admin.destinations.edit', compact('destination'));
     }
 
-    public function update(Request $request, $id)
+    /**
+     * Met à jour une destination spécifique dans la base de données.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\Destination  $destination
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, Destination $destination)
     {
-        // Validez et mettez à jour les données du formulaire selon vos besoins
+        $destination->update($request->all());
+        return redirect()->route('admin.destinations.show', $destination);
     }
 
-    public function destroy($id)
+    /**
+     * Supprime une destination spécifique de la base de données.
+     *
+     * @param  \App\Models\Destination  $destination
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(Destination $destination)
     {
-        $destination = Destination::findOrFail($id);
         $destination->delete();
-
-        // Utilisez SweetAlert pour afficher une alerte
-        Alert::success('Succès', 'La destination a été supprimée avec succès.');
-
-        // Redirigez vers la liste des destinations ou une autre page après la suppression
         return redirect()->route('destinations.index');
     }
 }

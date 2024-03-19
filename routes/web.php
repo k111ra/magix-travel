@@ -11,8 +11,7 @@ use App\Http\Controllers\ProduitsController;
 use App\Http\Controllers\RolesController;
 use App\Http\Controllers\ToursController;
 use App\Http\Controllers\UsersController;
-use Illuminate\Console\Command;
-use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\DestinationController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,34 +25,37 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//////Les routes protegées sont utilisé côté admin du système
-Route::middleware(['auth'])->prefix('admin')->group(function () {
+// Authentication routes
+Route::post('/login', [LoginController::class, 'store'])->name('login.store');
+Route::get('/login', [HomeController::class, 'login'])->name('login');
+Route::get('/deconnexion', [LogoutController::class, 'deconnexion'])->name('deconnexion');
 
-    //----------------------------TOURS------------------------------------//
+// Public routes
+Route::get('/', [HomeController::class, 'home'])->name('home');
+Route::get('/service', [HomeController::class, 'service'])->name('service');
+Route::get('/apropos', [HomeController::class, 'apropos'])->name('apropos');
+Route::get('/contacts', [HomeController::class, 'contacts'])->name('contacts');
 
-    Route::get('/tours', [ToursController::class, 'index'])->name('tours.index');
-    Route::get('/tours/create', [ToursController::class, 'create'])->name('tours.create');
-    Route::post('/tours', [ToursController::class, 'store'])->name('tours.store');
-    Route::get('/tours/{tour}', [ToursController::class, 'show'])->name('tours.show');
-    Route::get('/tours/{tour}/edit', [ToursController::class, 'edit'])->name('tours.edit');
-    Route::delete('/tours/{tour}', [ToursController::class, 'destroy'])->name('tours.destroy');
-    Route::put('/tours/{tour}', [ToursController::class, 'update'])->name('tours.update');
+// Admin routes (use middleware for protection)
+Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function () {
 
-    //----------------------------HOTEL------------------------------------//
+    // Resource routes for common admin functionalities
+    Route::resource('tours', ToursController::class);
+    Route::resource('hotels', HotelsController::class);
+    Route::resource('destinations', DestinationController::class);
 
-    Route::get('/hotels', [HotelsController::class, 'index'])->name('hotels.index');
-    Route::get('/hotels/create', [HotelsController::class, 'create'])->name('hotels.create');
-    Route::post('/hotels', [HotelsController::class, 'store'])->name('hotels.store');
-    Route::get('/hotels/{hotel}', [HotelsController::class, 'show'])->name('hotels.show');
-    Route::get('/hotels/{hotel}/edit', [HotelsController::class, 'edit'])->name('hotels.edit');
-    Route::delete('/hotels/{hotel}', [HotelsController::class, 'destroy'])->name('hotels.destroy');
-    Route::put('/hotels/{hotel}', [HotelsController::class, 'update'])->name('hotels.update');
-
-
-
-
+    // Other admin routes
     Route::get('/dashboard', [HomeController::class, 'dashboard'])->name('dashboard');
-    Route::get('/deconnexion', [LogoutController::class, 'deconnexion'])->name('deconnexion');
+
+    // User management routes
+    Route::resource('users', UsersController::class);
+    Route::resource('clients', ClientController::class);
+    Route::resource('roles', RolesController::class);
+
+    // Other functionalities with separate controllers
+    Route::resource('commandes', CommandesController::class);
+    Route::resource('produits', ProduitsController::class);
+    Route::resource('devis', DevisController::class);
 
     ////////////Routes des utilisateurs////////////
     Route::get('/liste-user', [UsersController::class, 'index'])->name('user.index');
@@ -92,4 +94,6 @@ Route::get('/service', [HomeController::class, 'service'])->name('service');
 Route::get('/apropos', [HomeController::class, 'apropos'])->name('apropos');
 Route::get('/contacts', [HomeController::class, 'contacts'])->name('contacts');
 
+
+// Use Laravel helper functions for common authentication routes (optional)
 Auth::routes();

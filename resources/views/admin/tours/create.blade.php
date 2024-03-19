@@ -1,5 +1,3 @@
-<!-- resources/views/admin/tours/create.blade.php -->
-
 @extends('admin.layout.layout')
 @section('content')
     <div class="container">

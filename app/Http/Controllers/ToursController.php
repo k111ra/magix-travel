@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Tour;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
-
+use Yoeunes\Toastr\Facades\Toastr;
 
 class ToursController extends Controller
 {
@@ -41,34 +41,49 @@ class ToursController extends Controller
 
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
-            // Validation rules for other fields
-            'nom' => 'required',
-            'description' => 'required',
-            'duree' => 'required',
-            'prix' => 'required',
-            'destination' => 'required',
-            'place' => 'required',
-            'date_depart' => 'required',
-            'moyen_transport' => 'required',
-            'images.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-        ]);
+        // Définir les règles de validation
+        $rules = [
+            'nom' => ['required', 'string', 'max:255'],
+            'description' => ['required', 'string'],
+            'duree' => ['required', 'numeric'],
+            'prix' => ['required', 'numeric'],
+            'destination' => ['required', 'string'],
+            'place' => ['required', 'numeric'],
+            'date_depart' => ['required', 'date'],
+            'moyen_transport' => ['required', 'string'],
+            'images' => 'array|required',
+        ];
 
-        // Create the tour without the 'images' attribute
-        $tour = Tour::create(Arr::except($validatedData, 'images'));
+        // Valider les données
+        $validatedData = $request->validate($rules);
 
+        // Créer un nouveau tour
+        $tour = new Tour;
+        $tour->nom = $validatedData['nom'];
+        $tour->description = $validatedData['description'];
+        $tour->duree = $validatedData['duree'];
+        $tour->prix = $validatedData['prix'];
+        $tour->destination = $validatedData['destination'];
+        $tour->place = $validatedData['place'];
+        $tour->date_depart = $validatedData['date_depart'];
+        $tour->moyen_transport = $validatedData['moyen_transport'];
+
+        // Storing tour images
         if ($request->hasFile('images')) {
             $images = [];
             foreach ($request->file('images') as $image) {
-                $path = $image->store('tour_images', 'public');
+                $path = $image->store('tour_images', 'public'); // Store images in 'public/tour_images' directory
                 $images[] = $path;
             }
-            $tour->update(['images' => $images]);
+            $tour->images = $images;
         }
+        // Enregistrer le tour
+        $tour->save();
 
-
-        return redirect()->route('tours.index')->with('success', 'Tour ajouté avec succès.');
+        // Rediriger vers la page des tours
+        return redirect()->route('tours.index')->with('success', 'Le tour a été ajouté avec succès');
     }
+
 
 
     /**
@@ -125,12 +140,11 @@ class ToursController extends Controller
             $tour->update(['images' => $images]);
         }
 
-
         $tour->update($validatedData);
 
-        return redirect()->route('tours.index')->with('success', 'Tour mis à jour avec succès.');
+        // Success Toastr notification
+        return redirect()->route('tours.index')->with('success', 'Le tour a été mis à jour avec succès');
     }
-
 
     /**
      * Remove the specified resource from storage.
@@ -144,7 +158,7 @@ class ToursController extends Controller
     {
         $tour->delete();
 
-        return redirect()->route('tours.index')->with('success', 'Tour supprimé avec succès.');
+        return redirect()->route('tours.index')->with('success', 'Le tour a été supprimé avec succès');
     }
 
 }
