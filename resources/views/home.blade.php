@@ -147,36 +147,36 @@
 						<!--Tab-->
 						<div class="tab active-tab" id="tab-1">
 							<div class="form-box site-form">
-								<form method="get" action="recherche">
+								<form method="get" action="rechercheHotel">
 									<div class="row clearfix">
 										<div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
-											<div class="field-label">Destination</div>
+											<div class="field-label">nom</div>
 											<div class="field-inner">
-												<input type="text" name="recherche" value="" placeholder="Where to go?"
+												<input type="text" name="rechercheHotel" value="" placeholder="Where to go?"
 													>
 												<i class="alt-icon fa fa-map-marker-alt"></i>
 											</div>
 										</div>
 										<div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
-											<div class="field-label">Start</div>
+											<div class="field-label">Description</div>
 											<div class="field-inner">
-												<input class="datepicker" type="text" name="field-name" value=""
+												<input class="name" type="text" name="rechercheHotel" value=""
 													placeholder="Check in" >
 												<i class="alt-icon fa fa-calendar-alt"></i>
 											</div>
 										</div>
 										<div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
-											<div class="field-label">End</div>
+											<div class="field-label">Localisation</div>
 											<div class="field-inner">
-												<input class="datepicker" type="text" name="field-name" value=""
+												<input class="" type="text" name="rechercheHotel" value=""
 													placeholder="Check out">
 												<i class="alt-icon fa fa-calendar-alt"></i>
 											</div>
 										</div>
 										<div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
-											<div class="field-label">Guest</div>
+											<div class="field-label">Prix</div>
 											<div class="field-inner">
-												<input type="text" name="field-name" value="" placeholder="Guests"
+												<input type="text" name="rechercheHotel" value="" placeholder="Guests"
 													>
 												<i class="alt-icon fa fa-user"></i>
 											</div>
@@ -191,36 +191,36 @@
 						<!--Tab-->
 						<div class="tab" id="tab-2">
 							<div class="form-box site-form">
-								<form method="post" action="https://jufailitech.com/envatoitems/travilo/html/index.html">
+								<form method="get" action="rechercheTour">
 									<div class="row clearfix">
 										<div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
 											<div class="field-label">Destination</div>
 											<div class="field-inner">
-												<input type="text" name="field-name" value="" placeholder="Where to go?"
+												<input type="text" name="rechercheTour" value="" placeholder="Where to go?"
 													required>
 												<i class="alt-icon fa fa-map-marker-alt"></i>
 											</div>
 										</div>
 										<div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
-											<div class="field-label">Start</div>
+											<div class="field-label">Date de depart</div>
 											<div class="field-inner">
-												<input class="datepicker" type="text" name="field-name" value=""
+												<input class="" type="text" name="rechercheHotel" value=""
 													placeholder="Check in" required>
 												<i class="alt-icon fa fa-calendar-alt"></i>
 											</div>
 										</div>
 										<div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
-											<div class="field-label">End</div>
+											<div class="field-label">Moyen de transport</div>
 											<div class="field-inner">
-												<input class="datepicker" type="text" name="field-name" value=""
+												<input class="" type="text" name="rechercheHotel" value=""
 													placeholder="Check out" required>
 												<i class="alt-icon fa fa-calendar-alt"></i>
 											</div>
 										</div>
 										<div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
-											<div class="field-label">Guest</div>
+											<div class="field-label">Prix</div>
 											<div class="field-inner">
-												<input type="text" name="field-name" value="" placeholder="Guests"
+												<input type="text" name="rechercheHotel" value="" placeholder="Guests"
 													required>
 												<i class="alt-icon fa fa-user"></i>
 											</div>

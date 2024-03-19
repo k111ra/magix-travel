@@ -8,6 +8,7 @@ use App\Http\Controllers\DevisController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\HotelsController;
 use App\Http\Controllers\ProduitsController;
+use App\Http\Controllers\RechercheController;
 use App\Http\Controllers\RolesController;
 use App\Http\Controllers\ToursController;
 use App\Http\Controllers\UsersController;
@@ -95,7 +96,9 @@ Route::get('/contacts', [HomeController::class, 'contacts'])->name('contact');
 
 ////////////////////ROUTES DES RECHERCHES//////////////////
 
-Route::get('/recherche', [HomeController::class, 'recherche'])->name('contacts');
+Route::get('/rechercheTour', [RechercheController::class, 'rechercheTour'])->name('contacts');
+Route::get('/rechercheHotel', [RechercheController::class, 'rechercheHotel'])->name('contacts');
+
 
 
 Auth::routes();

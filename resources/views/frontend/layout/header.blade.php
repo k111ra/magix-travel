@@ -56,10 +56,10 @@
                         <nav class="main-menu">
                             <ul class="navigation clearfix">
                                 <li class="current dropdown"><a href="{{route('home')}}">Home</a>
-                                    <ul>
+                                    <!-- <ul>
                                         <li><a href="{{route('home')}}">Home 01</a></li>
                                         <li><a href="index-3.html">Home 02</a></li>
-                                    </ul>
+                                    </ul> -->
                                 </li>
                                 <!-- <li class="dropdown"><a href="tour-list.html">Tours</a>
                                     <ul>

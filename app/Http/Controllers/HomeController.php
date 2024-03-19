@@ -89,19 +89,6 @@ class HomeController extends Controller
     }
 
 
-    //recherche
-    ////////recherche function///////////
-    public function recherche(Request $request){
-
-        if ($request->filled('recherche')) {
-            $tours = Tour::where('destination', $request->recherche)->get();
-        } else{
-            $tours = Tour::all();
-        }
-        // dd($recherche);
-       return view('frontend.pages.recherche.tours.index', compact('tours'));
-     }
-
 
 }
 

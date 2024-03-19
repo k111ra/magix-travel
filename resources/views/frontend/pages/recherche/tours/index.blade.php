@@ -26,36 +26,36 @@
 					<div class="outer">
 						<div class="search-title"><span>Search for your desired tour package</span></div>
 						<div class="form-box site-form">
-							<form method="get" action="recherche">
+							<form method="get" action="rechercheTour">
 								<div class="row clearfix">
 									<div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
 										<div class="field-label">Destination</div>
 										<div class="field-inner">
-											<input type="text" name="recherche" value="" placeholder="Where to go?"
+											<input type="text" name="rechercheTour" value="" placeholder="Where to go?"
 												>
 											<i class="alt-icon fa fa-map-marker-alt"></i>
 										</div>
 									</div>
 									<div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
-										<div class="field-label">Start</div>
+										<div class="field-label">Date de depart</div>
 										<div class="field-inner">
-											<input class="datepicker" type="text" name="field-name" value=""
-												placeholder="Check in" >
+											<input class="datepicker" type="text" name="rechercheTour" value=""
+												placeholder="date de depart" >
 											<i class="alt-icon fa fa-calendar-alt"></i>
 										</div>
 									</div>
 									<div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
-										<div class="field-label">End</div>
+										<div class="field-label">Moyen de transport</div>
 										<div class="field-inner">
-											<input class="datepicker" type="text" name="field-name" value=""
-												placeholder="Check out" >
+											<input class="" type="text" name="rechercheTour" value=""
+												placeholder="Moyen de transport" >
 											<i class="alt-icon fa fa-calendar-alt"></i>
 										</div>
 									</div>
 									<div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
-										<div class="field-label">Guest</div>
+										<div class="field-label">Prix</div>
 										<div class="field-inner">
-											<input type="text" name="field-name" value="" placeholder="Guests" >
+											<input type="text" name="rechercheTour" value="" placeholder="Prix ..." >
 											<i class="alt-icon fa fa-user"></i>
 										</div>
 									</div>
@@ -119,7 +119,7 @@
 									<div class="p-icon"><img src="{{asset('frontend/assets/images/icons/t-icon-1.png')}}" alt=""><span
 											class="icon flaticon-adventure"></span></div>
 									<div class="location">{{ $tour->destination }}</div>
-									<h5><a href="tour-single.html">Nordic Elegance and Urban Charms</a></h5>
+									<h5><a href="tour-single.html">{{ $tour->description }}</a></h5>
 									<div class="info clearfix">
 										<div class="duration"><i class="fa-solid fa-clock"></i> {{$tour->duree }} Jours {{ $tour->duree > 1 ? 'Nuits' : 'Nuits' }}</div>
 										<div class="persons"><i class="fa-solid fa-user"></i> 12</div>
