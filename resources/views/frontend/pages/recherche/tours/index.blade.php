@@ -39,7 +39,7 @@
 									<div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
 										<div class="field-label">Date de depart</div>
 										<div class="field-inner">
-											<input class="datepicker" type="text" name="rechercheTour" value=""
+											<input class="" type="text" name="" value=""
 												placeholder="date de depart" >
 											<i class="alt-icon fa fa-calendar-alt"></i>
 										</div>
@@ -47,7 +47,7 @@
 									<div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
 										<div class="field-label">Moyen de transport</div>
 										<div class="field-inner">
-											<input class="" type="text" name="rechercheTour" value=""
+											<input class="" type="text" name="" value=""
 												placeholder="Moyen de transport" >
 											<i class="alt-icon fa fa-calendar-alt"></i>
 										</div>
@@ -55,7 +55,7 @@
 									<div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
 										<div class="field-label">Prix</div>
 										<div class="field-inner">
-											<input type="text" name="rechercheTour" value="" placeholder="Prix ..." >
+											<input type="text" name="" value="" placeholder="Prix ..." >
 											<i class="alt-icon fa fa-user"></i>
 										</div>
 									</div>

@@ -197,7 +197,7 @@
 											<div class="field-label">Destination</div>
 											<div class="field-inner">
 												<input type="text" name="rechercheTour" value="" placeholder="Where to go?"
-													required>
+													>
 												<i class="alt-icon fa fa-map-marker-alt"></i>
 											</div>
 										</div>
@@ -205,7 +205,7 @@
 											<div class="field-label">Date de depart</div>
 											<div class="field-inner">
 												<input class="" type="text" name="rechercheHotel" value=""
-													placeholder="Check in" required>
+													placeholder="Check in" >
 												<i class="alt-icon fa fa-calendar-alt"></i>
 											</div>
 										</div>
@@ -213,7 +213,7 @@
 											<div class="field-label">Moyen de transport</div>
 											<div class="field-inner">
 												<input class="" type="text" name="rechercheHotel" value=""
-													placeholder="Check out" required>
+													placeholder="Check out" >
 												<i class="alt-icon fa fa-calendar-alt"></i>
 											</div>
 										</div>
@@ -221,7 +221,7 @@
 											<div class="field-label">Prix</div>
 											<div class="field-inner">
 												<input type="text" name="rechercheHotel" value="" placeholder="Guests"
-													required>
+													>
 												<i class="alt-icon fa fa-user"></i>
 											</div>
 										</div>

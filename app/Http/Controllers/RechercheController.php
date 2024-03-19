@@ -13,11 +13,11 @@ class RechercheController extends Controller
 
         if ($request->filled('rechercheTour')) {
             $recherchet = $request->rechercheTour;
-            $tours = Tour::where('destination', 'LIKE', "%$recherchet%")
-            ->orWhere('date_depart', 'LIKE', "%$recherchet%")
-            ->orWhere('moyen_transport', 'LIKE', "%$recherchet%")
-            ->orWhere('prix', 'LIKE', "%$recherchet%")
-            ->get();
+            $tours = Tour::where('destination', 'LIKE', "%$recherchet%")->get();
+            // ->orWhere('date_depart', 'LIKE', "%$recherchet%")
+            // ->orWhere('moyen_transport', 'LIKE', "%$recherchet%")
+            // ->orWhere('prix', 'LIKE', "%$recherchet%")
+            
         } else{
             $tours = Tour::all();
         }
