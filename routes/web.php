@@ -12,6 +12,7 @@ use App\Http\Controllers\RolesController;
 use App\Http\Controllers\ToursController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\DestinationController;
+use App\Http\Controllers\VolController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -47,6 +48,8 @@ Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function () {
     Route::resource('tours', ToursController::class);
     Route::resource('hotels', HotelsController::class);
     Route::resource('destinations', DestinationController::class);
+    Route::resource('vols', VolController::class);
+
 
     // Other admin routes
     Route::get('/dashboard', [HomeController::class, 'dashboard'])->name('dashboard');
@@ -98,6 +101,8 @@ Route::get('/service', [HomeController::class, 'service'])->name('service');
 Route::get('/apropos', [HomeController::class, 'apropos'])->name('apropos');
 Route::get('/contacts', [HomeController::class, 'contacts'])->name('contacts');
 
+
+Route::get('/hotels', [HotelsController::class, 'hotelFrontend'])->name('hotels');
 
 // Use Laravel helper functions for common authentication routes (optional)
 Auth::routes();

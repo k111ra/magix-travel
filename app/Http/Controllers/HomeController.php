@@ -28,10 +28,10 @@ class HomeController extends Controller
      */
     public function home()
     {
-        $tours = Tour::all(); // Retrieve all tours from the database
-
+        $tours = Tour::all(); 
         $destinations = Destination::orderby('created_at', 'DESC')->take(10)->get();
-        return view('home', compact('tours','destinations')); // Assuming 'front.home' is your view file
+        $hotels = Hotel::orderby("created_at", 'DESC')->take(6)->get();
+        return view('home', compact('tours','destinations','hotels')); // Assuming 'front.home' is your view file
     }
 
     public function destination(){
