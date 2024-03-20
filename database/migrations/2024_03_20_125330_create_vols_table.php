@@ -20,7 +20,7 @@ return new class extends Migration {
             $table->unsignedBigInteger('destination_id');
             $table->foreign('destination_id')->references('id')->on('destinations')->onDelete('cascade');
             $table->dateTime('date_depart');
-            $table->decimal('prix', 10, 2);
+            $table->decimal('prix', 24, 2);
             $table->timestamps();
         });
     }

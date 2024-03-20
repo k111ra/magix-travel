@@ -32,7 +32,6 @@
                                 <td>{{ $vol->date_depart }}</td>
                                 <td>{{ $vol->prix }}</td>
 
-
                                 <td>
                                     <a href="{{ route('vols.show', $vol->id) }}" class="btn btn-info btn-sm">
                                         <i class="fas fa-eye"></i>
