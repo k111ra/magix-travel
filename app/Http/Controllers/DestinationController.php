@@ -41,21 +41,27 @@ class DestinationController extends Controller
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
             'description' => 'required|string',
-            'images' => 'required|array',
             'images.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             // Ajoutez d'autres règles de validation selon votre schéma
         ]);
 
-        // Créez une nouvelle destination avec les données validées et le slug
+        // Téléchargez et stockez les images
+        $imagePaths = [];
+        foreach ($validatedData['images'] as $image) {
+            $path = $image->store('destinations', 'public');
+            $imagePaths[] = $path;
+        }
+
+        // Créez une nouvelle destination avec les données validées et les chemins d'accès aux images
         $destination = Destination::create([
             'name' => $validatedData['name'],
             'description' => $validatedData['description'],
-            'images' => $validatedData['images'],
+            'images' => $imagePaths,
             'slug' => Str::slug($validatedData['name'], '-')
         ]);
 
         // Redirigez vers la page de détails de la destination créée
-        return redirect()->route('destinations.index', $destination);
+        return redirect()->route('destinations.index', $destination)->with('success', 'Destination ajoute avec succès');
     }
 
     /**
@@ -90,7 +96,7 @@ class DestinationController extends Controller
     public function update(Request $request, Destination $destination)
     {
         $destination->update($request->all());
-        return redirect()->route('admin.destinations.show', $destination);
+        return redirect()->route('destinations.index', $destination);
     }
 
     /**

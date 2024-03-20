@@ -34,18 +34,23 @@ class HotelsController extends Controller
             // Add other fields as needed
         ]);
 
-        // Storing tour images
+        // Storing hotel images
         if ($request->hasFile('images')) {
             $images = [];
+
             foreach ($request->file('images') as $image) {
-                $path = $image->store('hotels', 'public'); // Store images in 'public/tour_images' directory
+                $path = $image->store('hotels', 'public');
                 $images[] = $path;
             }
-            $hotel->images = $images;
+
+            // Convertir le tableau d'images en une chaîne JSON valide
+            $hotel->images = json_encode($images);
         }
 
-        // Save the hotel
+        // Enregistrer l'hôtel
         $hotel->save();
+
+
 
         // Redirect to the index page or show the created hotel
         return redirect()->route('hotels.index')->with('success', 'Hotel created successfully');
@@ -53,7 +58,7 @@ class HotelsController extends Controller
 
     public function show(Hotel $hotel)
     {
-        return view('admin.hotels.show', compact('hotel'));
+        return view('admin.hotels.show')->with('hotel', $hotel);
     }
 
     public function edit(Hotel $hotel)
@@ -64,23 +69,46 @@ class HotelsController extends Controller
     public function update(Request $request, Hotel $hotel)
     {
         // Validate the request
-
-        // Update the hotel
-        $hotel->update([
-            'name' => $request->input('name'),
-            'description' => $request->input('description'),
-            'localisation' => $request->input('localisation'),
-            'etoiles' => $request->input('etoiles'),
-            'prix' => $request->input('prix'),
-            'images*' => $request->input('images[]'),
+        $validatedData = $request->validate([
+            'name' => 'required|string|max:255',
+            'description' => 'required|string',
+            'localisation' => 'required|string',
+            'etoiles' => 'required|string',
+            'prix' => 'required|numeric',
+            'images.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
+        // Update les champs autres que les images
+        $hotel->update([
+            'name' => $validatedData['name'],
+            'description' => $validatedData['description'],
+            'localisation' => $validatedData['localisation'],
+            'etoiles' => $validatedData['etoiles'],
+            'prix' => $validatedData['prix'],
+        ]);
+
+        // Stocker les chemins des nouvelles images
+        $images = [];
+
+        if ($request->hasFile('images')) {
+            foreach ($request->file('images') as $image) {
+                $path = $image->store('tour_images', 'public');
+                $images[] = $path;
+            }
+        }
+
+        // Mettre à jour les images seulement si de nouvelles images ont été téléchargées
+        if (!empty ($images)) {
+            $hotel->images = $images;
+        }
+
+        // Mettre à jour les autres champs avec les données validées
+        $hotel->update($validatedData);
+
         // Redirect to the index page or show the updated hotel
-        Alert::toast(__('Hotel Modifier'), 'success');
-
-        return redirect()->back();
-
+        return redirect()->route('hotels.index')->with('success', 'Hotel Modifié');
     }
+
 
     public function destroy(Hotel $hotel)
     {
