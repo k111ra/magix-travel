@@ -119,6 +119,7 @@ class ToursController extends Controller
 
     public function update(Request $request, Tour $tour)
     {
+        // Valider les données du formulaire
         $validatedData = $request->validate([
             'nom' => 'required',
             'description' => 'required',
@@ -131,20 +132,28 @@ class ToursController extends Controller
             'images.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
+        // Stocker les chemins des nouvelles images
+        $images = [];
+
         if ($request->hasFile('images')) {
-            $images = [];
             foreach ($request->file('images') as $image) {
                 $path = $image->store('tour_images', 'public');
                 $images[] = $path;
             }
-            $tour->update(['images' => $images]);
         }
 
+        // Mettre à jour les images seulement si de nouvelles images ont été téléchargées
+        if (!empty ($images)) {
+            $tour->images = $images;
+        }
+
+        // Mettre à jour les autres champs avec les données validées
         $tour->update($validatedData);
 
-        // Success Toastr notification
+        // Notification Toastr de succès
         return redirect()->route('tours.index')->with('success', 'Le tour a été mis à jour avec succès');
     }
+
 
     /**
      * Remove the specified resource from storage.

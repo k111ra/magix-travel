@@ -34,6 +34,16 @@ class HotelsController extends Controller
             // Add other fields as needed
         ]);
 
+        // Storing tour images
+        if ($request->hasFile('images')) {
+            $images = [];
+            foreach ($request->file('images') as $image) {
+                $path = $image->store('hotels', 'public'); // Store images in 'public/tour_images' directory
+                $images[] = $path;
+            }
+            $hotel->images = $images;
+        }
+
         // Save the hotel
         $hotel->save();
 

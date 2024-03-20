@@ -20,15 +20,16 @@
 
                 <div class="mb-3">
                     <strong>Images:</strong>
-                    @if (is_array($tour->images) && !empty($tour->images))
+                    @if (is_array($tour->images) && count($tour->images) > 0)
                         @foreach ($tour->images as $image)
-                            <img src="{{ asset('storage/' . $tour->images) }}" width="200px" alt="Tour Image"
-                                class="img-thumbnail">
+                            <img src="{{ asset('storage/' . $image) }}" width="200px" alt="Tour Image" class="img-thumbnail">
                         @endforeach
                     @else
                         <p>Aucune image disponible pour ce tour.</p>
                     @endif
                 </div>
+
+
 
                 <a href="{{ route('tours.index') }}" class="btn btn-primary">Retour à la liste</a>
             </div>
