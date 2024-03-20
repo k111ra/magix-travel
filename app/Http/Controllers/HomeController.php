@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Destination;
 use App\Models\Hotel;
 use App\Models\Tour;
 use Carbon\Carbon;
@@ -29,7 +30,13 @@ class HomeController extends Controller
     {
         $tours = Tour::all(); // Retrieve all tours from the database
 
-        return view('home', compact('tours')); // Assuming 'front.home' is your view file
+        $destinations = Destination::orderby('created_at', 'DESC')->take(10)->get();
+        return view('home', compact('tours','destinations')); // Assuming 'front.home' is your view file
+    }
+
+    public function destination(){
+        $destinations = Destination::all();
+        return view('frontend.destination.index',compact('destinations'));
     }
 
     public function apropos()

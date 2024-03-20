@@ -36,6 +36,10 @@ Route::get('/service', [HomeController::class, 'service'])->name('service');
 Route::get('/apropos', [HomeController::class, 'apropos'])->name('apropos');
 Route::get('/contacts', [HomeController::class, 'contacts'])->name('contacts');
 
+//routes des destinations
+Route::get('/destination', [HomeController::class, 'destination'])->name('destination');
+
+
 // Admin routes (use middleware for protection)
 Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function () {
 
