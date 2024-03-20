@@ -11,7 +11,11 @@
                 </ul>
             </div>
             <div class="top-right clearfix">
-                <div class="login"><a href="#">Login / Signup</a></div>
+                {{-- <div class="login"><a href="#">Login / Signup</a></div> --}}
+                <div class="login">
+                    <a href="{{route('login')}}">Login</a>
+                </div>
+                
                 <div class="lang-box">
                     <div class="lang-btn clearfix"><span class="txt">En</span><span
                             class="icon far fa-angle-down"></span>
@@ -83,7 +87,11 @@
                                     </ul>
                                 </li>
                                 <li><a href="contact.html">Contact</a></li>
-                                <li><a href="{{route('login')}}">Connexion</a></li>
+                                @auth
+                                    <!-- Afficher le profil de l'utilisateur -->
+                                    <li><a href="{{route('dashboard')}}" title="Tableau de bord"><i class="icon fa-solid fa-home" style="color: orangered"></i></a></li>
+                                @endauth
+                                {{-- <li><a href="{{route('login')}}">Connexion</a></li> --}}
                             </ul>
                         </nav>
                         <!-- Main Menu End-->
