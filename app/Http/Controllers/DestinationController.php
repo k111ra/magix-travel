@@ -45,20 +45,24 @@ class DestinationController extends Controller
             // Ajoutez d'autres règles de validation selon votre schéma
         ]);
 
-        // Téléchargez et stockez les images
-        $imagePaths = [];
-        foreach ($validatedData['images'] as $image) {
-            $path = $image->store('destinations', 'public');
-            $imagePaths[] = $path;
-        }
-
         // Créez une nouvelle destination avec les données validées et les chemins d'accès aux images
         $destination = Destination::create([
             'name' => $validatedData['name'],
             'description' => $validatedData['description'],
-            'images' => $imagePaths,
             'slug' => Str::slug($validatedData['name'], '-')
         ]);
+
+        // Storing tour images
+        if ($request->hasFile('images')) {
+            $images = [];
+            foreach ($request->file('images') as $image) {
+                $path = $image->store('destination', 'public');
+                $images[] = $path;
+            }
+            $destination->images = $images;
+        }
+
+        $destination->save();
 
         // Redirigez vers la page de détails de la destination créée
         return redirect()->route('destinations.index', $destination)->with('success', 'Destination ajoute avec succès');
