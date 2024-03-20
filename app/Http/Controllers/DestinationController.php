@@ -110,4 +110,9 @@ class DestinationController extends Controller
         $destination->delete();
         return redirect()->route('destinations.index');
     }
+
+    public function destination(){
+        $destinations = Destination::all();
+        return view('frontend.pages.destination.index',compact('destinations'));
+    }
 }
