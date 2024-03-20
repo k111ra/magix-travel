@@ -98,5 +98,7 @@ Route::get('/apropos', [HomeController::class, 'apropos'])->name('apropos');
 Route::get('/contacts', [HomeController::class, 'contacts'])->name('contacts');
 
 
+Route::get('/hotels', [HotelsController::class, 'hotelFrontend'])->name('hotels');
+
 // Use Laravel helper functions for common authentication routes (optional)
 Auth::routes();

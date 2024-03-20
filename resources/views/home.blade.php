@@ -705,10 +705,10 @@
 				<div class="tabs-box pkg-tabs">
 					<div class="title-outer clearfix">
 						<div class="title-box">
-							<div class="subtitle">Packages</div>
-							<h2><span>Top Destinations</span></h2>
+							{{-- <div class="subtitle">Packages</div> --}}
+							<h2><span>Top Hotels</span></h2>
 						</div>
-						<div class="tab-btns">
+						{{-- <div class="tab-btns">
 							<ul class="tab-buttons clearfix">
 								<li class="tab-btn active-btn" data-tab="#pkg-tab-1"><span>Hotels</span></li>
 								<li class="tab-btn" data-tab="#pkg-tab-2"><span>Tours</span></li>
@@ -717,38 +717,42 @@
 								<li class="tab-btn" data-tab="#pkg-tab-5"><span>Cruises</span></li>
 								<li class="tab-btn" data-tab="#pkg-tab-6"><span>Flights</span></li>
 							</ul>
-						</div>
+						</div> --}}
 					</div>
 					<div class="tabs-content">
 						<div class="tab active-tab" id="pkg-tab-1">
 							<div class="row clearfix justify-content-center">
 								<!--Block-->
-								<div class="package-block alt col-lg-4 col-md-6 col-sm-12">
-									<div class="inner-box">
-										<div class="image-box">
-											<div class="image"><a href="hotel-single.html"><img
-														src="{{asset('frontend/assets/images/resources/destinations/maldives-hotel.jpg')}}"
-														alt="Maldives Hotel"></a></div>
-											<div class="b-title featured"><span>Featured</span></div>
-											<div class="fav-btn"><a href="#"><span class="far fa-heart"></span></a>
+								@foreach ($hotels as $hotel)
+									<div class="package-block alt col-lg-4 col-md-6 col-sm-12">
+										<div class="inner-box">
+											<div class="image-box">
+												<div class="image"><a href="hotel-single.html">
+													<img src="{{ asset('storage/' . json_decode($hotel->images)[0]) }}"
+															alt="Maldives Hotel"></a></div>
+												<div class="b-title featured"><span>Featured</span></div>
+												<div class="fav-btn"><a href="#"><span class="far fa-heart"></span></a>
+												</div>
 											</div>
-										</div>
-										<div class="lower-box">
-											<div class="location">Maldives</div>
-											<h5><a href="hotel-single.html">Hotel Maldives Shore</a></h5>
-											<div class="bottom-box clearfix">
-												<div class="rating"><a href="#" class="theme-btn"><i
-															class="fa-solid fa-star"></i>
-														<strong>4.8</strong> &ensp;
-														<span class="count">1415 Reviews</span></a></div>
-												<div class="price">Start from &ensp;<span class="amount">$249</span>
+											<div class="lower-box">
+												<div class="location">{{$hotel->localisation}}</div>
+												<h5><a href="hotel-single.html">{{$hotel->name}}</a></h5>
+												<div class="bottom-box clearfix">
+													<div class="rating"><a href="#" class="theme-btn"><i
+																class="fa-solid fa-star"></i>
+															<strong>{{$hotel->etoiles}}  étoiles</strong> &ensp;
+															{{-- <span class="count">1415 Reviews</span> --}}
+														</a></div>
+													<div class="price">Prix &ensp;<span class="amount"> {{ number_format($hotel->prix, 0, ',', ' ') }} FCFA </span>
+													</div>
 												</div>
 											</div>
 										</div>
 									</div>
-								</div>
+								@endforeach
+								
 								<!--Block-->
-								<div class="package-block alt col-lg-4 col-md-6 col-sm-12">
+								{{-- <div class="package-block alt col-lg-4 col-md-6 col-sm-12">
 									<div class="inner-box">
 										<div class="image-box">
 											<div class="image"><a href="hotel-single.html"><img
@@ -772,9 +776,9 @@
 											</div>
 										</div>
 									</div>
-								</div>
+								</div> --}}
 								<!--Block-->
-								<div class="package-block alt col-lg-4 col-md-6 col-sm-12">
+								{{-- <div class="package-block alt col-lg-4 col-md-6 col-sm-12">
 									<div class="inner-box">
 										<div class="image-box">
 											<div class="image"><a href="hotel-single.html"><img
@@ -797,9 +801,9 @@
 											</div>
 										</div>
 									</div>
-								</div>
+								</div> --}}
 								<!--Block-->
-								<div class="package-block alt col-lg-4 col-md-6 col-sm-12">
+								{{-- <div class="package-block alt col-lg-4 col-md-6 col-sm-12">
 									<div class="inner-box">
 										<div class="image-box">
 											<div class="image"><a href="hotel-single.html"><img
@@ -823,9 +827,9 @@
 											</div>
 										</div>
 									</div>
-								</div>
+								</div> --}}
 								<!--Block-->
-								<div class="package-block alt col-lg-4 col-md-6 col-sm-12">
+								{{-- <div class="package-block alt col-lg-4 col-md-6 col-sm-12">
 									<div class="inner-box">
 										<div class="image-box">
 											<div class="image"><a href="hotel-single.html"><img
@@ -848,9 +852,9 @@
 											</div>
 										</div>
 									</div>
-								</div>
+								</div> --}}
 								<!--Block-->
-								<div class="package-block alt col-lg-4 col-md-6 col-sm-12">
+								{{-- <div class="package-block alt col-lg-4 col-md-6 col-sm-12">
 									<div class="inner-box">
 										<div class="image-box">
 											<div class="image"><a href="hotel-single.html"><img
@@ -874,7 +878,7 @@
 											</div>
 										</div>
 									</div>
-								</div>
+								</div> --}}
 							</div>
 						</div>
 						<div class="tab" id="pkg-tab-2">
@@ -2597,4 +2601,4 @@
 				</div>
 			</div>
 		</div>
-        @endsection
+@endsection

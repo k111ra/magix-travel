@@ -10,7 +10,7 @@ class HotelsController extends Controller
 {
     public function index()
     {
-        $hotels = Hotel::all();
+        $hotels = Hotel::orderby("created_at", 'DESC')->get();
         return view('admin.hotels.index')->with('hotels', $hotels);
     }
 
@@ -50,8 +50,6 @@ class HotelsController extends Controller
         // Enregistrer l'hôtel
         $hotel->save();
 
-
-
         // Redirect to the index page or show the created hotel
         return redirect()->route('hotels.index')->with('success', 'Hotel created successfully');
     }
@@ -66,6 +64,7 @@ class HotelsController extends Controller
         return view('admin.hotels.edit', compact('hotel'));
     }
 
+
     public function update(Request $request, Hotel $hotel)
     {
         // Validate the request
@@ -78,7 +77,20 @@ class HotelsController extends Controller
             'images.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
-        // Update les champs autres que les images
+        // Stocker les chemins des nouvelles images
+        if ($request->hasFile('images')) {
+            $images = [];
+
+            foreach ($request->file('images') as $image) {
+                $path = $image->store('hotels', 'public');
+                $images[] = $path;
+            }
+
+            // Convertir le tableau d'images en une chaîne JSON valide
+            $hotel->images = json_encode($images);
+        }
+
+        // Mettre à jour les autres champs avec les données validées
         $hotel->update([
             'name' => $validatedData['name'],
             'description' => $validatedData['description'],
@@ -87,27 +99,10 @@ class HotelsController extends Controller
             'prix' => $validatedData['prix'],
         ]);
 
-        // Stocker les chemins des nouvelles images
-        $images = [];
-
-        if ($request->hasFile('images')) {
-            foreach ($request->file('images') as $image) {
-                $path = $image->store('tour_images', 'public');
-                $images[] = $path;
-            }
-        }
-
-        // Mettre à jour les images seulement si de nouvelles images ont été téléchargées
-        if (!empty ($images)) {
-            $hotel->images = $images;
-        }
-
-        // Mettre à jour les autres champs avec les données validées
-        $hotel->update($validatedData);
-
         // Redirect to the index page or show the updated hotel
         return redirect()->route('hotels.index')->with('success', 'Hotel Modifié');
     }
+
 
 
     public function destroy(Hotel $hotel)
@@ -117,5 +112,13 @@ class HotelsController extends Controller
 
         // Redirect to the index page
         return redirect()->back()->with('success', 'Hotel deleted successfully');
+    }
+
+
+
+    public function hotelFrontend()
+    {
+        $hotels = Hotel::orderby('created_at', 'DESC')->get();
+        return view('frontend.pages.hotels.hotels', compact('hotels'));
     }
 }
