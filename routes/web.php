@@ -12,7 +12,6 @@ use App\Http\Controllers\RolesController;
 use App\Http\Controllers\ToursController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\DestinationController;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
