@@ -34,10 +34,6 @@ class HomeController extends Controller
         return view('home', compact('tours','destinations','hotels')); // Assuming 'front.home' is your view file
     }
 
-    public function destination(){
-        $destinations = Destination::all();
-        return view('frontend.destination.index',compact('destinations'));
-    }
 
     public function apropos()
     {
