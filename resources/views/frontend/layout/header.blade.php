@@ -1,23 +1,22 @@
-
 <div class="header-top">
     <div class="auto-container">
         <div class="inner clearfix">
             <div class="top-left clearfix">
                 <ul class="info clearfix">
-                    <li><i class="icon fa fa-envelope"></i> <a
-                            href="mailto:hello@travilo.com">hello@travilo.com</a></li>
-                    <li><i class="icon fa fa-map-marker-alt"></i> <a href="#">20, Love Street, Muscat,
-                            Oman</a></li>
+                    <li><i class="icon fa fa-envelope"></i> <a href="mailto:info@magixtravel.com">info@magixtravel.com</a>
+                    </li>
+                    <li><i class="icon fa fa-map-marker-alt"></i> <a href="#">Trechville, Abidjan, Côte d'Ivoire</a>
+                    </li>
                 </ul>
             </div>
             <div class="top-right clearfix">
                 {{-- <div class="login"><a href="#">Login / Signup</a></div> --}}
                 <div class="login">
-                    <a href="{{route('login')}}">Login</a>
+                    <a href="{{ route('login') }}">Login</a>
                 </div>
-                
+
                 <div class="lang-box">
-                    <div class="lang-btn clearfix"><span class="txt">En</span><span
+                    <div class="lang-btn clearfix"><span class="txt">FR</span><span
                             class="icon far fa-angle-down"></span>
                     </div>
                     <ul class="lang-list">
@@ -46,8 +45,14 @@
         <div class="main-box clearfix">
             <!--Logo-->
             <div class="logo-box">
-                <div class="logo"><a href="index-2.html" title="Travilo"><img src="{{asset('frontend/assets/images/logo.png')}}"
-                            alt="" title="Travilo"></a></div>
+                <div class="logo"><a href="index-2.html" title="Travilo">
+                        {{-- <span style="font-weight: 900; font-size:50px;">
+                            Magix <span style="color: green">Travel</span>
+                        </span> --}}
+                        <img src="{{ asset('frontend/assets/images/Logo.png') }}" width="200px" alt=""
+                            title="Travilo">
+                    </a>
+                </div>
             </div>
 
             <div class="outer clearfix">
@@ -89,7 +94,8 @@
                                 <li><a href="contact.html">Contact</a></li>
                                 @auth
                                     <!-- Afficher le profil de l'utilisateur -->
-                                    <li><a href="{{route('dashboard')}}" title="Tableau de bord"><i class="icon fa-solid fa-home" style="color: orangered"></i></a></li>
+                                    <li><a href="{{ route('dashboard') }}" title="Tableau de bord"><i
+                                                class="icon fa-solid fa-home" style="color: orangered"></i></a></li>
                                 @endauth
                                 {{-- <li><a href="{{route('login')}}">Connexion</a></li> --}}
                             </ul>
@@ -110,7 +116,8 @@
                 <!-- Hidden Nav Toggler -->
                 <div class="nav-toggler">
                     <button class="hidden-bar-opener"><span class="icon"><img
-                                src="{{asset('frontend/assets/images/icons/menu-icon.svg')}}" alt=""></span></button>
+                                src="{{ asset('frontend/assets/images/icons/menu-icon.svg') }}"
+                                alt=""></span></button>
                 </div>
             </div>
         </div>
