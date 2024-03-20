@@ -417,8 +417,8 @@
 		<div class="popular-section">
 			<div class="auto-container">
 				<div class="title-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-					<div class="subtitle">Start Travelling Today</div>
-					<h2><span>Popular Locations</span></h2>
+					<div class="subtitle">Commencer à voyager aujourd'hui</div>
+					<h2><span>Destinations</span></h2>
 				</div>
 				<div class="carousel-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
 					<div class="bg-grad-left"><img src="{{asset('frontend/assets/images/background/bg-gradient-15.png')}}" alt="" title="">
@@ -429,24 +429,30 @@
 					<div class="popular-carousel">
 
 						<!--Block-->
+						@foreach ($destinations as $destination )
 						<div class="popular-block">
 							<div class="inner-box">
 								<div class="image-box">
-									<div class="image"><a href="destination-single.html"><img
+									<div class="image"><a href="destination-single.html">
+										<!-- <img
 												src="{{asset('frontend/assets/images/resources/destinations/newyork.jpg')}}"
-												alt="New York"></a></div>
+												alt="New York"> -->
+											
+												<img src="{{ asset('storage/' . $destination->images[0]) }}" alt="{{$destination->name}}">
+											</a></div>
 								</div>
 								<div class="hvr-box">
 									<div class="hvr-inner">
-										<h3><a href="destination-single.html">New York</a></h3>
-										<div class="info"><span>20 Hotels</span> <span>30 Tours</span> <span>15
-												Cars</span> <span>18 Flights</span></div>
+										<h3><a href="destination-single.html">{{$destination->name}}</a></h3>
+										<!-- <div class="info"><span>20 Hotels</span> <span>30 Tours</span> <span>15
+												Cars</span> <span>18 Flights</span></div> -->
 									</div>
-								</div>
+								</div>	
 							</div>
 						</div>
+						@endforeach
 
-						<!--Block-->
+						{{-- <!--Block-->
 						<div class="popular-block alternate">
 							<div class="inner-box">
 								<div class="image-box">
@@ -641,7 +647,8 @@
 									</div>
 								</div>
 							</div>
-						</div>
+						</div> --}}
+
 					</div>
 				</div>
 			</div>

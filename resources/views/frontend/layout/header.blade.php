@@ -73,7 +73,7 @@
                                 </li>
                                 <li class="dropdown"><a href="destinations.html">Destination</a>
                                     <ul>
-                                        <li><a href="destinations.html">All Destinations</a></li>
+                                        <li><a href="{{route('destination')}}">All Destinations</a></li>
                                         <li><a href="destination-single.html">Destination Single</a></li>
                                         <li><a href="hotels.html">Hotels</a></li>
                                         <li><a href="hotel-single.html">Hotel Details</a></li>
