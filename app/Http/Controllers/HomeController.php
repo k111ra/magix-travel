@@ -28,8 +28,8 @@ class HomeController extends Controller
     public function home()
     {
         $tours = Tour::all(); // Retrieve all tours from the database
-
-        return view('home', compact('tours')); // Assuming 'front.home' is your view file
+        $hotels = Hotel::orderby("created_at", 'DESC')->take(6)->get();
+        return view('home', compact('tours','hotels')); // Assuming 'front.home' is your view file
     }
 
     public function apropos()

@@ -61,12 +61,7 @@
                     <div class="nav-outer clearfix">
                         <nav class="main-menu">
                             <ul class="navigation clearfix">
-                                <li class="current dropdown"><a href="index-2.html">Home</a>
-                                    <ul>
-                                        <li><a href="index-2.html">Home 01</a></li>
-                                        <li><a href="index-3.html">Home 02</a></li>
-                                    </ul>
-                                </li>
+                                <li class="current dropdown"><a href="{{route('home')}}">Home</a></li>
                                 <li class="dropdown"><a href="tour-list.html">Tours</a>
                                     <ul>
                                         <li><a href="tour-list.html">Tours List</a></li>
@@ -84,6 +79,7 @@
                                         <li><a href="hotel-single.html">Hotel Details</a></li>
                                     </ul>
                                 </li>
+                                <li><a href="{{route('hotels')}}">Hotels</a></li>
                                 <li><a href="about.html">About</a></li>
                                 <li class="dropdown"><a href="blog.html">News</a>
                                     <ul>

@@ -39,6 +39,9 @@
                     <div class="form-group">
                         <label for="images">Images:</label>
                         <input type="file" name="images[]" id="images" multiple accept="image/*" class="form-control-file">
+                        @error('images[]')
+                            <p class="text-danger">{{ $message }}</p>
+                        @enderror
                     </div>
 
                     <!-- Add other form fields for editing -->
