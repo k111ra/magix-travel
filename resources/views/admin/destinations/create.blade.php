@@ -20,15 +20,6 @@
                                 @enderror
                             </div>
 
-                            <div class="form-group">
-                                <label for="description">Description:</label>
-                                <textarea name="description" id="description" class="form-control" required></textarea>
-                                @error('description')
-                                    <p class="text-danger">{{ $message }}</p>
-                                @enderror
-                            </div>
-
-
 
                         </div>
                         <div class="col-sm-6">
@@ -40,6 +31,16 @@
                                 <input type="file" name="images[]" id="images" multiple accept="image/*"
                                     class="form-control-file">
                                 @error('images[]')
+                                    <p class="text-danger">{{ $message }}</p>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                        <div class="form-group">
+                                <label for="description">Description:</label>
+                                <textarea name="description" id="description" class="form-control" required></textarea>
+                                @error('description')
                                     <p class="text-danger">{{ $message }}</p>
                                 @enderror
                             </div>
