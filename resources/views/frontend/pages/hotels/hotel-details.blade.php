@@ -204,10 +204,10 @@
 						</div>
 
 						<!--Sidebar Side-->
-						<div class="sidebar-side col-xl-4 col-lg-8 col-md-12 col-sm-12">
+						{{-- <div class="sidebar-side col-xl-4 col-lg-8 col-md-12 col-sm-12">
 							<div class="sidebar-inner">
 								<!--Widget-->
-								{{-- <div class="dsp-widget t-book-widget">
+								 <div class="dsp-widget t-book-widget">
 									<div class="inner-box">
 										<div class="t-book-header">
 											<span class="st-txt">Start <br>From</span>
@@ -278,7 +278,7 @@
 											</div>
 										</div>
 									</div>
-								</div> --}}
+								</div> 
 
 								<!--Widget-->
 								<div class="dsp-widget get-help-widget">
@@ -326,7 +326,7 @@
 								</div>
 
 							</div>
-						</div>
+						</div> --}}
 
 					</div>
 				</div>
