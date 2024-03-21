@@ -14,7 +14,6 @@
                         <tr>
                             <th>#</th>
                             <th>Nom</th>
-                            <th>Description</th>
                             <th>Durée</th>
                             <th>Prix</th>
                             <th>Destination</th>
@@ -30,10 +29,9 @@
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $tour->nom }}</td>
-                                <td>{{ $tour->description }}</td>
-                                <td>{{ $tour->duree }}</td>
-                                <td>{{ $tour->prix }}</td>
-                                <td>{{ $tour->destination }}</td>
+                                <td>{{ $tour->duree }} jour(s)</td>
+                                <td>{{ number_format($tour->prix, 0, ',', ' ') }} FCFA</td>
+                                <td>{{ $tour->destination->name }}</td>
                                 <td>{{ $tour->place }}</td>
                                 <td>{{ $tour->date_depart }}</td>
                                 <td>{{ $tour->moyen_transport }}</td>

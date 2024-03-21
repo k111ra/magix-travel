@@ -20,5 +20,10 @@ class Destination extends Model
     {
         return $this->hasMany(Vol::class, 'destination_id');
     }
+
+    public function tours()
+    {
+        return $this->hasMany(Tour::class);
+    }
 }
 

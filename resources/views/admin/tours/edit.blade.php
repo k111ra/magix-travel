@@ -38,13 +38,17 @@
                                      required>
                              </div>
 
-                            <div class="form-group">
-                                <label for="destination">Destination:</label>
-                                <input type="text" name="destination" id="destination" class="form-control"
-                                    value="{{ $tour->destination }}" required>
+                             <div class="form-group">
+                                <label for="depart_id">Destination</label>
+                                <select name="destinations_id" class="form-control" id="destinations_id" >
+                                    <option value="{{ $tour->destination }}">Selectionner...</option>
+                                    @foreach ($destinations as $data)
+                                        <option value="{{ $data->id }}" {{$tour->destination && $data->id == $tour->destination->id ? 'selected' : '' }}>{{ $data->name }}</option>
+                                    @endforeach
+                                </select>
                             </div>
                         </div>
-                         <div class="col-sm-4">
+                         <div class="col-sm-6">
 
                             <div class="form-group">
                                 <label for="place">Places disponibles:</label>
@@ -66,7 +70,7 @@
 
                             <div class="form-group">
                                 <label for="images">Images:</label>
-                                <input type="file" name="images[]" id="images" multiple accept="image/*"
+                                <input type="file" name="images[]" value="{{ $tour->images}}" id="images" multiple accept="image/*"
                                     class="form-control-file">
                             </div>
                         </div>

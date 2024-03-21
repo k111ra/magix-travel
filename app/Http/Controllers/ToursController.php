@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Destination;
 use App\Models\Tour;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
@@ -16,7 +17,7 @@ class ToursController extends Controller
      */
     public function index()
     {
-        $tours = Tour::all();
+        $tours = Tour::orderby('created_at', 'DESC')->get();
         // dd($tours); // Check if data is retrieved successfully
         return view('admin.tours.index')->with('tours', $tours);
     }
@@ -28,7 +29,8 @@ class ToursController extends Controller
      */
     public function create()
     {
-        return view('admin.tours.create');
+        $destinations = Destination::all();
+        return view('admin.tours.create',compact('destinations'));
     }
 
     /**
@@ -44,13 +46,13 @@ class ToursController extends Controller
         // Définir les règles de validation
         $rules = [
             'nom' => ['required', 'string', 'max:255'],
-            'description' => ['required', 'string'],
+            'destinations_id' => ['required', 'integer'],
             'duree' => ['required', 'numeric'],
             'prix' => ['required', 'numeric'],
-            'destination' => ['required', 'string'],
             'place' => ['required', 'numeric'],
             'date_depart' => ['required', 'date'],
             'moyen_transport' => ['required', 'string'],
+            'description'=> ['required', 'string', 'max:255'],
             'images' => 'array|required',
         ];
 
@@ -63,20 +65,22 @@ class ToursController extends Controller
         $tour->description = $validatedData['description'];
         $tour->duree = $validatedData['duree'];
         $tour->prix = $validatedData['prix'];
-        $tour->destination = $validatedData['destination'];
+        $tour->destinations_id = $validatedData['destinations_id'];
         $tour->place = $validatedData['place'];
         $tour->date_depart = $validatedData['date_depart'];
         $tour->moyen_transport = $validatedData['moyen_transport'];
 
-        // Storing tour images
+
         if ($request->hasFile('images')) {
             $images = [];
             foreach ($request->file('images') as $image) {
                 $path = $image->store('tour_images', 'public'); // Store images in 'public/tour_images' directory
                 $images[] = $path;
             }
-            $tour->images = $images;
+            // Convertir le tableau d'images en une chaîne de caractères JSON
+            $tour->images = json_encode($images);
         }
+
         // Enregistrer le tour
         $tour->save();
 
@@ -94,6 +98,7 @@ class ToursController extends Controller
      */
     public function show(Tour $tour)
     {
+        // dd($tour);
         return view('admin.tours.show', compact('tour'));
     }
     /**
@@ -106,7 +111,8 @@ class ToursController extends Controller
 
     public function edit(Tour $tour)
     {
-        return view('admin.tours.edit', compact('tour'));
+        $destinations = Destination::all();
+        return view('admin.tours.edit', compact('tour','destinations'));
     }
 
     /**
@@ -122,34 +128,40 @@ class ToursController extends Controller
         // Valider les données du formulaire
         $validatedData = $request->validate([
             'nom' => 'required',
-            'description' => 'required',
+            'destinations_id' => 'required',
             'duree' => 'required',
             'prix' => 'required',
-            'destination' => 'required',
             'place' => 'required',
             'date_depart' => 'required',
             'moyen_transport' => 'required',
+            'description'=> 'string',
             'images.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
-        // Stocker les chemins des nouvelles images
-        $images = [];
+         // Stocker les chemins des nouvelles images
+         if ($request->hasFile('images')) {
+            $images = [];
 
-        if ($request->hasFile('images')) {
             foreach ($request->file('images') as $image) {
                 $path = $image->store('tour_images', 'public');
                 $images[] = $path;
             }
-        }
 
-        // Mettre à jour les images seulement si de nouvelles images ont été téléchargées
-        if (!empty ($images)) {
-            $tour->images = $images;
+            // Convertir le tableau d'images en une chaîne JSON valide
+            $tour->images = json_encode($images);
         }
 
         // Mettre à jour les autres champs avec les données validées
-        $tour->update($validatedData);
-
+        $tour->update([
+            'nom' => $validatedData['nom'],
+            'destinations_id' => $validatedData['destinations_id'],
+            'duree' => $validatedData['duree'],
+            'prix' => $validatedData['prix'],
+            'place' => $validatedData['place'],
+            'date_depart' => $validatedData['date_depart'],
+            'moyen_transport' => $validatedData['moyen_transport'],
+            'description' => $validatedData['description'],
+        ]);
         // Notification Toastr de succès
         return redirect()->route('tours.index')->with('success', 'Le tour a été mis à jour avec succès');
     }
