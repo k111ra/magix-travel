@@ -10,7 +10,7 @@
 					<h1>Destinations</h1>
 					<div class="bread-crumb">
 						<ul class="clearfix">
-							<li><a href="index-2.html">Home</a></li>
+							<li><a href="{{route('home')}} ">Home</a></li>
 							<li class="current">Destinations</li>
 						</ul>
 					</div>
@@ -26,18 +26,16 @@
 					<div class="row clearfix">
 						<!--Block-->
                         @foreach ($destinations as $destination)
-                            
-                        
 						<div class="popular-block col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
 							<div class="inner-box">
 								<div class="image-box">
-									<div class="image"><a href="destination-single.html"><img
+									<div class="image"><a href="{{route('single-destination',$destination->id)}}"><img
 												src="{{ asset('storage/' . json_decode($destination->images)[0]) }}" alt="Giza" style="height: 369.52px;"></a>
 									</div>
 								</div>
 								<div class="hvr-box">
 									<div class="hvr-inner">
-										<h3><a href="destination-single.html">{{$destination->name}}</a></h3>
+										<h3><a href="{{route('single-destination',$destination->id)}}">{{$destination->name}}</a></h3>
 										{{-- <div class="info"><span>20 Hotel</span> <span>30 Tours</span> <span>10
 												Cars</span> <span>18 Flights</span></div> --}}
 									</div>

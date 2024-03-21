@@ -45,7 +45,7 @@
         <div class="main-box clearfix">
             <!--Logo-->
             <div class="logo-box">
-                <div class="logo"><a href="index-2.html" title="Travilo">
+                <div class="logo"><a href="{{route('home')}}" title="Travilo">
                         {{-- <span style="font-weight: 900; font-size:50px;">
                             Magix <span style="color: green">Travel</span>
                         </span> --}}
@@ -65,18 +65,18 @@
                                 <li class="dropdown"><a href="tour-list.html">Tours</a>
                                     <ul>
                                         <li><a href="tour-list.html">Tours List</a></li>
-                                        <li><a href="tour-packages.html">Tour Packages</a></li>
+                                        {{-- <li><a href="tour-packages.html">Tour Packages</a></li>
                                         <li><a href="tour-single.html">Tour Details</a></li>
                                         <li><a href="activities.html">Activities</a></li>
-                                        <li><a href="activity-single.html">Activity Details</a></li>
+                                        <li><a href="activity-single.html">Activity Details</a></li> --}}
                                     </ul>
                                 </li>
                                 <li class="dropdown"><a href="destinations.html">Destination</a>
                                     <ul>
-                                        <li><a href="{{route('destination')}}">All Destinations</a></li>
-                                        <li><a href="destination-single.html">Destination Single</a></li>
+                                        <li><a href="{{route('destination')}}">Les Destinations</a></li>
+                                        {{-- <li><a href="destination-single.html">Destination Single</a></li>
                                         <li><a href="hotels.html">Hotels</a></li>
-                                        <li><a href="hotel-single.html">Hotel Details</a></li>
+                                        <li><a href="hotel-single.html">Hotel Details</a></li> --}}
                                     </ul>
                                 </li>
                                 <li><a href="{{route('hotels')}}">Hotels</a></li>

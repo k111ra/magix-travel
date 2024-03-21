@@ -148,4 +148,10 @@ class DestinationController extends Controller
         $destinations = Destination::orderby('created_at', 'DESC')->get();
         return view('frontend.pages.destination.index',compact('destinations'));
     }
+
+    public function singleDestination($id)
+    {
+        $destination = Destination::findOrFail($id);
+        return view('frontend.pages.destination.single-destination', compact('destination'));
+    }
 }
