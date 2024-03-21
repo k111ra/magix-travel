@@ -8,7 +8,7 @@
 						<!--Slide Item-->
 						<div class="swiper-slide slide-item">
 							<div class="image-layer"
-								style="background-image: url({{asset('frontend/assets/images/resources/slider/main-slider-1.jpg')}});"></div>
+								style="background-image: url({{asset('frontend/assets/images/resources/slider/main-slider-1.jpg')}})"></div>
 							<div class="auto-container">
 								<div class="content-box">
 									<div class="content">
@@ -438,7 +438,7 @@
 												src="{{asset('frontend/assets/images/resources/destinations/newyork.jpg')}}"
 												alt="New York"> -->
 											
-												<img src="{{ asset('storage/' . $destination->images[0]) }}" alt="{{$destination->name}}">
+												<img src="{{ asset('storage/' . $destination->images[0]) }}" alt="{{$destination->name}}"  style="height: 369.52px;">
 											</a></div>
 								</div>
 								<div class="hvr-box">
