@@ -16,17 +16,17 @@
                                 <div class="inner-box">
                                     <div class="image-box">
                                         <div class="image">
-                                            <a href="hotel-single.html">
+                                            <a href="{{route('single-hotel',$hotel->id)}}">
                                                 <img src="{{ asset('storage/' . json_decode($hotel->images)[0]) }}" alt="Maldives Hotel">
                                             </a>
                                         </div>
                                         <div class="b-title featured"><span>Featured</span></div>
-                                        <div class="fav-btn"><a href="#"><span class="far fa-heart"></span></a>
+                                        <div class="fav-btn"><a href="{{route('single-hotel',$hotel->id)}}"><span class="far fa-heart"></span></a>
                                         </div>
                                     </div>
                                     <div class="lower-box">
                                         <div class="location">{{$hotel->localisation}}</div>
-                                        <h5><a href="hotel-single.html">{{$hotel->name}}</a></h5>
+                                        <h5><a href="{{route('single-hotel',$hotel->id)}}">{{$hotel->name}}</a></h5>
                                         <div class="bottom-box clearfix">
                                             <div class="rating"><a href="#" class="theme-btn"><i
                                                         class="fa-solid fa-star"></i>

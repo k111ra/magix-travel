@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\Destination;
 use Illuminate\Support\Str;
+use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 
 class DestinationController extends Controller
 {

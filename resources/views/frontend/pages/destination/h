@@ -1,0 +1,20 @@
+
+					<div class="image-col sm-col">
+						
+						<div class="">
+							
+							<div class="inner">
+								
+								<div class="image"><img src="{{ asset('storage/' . json_decode($hotel->images)[$i]) }}"
+										alt=""></div>
+								<div class="image-layer"
+									style="background-image: url({{ asset('storage/' . json_decode($hotel->images)[$i]) }});">
+								</div>
+								<a href="{{ asset('storage/' . json_decode($hotel->images)[$i]) }}"
+									class="over-link lightbox-image" data-fancybox="HotelGallery"></a>
+									
+							</div>
+						</div>
+						
+					</div>
+					@endfor

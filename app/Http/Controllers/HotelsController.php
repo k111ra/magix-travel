@@ -121,4 +121,10 @@ class HotelsController extends Controller
         $hotels = Hotel::orderby('created_at', 'DESC')->get();
         return view('frontend.pages.hotels.hotels', compact('hotels'));
     }
+
+    public function hotelDetails($id)
+    {
+        $hotel = Hotel::findOrFail($id);
+        return view('frontend.pages.hotels.hotel-details',compact('hotel'));
+    }
 }

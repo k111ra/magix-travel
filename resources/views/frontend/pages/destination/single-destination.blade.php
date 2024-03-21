@@ -2,7 +2,7 @@
 @section('content')
 		<!-- Banner Section -->
 		<section class="inner-banner">
-			<div class="image-layer" style="background-image: url({{asset('frontend/assets/images/resources/featured/banner-2.jpg')}});">
+			<div class="image-layer" style="background-image: url({{ asset('frontend/assets/images/resources/featured/banner-2.jpg' )}});">
 			</div>
 			<div class="auto-container">
 				<div class="content-box">
