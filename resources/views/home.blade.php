@@ -438,7 +438,7 @@
 												src="{{asset('frontend/assets/images/resources/destinations/newyork.jpg')}}"
 												alt="New York"> -->
 											
-												<img src="{{ asset('storage/' . $destination->images[0]) }}" alt="{{$destination->name}}"  style="height: 369.52px;">
+												<img src="{{ asset('storage/' . json_decode($destination->images)[0]) }}" alt="{{$destination->name}}"  style="height: 369.52px;">
 											</a></div>
 								</div>
 								<div class="hvr-box">

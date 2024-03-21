@@ -15,7 +15,7 @@ class DestinationController extends Controller
      */
     public function index()
     {
-        $destinations = Destination::all();
+        $destinations = Destination::orderby('created_at', 'DESC')->get();
         return view('admin.destinations.index', compact('destinations'));
     }
 
@@ -65,7 +65,7 @@ class DestinationController extends Controller
         $destination->save();
 
         // Redirigez vers la page de détails de la destination créée
-        return redirect()->route('destinations.index', $destination)->with('success', 'Destination ajoute avec succès');
+        return redirect()->route('destinations.index')->with('success', 'Destination ajoute avec succès');
     }
 
     /**
@@ -97,10 +97,39 @@ class DestinationController extends Controller
      * @param  \App\Models\Destination  $destination
      * @return \Illuminate\Http\Response
      */
+
     public function update(Request $request, Destination $destination)
     {
-        $destination->update($request->all());
-        return redirect()->route('destinations.index', $destination);
+        // Validate the request
+        $validatedData = $request->validate([
+            'name' => 'required|string|max:255',
+            'description' => 'required|string',
+            'slug' => 'string|max:255',
+            'images.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+
+        // Stocker les chemins des nouvelles images
+        if ($request->hasFile('images')) {
+            $images = [];
+
+            foreach ($request->file('images') as $image) {
+                $path = $image->store('destination', 'public');
+                $images[] = $path;
+            }
+
+            // Convertir le tableau d'images en une chaîne JSON valide
+            $destination->images = json_encode($images);
+        }
+
+        // Mettre à jour les autres champs avec les données validées
+        $destination->update([
+            'name' => $validatedData['name'],
+            'description' => $validatedData['description'],
+            'slug' => Str::slug($validatedData['name'], '-')
+        ]);
+
+        // Redirect to the index page or show the updated hotel
+        return redirect()->route('destinations.index')->with('success', 'Destination Modifié');
     }
 
     /**
@@ -116,7 +145,7 @@ class DestinationController extends Controller
     }
 
     public function destination(){
-        $destinations = Destination::all();
+        $destinations = Destination::orderby('created_at', 'DESC')->get();
         return view('frontend.pages.destination.index',compact('destinations'));
     }
 }

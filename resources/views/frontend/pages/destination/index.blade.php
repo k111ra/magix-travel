@@ -32,7 +32,7 @@
 							<div class="inner-box">
 								<div class="image-box">
 									<div class="image"><a href="destination-single.html"><img
-												src="{{ asset('storage/' . $destination->images[0]) }}" alt="Giza" style="height: 369.52px;"></a>
+												src="{{ asset('storage/' . json_decode($destination->images)[0]) }}" alt="Giza" style="height: 369.52px;"></a>
 									</div>
 								</div>
 								<div class="hvr-box">
