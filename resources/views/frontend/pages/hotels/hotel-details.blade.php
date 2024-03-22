@@ -1,14 +1,13 @@
 @extends('layouts.layout')
 @section('content')
-    		<!-- Banner Section -->
 		<div class="hotel-single-banner">
-
 			<div class="outer-container">
 				<div class="row clearfix">
 					<div class="image-col">
 						<div class="image-block">
 							<div class="inner">
-								<div class="image"><img src="{{ asset('storage/' . json_decode($hotel->images)[0]) }}"
+								<div class="image">
+									<img src="{{ asset('storage/' . json_decode($hotel->images)[0]) }}"
 										alt=""></div>
 								<div class="image-layer"
 									style="background-image: url({{ asset('storage/' . json_decode($hotel->images)[0]) }});">
@@ -18,30 +17,33 @@
 							</div>
 						</div>
 					</div>
-					@for($i = 1; $i < count(json_decode($hotel->images)); $i++)
-					
-					<div class="image-col sm-col" style="display: flexbox">
-
-						
-						
-						<div class="image-block sm-block">
-							
-							<div class="inner">
-								<div class="image"><img src="{{ asset('storage/' . json_decode($hotel->images)[$i]) }}}"
-										alt=""></div>
-								<div class="image-layer"
-									style="background-image: url({{ asset('storage/' . json_decode($hotel->images)[$i]) }});">
+					<div class="image-col sm-col">
+					@for ($i = 1; $i < min(count(json_decode($hotel->images)), 3); $i++)
+							<div class="image-block sm-block">
+								<div class="inner">
+									<div class="image">
+										<img src="{{ asset('storage/' . json_decode($hotel->images)[$i]) }}" alt="">
+									</div>
+									<div class="image-layer" style="background-image: url({{ asset('storage/' . json_decode($hotel->images)[$i]) }});"></div>
+									<a href="{{ asset('storage/' . json_decode($hotel->images)[$i]) }}" class="over-link lightbox-image" data-fancybox="HotelGallery"></a>
 								</div>
-								<a href="{{ asset('storage/' . json_decode($hotel->images)[$i]) }}"
-									class="over-link lightbox-image" data-fancybox="HotelGallery"></a>
 							</div>
-						
-						    
-							{{-- <div class="img-link"><a href="#" class="theme-btn"><span>+ 160 Photos</span></a></div> --}}
-						</div>
-						
-					</div>@endfor
+					@endfor
+					</div>
 
+					<div class="image-col sm-col">
+						@for ($i = 3; $i < min(count(json_decode($hotel->images)), 5); $i++)
+								<div class="image-block sm-block">
+									<div class="inner">
+										<div class="image">
+											<img src="{{ asset('storage/' . json_decode($hotel->images)[$i]) }}" alt="">
+										</div>
+										<div class="image-layer" style="background-image: url({{ asset('storage/' . json_decode($hotel->images)[$i]) }});"></div>
+										<a href="{{ asset('storage/' . json_decode($hotel->images)[$i]) }}" class="over-link lightbox-image" data-fancybox="HotelGallery"></a>
+									</div>
+								</div>
+						@endfor
+					</div>
 				</div>
 			</div>
 		</div>
