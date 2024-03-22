@@ -1,6 +1,7 @@
 <?php
 namespace App\Models;
 
+use App\Models\Vol;
 use Illuminate\Database\Eloquent\Model;
 
 class Destination extends Model
