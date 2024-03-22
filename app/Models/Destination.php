@@ -1,15 +1,16 @@
 <?php
 namespace App\Models;
 
+use App\Models\Vol;
 use Illuminate\Database\Eloquent\Model;
 
 class Destination extends Model
 {
-    protected $fillable = ['name', 'description', 'slug'];
+    protected $fillable = ['name', 'description', 'slug','images'];
 
-    protected $casts = [
-        'images' => 'array',
-    ];
+    // protected $casts = [
+    //     'images' => 'array',
+    // ];
 
     public function volsDepart()
     {
@@ -19,6 +20,11 @@ class Destination extends Model
     public function volsArrivee()
     {
         return $this->hasMany(Vol::class, 'destination_id');
+    }
+
+    public function tours()
+    {
+        return $this->hasMany(Tour::class);
     }
 }
 

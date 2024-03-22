@@ -40,6 +40,12 @@ Route::get('/contacts', [HomeController::class, 'contacts'])->name('contacts');
 
 //routes des destinations
 Route::get('/destination', [DestinationController::class, 'destination'])->name('destination');
+Route::get('/detail-destination/{id}', [DestinationController::class, 'singleDestination'])->name('single-destination');
+
+
+//Routes des hotels
+Route::get('/hotel-details/{id}', [HotelsController::class, 'hotelDetails'])->name('single-hotel');
+
 
 
 // Admin routes (use middleware for protection)
