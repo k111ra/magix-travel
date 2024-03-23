@@ -12,6 +12,7 @@ use App\Http\Controllers\RolesController;
 use App\Http\Controllers\ToursController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\DestinationController;
+use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\VolController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -56,6 +57,8 @@ Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function () {
     Route::resource('hotels', HotelsController::class);
     Route::resource('destinations', DestinationController::class);
     Route::resource('vols', VolController::class);
+    Route::resource('reservations', ReservationController::class);
+
 
 
     // Other admin routes

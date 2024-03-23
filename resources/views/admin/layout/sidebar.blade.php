@@ -41,6 +41,8 @@
                         href="{{ route('destinations.index') }}">Destinations</a></li>
                 <li><a class="nav-link @if (request()->routeIs('vols.index')) active @endif"
                         href="{{ route('vols.index') }}">Vols</a></li>
+                <li><a class="nav-link @if (request()->routeIs('reservations.index')) active @endif"
+                        href="{{ route('reservations.index') }}">Reservation</a></li>
             </ul>
         </li>
 
