@@ -32,14 +32,14 @@
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="etoiles">Étoiles:</label>
-                                <input type="number" name="etoiles" id="etoiles" class="form-control" value="{{ $hotel->etoiles }}">
+                                <input type="number" min="0" name="etoiles" id="etoiles" class="form-control" value="{{ $hotel->etoiles }}">
                             </div>
                         </div>
 
                     <div class="col-sm-6">
                         <div class="form-group">
                             <label for="prix">Prix:</label>
-                            <input type="number" name="prix" id="prix" class="form-control" value="{{ $hotel->prix }}" required>
+                            <input type="number" name="prix" min="0" id="prix" class="form-control" value="{{ $hotel->prix }}" required>
                         </div>
                     </div>
                     <div class="form-group">

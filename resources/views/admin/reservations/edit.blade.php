@@ -21,7 +21,7 @@
                 </div>
                 <div class="form-group">
                     <label for="phone_number">Numéro de téléphone</label>
-                    <input type="text" name="phone_number" class="form-control" id="phone_number"
+                    <input type="text" min="0" name="phone_number" class="form-control" id="phone_number"
                         value="{{ $reservation->phone_number }}">
                 </div>
                 <div class="form-group">
@@ -41,7 +41,7 @@
                 </div>
                 <div class="form-group">
                     <label for="num_persons">Nombre de personnes</label>
-                    <input type="number" name="num_persons" class="form-control" id="num_persons"
+                    <input type="number" min="0" name="num_persons" class="form-control" id="num_persons"
                         value="{{ $reservation->num_persons }}">
                 </div>
                 <div class="form-group">

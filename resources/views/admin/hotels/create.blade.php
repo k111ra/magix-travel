@@ -34,7 +34,7 @@
 
                         <div class="form-group">
                             <label for="etoiles">Etoiles:</label>
-                            <input type="number" name="etoiles" id="etoiles" class="form-control" required>
+                            <input type="number" min="0" name="etoiles" id="etoiles" class="form-control" required>
                             @error('etoiles')
                             <p class="text-danger">{{ $message }}</p>
                             @enderror
@@ -46,7 +46,7 @@
                         <!-- Group 2 -->
                         <div class="form-group">
                             <label for="prix">Prix:</label>
-                            <input type="number" name="prix" id="prix" class="form-control" required>
+                            <input type="number" min="0" name="prix" id="prix" class="form-control" required>
                             @error('prix')
                             <p class="text-danger">{{ $message }}</p>
                             @enderror

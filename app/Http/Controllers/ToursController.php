@@ -182,4 +182,16 @@ class ToursController extends Controller
         return redirect()->route('tours.index')->with('success', 'Le tour a été supprimé avec succès');
     }
 
+
+    public function tourFrontend()
+    {
+        $tours = Tour::orderby('created_at', 'DESC')->get();
+        return view('frontend.pages.tours.index', compact('tours'));
+    }
+
+    public function tourDetails($id)
+    {
+        $tour = Tour::findOrFail($id);
+        return view('frontend.pages.tours.single-tour',compact('tour'));
+    }
 }

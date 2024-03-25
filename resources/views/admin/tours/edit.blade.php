@@ -24,17 +24,15 @@
                                     required>
                             </div>
 
-                           
-
                             <div class="form-group">
                                 <label for="duree">Durée (en jours):</label>
-                                <input type="number" name="duree" id="duree" class="form-control" value="{{ $tour->duree }}"
+                                <input type="number" min="0" name="duree" id="duree" class="form-control" value="{{ $tour->duree }}"
                                     required>
                             </div>
 
                              <div class="form-group">
                                  <label for="prix">Prix:</label>
-                                 <input type="number" name="prix" id="prix" class="form-control" value="{{ $tour->prix }}"
+                                 <input type="number" min="0" name="prix" id="prix" class="form-control" value="{{ $tour->prix }}"
                                      required>
                              </div>
 
@@ -52,7 +50,7 @@
 
                             <div class="form-group">
                                 <label for="place">Places disponibles:</label>
-                                <input type="number" name="place" id="place" class="form-control" value="{{ $tour->place }}"
+                                <input type="number" min="0" name="place" id="place" class="form-control" value="{{ $tour->place }}"
                                     required>
                             </div>
 

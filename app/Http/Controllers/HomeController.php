@@ -19,7 +19,7 @@ class HomeController extends Controller
      */
     public function home()
     {
-        $tours = Tour::all();
+        $tours = Tour::latest()->take(9)->get();
         $destinations = Destination::latest()->take(10)->get();
         $hotels = Hotel::latest()->take(6)->get();
         return view('home', compact('tours', 'destinations', 'hotels'));
