@@ -31,7 +31,7 @@
                                 <td>{{ $tour->nom }}</td>
                                 <td>{{ $tour->duree }} jour(s)</td>
                                 <td>{{ number_format($tour->prix, 0, ',', ' ') }} FCFA</td>
-                                <td>{{ $tour->destination ? $tour->destination->name : 'N/A' }}</td>
+                                <td>{{ $tour->destination->name}}</td>
                                 <td>{{ $tour->place }}</td>
                                 <td>{{ $tour->date_depart }}</td>
                                 <td>{{ $tour->moyen_transport }}</td>

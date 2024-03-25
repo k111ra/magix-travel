@@ -19,13 +19,13 @@
                             </div>
                             <div class="form-group">
                                 <label for="duree">Durée (en jours):</label>
-                                <input type="number" name="duree" id="duree" class="form-control" required>
+                                <input type="number" min="0" name="duree" id="duree" class="form-control" required>
                             </div>
                             
 
                             <div class="form-group">
                                 <label for="prix">Prix:</label>
-                                <input type="number" name="prix" id="prix" class="form-control" required>
+                                <input type="number" min="0" name="prix" id="prix" class="form-control" required>
                             </div>
                             
                             <div class="form-group">
@@ -55,8 +55,6 @@
                                 <input type="text" name="moyen_transport" id="moyen_transport" class="form-control"
                                     required>
                             </div>
-
-                            
                             <!-- Common Group -->
                            
                             <div class="form-group">
@@ -64,11 +62,8 @@
                                 <input type="file" name="images[]" id="images" multiple accept="image/*"
                                     class="form-control-file">
                             </div>
-                        
                         </div>
                     </div> 
-                
-
                 </div>
 
                 <div class="col-sm-12">
@@ -77,7 +72,6 @@
                                 <textarea name="description" id="description" class="form-control" required></textarea>
                         </div>
                  </div>
-
 
                 <div class="card-footer">
                     <button type="submit" class="btn btn-primary">Ajouter le Tour</button>

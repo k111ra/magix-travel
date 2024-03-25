@@ -72,13 +72,13 @@
                                 <div class="col-4">
                                     <div class="form-group">
                                         <label for="amount">Montant</label>
-                                        <input type="number" name="amount" class="form-control" id="amount">
+                                        <input type="number" min="0" name="amount" class="form-control" id="amount">
                                     </div>
                                 </div>
                                 <div class="col-4">
                                     <div class="form-group">
                                         <label for="num_persons">Nombre de personnes</label>
-                                        <input type="number" name="num_persons" class="form-control" id="num_persons">
+                                        <input type="number" min="0" name="num_persons" class="form-control" id="num_persons">
                                     </div>
                                 </div>
                                 <div class="col-6">

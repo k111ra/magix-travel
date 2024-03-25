@@ -1,9 +1,11 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\CommandesController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DevisController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\HotelsController;
@@ -42,6 +44,7 @@ Route::get('/contacts', [HomeController::class, 'contacts'])->name('contacts');
 //routes des destinations
 Route::get('/destination', [DestinationController::class, 'destination'])->name('destination');
 Route::get('/detail-destination/{id}', [DestinationController::class, 'singleDestination'])->name('single-destination');
+
 
 
 //Routes des hotels
@@ -112,7 +115,20 @@ Route::get('/apropos', [HomeController::class, 'apropos'])->name('apropos');
 Route::get('/contacts', [HomeController::class, 'contacts'])->name('contacts');
 
 
+////////////Les routes front de hotel////////////////////////
 Route::get('/hotels', [HotelsController::class, 'hotelFrontend'])->name('hotels');
+
+////////////Les routes front de tour////////////////////////
+Route::get('/tours', [ToursController::class, 'tourFrontend'])->name('tours');
+Route::get('/detail-tour/{id}', [ToursController::class, 'tourDetails'])->name('single-tour');
+
+
+////////////Les routes front pour about////////////////////////
+Route::get('/a-propos-de-nous', [AboutController::class, 'index'])->name('about');
+
+
+////////////Les routes front de contact////////////////////////
+Route::get('/contactez-nous', [ContactController::class, 'index'])->name('contact');
 
 // Use Laravel helper functions for common authentication routes (optional)
 Auth::routes();
