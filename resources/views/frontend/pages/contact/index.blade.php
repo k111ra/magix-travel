@@ -96,13 +96,11 @@
 					</div>
 				</div>
 
-				<div class="map-box">
-					<iframe
-						src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d29242.499927623165!2d58.47333640472832!3d23.628977463737897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2som!4v1691096678627!5m2!1sen!2som"
-						allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				{{-- <div class="map-box"> --}}
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.7615890428924!2d-4.00948032591216!3d5.299852894678455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfc1eb01294beb2d%3A0xbeed57f41e6f0d0c!2sMagix%20Travel!5e0!3m2!1sfr!2sci!4v1711447307834!5m2!1sfr!2sci" width="1200" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 					<div class="map-icon"><img src="assets/images/icons/map-marker.png" alt=""></div>
-				</div>
+				{{-- </div> --}}
 
 			</div>
 		</section>
