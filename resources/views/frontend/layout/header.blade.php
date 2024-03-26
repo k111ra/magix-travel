@@ -13,7 +13,12 @@
             <div class="top-right clearfix">
                 {{-- <div class="login"><a href="#">Login / Signup</a></div> --}}
                 <div class="login">
+
+                    @auth
+                        connected
+                    @endauth
                     <a href="{{ route('login') }}">Login</a>
+
                 </div>
 
                 <div class="lang-box">
@@ -51,7 +56,7 @@
                             Magix <span style="color: green">Travel</span>
                         </span> --}}
                         <img src="{{ asset('frontend/assets/images/Logo.png') }}" width="200px" alt=""
-                            title="Travilo">
+                            title="Magix Travel">
                     </a>
                 </div>
             </div>

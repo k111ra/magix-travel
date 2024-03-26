@@ -3,6 +3,7 @@
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\CommandesController;
 use App\Http\Controllers\ContactController;
@@ -129,6 +130,11 @@ Route::get('/a-propos-de-nous', [AboutController::class, 'index'])->name('about'
 
 ////////////Les routes front de contact////////////////////////
 Route::get('/contactez-nous', [ContactController::class, 'index'])->name('contact');
+
+
+
+////////////Les routes front de contact////////////////////////
+Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 
 // Use Laravel helper functions for common authentication routes (optional)
 Auth::routes();
