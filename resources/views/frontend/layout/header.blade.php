@@ -55,7 +55,7 @@
                         {{-- <span style="font-weight: 900; font-size:50px;">
                             Magix <span style="color: green">Travel</span>
                         </span> --}}
-                        <img src="{{ asset('frontend/assets/images/Logo.png') }}" width="200px" alt=""
+                        <img src="{{ asset('frontend/assets/images/logo.png') }}" width="200px" alt=""
                             title="Magix Travel">
                     </a>
                 </div>
