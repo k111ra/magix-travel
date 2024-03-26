@@ -12,7 +12,12 @@
             <div class="top-right clearfix">
                 {{-- <div class="login"><a href="#">Login / Signup</a></div> --}}
                 <div class="login">
+                    
+                    @auth
+                    connected
+                    @endauth
                     <a href="{{ route('login') }}">Login</a>
+
                 </div>
 
                 <div class="lang-box">
@@ -50,7 +55,7 @@
                             Magix <span style="color: green">Travel</span>
                         </span> --}}
                         <img src="{{ asset('frontend/assets/images/Logo.png') }}" width="200px" alt=""
-                            title="Travilo">
+                            title="Magix Travel">
                     </a>
                 </div>
             </div>
@@ -81,12 +86,12 @@
                                 </li>
                                 <li class="dropdown {{ Route::is('hotels') ? 'current' : '' }}"><a href="{{route('hotels')}}">Hotels</a></li>
                                 <li class="dropdown {{ Route::is('about') ? 'current' : '' }}"><a href="{{route('about')}}">About</a></li>
-                                {{-- <li class="dropdown"><a href="blog.html">News</a>
-                                    <ul>
+                                 <li class="dropdown {{ Route::is('blog') ? 'current' : '' }}"><a href="{{route('blog')}}">Blog</a>
+                                   {{-- <ul>
                                         <li><a href="blog.html">Our Blog</a></li>
                                         <li><a href="blog-single.html">Blog Details</a></li>
-                                    </ul>
-                                </li> --}}
+                                    </ul></li> --}}
+                                
                                 <li class="dropdown {{ Route::is('contact') ? 'current' : '' }}"><a href="{{route('contact')}}">Contact</a></li>
                                 @auth
                                     <!-- Afficher le profil de l'utilisateur -->
@@ -104,7 +109,7 @@
 
                 <div class="links-box clearfix">
                     <div class="link call-to">
-                        <a href="tel:+96899999000"><i class="icon fa-solid fa-phone"></i> Appelez-nous <span
+                        <a href="tel:+225 07 99 99 90 00"><i class="icon fa-solid fa-phone"></i> Appelez-nous <span
                                 class="nmbr">+225 07 99 99 90 00</span></a>
                     </div>
                 </div>

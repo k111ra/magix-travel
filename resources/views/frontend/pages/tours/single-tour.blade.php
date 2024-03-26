@@ -1,7 +1,8 @@
 @extends('layouts.layout')
 @section('content')
 <div class="tour-single-banner">
-    <div class="image-layer" style="background-image: url({{asset('frontend/assets/images/resources/featured/featured-4.jpg')}});">
+    <div class="image-layer" style="background-image: url({{asset('frontend/assets/images/resources/featured/featured-4.jpg')}})"
+')}});">
     </div>
     <div class="auto-container">
         <div class="content-box">
@@ -317,7 +318,7 @@
 										allowfullscreen="" loading="lazy"
 										referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-									<div class="map-icon"><img src="assets/images/icons/map-marker-2.png" alt=""></div>
+									<div class="map-icon"><img src="{{asset('frontend/assets/images/icons/map-marker-2.png')}}" alt=""></div>
 								</div>
 							</div>
 
@@ -431,65 +432,64 @@
 									<ul class="clearfix">
 										<li>
 											<div class="image"><a
-													href="assets/images/resources/destinations/hotels/hotel-room-1.jpg"
+													href="{{asset('frontend/assets/images/resources/destinations/hotels/hotel-room-1.jpg')}}"
 													class="lightbox-image" data-fancybox="SbGallery"><img
-														src="assets/images/resources/thumbnails/hotel-room-1-thumb.jpg"
+														src="{{asset('frontend/assets/images/resources/thumbnails/hotel-room-1-thumb.jpg')}}"
 														alt=""></a>
 											</div>
 										</li>
 										<li>
 											<div class="image"><a
-													href="assets/images/resources/destinations/hotels/hotel-room-2.jpg"
+													href="{{asset('frontend/assets/images/resources/destinations/hotels/hotel-room-2.jpg')}}"
 													class="lightbox-image" data-fancybox="SbGallery"><img
-														src="assets/images/resources/thumbnails/hotel-room-2-thumb.jpg"
+														src="{{asset('frontend/assets/images/resources/thumbnails/hotel-room-2-thumb.jpg')}}"
 														alt=""></a>
 											</div>
 										</li>
 										<li>
 											<div class="image"><a
-													href="assets/images/resources/destinations/hotels/hotel-room-3.jpg"
-													class="lightbox-image" data-fancybox="SbGallery"><img
-														src="assets/images/resources/thumbnails/hotel-room-3-thumb.jpg"
+													href="
+													{{asset('frontend/assets/images/resources/destinations/hotels/hotel-room-3.jpg')}}"										class="lightbox-image" data-fancybox="SbGallery"><img
+														src="{{asset('frontend/assets/images/resources/thumbnails/hotel-room-3-thumb.jpg')}}"
 														alt=""></a>
 											</div>
 										</li>
 										<li>
 											<div class="image"><a
-													href="assets/images/resources/destinations/hotels/hotel-room-4.jpg"
-													class="lightbox-image" data-fancybox="SbGallery"><img
-														src="assets/images/resources/thumbnails/hotel-room-4-thumb.jpg"
+													href="{{asset('frontend/assets/images/resources/destinations/hotels/hotel-room-4.jpg')}}"					class="lightbox-image" data-fancybox="SbGallery"><img
+														src="{{asset('frontend/assets/images/resources/thumbnails/hotel-room-4-thumb.jpg')}}"
 														alt=""></a>
 											</div>
 										</li>
 										<li>
 											<div class="image"><a
-													href="assets/images/resources/destinations/hotels/hotel-room-5.jpg"
+													href="{{asset('frontend/assets/images/resources/destinations/hotels/hotel-room-5.jpg')}}"
 													class="lightbox-image" data-fancybox="SbGallery"><img
-														src="assets/images/resources/thumbnails/hotel-room-5-thumb.jpg"
+														src="{{asset('frontend/assets/images/resources/thumbnails/hotel-room-5-thumb.jpg')}}"
 														alt=""></a>
 											</div>
 										</li>
 										<li>
 											<div class="image"><a
-													href="assets/images/resources/destinations/hotels/hotel-room-6.jpg"
+													href="{{asset('frontend/assets/images/resources/destinations/hotels/hotel-room-6.jpg')}}"
 													class="lightbox-image" data-fancybox="SbGallery"><img
-														src="assets/images/resources/thumbnails/hotel-room-6-thumb.jpg"
+														src="{{asset('frontend/assets/images/resources/thumbnails/hotel-room-6-thumb.jpg')}}"
 														alt=""></a>
 											</div>
 										</li>
 										<li>
 											<div class="image"><a
-													href="assets/images/resources/destinations/hotels/hotel-room-7.jpg"
+													href="{{asset('frontend/assets/images/resources/destinations/hotels/hotel-room-7.jpg')}}"
 													class="lightbox-image" data-fancybox="SbGallery"><img
-														src="assets/images/resources/thumbnails/hotel-room-7-thumb.jpg"
+														src="{{asset('frontend/assets/images/resources/thumbnails/hotel-room-7-thumb.jpg')}}"
 														alt=""></a>
 											</div>
 										</li>
 										<li>
 											<div class="image"><a
-													href="assets/images/resources/destinations/hotels/hotel-room-8.jpg"
+													href="{{asset('frontend/assets/images/resources/destinations/hotels/hotel-room-8.jpg')}}"
 													class="lightbox-image" data-fancybox="SbGallery"><img
-														src="assets/images/resources/thumbnails/hotel-room-8-thumb.jpg"
+														src="{{asset('frontend/assets/images/resources/thumbnails/hotel-room-8-thumb.jpg')}}"
 														alt=""></a>
 											</div>
 										</li>
@@ -569,7 +569,7 @@
 											<div class="lower clearfix">
 												<div class="author-info">
 													<div class="image"><img
-															src="assets/images/resources/thumbnails/reviewer-1.jpg"
+															src="{{asset('frontend/assets/images/resources/thumbnails/reviewer-1.jpg')}}"
 															alt="Review 1"></div>
 													<div class="author-name">David Hustler</div>
 													<div class="designation">Photographer</div>
@@ -608,7 +608,7 @@
 											<div class="lower clearfix">
 												<div class="author-info">
 													<div class="image"><img
-															src="assets/images/resources/thumbnails/reviewer-2.jpg"
+															src="{{asset('frontend/assets/images/resources/thumbnails/reviewer-2.jpg')}}"
 															alt="Review 2"></div>
 													<div class="author-name">Peter Hazard</div>
 													<div class="designation">Self Employed</div>
@@ -646,7 +646,7 @@
 											<div class="lower clearfix">
 												<div class="author-info">
 													<div class="image"><img
-															src="assets/images/resources/thumbnails/reviewer-3.jpg"
+															src="{{asset('frontend/assets/images/resources/thumbnails/reviewer-3.jpg')}}"
 															alt="Review 3"></div>
 													<div class="author-name">Pablo Benjamin</div>
 													<div class="designation">Sr. Engineer</div>
@@ -894,7 +894,7 @@
 									<div class="posts">
 										<div class="post">
 											<div class="image"><a href="#"><img
-														src="assets/images/resources/thumbnails/uk-thumb.jpg"
+														src="{{asset('frontend/assets/images/resources/thumbnails/uk-thumb.jpg')}}"
 														alt="London Bridge"></a>
 											</div>
 											<h6><a href="#">Iconic Landmark Connecting History and Modernity</a></h6>
@@ -902,14 +902,14 @@
 										</div>
 										<div class="post">
 											<div class="image"><a href="#"><img
-														src="assets/images/resources/thumbnails/maldives-thumb.jpg"
+														src="{{asset('frontend/assets/images/resources/thumbnails/maldives-thumb.jpg')}}"
 														alt="Maldives"></a></div>
 											<h6><a href="#">Unveiling the Serenity of Maldivian Islands</a></h6>
 											<div class="price">Starts from <span class="amount">$595</span></div>
 										</div>
 										<div class="post">
 											<div class="image"><a href="#"><img
-														src="assets/images/resources/thumbnails/finland-thumb.jpg"
+														src="{{asset('frontend/assets/images/resources/thumbnails/finland-thumb.jpg')}}"
 														alt="Helsinki"></a></div>
 											<h6><a href="#">Vibrant Helsinki, A Fusion of Culture and Cuisine</a></h6>
 											<div class="price">Starts from <span class="amount">$565</span></div>

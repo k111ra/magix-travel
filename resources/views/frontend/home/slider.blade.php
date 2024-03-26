@@ -15,11 +15,11 @@
                                         <div class="travilo-text">Disover top places and enjoy extreme
                                             activities around the world with a cheap price.</div>
                                         <div class="links-box clearfix">
-                                            <div class="link"><a href="about.html"
+                                            <div class="link"><a href="{{route('about')}}"
                                                     class="theme-btn btn-style-two"><span>Explore
                                                         Now</span></a>
                                             </div>
-                                            <div class="link"><a href="about.html"
+                                            <div class="link"><a href="{{route('about')}}"
                                                     class="theme-btn btn-style-three"><span>About
                                                         Us</span></a>
                                             </div>
@@ -45,11 +45,11 @@
                                             joining in celebrations that showcase the heart and soul of the
                                             community.</div>
                                         <div class="links-box clearfix">
-                                            <div class="link"><a href="about.html"
+                                            <div class="link"><a href="{{route('about')}}"
                                                     class="theme-btn btn-style-two"><span>Explore
                                                         Now</span></a>
                                             </div>
-                                            <div class="link"><a href="about.html"
+                                            <div class="link"><a href="{{route('about')}}"
                                                     class="theme-btn btn-style-three"><span>About
                                                         Us</span></a>
                                             </div>
@@ -75,11 +75,11 @@
                                             traditions of the region you're visiting, savoring local delicacies
                                             and street food.</div>
                                         <div class="links-box clearfix">
-                                            <div class="link"><a href="about.html"
+                                            <div class="link"><a href="{{route('about')}}"
                                                     class="theme-btn btn-style-two"><span>Explore
                                                         Now</span></a>
                                             </div>
-                                            <div class="link"><a href="about.html"
+                                            <div class="link"><a href="{{route('about')}}"
                                                     class="theme-btn btn-style-three"><span>About
                                                         Us</span></a>
                                             </div>
@@ -104,11 +104,11 @@
                                         <div class="travilo-text">Immerse yourself in the natural beauty of the
                                             landscapes, whether it's lush forests or pristine beaches.</div>
                                         <div class="links-box clearfix">
-                                            <div class="link"><a href="about.html"
+                                            <div class="link"><a href="{{route('about')}}"
                                                     class="theme-btn btn-style-two"><span>Explore
                                                         Now</span></a>
                                             </div>
-                                            <div class="link"><a href="about.html"
+                                            <div class="link"><a href="{{route('about')}}"
                                                     class="theme-btn btn-style-three"><span>About
                                                         Us</span></a>
                                             </div>

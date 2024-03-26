@@ -28,26 +28,22 @@
                 <div class="inner wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="0ms">
                     <div class="d-elem-1"><img src="{{asset('frontend/assets/images/elements/green-1.png')}}" alt=""></div>
                     <div class="title-box">
-                        <div class="subtitle">Let’s Explore the World</div>
-                        <h2><span>We Make Your Travel More Enjoyable</span></h2>
-                        <p class="travilo-text">Our dedicated team is committed to providing you with
-                            exceptional experiences,
-                            personalized itineraries, and expert guidance, ensuring your journey is filled with
-                            unforgettable
-                            moments.</p>
+                        <div class="subtitle">Explorons le monde</div>
+                        <h2><span>Nous Rendons Votre Voyage Plus Agréable</span></h2>
+                        <p class="travilo-text">Notre équipe dévouée s’engage à vous fournir des expériences exceptionnelles, Des itinéraires personnalisés et des conseils d’experts, garantissant que votre voyage est rempli de Moments inoubliable .</p>
                     </div>
                     <div class="features">
                         <div class="row clearfix">
                             <div class="f-block col-lg-6 col-md-6 col-sm-12">
                                 <div class="inner-box">
                                     <div class="icon"><img src="{{asset('frontend/assets/images/icons/f-icon-1.png')}}" alt=""></div>
-                                    <h6>Award winning tour & travel arranger</h6>
+                                    <h6>Organisateur de voyages et de voyages primé</h6>
                                 </div>
                             </div>
                             <div class="f-block col-lg-6 col-md-6 col-sm-12">
                                 <div class="inner-box">
                                     <div class="icon"><img src="{{asset('frontend/assets/images/icons/f-icon-2.png')}}" alt=""></div>
-                                    <h6>Most popular booking solution provider</h6>
+                                    <h6>Fournisseur de solutions de réservation le plus populaire</h6>
                                 </div>
                             </div>
                         </div>
@@ -55,13 +51,12 @@
                     <div class="lower-text">
                         <div class="travilo-text">
                             <ul>
-                                <li>Inspiring travel experiences</li>
-                                <li>Expertly curated itineraries</li>
-                                <li>Personalized guidance and support</li>
+                                <li>Des expériences de voyage inspirantes</li>
+                                <li>Des itinéraires soigneusement sélectionnés</li>
+                                <li>Un accompagnement et un accompagnement personnalisés</li>
                             </ul>
                         </div>
-                        <div class="link-box"><a href="about.html" class="theme-btn btn-style-one"><span>Read
-                                    More</span></a></div>
+                        <div class="link-box"><a href="about.html" class="theme-btn btn-style-one"><span>Lire Plus</span></a></div>
                     </div>
                 </div>
             </div>
@@ -95,10 +90,8 @@
                 data-wow-duration="1500ms">
                 <div class="inner-box">
                     <div class="icon"><span><img src="{{asset('frontend/assets/images/icons/intro-4.png')}}" alt=""></span></div>
-                    <h4>Our Mission</h4>
-                    <div class="travilo-text">to inspire and empower travelers to explore the world with wonder,
-                        creating
-                        unforgettable experiences.</div>
+                    <h4>Notre mission</h4>
+                    <div class="travilo-text">d’inspirer et de donner aux voyageurs les moyens d’explorer le monde avec émerveillement, créant Des expériences inoubliables.</div>
                 </div>
             </div>
             <!--Block-->
@@ -106,10 +99,8 @@
                 data-wow-duration="1500ms">
                 <div class="inner-box">
                     <div class="icon"><span><img src="{{asset('frontend/assets/images/icons/intro-5.png')}}" alt=""></span></div>
-                    <h4>Destination Insights</h4>
-                    <div class="travilo-text">Gain valuable insights into captivating destinations through our
-                        comprehensive
-                        guides and expert recommendations.</div>
+                    <h4>Informations sur les destinations</h4>
+                    <div class="travilo-text">Obtenez des informations précieuses sur des destinations captivantes grâce à notre complet guides et recommandations d’experts.</div>
                 </div>
             </div>
             <!--Block-->
@@ -117,10 +108,8 @@
                 data-wow-duration="1500ms">
                 <div class="inner-box">
                     <div class="icon"><span><img src="{{asset('frontend/assets/images/icons/intro-6.png')}}" alt=""></span></div>
-                    <h4>Tailored Travel Planning</h4>
-                    <div class="travilo-text">Our website offers personalized travel planning services tailored
-                        to your
-                        preferences and interests.</div>
+                    <h4>Planification de voyage sur mesure</h4>
+                    <div class="travilo-text">Notre site Web offre des services de planification de voyage personnalisés à votre préférences et intérêts.</div>
                 </div>
             </div>
         </div>
@@ -139,27 +128,11 @@
                     <div class="inner wow fadeInLeft" data-wow-duration="1500ms" data-wow-delay="0ms">
                         <div class="d-elem-1"><img src="{{asset('frontend/assets/images/elements/green-4.png')}}" alt=""></div>
                         <div class="title-box">
-                            <div class="subtitle">Our Speciality</div>
-                            <h2><span>Your Trusted Travel Partner</span></h2>
-                            <p class="travilo-text">At our travel website, our speciality lies in curating
-                                unforgettable
-                                experiences that cater to the unique preferences of each traveler. From family
-                                vacations to solo
-                                adventures, romantic getaways to group escapades, we take pride in offering a
-                                diverse range of
-                                handpicked destinations and carefully crafted itineraries.</p>
-                            <p class="travilo-text">Our team of travel experts is dedicated to staying ahead of
-                                the curve,
-                                ensuring that we bring you the latest travel trends and hidden gems to explore.
-                                Whether it's seeking
-                                out off-the-beaten-path activities or securing exclusive deals with our trusted
-                                partners, our
-                                commitment to excellence ensures that every trip planned through our platform is
-                                a journey of a
-                                lifetime.</p>
-                            <p class="travilo-text">Our 24/7 customer service team is always at your disposal,
-                                ready to address
-                                any queries or assist with last-minute changes.</p>
+                            <div class="subtitle">Notre spécialité  </div>
+                            <h2><span>Votre Partenaire De Voyage De Confiance</span></h2>
+                            <p class="travilo-text">Sur notre site de voyage, notre spécialité réside dans la curation inoubliable Des expériences qui répondent aux préférences uniques de chaque voyageur. De la famille Vacances en solo Aventures, escapades romantiques en escapades de groupe, nous sommes fiers d’offrir un Gamme variée de Des destinations triées sur le volet et des itinéraires soigneusement conçus.</p>
+                            <p class="travilo-text">Notre équipe d’experts en voyages s’engage à garder une longueur d’avance la courbe, S’assurer que nous vous apportons les dernières tendances de voyage et les joyaux cachés à explorer. Qu’il s’agisse de activités hors des sentiers battus ou en concluant des accords exclusifs avec nos partenaires, nos L’engagement envers l’excellence garantit que chaque voyage planifié par l’intermédiaire de notre plateforme est Le voyage d’un vie.Notre équipe d’experts en voyages s’engage à garder une longueur d’avance la courbe, S’assurer que nous vous apportons les dernières tendances de voyage et les joyaux cachés à explorer. Qu’il s’agisse de activités hors des sentiers battus ou en concluant des accords exclusifs avec nos partenaires, nos L’engagement envers l’excellence garantit que chaque voyage planifié par l’intermédiaire de notre plateforme est Le voyage d’un vie.</p>
+                            <p class="travilo-text">Notre service client 24h/24 et 7j/7 est toujours à votre disposition, Prêt à l’emploi toute question ou assistance en cas de modifications de dernière minute.</p>
                         </div>
                     </div>
                 </div>
@@ -172,40 +145,32 @@
                                     <div class="inner-box">
                                         <div class="icon"><img src="{{asset('frontend/assets/images/icons/f-icon-10.png')}}" alt="">
                                         </div>
-                                        <h4>Innovative Tour Plans</h4>
-                                        <div class="travilo-text">Experience our innovative tour plans designed
-                                            to take you off the
-                                            beaten path and uncover hidden gems.</div>
+                                        <h4>Plans de tournée innovants</h4>
+                                        <div class="travilo-text">Découvrez nos plans de visite innovants conçus pour vous faire sortir de la sentiers battus et découvrez des joyaux cachés.</div>
                                     </div>
                                 </div>
                                 <div class="feature col-lg-6 col-md-6 col-sm-12">
                                     <div class="inner-box">
                                         <div class="icon"><img src="{{asset('frontend/assets/images/icons/f-icon-11.png')}}" alt="">
                                         </div>
-                                        <h4>Expert Travel Guide</h4>
-                                        <div class="travilo-text">Embark on your journey with confidence, guided
-                                            by our expert travel
-                                            guides who share their local expertise and insider knowledge.</div>
+                                        <h4>Guide de voyage expert </h4>
+                                        <div class="travilo-text">Embarquez pour votre voyage en toute confiance, guidé par notre expert en voyages Des guides qui partagent leur expertise locale et leurs connaissances d’initiés.</div>
                                     </div>
                                 </div>
                                 <div class="feature col-lg-6 col-md-6 col-sm-12">
                                     <div class="inner-box">
                                         <div class="icon"><img src="{{asset('frontend/assets/images/icons/f-icon-12.png')}}" alt="">
                                         </div>
-                                        <h4>Flexible Payment Policy</h4>
-                                        <div class="travilo-text">Travel stress-free with our flexible payment
-                                            policy that accommodates
-                                            your needs and preferences.</div>
+                                        <h4>Politique de paiement flexible</h4>
+                                        <div class="travilo-text">Voyagez sans stress grâce à notre système de paiement flexible politique qui tient compte des vos besoins et préférences.</div>
                                     </div>
                                 </div>
                                 <div class="feature col-lg-6 col-md-6 col-sm-12">
                                     <div class="inner-box">
                                         <div class="icon"><img src="{{asset('frontend/assets/images/icons/f-icon-13.png')}}" alt="">
                                         </div>
-                                        <h4>High Quality Management</h4>
-                                        <div class="travilo-text">Rest assured that your travel experience is in
-                                            capable hands with our
-                                            high-quality management and attention to every detail.</div>
+                                        <h4>Gestion de haute qualité</h4>
+                                        <div class="travilo-text">Soyez assuré que votre expérience de voyage est en Des mains compétentes avec notre Une gestion de haute qualité et une attention portée à chaque détail.</div>
                                     </div>
                                 </div>
                             </div>
@@ -272,8 +237,8 @@
 <div class="team-section">
     <div class="auto-container">
         <div class="title-box centered wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-            <div class="subtitle">Team Members</div>
-            <h2><span>Our Amazing Team Players</span></h2>
+            <div class="subtitle">Membres de l’équipe</div>
+            <h2><span>Nos Formidables membres de l’équipe</span></h2>
         </div>
 
         <div class="team-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
@@ -364,8 +329,8 @@
 <div class="testimonials-section alt-bg">
     <div class="auto-container">
         <div class="title-box centered wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-            <div class="subtitle">Testimonials</div>
-            <h2><span>What Travelers Say</span></h2>
+            <div class="subtitle">Témoignages</div>
+            <h2><span>Ce Que Disent Les Voyageurs </span></h2>
         </div>
 
         <div class="carousel-box wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
@@ -615,8 +580,8 @@
 <div class="partners-two">
     <div class="auto-container">
         <div class="title-box centered">
-            <div class="subtitle">Valuable Partners</div>
-            <h2>Our Valuable Partners</h2>
+            <div class="subtitle">Des partenaires précieux</div>
+            <h2>Nos Précieux Partenaires</h2>
         </div>
         <div class="carousel-box">
             <div class="partners-carousel">
