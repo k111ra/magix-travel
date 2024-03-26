@@ -15,6 +15,7 @@ use App\Http\Controllers\RolesController;
 use App\Http\Controllers\ToursController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\DestinationController;
+use App\Http\Controllers\MessageController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\VolController;
 use Illuminate\Support\Facades\Auth;
@@ -102,6 +103,14 @@ Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function () {
 
     /////////Routes des Tours////////
     Route::get('/tours', [ToursController::class, 'index'])->name('tours.index');
+
+    
+///Routes de message
+Route::get('/message', [MessageController::class, 'index'])->name('message');
+Route::get('/messages/{id}', [MessageController::class, 'show'])->name('message-vue');
+Route::patch('/messages/{message}', [MessageController::class, 'update']);
+
+
 });
 
 
@@ -130,6 +139,7 @@ Route::get('/a-propos-de-nous', [AboutController::class, 'index'])->name('about'
 
 ////////////Les routes front de contact////////////////////////
 Route::get('/contactez-nous', [ContactController::class, 'index'])->name('contact');
+Route::post('/contactez-nous', [MessageController::class, 'restore'])->name('envoi-message');
 
 
 

@@ -56,6 +56,8 @@
                         href="{{ route('Roles.index') }}">Slide</a></li>
                 {{-- <li><a class="nav-link @if (request()->routeIs('some_other_route')) active @endif" href="{{ route('some_other_route') }}">Some Other Route</a></li> --}}
                 <!-- Add similar checks for other parametre menu items -->
+                <li><a class="nav-link @if (request()->routeIs('Roles.index')) active @endif"
+                    href="{{ route('message') }}">Message</a></li>
             </ul>
         </li>
         <li class="dropdown">

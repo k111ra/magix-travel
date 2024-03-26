@@ -53,11 +53,13 @@
 						<div class="inner wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="0ms">
 							<h3>Envoyez-nous un Message</h3>
 							<div class="form-box site-form">
-								<form method="post" action="" id="">
+								{{-- /Formulaire de contact/ --}}
+								<form method="post" action="{{route('envoi-message')}}" id="">
+									@csrf
 									<div class="row clearfix">
 										<div class="form-group col-xl-6 col-lg-6 col-md-12 col-sm-12">
 											<div class="field-inner">
-												<input type="text" name="username" value="" placeholder="Votre nom"
+												<input type="text" name="nom" value="" placeholder="Votre nom"
 													required>
 											</div>
 										</div>
