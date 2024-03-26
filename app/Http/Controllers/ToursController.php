@@ -18,7 +18,6 @@ class ToursController extends Controller
     public function index()
     {
         $tours = Tour::orderby('created_at', 'DESC')->get();
-        // dd($tours); // Check if data is retrieved successfully
         return view('admin.tours.index')->with('tours', $tours);
     }
 
@@ -30,7 +29,7 @@ class ToursController extends Controller
     public function create()
     {
         $destinations = Destination::all();
-        return view('admin.tours.create',compact('destinations'));
+        return view('admin.tours.create', compact('destinations'));
     }
 
     /**
@@ -52,7 +51,7 @@ class ToursController extends Controller
             'place' => ['required', 'numeric'],
             'date_depart' => ['required', 'date'],
             'moyen_transport' => ['required', 'string'],
-            'description'=> ['required', 'string', 'max:255'],
+            'description' => ['required', 'string', 'max:255'],
             'images' => 'array|required',
         ];
 
@@ -112,7 +111,7 @@ class ToursController extends Controller
     public function edit(Tour $tour)
     {
         $destinations = Destination::all();
-        return view('admin.tours.edit', compact('tour','destinations'));
+        return view('admin.tours.edit', compact('tour', 'destinations'));
     }
 
     /**
@@ -134,12 +133,12 @@ class ToursController extends Controller
             'place' => 'required',
             'date_depart' => 'required',
             'moyen_transport' => 'required',
-            'description'=> 'string',
+            'description' => 'string',
             'images.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
-         // Stocker les chemins des nouvelles images
-         if ($request->hasFile('images')) {
+        // Stocker les chemins des nouvelles images
+        if ($request->hasFile('images')) {
             $images = [];
 
             foreach ($request->file('images') as $image) {
@@ -192,6 +191,6 @@ class ToursController extends Controller
     public function tourDetails($id)
     {
         $tour = Tour::findOrFail($id);
-        return view('frontend.pages.tours.single-tour',compact('tour'));
+        return view('frontend.pages.tours.single-tour', compact('tour'));
     }
 }

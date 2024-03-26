@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Destination extends Model
 {
-    protected $fillable = ['name', 'description', 'slug','images'];
+    protected $fillable = ['name', 'description', 'slug', 'images'];
 
     // protected $casts = [
     //     'images' => 'array',
@@ -24,7 +24,7 @@ class Destination extends Model
 
     public function tours()
     {
-        return $this->hasMany(Tour::class);
+        return $this->hasMany(Tour::class, 'tour_id');
     }
 }
 
