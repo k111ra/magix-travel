@@ -30,19 +30,19 @@
 								<ul>
 									<li class="location">
 										<i class="icon fa fa-map-marker-alt"></i>
-										<h5>Location</h5>
-										<div class="travilo-text">20, Love Street, Muscat, Oman</div>
+										<h5>Localisation</h5>
+										<div class="travilo-text">Treichville, Abidjan, Côte d'Ivoire
 									</li>
 									<li class="phone">
 										<i class="icon fa-solid fa-phone"></i>
-										<h5>Phone</h5>
-										<div class="travilo-text"><a href="tel:+96899999000">+968 99999000</a></div>
+										<h5>Téléhone</h5>
+										<div class="travilo-text"><a href="tel:+225 07 99 99 90 00">+225 07 99 99 90 00</a></div>
 									</li>
 									<li class="email">
 										<i class="icon fa fa-envelope"></i>
-										<h5>Email</h5>
+										<h5>E-mail</h5>
 										<div class="travilo-text"><a
-												href="mailto:hello@travilo.com">hello@travilo.com</a></div>
+												href="mailto:info@magixtravel.com">info@magixtravel.com</a></div>
 									</li>
 								</ul>
 							</div>
@@ -51,37 +51,37 @@
 					<!--Form Col-->
 					<div class="form-col col-lg-8 col-md-12 col-sm-12">
 						<div class="inner wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="0ms">
-							<h3>Send Us A Message</h3>
+							<h3>Envoyez-nous un Message</h3>
 							<div class="form-box site-form">
 								<form method="post" action="" id="">
 									<div class="row clearfix">
 										<div class="form-group col-xl-6 col-lg-6 col-md-12 col-sm-12">
 											<div class="field-inner">
-												<input type="text" name="username" value="" placeholder="Your name"
+												<input type="text" name="username" value="" placeholder="Votre nom"
 													required>
 											</div>
 										</div>
 										<div class="form-group col-xl-6 col-lg-6 col-md-12 col-sm-12">
 											<div class="field-inner">
-												<input type="email" name="email" value="" placeholder="Your email"
+												<input type="email" name="email" value="" placeholder="Votre E-mail"
 													required>
 											</div>
 										</div>
 										<div class="form-group col-xl-6 col-lg-6 col-md-12 col-sm-12">
 											<div class="field-inner">
-												<input type="text" name="phone" value="" placeholder="Your Phone"
+												<input type="text" name="phone" value="" placeholder="Votre numero de telephone"
 													required>
 											</div>
 										</div>
 										<div class="form-group col-xl-6 col-lg-6 col-md-12 col-sm-12">
 											<div class="field-inner">
-												<input type="text" name="subject" value="" placeholder="Subject"
+												<input type="text" name="subject" value="" placeholder="objet de votre message"
 													required>
 											</div>
 										</div>
 										<div class="form-group col-xl-12 col-lg-12 col-md-12 col-sm-12">
 											<div class="field-inner">
-												<textarea name="message" placeholder="Start writing your message here"
+												<textarea name="message" placeholder="Ecrivez votre message ici ..."
 													required></textarea>
 											</div>
 										</div>

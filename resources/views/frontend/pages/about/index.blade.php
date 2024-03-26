@@ -28,13 +28,9 @@
                 <div class="inner wow fadeInRight" data-wow-duration="1500ms" data-wow-delay="0ms">
                     <div class="d-elem-1"><img src="{{asset('frontend/assets/images/elements/green-1.png')}}" alt=""></div>
                     <div class="title-box">
-                        <div class="subtitle">Let’s Explore the World</div>
-                        <h2><span>We Make Your Travel More Enjoyable</span></h2>
-                        <p class="travilo-text">Our dedicated team is committed to providing you with
-                            exceptional experiences,
-                            personalized itineraries, and expert guidance, ensuring your journey is filled with
-                            unforgettable
-                            moments.</p>
+                        <div class="subtitle">Explorons le monde</div>
+                        <h2><span>Nous Rendons Votre Voyage Plus Agréable</span></h2>
+                        <p class="travilo-text">Notre équipe dévouée s’engage à vous fournir des expériences exceptionnelles, Des itinéraires personnalisés et des conseils d’experts, garantissant que votre voyage est rempli de Moments inoubliable .</p>
                     </div>
                     <div class="features">
                         <div class="row clearfix">
@@ -95,10 +91,8 @@
                 data-wow-duration="1500ms">
                 <div class="inner-box">
                     <div class="icon"><span><img src="{{asset('frontend/assets/images/icons/intro-4.png')}}" alt=""></span></div>
-                    <h4>Our Mission</h4>
-                    <div class="travilo-text">to inspire and empower travelers to explore the world with wonder,
-                        creating
-                        unforgettable experiences.</div>
+                    <h4>Notre mission</h4>
+                    <div class="travilo-text">d’inspirer et de donner aux voyageurs les moyens d’explorer le monde avec émerveillement, créant Des expériences inoubliables.</div>
                 </div>
             </div>
             <!--Block-->
@@ -106,10 +100,8 @@
                 data-wow-duration="1500ms">
                 <div class="inner-box">
                     <div class="icon"><span><img src="{{asset('frontend/assets/images/icons/intro-5.png')}}" alt=""></span></div>
-                    <h4>Destination Insights</h4>
-                    <div class="travilo-text">Gain valuable insights into captivating destinations through our
-                        comprehensive
-                        guides and expert recommendations.</div>
+                    <h4>Informations sur les destinations</h4>
+                    <div class="travilo-text">Obtenez des informations précieuses sur des destinations captivantes grâce à notre complet guides et recommandations d’experts.</div>
                 </div>
             </div>
             <!--Block-->
@@ -117,10 +109,8 @@
                 data-wow-duration="1500ms">
                 <div class="inner-box">
                     <div class="icon"><span><img src="{{asset('frontend/assets/images/icons/intro-6.png')}}" alt=""></span></div>
-                    <h4>Tailored Travel Planning</h4>
-                    <div class="travilo-text">Our website offers personalized travel planning services tailored
-                        to your
-                        preferences and interests.</div>
+                    <h4>Planification de voyage sur mesure</h4>
+                    <div class="travilo-text">Notre site Web offre des services de planification de voyage personnalisés à votre préférences et intérêts.</div>
                 </div>
             </div>
         </div>

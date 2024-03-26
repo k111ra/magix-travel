@@ -13,7 +13,7 @@
             <p><strong>Montant: </strong> {{ $reservation->amount }}</p>
             <p><strong>Nombre de personnes: </strong> {{ $reservation->num_persons }}</p>
             @if ($reservation->tour)
-                <p><strong>Tour: </strong> {{ $reservation->tour->name }}</p>
+                <p><strong>Tour: </strong> {{ $reservation->tour->nom }}</p>
             @endif
             @if ($reservation->hotel)
                 <p><strong>Hôtel: </strong> {{ $reservation->hotel->name }}</p>
