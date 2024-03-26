@@ -5,7 +5,8 @@
                 <ul class="info clearfix">
                     <li><i class="icon fa fa-envelope"></i> <a href="mailto:info@magixtravel.com">info@magixtravel.com</a>
                     </li>
-                    <li><i class="icon fa fa-map-marker-alt"></i> <a href="#">Treichville, Abidjan, Côte d'Ivoire</a>
+                    <li><i class="icon fa fa-map-marker-alt"></i> <a href="#">Treichville, Abidjan, Côte
+                            d'Ivoire</a>
                     </li>
                 </ul>
             </div>
@@ -45,7 +46,7 @@
         <div class="main-box clearfix">
             <!--Logo-->
             <div class="logo-box">
-                <div class="logo"><a href="{{route('home')}}" title="Travilo">
+                <div class="logo"><a href="{{ route('home') }}" title="Travilo">
                         {{-- <span style="font-weight: 900; font-size:50px;">
                             Magix <span style="color: green">Travel</span>
                         </span> --}}
@@ -61,8 +62,10 @@
                     <div class="nav-outer clearfix">
                         <nav class="main-menu">
                             <ul class="navigation clearfix">
-                                <li class="dropdown {{ Route::is('home') ? 'current' : '' }}"><a href="{{route('home')}}">Home</a></li>
-                                <li class="dropdown {{ Route::is('tours') ? 'current' : '' }}"><a href="{{route('tours')}} ">Tours</a>
+                                <li class="dropdown {{ Route::is('home') ? 'current' : '' }}"><a
+                                        href="{{ route('home') }}">Accueil</a></li>
+                                <li class="dropdown {{ Route::is('tours') ? 'current' : '' }}"><a
+                                        href="{{ route('tours') }} ">Tours</a>
                                     {{-- <ul>
                                         <li><a href="tour-list.html">Tours List</a></li>
                                         <li><a href="tour-packages.html">Tour Packages</a></li>
@@ -71,7 +74,8 @@
                                         <li><a href="activity-single.html">Activity Details</a></li>
                                     </ul> --}}
                                 </li>
-                                <li class="dropdown {{ Route::is('destination') ? 'current' : '' }}"><a href="{{route('destination')}}">Destination</a>
+                                <li class="dropdown {{ Route::is('destination') ? 'current' : '' }}"><a
+                                        href="{{ route('destination') }}">Destinations</a>
                                     {{-- <ul>
                                         <li><a href="{{route('destination')}}">Les Destinations</a></li>
                                         <li><a href="destination-single.html">Destination Single</a></li>
@@ -79,15 +83,18 @@
                                         <li><a href="hotel-single.html">Hotel Details</a></li>
                                     </ul> --}}
                                 </li>
-                                <li class="dropdown {{ Route::is('hotels') ? 'current' : '' }}"><a href="{{route('hotels')}}">Hotels</a></li>
-                                <li class="dropdown {{ Route::is('about') ? 'current' : '' }}"><a href="{{route('about')}}">About</a></li>
+                                <li class="dropdown {{ Route::is('hotels') ? 'current' : '' }}"><a
+                                        href="{{ route('hotels') }}">Hotels</a></li>
+                                <li class="dropdown {{ Route::is('about') ? 'current' : '' }}"><a
+                                        href="{{ route('about') }}">About</a></li>
                                 {{-- <li class="dropdown"><a href="blog.html">News</a>
                                     <ul>
                                         <li><a href="blog.html">Our Blog</a></li>
                                         <li><a href="blog-single.html">Blog Details</a></li>
                                     </ul>
                                 </li> --}}
-                                <li class="dropdown {{ Route::is('contact') ? 'current' : '' }}"><a href="{{route('contact')}}">Contact</a></li>
+                                <li class="dropdown {{ Route::is('contact') ? 'current' : '' }}"><a
+                                        href="{{ route('contact') }}">Contact</a></li>
                                 @auth
                                     <!-- Afficher le profil de l'utilisateur -->
                                     <li><a href="{{ route('dashboard') }}" title="Tableau de bord"><i
@@ -105,7 +112,7 @@
                 <div class="links-box clearfix">
                     <div class="link call-to">
                         <a href="tel:+96899999000"><i class="icon fa-solid fa-phone"></i> Appelez-nous <span
-                                class="nmbr">+225 07 99 99 90 00</span></a>
+                                class="nmbr">+225 27 21 37 70 38</span></a>
                     </div>
                 </div>
 
