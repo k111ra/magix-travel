@@ -13,10 +13,10 @@ class NewsletterController extends Controller
         ]);
         try {
             if (Newsletter::isSubscribed($request->email)) {
-                return redirect()->back()->with('error','vous étes déjà inscrite');
+                return redirect()->back()->with('error','vous étes déjà inscrit');
             }else {
                 Newsletter::subscribe($request->email);
-                return redirect()->back()->with('success','vous étes inscrite avec succes');
+                return redirect()->back()->with('success','vous étes inscrit avec succes');
             }
         } catch (\Throwable $th) {
             return redirect()->back()->with('error',$th->getMessage());
