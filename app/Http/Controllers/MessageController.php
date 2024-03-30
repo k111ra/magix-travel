@@ -37,7 +37,7 @@ class MessageController extends Controller
 
         // Rediriger avec un message de succès
         return redirect()->back()
-            ->with('success', 'Reservation créée avec succès.');
+            ->with('success', 'Message envoyer avec succès.');
     }
 
     public function  update(Message $message)

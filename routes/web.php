@@ -16,6 +16,7 @@ use App\Http\Controllers\ToursController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\DestinationController;
 use App\Http\Controllers\MessageController;
+use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\VolController;
 use Illuminate\Support\Facades\Auth;
@@ -145,6 +146,10 @@ Route::post('/contactez-nous', [MessageController::class, 'restore'])->name('env
 
 ////////////Les routes front de contact////////////////////////
 Route::get('/blog', [BlogController::class, 'index'])->name('blog');
+
+// Routes de Newsletter
+Route::post('/newsletter', [NewsletterController::class, 'subscribe']);
+
 
 // Use Laravel helper functions for common authentication routes (optional)
 Auth::routes();

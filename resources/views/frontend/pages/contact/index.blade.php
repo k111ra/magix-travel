@@ -88,8 +88,7 @@
 											</div>
 										</div>
 										<div class="form-group col-xl-12 col-lg-12 col-md-12 col-sm-12">
-											<button type="submit" class="theme-btn btn-style-one"><span>Submit
-													Query</span></button>
+											<button type="submit" class="theme-btn btn-style-one"><span>Envoyer message</span></button>
 										</div>
 									</div>
 								</form>
