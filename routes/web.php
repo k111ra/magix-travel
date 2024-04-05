@@ -15,9 +15,11 @@ use App\Http\Controllers\RolesController;
 use App\Http\Controllers\ToursController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\DestinationController;
+use App\Http\Controllers\HotelReservationController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\ReservationController;
+use App\Http\Controllers\TourReservationController;
 use App\Http\Controllers\VolController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -52,6 +54,10 @@ Route::get('/detail-destination/{id}', [DestinationController::class, 'singleDes
 
 //Routes des hotels
 Route::get('/hotel-details/{id}', [HotelsController::class, 'hotelDetails'])->name('single-hotel');
+//hotel reservation
+Route::get('/hotel-reservation/{id}', [HotelReservationController::class, 'index'])->name('single-reservation');
+Route::get('/hotel-reservationShow/{id}', [HotelReservationController::class, 'show'])->name('single-reservationshow');
+Route::post('/hotel-reservation-create', [HotelReservationController::class, 'create'])->name('create-reservation');
 
 
 
@@ -130,7 +136,10 @@ Route::get('/contacts', [HomeController::class, 'contacts'])->name('contacts');
 Route::get('/hotels', [HotelsController::class, 'hotelFrontend'])->name('hotels');
 
 ////////////Les routes front de tour////////////////////////
+Route::get('/Reservation-tour/{id}', [TourReservationController::class, 'index'])->name('Reservation.tour');
+Route::get('/Show-tour_resevation/{id}', [TourReservationController::class, 'show'])->name('Reservation.tourShow');
 Route::get('/tours', [ToursController::class, 'tourFrontend'])->name('tours');
+Route::post('/tour-reservation-create', [TourReservationController::class, 'create'])->name('reservation.tour.create');
 Route::get('/detail-tour/{id}', [ToursController::class, 'tourDetails'])->name('single-tour');
 
 
