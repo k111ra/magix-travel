@@ -290,6 +290,15 @@
 									</div>
 								</div>
 
+								<div class="dsp-widget dsp-stat-widget">
+									<div class="inner">
+										<div class="book-link"><a href="{{route('single-reservation',$hotel->id) }}"
+											class="theme-btn btn-style-two"><span>Reserver maintenant</span></a></div>
+								
+									</div>
+								</div>
+								
+
 							</div>
 						</div>
 

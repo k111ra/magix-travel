@@ -34,8 +34,8 @@
 									<div class="location">{{$tour->destination->name}}</div>
 									<div class="rating"><a href="#" class="theme-btn"><i class="fa-solid fa-star"></i>
 											<strong>4.8</strong>   <span class="count">4233 Reviews</span></a></div>
-									<div class="add-fav"><a href="{{route('Reservation.tour',$tour->id)}}"><i class="far fa-heart"></i> Add to Wishlist</a>
-									</div>
+									<div class="add-fav"><div class="book-link"><a href="{{route('Reservation.tour',$tour->id) }}"
+										class="theme-btn btn-style-two"><span>Reserver maintenant</span></a></div></div>
 								</div>
 								<h1>{{$tour->nom}}</h1>
 								<div class="info clearfix">

@@ -78,7 +78,7 @@
                 <div class="package-block alt col-lg-4 col-md-6 col-sm-12">
                     <div class="inner-box">
                         <div class="image-box">
-                            <div class="image"><a href="hotel-single.html"><img
+                            <div class="image"><a href="{{route('single-hotel',$hotel->id)}}"><img
                                         src="{{ asset('storage/' . json_decode($hotel->images)[0]) }}"
                                         alt="Beach Hotel"></a></div>
                             <div class="b-title featured"><span>Featured</span></div>
@@ -86,9 +86,9 @@
                         </div>
                         <div class="lower-box">
                             <div class="location">{{$hotel->localisation}} </div>
-                            <h5><a href="hotel-single.html">{{$hotel->name}} </a></h5>
+                            <h5><a href="{{route('single-hotel',$hotel->id)}}">{{$hotel->name}} </a></h5>
                             <div class="bottom-box clearfix">
-                                <div class="rating"><a href="#" class="theme-btn"><i
+                                <div class="rating"><a href="{{route('single-hotel',$hotel->id)}}" class="theme-btn"><i
                                             class="fa-solid fa-star"></i>
                                         <strong>{{$hotel->etoiles}}  étoiles</strong> &ensp; 
                                         {{-- <span class="count">4500 Reviews</span> --}}
