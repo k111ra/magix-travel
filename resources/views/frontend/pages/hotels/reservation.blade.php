@@ -36,13 +36,13 @@
                         <div class="col-4">
                             <div class="form-group">
                                 <label for="tour_id">hotel</label>
-                                <input type="text"  name="hotel_id" class="form-control" id="hotel_id" value="{{ $hotel->name }}" disabled>
+                                <input type="text"  name="hotel_id" class="form-control" id="hotel_id" value="{{ $hotel->name }}" readonly>
                             </div>
                         </div>
                         <div class="col-4">
                             <div class="form-group">
                                 <label for="destination_id">Localisation</label>
-                                 <input type="text"  name="destination_id" class="form-control" id="destination_id" value="{{  $hotel->localisation  }}" disabled>
+                                 <input type="text"  name="destination_id" class="form-control" id="destination_id" value="{{  $hotel->localisation  }}" readonly>
                             </div>
                         </div>
                         {{-- <div class="col-4">
@@ -59,14 +59,14 @@
                             <div class="form-group">
                                 <label for="reservation_date">Date de réservation</label>
                                 <input type="date" name="reservation_date" class="form-control"
-                                    id="reservation_date" value="{{date('Y-m-d')}}" disabled>
+                                    id="reservation_date" value="{{date('Y-m-d')}}" readonly>
                             </div>
                         </div>
                         <div class="col-4">
                             <div class="form-group">
                                 <label for="amount">Montant</label>
                                 
-                                <input type="number"  min="0" value="{{ $hotel->prix }}" name="amount" class="form-control" id="amount" disabled>
+                                <input type="number"  min="0" value="{{ $hotel->prix }}" name="amount" class="form-control" id="amount" readonly>
                                
                             </div>
                         </div>
