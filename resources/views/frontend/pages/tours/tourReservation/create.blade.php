@@ -33,25 +33,16 @@
             <div class="row">
                 <div class="col-12">
                     <div class="row">
-                        <div class="col-4">
+                        <div class="col-4"> 
                             <div class="form-group">
                                 <label for="tour_id">Tours</label>
-                                <select name="tour_id" class="form-control" id="tour_id">
-                                    
-                                        <option value="{{ $tour->id }}">{{ $tour->nom }}</option>
-                                    
-                                </select>
+                                <input type="text" name="tour_id" class="form-control" id="tour_id" value="{{ $tour->nom }}" disabled>
                             </div>
                         </div>
                         <div class="col-4">
-                            <div class="form-group">
+                            <div class="form-group"> 
                                 <label for="destination_id">Localisation</label>
-                                <select name="destination_id" class="form-control" id="destination_id">
-                                   @foreach ($destinations as $destination)
-                                       
-                                   <option value="{{ $destination->id }}">{{ $destination->name }}</option>
-                                     @endforeach
-                                </select>
+                                <input type="text" value="{{$tour->destination->name}}" name="destination_id" class="form-control" id="destination_id" disabled>
                             </div>
                         </div>
                         {{-- <div class="col-4">
@@ -68,21 +59,21 @@
                             <div class="form-group">
                                 <label for="reservation_date">Date de réservation</label>
                                 <input type="date" name="reservation_date" class="form-control"
-                                    id="reservation_date">
+                                    id="reservation_date" value="{{date('Y-m-d')}}" disabled>
                             </div>
                         </div>
                         <div class="col-4">
                             <div class="form-group">
                                 <label for="amount">Montant</label>
                                 
-                                <input type="number" min="0" value="{{ $tour->prix }}" name="amount" class="form-control" id="amount">
+                                <input type="number" min="0" value="{{ $tour->prix }}" name="amount" class="form-control" id="amount" disabled>
                                
                             </div>
                         </div>
                         <div class="col-4">
                             <div class="form-group">
                                 <label for="num_persons">Nombre de personnes</label>
-                                <input type="number" min="0" name="num_persons" class="form-control" id="num_persons" value="{{ $tour->place }}">
+                                <input type="number" min="0" name="num_persons" class="form-control" id="num_persons" value="{{ $tour->place }}" disabled>
                             </div>
                         </div>
                         <div class="col-4">

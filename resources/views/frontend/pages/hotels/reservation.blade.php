@@ -36,22 +36,13 @@
                         <div class="col-4">
                             <div class="form-group">
                                 <label for="tour_id">hotel</label>
-                                <select name="hotel_id" class="form-control" id="hotel_id">
-                                    
-                                        <option value="{{ $hotel->id }}">{{ $hotel->name }}</option>
-                                    
-                                </select>
+                                <input type="text"  name="hotel_id" class="form-control" id="hotel_id" value="{{ $hotel->name }}" disabled>
                             </div>
                         </div>
                         <div class="col-4">
                             <div class="form-group">
                                 <label for="destination_id">Localisation</label>
-                                <select name="destination_id" class="form-control" id="destination_id">
-                                   @foreach ($destinations as $destination)
-                                       
-                                   <option value="{{ $destination->id }}">{{ $destination->name }}</option>
-                                     @endforeach
-                                </select>
+                                 <input type="text"  name="destination_id" class="form-control" id="destination_id" value="{{  $hotel->localisation  }}" disabled>
                             </div>
                         </div>
                         {{-- <div class="col-4">
@@ -68,14 +59,14 @@
                             <div class="form-group">
                                 <label for="reservation_date">Date de réservation</label>
                                 <input type="date" name="reservation_date" class="form-control"
-                                    id="reservation_date">
+                                    id="reservation_date" value="{{date('Y-m-d')}}" disabled>
                             </div>
                         </div>
                         <div class="col-4">
                             <div class="form-group">
                                 <label for="amount">Montant</label>
                                 
-                                <input type="number" min="0" value="{{ $hotel->prix }}" name="amount" class="form-control" id="amount">
+                                <input type="number"  min="0" value="{{ $hotel->prix }}" name="amount" class="form-control" id="amount" disabled>
                                
                             </div>
                         </div>
