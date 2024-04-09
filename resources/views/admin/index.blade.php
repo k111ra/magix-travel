@@ -62,7 +62,7 @@
                                         <h2 class="mb-3 font-18">{{ $totalReservations }}</h2>
                                         <p class="mb-0"><span
                                                 class="col-green">{{ number_format($percentageIncreaseReservations) }}%</span>
-                                            Increase</p>
+                                                Augmentation</p>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">

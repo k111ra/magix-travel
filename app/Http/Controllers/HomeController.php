@@ -65,7 +65,7 @@ class HomeController extends Controller
         $totalTours = Tour::count();
         $totalHotels = Hotel::count();
         $totalDestinations = Destination::count();
-        $totalReservations = Destination::count();
+        $totalReservations = Reservation::count();
 
         $startDate = Carbon::now()->subDays(30);
         $endDate = Carbon::now();
