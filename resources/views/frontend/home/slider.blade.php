@@ -11,13 +11,13 @@
                             <div class="content">
                                 <div class="clearfix">
                                     <div class="inner">
-                                        <h1><span>Adventure<i class="s-text">Adventure</i></span></h1>
-                                        <div class="travilo-text">Disover top places and enjoy extreme
-                                            activities around the world with a cheap price.</div>
+                                        <h1><span>Aventure<i class="s-text">Aventure</i></span></h1>
+                                        <div class="travilo-text">Découvrez les meilleurs endroits et profitez de l'extrême
+                                            des activités à travers le monde à un prix bon marché.</div>
                                         <div class="links-box clearfix">
                                             <div class="link"><a href="{{route('about')}}"
-                                                    class="theme-btn btn-style-two"><span>Explore
-                                                        Now</span></a>
+                                                    class="theme-btn btn-style-two"><span>Explorer
+                                                        Maintenant</span></a>
                                             </div>
                                             <div class="link"><a href="{{route('about')}}"
                                                     class="theme-btn btn-style-three"><span>About
@@ -41,13 +41,13 @@
                                 <div class="clearfix">
                                     <div class="inner">
                                         <h1><span>Festivals<i class="s-text">Festivals</i></span></h1>
-                                        <div class="travilo-text">Experience the vibrancy of local festivities,
-                                            joining in celebrations that showcase the heart and soul of the
-                                            community.</div>
+                                        <div class="travilo-text">Découvrez le dynamisme des festivités locales,
+                                            se joindre à des célébrations qui mettent en valeur le cœur et l'âme de la
+                                            communauté.</div>
                                         <div class="links-box clearfix">
                                             <div class="link"><a href="{{route('about')}}"
-                                                    class="theme-btn btn-style-two"><span>Explore
-                                                        Now</span></a>
+                                                    class="theme-btn btn-style-two"><span>Explorer
+                                                        Maintenant</span></a>
                                             </div>
                                             <div class="link"><a href="{{route('about')}}"
                                                     class="theme-btn btn-style-three"><span>About
@@ -71,13 +71,13 @@
                                 <div class="clearfix">
                                     <div class="inner">
                                         <h1><span>Cuisine<i class="s-text">Cuisine</i></span></h1>
-                                        <div class="travilo-text">Delight in the diverse flavors and culinary
-                                            traditions of the region you're visiting, savoring local delicacies
-                                            and street food.</div>
+                                        <div class="travilo-text">Délectez-vous des diverses saveurs et plats culinaires
+                                            traditions de la région que vous visitez, en savourant des spécialités locales
+                                            et la cuisine de rue.</div>
                                         <div class="links-box clearfix">
                                             <div class="link"><a href="{{route('about')}}"
-                                                    class="theme-btn btn-style-two"><span>Explore
-                                                        Now</span></a>
+                                                    class="theme-btn btn-style-two"><span>Explorer
+                                                        Maintenant</span></a>
                                             </div>
                                             <div class="link"><a href="{{route('about')}}"
                                                     class="theme-btn btn-style-three"><span>About
@@ -101,12 +101,12 @@
                                 <div class="clearfix">
                                     <div class="inner">
                                         <h1><span>Nature<i class="s-text">Nature</i></span></h1>
-                                        <div class="travilo-text">Immerse yourself in the natural beauty of the
-                                            landscapes, whether it's lush forests or pristine beaches.</div>
+                                        <div class="travilo-text">Plongez-vous dans la beauté naturelle du
+                                            paysages, qu'il s'agisse de forêts luxuriantes ou de plages immaculées.</div>
                                         <div class="links-box clearfix">
                                             <div class="link"><a href="{{route('about')}}"
-                                                    class="theme-btn btn-style-two"><span>Explore
-                                                        Now</span></a>
+                                                    class="theme-btn btn-style-two"><span>Explorer
+                                                        Maintenant</span></a>
                                             </div>
                                             <div class="link"><a href="{{route('about')}}"
                                                     class="theme-btn btn-style-three"><span>About

@@ -3,12 +3,25 @@
         <div class="title-box centered">
             <div class="subtitle">Get Regular Updates</div>
             <h2>Subscribe to our Newsletter</h2>
+                </div>
+           <div class="container">
+            @if (\Session::has('success'))
+            <div class="alert alert-success">
+                <p>{{ \Session::get('success') }}</p>
+            </div><br />
+            @endif
+            @if (\Session::has('failure'))
+            <div class="alert alert-danger">
+                <p>{{ \Session::get('failure') }}</p>
+            </div><br />
+            @endif
         </div>
         <div class="form-box subscribe-form">
-            <form method="post" action="https://jufailitech.com/envatoitems/travilo/html/contact.html">
+            <form method="post" action="/newsletter">
+                @csrf
                 <div class="form-group">
                     <div class="field-inner">
-                        <input type="email" name="email" value="" placeholder="Type your email here" required>
+                        <input type="email" name="email" value="" placeholder="Entrez votre E-mail" required>
                     </div>
                     <button type="submit" class="theme-btn"><span>Subscribe</span></button>
                 </div>

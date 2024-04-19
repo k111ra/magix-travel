@@ -61,13 +61,13 @@
 
 								<div class="sp-header">
 									<div class="loc-rat clearfix">
-										<div class="location">London</div>
+										<div class="location">{{$hotel->localisation}}</div>
 										<div class="rating"><a href="#" class="theme-btn"><i
 													class="fa-solid fa-star"></i>
-												<strong>4.8</strong><span class="count">8345 Reviews</span></a></div>
-										<div class="add-fav"><a href="#"><i class="far fa-heart"></i> Save</a></div>
+												<strong>{{$hotel->etoiles}}</strong><span class="count">8345 Reviews</span></a></div>
+										<div class="add-fav"><a href="{{route('single-reservation',$hotel->id) }}"><i class="far fa-heart"></i> Save</a></div>
 									</div>
-									<h1>The Ritz London</h1>
+									<h1>{{$hotel->name}}</h1>
 									<div class="info clearfix">
 										<div class="duration"><i class="fa-solid fa-map-marker-alt"></i> 150 Piccadilly,
 											London W1J 9BR, United Kingdom</div>
@@ -76,89 +76,61 @@
 
 								<div class="upper-content">
 									<div class="text-content">
-										<h3>About this Hotel</h3>
-										<p>The Ritz London is an iconic luxury hotel located in the heart of Piccadilly,
-											one of London's most prestigious neighborhoods.</p>
-										<p>Established in 1906, The Ritz exudes timeless elegance and refined opulence,
-											making it a favorite destination for discerning travelers from around the
-											world. The hotel's stunning Edwardian architecture and lavish interiors,
-											adorned with chandeliers, marble columns, and antique furnishings, transport
-											guests to a bygone era of sophistication and grandeur.</p>
-										<p>With 136 luxurious guest rooms and suites, each meticulously decorated to
-											evoke classic glamour and modern comfort, The Ritz London promises an
-											unforgettable stay. Guests are treated to impeccable service from the
-											hotel's dedicated staff, ensuring every need is met with grace and attention
-											to detail. The hotel's restaurants, including the renowned Michelin-starred
-											Ritz Restaurant, offer exquisite dining experiences, serving a mix of
-											British and French culinary delights.</p>
+										<h3>À propos de cet hôtel</h3>
+										{{$hotel->description}}
 										<br>
-										<h3>Facilities</h3>
+										<h3>Équipement</h3>
 										<div class="facilities">
 											<div class="row clearfix">
 												<div class="fac-block col-lg-6 col-md-6 col-sm-12">
 													<div class="inner">
 														<div class="icon"><i class="flaticon-air-conditioner"></i></div>
-														<h5>Full Air Conditioned</h5>
-														<div class="travilo-text">The Ritz London provides
-															air-conditioned rooms and public areas to ensure a
-															comfortable stay, especially during warm London summers.
+														<h5>Entièrement climatisé</h5>
+														<div class="travilo-text">{{$hotel->name}} propose : des chambres climatisées et des espaces publics pour assurer une séjour confortable, surtout pendant les étés chauds de Londres.
 														</div>
 													</div>
 												</div>
 												<div class="fac-block col-lg-6 col-md-6 col-sm-12">
 													<div class="inner">
 														<div class="icon"><i class="flaticon-wifi-1"></i></div>
-														<h5>Free Wifi Zone</h5>
-														<div class="travilo-text">Complimentary high-speed Wi-Fi is
-															available throughout the hotel, allowing guests to stay
-															connected during their visit.</div>
+														<h5>Zone Wifi gratuite</h5>
+														<div class="travilo-text">Une connexion Wi-Fi haut débit gratuite est disponible disponibles dans tout l’hôtel, permettant aux clients de rester connectés lors de leur visite.</div>
 													</div>
 												</div>
 												<div class="fac-block col-lg-6 col-md-6 col-sm-12">
 													<div class="inner">
 														<div class="icon"><i class="flaticon-park"></i></div>
-														<h5>Out Door Area</h5>
-														<div class="travilo-text">The hotel boasts a picturesque outdoor
-															terrace where guests can relax and enjoy the fresh air in a
-															tranquil setting.</div>
+														<h5>Zone de porte extérieure</h5>
+														<div class="travilo-text">L’hôtel dispose d’un cadre extérieur pittoresque terrasse où vous pourrez vous détendre et profiter de l’air frais dans un Cadre tranquille.</div>
 													</div>
 												</div>
 												<div class="fac-block col-lg-6 col-md-6 col-sm-12">
 													<div class="inner">
 														<div class="icon"><i class="flaticon-restaurant"></i></div>
-														<h5>Food & Drinks</h5>
-														<div class="travilo-text">The Ritz offers a range of dining
-															options, from the opulent Ritz Restaurant to the elegant
-															Palm Court, famous for its afternoon tea service, making
-															every meal a memorable experience.</div>
+														<h5>Nourriture et boissons</h5>
+														<div class="travilo-text">Le Ritz propose une gamme de restaurants de l’opulent restaurant Ritz à l’élégant Palm Court, célèbre pour son service de thé de l’après-midi, Chaque repas est une expérience mémorable.</div>
 													</div>
 												</div>
 												<div class="fac-block col-lg-6 col-md-6 col-sm-12">
 													<div class="inner">
 														<div class="icon"><i class="flaticon-swimming-pool-1"></i></div>
-														<h5>Swimming Pool</h5>
-														<div class="travilo-text">The Ritz London features a beautiful
-															indoor swimming pool where guests can unwind and rejuvenate.
+														<h5>Piscine</h5>
+														<div class="travilo-text">{{$hotel->name}} dispose d’un magnifique Piscine intérieure où vous pourrez vous détendre et vous ressourcer.
 														</div>
 													</div>
 												</div>
 												<div class="fac-block col-lg-6 col-md-6 col-sm-12">
 													<div class="inner">
 														<div class="icon"><i class="flaticon-heart-1"></i></div>
-														<h5>Spa and Gym</h5>
-														<div class="travilo-text">The hotel's luxurious spa and fitness
-															center provide guests with the opportunity to indulge in
-															relaxation and maintain their fitness routines during their
-															stay.</div>
+														<h5>Spa et salle de sport</h5>
+														<div class="travilo-text">Le luxueux spa et la salle de fitness de l’hôtel offrir aux clients la possibilité de s’adonner à se détendre et maintenir leurs routines de remise en forme pendant leur rester.</div>
 													</div>
 												</div>
 											</div>
 										</div>
-										<h3>Policies</h3>
+										<h3>Manifeste</h3>
 										<div class="policies">
-											<div class="text u-text">Please note that hotel policies and facilities may
-												be subject to change, so it's recommended to confirm the most up-to-date
-												information directly with the hotel when making a reservation.</div>
+											<div class="text u-text">Veuillez noter que les conditions et les installations de l’hôtel peuvent être sujettes à changement, il est donc recommandé de confirmer les informations directement auprès de l’hôtel lors de la réservation.</div>
 											<div class="pols">
 												<div class="pol-block">
 													<div class="inner">
@@ -172,7 +144,7 @@
 													<div class="inner">
 														<div class="icon"><i class="flaticon-little-boy"></i></div>
 														<h5>Children & Infants</h5>
-														<div class="travilo-text">The Ritz London welcomes children of
+														<div class="travilo-text">{{$hotel->name}} welcomes children of
 															all ages. Extra beds and cribs may be provided upon request,
 															subject to availability.</div>
 													</div>
@@ -180,20 +152,15 @@
 												<div class="pol-block">
 													<div class="inner">
 														<div class="icon"><i class="flaticon-calendar-3"></i></div>
-														<h5>Cancellation</h5>
-														<div class="travilo-text">The hotel's cancellation policy may
-															vary depending on the type of reservation and rate selected.
-															Guests are advised to review the specific terms and
-															conditions at the time of booking.</div>
+														<h5>Annulation</h5>
+														<div class="travilo-text">Les conditions d’annulation de l’hôtel peuvent varient en fonction du type de réservation et du tarif choisi. Il est conseillé aux clients de consulter les conditions spécifiques et conditions au moment de la réservation.</div>
 													</div>
 												</div>
 												<div class="pol-block">
 													<div class="inner">
 														<div class="icon"><i class="flaticon-parking-lot"></i></div>
 														<h5>Parking</h5>
-														<div class="travilo-text">The Ritz London offers valet parking
-															services for guests with private vehicles. Charges may
-															apply.</div>
+														<div class="travilo-text">{{$hotel->name}} propose un service de voiturier Services pour les clients avec des véhicules privés. Des accusations peuvent être portées contre appliquer.</div>
 													</div>
 												</div>
 											</div>
@@ -285,16 +252,12 @@
 								<!--Widget-->
 								<div class="dsp-widget get-help-widget">
 									<div class="inner">
-										<h6>Get Help</h6>
-										<h3>Need Help to Book?</h3>
-										<div class="travilo-text">If you're eager to experience the epitome of luxury at
-											The Ritz London, our dedicated team of travel experts is here to assist you
-											in making your reservation. Whether you're planning a romantic getaway, a
-											family vacation, or a business trip, we can tailor your stay to meet your
-											specific preferences and needs.</div>
+										<h6>Obtenir De L’aide</h6>
+										<h3>Besoin D’aide Pour Réserver ?</h3>
+										<div class="travilo-text">Si vous êtes impatient de découvrir la quintessence du luxe chez {{$hotel->name}}, notre équipe dédiée d’experts en voyages est là pour vous aider lors de votre réservation. Que vous planifiiez une escapade romantique, un vacances en famille, ou un voyage d’affaires, nous pouvons adapter votre séjour pour répondre à vos besoins préférences et besoins spécifiques.</div>
 										<div class="call-to">
-											<a href="tel:+96899999000"><i class="icon fa-solid fa-phone"></i> Call Us
-												<span class="nmbr">+968 99999000</span></a>
+											<a href="tel:+96899999000"><i class="icon fa-solid fa-phone"></i> Appelez-nous
+												<span class="nmbr">+225 27 21 37 70 38</span></a>
 										</div>
 									</div>
 								</div>
@@ -327,6 +290,15 @@
 									</div>
 								</div>
 
+								<div class="dsp-widget dsp-stat-widget">
+									<div class="inner">
+										<div class="book-link"><a href="{{route('single-reservation',$hotel->id) }}"
+											class="theme-btn btn-style-two"><span>Reserver maintenant</span></a></div>
+								
+									</div>
+								</div>
+								
+
 							</div>
 						</div>
 
@@ -355,7 +327,7 @@
 														alt="">
 												</div>
 												<h5>Super King Delux</h5>
-												<div class="travilo-text">The Super King Deluxe Rooms at The Ritz London
+												<div class="travilo-text">The Super King Deluxe Rooms at {{$hotel->name}}
 													exude timeless elegance, offering a blend of classic charm and
 													modern comfort. Adorned with luxurious fabrics, plush furnishings,
 													and exquisite artwork, these rooms create a welcoming ambiance for
@@ -560,12 +532,12 @@
 									<ul class="accordion-box faqs-accordion clearfix">
 										<!--Block-->
 										<li class="accordion block active-block">
-											<div class="acc-btn active">Is The Ritz London a pet-friendly hotel? <span
+											<div class="acc-btn active">Is {{$hotel->name}} a pet-friendly hotel? <span
 													class="arrow fa fa-plus"></span></div>
 											<div class="acc-content current">
 												<div class="content">
 													<div class="travilo-text">
-														<p>Unfortunately, The Ritz London does not allow pets on the
+														<p>Unfortunately, {{$hotel->name}} does not allow pets on the
 															premises, except for registered guide dogs or service
 															animals, in compliance with hotel regulations and guest
 															comfort.</p>
@@ -576,13 +548,13 @@
 
 										<!--Block-->
 										<li class="accordion block">
-											<div class="acc-btn">Does The Ritz London offer airport transfer services?
+											<div class="acc-btn">Does {{$hotel->name}} offer airport transfer services?
 												<span class="arrow fa fa-plus"></span>
 											</div>
 											<div class="acc-content">
 												<div class="content">
 													<div class="travilo-text">
-														<p>Yes, The Ritz London can arrange airport transfer services
+														<p>Yes, {{$hotel->name}} can arrange airport transfer services
 															for guests upon request. Whether you require a private car,
 															limousine, or chauffeur-driven vehicle, our concierge team
 															will be delighted to assist you in making the necessary
@@ -599,7 +571,7 @@
 											<div class="acc-content">
 												<div class="content">
 													<div class="travilo-text">
-														<p>Yes, The Ritz London is committed to providing a smoke-free
+														<p>Yes, {{$hotel->name}} is committed to providing a smoke-free
 															environment for all guests. All rooms and public areas are
 															designated as non-smoking areas, in accordance with the
 															hotel policy.</p>
@@ -610,13 +582,13 @@
 
 										<!--Block-->
 										<li class="accordion block">
-											<div class="acc-btn">What dining options are available at The Ritz London?
+											<div class="acc-btn">What dining options are available at {{$hotel->name}}?
 												<span class="arrow fa fa-plus"></span>
 											</div>
 											<div class="acc-content">
 												<div class="content">
 													<div class="travilo-text">
-														<p>The Ritz London offers an exceptional dining experience at
+														<p>{{$hotel->name}} offers an exceptional dining experience at
 															several renowned restaurants. Guests can savor traditional
 															afternoon tea in the elegant Palm Court, indulge in gourmet
 															cuisine at the Michelin-starred Ritz Restaurant, and enjoy
@@ -630,11 +602,11 @@
 										<!--Block-->
 										<li class="accordion block">
 											<div class="acc-btn">Is there a dress code for dining and afternoon tea at
-												The Ritz London? <span class="arrow fa fa-plus"></span></div>
+												{{$hotel->name}}? <span class="arrow fa fa-plus"></span></div>
 											<div class="acc-content">
 												<div class="content">
 													<div class="travilo-text">
-														<p>Yes, The Ritz London maintains a formal dress code in the
+														<p>Yes, {{$hotel->name}} maintains a formal dress code in the
 															public areas and restaurants to maintain the elegant
 															ambiance. For gentlemen, a jacket and tie are required for
 															dining in The Ritz Restaurant and The Palm Court. During
@@ -716,7 +688,7 @@
 															class="fa-solid fa-star"></i>
 													</div>
 												</div>
-												<div class="travilo-text">Staying at The Ritz London was an
+												<div class="travilo-text">Staying at {{$hotel->name}} was an
 													unforgettable experience! From the moment we arrived, we were
 													treated like royalty. The hotel's grandeur and classic decor took us
 													back to a bygone era of elegance. Our Deluxe Room was beautifully
@@ -754,7 +726,7 @@
 													</div>
 												</div>
 												<div class="travilo-text">As a frequent traveler, I have experienced
-													many luxury hotels, but The Ritz London stands out as a true gem.
+													many luxury hotels, but {{$hotel->name}} stands out as a true gem.
 													The Executive Suite was tastefully decorated, offering breathtaking
 													views of the city. The attention to detail throughout the hotel was
 													exceptional, from the fragrant flowers to the immaculate service.
@@ -792,8 +764,7 @@
 															class="fa-solid fa-star"></i>
 													</div>
 												</div>
-												<div class="travilo-text">From the moment I stepped into The Ritz
-													London, I felt like I had entered a fairytale. The lavish decor,
+												<div class="travilo-text">From the moment I stepped into The Ritz London, I felt like I had entered a fairytale. The lavish decor,
 													chandeliers, and marble floors took my breath away. The Junior Suite
 													was elegant and comfortable, and the turn-down service with
 													chocolates was a delightful touch. Afternoon tea in the Palm Court
@@ -988,7 +959,7 @@
 											<ul>
 												<li><span class="icon flaticon-price-tag-1"></span><span
 														class="txt"><strong>Timeless Elegance
-															and Luxury:</strong> Choosing The Ritz London means
+															and Luxury:</strong> Choosing {{$hotel->name}} means
 														immersing yourself in the timeless
 														elegance and luxury of a truly iconic hotel. From the moment you
 														step into the grand lobby
@@ -1001,7 +972,7 @@
 												</li>
 												<li><span class="icon flaticon-shield"></span><span
 														class="txt"><strong>Prime Location in the
-															Heart of London:</strong> The Ritz London boasts a prime
+															Heart of London:</strong> {{$hotel->name}} boasts a prime
 														location in the heart of London's
 														prestigious Piccadilly neighborhood. Many of the city's top
 														attractions, such as Buckingham
@@ -1013,7 +984,7 @@
 														highlights.</span></li>
 												<li><span class="icon flaticon-location-2"></span><span
 														class="txt"><strong>Dining and Afternoon
-															Tea:</strong> One of the many highlights of The Ritz London
+															Tea:</strong> One of the many highlights of {{$hotel->name}}
 														is its exceptional dining
 														experience. Indulge in the world-famous afternoon tea served in
 														the elegant Palm Court,
@@ -1026,7 +997,7 @@
 														delights.</span></li>
 												<li><span class="icon flaticon-calendar"></span><span
 														class="txt"><strong>Impeccable Service and
-															Personalized Attention:</strong> The Ritz London is renowned
+															Personalized Attention:</strong> {{$hotel->name}} is renowned
 														for its exceptional level of
 														service and personalized attention to guests. From the warm
 														welcome upon arrival to the
@@ -1040,7 +1011,7 @@
 												<li><span class="icon flaticon-heart-1"></span><span
 														class="txt"><strong>Spa and Wellness
 															Retreat:</strong> In addition to its other luxurious
-														offerings, The Ritz London provides a
+														offerings, {{$hotel->name}} provides a
 														rejuvenating haven at its five-star spa and wellness
 														facilities.</span></li>
 											</ul>

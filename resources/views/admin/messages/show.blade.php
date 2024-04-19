@@ -8,10 +8,10 @@
       <div class="row d-flex justify-content-center">
         <div class="col-md-8 col-lg-8 col-xl-12">
   
-          <div class="card">
+          
             <div class="card-header d-flex justify-content-between align-items-center p-3"
               style="border-top: 4px solid #ffa900;">
-              <h5 class="mb-0">{{$messages->subject}}</h5>
+              <h5 class="mb-0">{{$messages->subject}}</h5> 
               {{-- <div class="d-flex flex-row align-items-center">
                 <span class="badge bg-warning me-3">20</span>
                 <i class="fas fa-minus me-3 text-muted fa-xs"></i>

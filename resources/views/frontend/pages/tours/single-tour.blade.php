@@ -1,8 +1,7 @@
 @extends('layouts.layout')
 @section('content')
 <div class="tour-single-banner">
-    <div class="image-layer" style="background-image: url({{asset('frontend/assets/images/resources/featured/featured-4.jpg')}})"
-')}});">
+    <div class="image-layer" style="background-image: url({{asset('frontend/assets/images/resources/featured/featured-4.jpg')}})">
     </div>
     <div class="auto-container">
         <div class="content-box">
@@ -35,8 +34,8 @@
 									<div class="location">{{$tour->destination->name}}</div>
 									<div class="rating"><a href="#" class="theme-btn"><i class="fa-solid fa-star"></i>
 											<strong>4.8</strong>   <span class="count">4233 Reviews</span></a></div>
-									<div class="add-fav"><a href="#"><i class="far fa-heart"></i> Add to Wishlist</a>
-									</div>
+									<div class="add-fav"><div class="book-link"><a href="{{route('Reservation.tour',$tour->id) }}"
+										class="theme-btn btn-style-two"><span>Reserver maintenant</span></a></div></div>
 								</div>
 								<h1>{{$tour->nom}}</h1>
 								<div class="info clearfix">

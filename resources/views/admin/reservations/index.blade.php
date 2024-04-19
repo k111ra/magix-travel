@@ -31,7 +31,7 @@
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ optional($reservation->tour)->nom }}</td>
-                                <td>{{ $reservation->hotel->name }}</td>
+                                <td>{{ optional($reservation->hotel)->name }}</td>
                                 <td>{{ optional($reservation->vol)->compagnie_aerienne }}</td>
                                 <td>{{ $reservation->reservation_date }}</td>
                                 <td> {{ number_format($reservation->amount, 0, ',', ' ') }} FCFA  </td>

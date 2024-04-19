@@ -11,3 +11,4 @@
 	<script src="{{asset('frontend/assets/js/lib/wow.min.js')}}"></script>
 	<script src="{{asset('frontend/assets/js/lib/swiper.min.js')}}"></script>
 	<script src="{{asset('frontend/assets/js/custom-script.js')}}"></script>
+	<script src="{{asset('frontend/assets/js/lib/date-script.js')}}"></script>
