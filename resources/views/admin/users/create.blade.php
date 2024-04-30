@@ -9,16 +9,17 @@
               <h4>Register</h4>
             </div>
             <div class="card-body">
-              <form method="POST">
+              <form method="POST" action="{{route('user.store')}}">
+                @csrf
                 <div class="row">
                   <div class="form-group col-6">
                     <label for="frist_name">First Name</label>
-                    <input id="frist_name" type="text" class="form-control" name="frist_name" autofocus>
+                    <input id="frist_name" type="text" class="form-control" name="name" autofocus>
                   </div>
-                  <div class="form-group col-6">
+                  {{-- <div class="form-group col-6">
                     <label for="last_name">Last Name</label>
                     <input id="last_name" type="text" class="form-control" name="last_name">
-                  </div>
+                  </div> --}}
                 </div>
                 <div class="form-group">
                   <label for="email">Email</label>
@@ -43,12 +44,14 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="email">Rôle</label>
-                    <select id="inputState" class="form-control">
+                    <label for="email">Roles</label>
+                   
+                    <select id="inputState" class="form-control" name="role_id">
                         <option selected>Choose...</option>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
+                         @foreach ($roles as $role)
+                        <option>{{$role->name}}</option>
+                    @endforeach
+                        
                     </select>
                     </div>
                 <div class="form-group">

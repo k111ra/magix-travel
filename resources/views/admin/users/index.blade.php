@@ -28,28 +28,32 @@
               <tr>
                 <th>#</th>
                 <th>Nom</th>
-                <th>Prenoms</th>
-                <th>Sexe</th>
+                {{-- <th>Sexe</th> --}}
                 <th>Email</th>
                 <th>Créer Par</th>
                 <th>Created At</th>
                 <th>Action</th>
               </tr>
+              @foreach ($utilisateurs as $utilisatuer)
+                  
+             
               <tr>
-                <td>1</td>
-                <td>Kouakou</td>
-                <td>Abdoul</td>
-                <td>Feminin</td>
-                <td>dev@gmail.com</td>
-                <td>Admin</td>
-                <td>10-02-2019</td>
+                
+                <td>{{$utilisatuer->id}}</td>
+                <td>{{$utilisatuer->name}}</td>
+                
+                {{-- <td>{{$utilisatuer->}}</td>
+                <td>{{$utilisatuer->}}</td>  --}}
+                <td>{{$utilisatuer->email}}</td>
+                <td>{{$utilisatuer->role_id}}</td>
+                <td>{{$utilisatuer->created_at}}</td>
                 <td>
                     <a type="button" href="" class="btn btn-xs"><i style="color: rgb(241, 211, 10)" class="fas fa-pencil-alt" title="Modifier"></i></a>
                     <a type="button" href="" class="btn btn-xs"><i style="color: blue" class="fas fa-eye" title="Supprimer"></i></a>
                     <a type="button" href="" class="btn btn-xs"><i style="color: red" class="fas fa-trash-alt" title="Delete"></i></a>
                 </td>
-              </tr>
-              <tr>
+              </tr> @endforeach
+              {{-- <tr>
                 <td>2</td>
                 <td>Kouakou</td>
                 <td>Abdoul</td>
@@ -76,7 +80,7 @@
                   <a type="button" href="" class="btn btn-xs"><i style="color: blue" class="fas fa-eye" title="Supprimer"></i></a>
                   <a type="button" href="" class="btn btn-xs"><i style="color: red" class="fas fa-trash-alt" title="Delete"></i></a>
                 </td>
-              </tr>
+              </tr> --}}
             </table>
           </div>
           {{-- <div class="float-right">

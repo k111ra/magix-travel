@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
+use Spatie\Permission\Models\Role;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class UsersController extends Controller
 {
@@ -15,7 +18,10 @@ class UsersController extends Controller
     public function index()
     {
 
-            return view('admin.users.index');
+        $roles = Role::all();
+        $utilisateurs = User::all();
+
+            return view('admin.users.index',compact('utilisateurs','roles'));
         
     }
 
@@ -26,7 +32,8 @@ class UsersController extends Controller
      */
     public function create()
     {
-            return view('admin.users.create');
+        $roles = Role::all();
+            return view('admin.users.create',compact('roles'));
        
     }
 
@@ -36,9 +43,34 @@ class UsersController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $returnSaved = false )
     {
         //
+         $request->validate([
+                    'name' => 'required',
+                    'email' => 'required|unique:users,email',
+                    'password' => 'required',
+                    'role_id' => 'required',
+                   
+                ]);
+        
+                $user = new User;
+                $user->name = $request->name;
+                $user->email = $request->email;
+                $user->password = Hash::make($request->password);
+                $user->is_admin = true;
+                $user->save();
+        
+                $user->assignRole($request->role_name);
+        
+                if($returnSaved){
+                    return $user;
+                }
+        
+                
+        return redirect()->route('users.index')
+        ->with('success', 'utilisateur crée avec succès.');
+
     }
 
     /**

@@ -89,6 +89,7 @@ Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function () {
     ////////////Routes des utilisateurs////////////
     Route::get('/liste-user', [UsersController::class, 'index'])->name('user.index');
     Route::get('/create-user', [UsersController::class, 'create'])->name('user.create');
+    Route::post('/store-user', [UsersController::class, 'store'])->name('user.store');
 
     ////////////Routes des clients////////////
     Route::get('/liste-client', [ClientController::class, 'index'])->name('client.index');
