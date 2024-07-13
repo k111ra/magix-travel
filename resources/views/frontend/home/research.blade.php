@@ -48,7 +48,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="theme-btn f-btn"><span>Search <i
+                            <button type="submit" class="theme-btn f-btn"><span>Recherche <i
                                         class="fa-solid fa-search"></i></span></button>
                         </form>
 

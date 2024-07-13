@@ -20,8 +20,7 @@
                                                         Maintenant</span></a>
                                             </div>
                                             <div class="link"><a href="{{route('about')}}"
-                                                    class="theme-btn btn-style-three"><span>About
-                                                        Us</span></a>
+                                                    class="theme-btn btn-style-three"><span>À propos de nous</span></a>
                                             </div>
                                         </div>
                                     </div>
@@ -50,8 +49,7 @@
                                                         Maintenant</span></a>
                                             </div>
                                             <div class="link"><a href="{{route('about')}}"
-                                                    class="theme-btn btn-style-three"><span>About
-                                                        Us</span></a>
+                                                    class="theme-btn btn-style-three"><span>À propos de nous</span></a>
                                             </div>
                                         </div>
                                     </div>
@@ -80,8 +78,7 @@
                                                         Maintenant</span></a>
                                             </div>
                                             <div class="link"><a href="{{route('about')}}"
-                                                    class="theme-btn btn-style-three"><span>About
-                                                        Us</span></a>
+                                                    class="theme-btn btn-style-three"><span>À propos de nous</span></a>
                                             </div>
                                         </div>
                                     </div>
@@ -109,8 +106,7 @@
                                                         Maintenant</span></a>
                                             </div>
                                             <div class="link"><a href="{{route('about')}}"
-                                                    class="theme-btn btn-style-three"><span>About
-                                                        Us</span></a>
+                                                    class="theme-btn btn-style-three"><span>À propos de nous</span></a>
                                             </div>
                                         </div>
                                     </div>

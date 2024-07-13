@@ -132,7 +132,7 @@
                         </div>
                         <div class="link-col col-lg-3 col-md-12 col-sm-12">
                             <div class="inner">
-                                <div class="link-box"><a href="destination-single.html"
+                                <div class="link-box"><a href="{{route('destination')}}"
                                         class="theme-btn btn-style-two"><span>Explorer
                                             Maintenant</span></a></div>
                             </div>

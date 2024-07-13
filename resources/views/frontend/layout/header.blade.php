@@ -91,7 +91,7 @@
                                 <li class="dropdown {{ Route::is('hotels') ? 'current' : '' }}"><a
                                         href="{{ route('hotels') }}">Hotels</a></li>
                                 <li class="dropdown {{ Route::is('about') ? 'current' : '' }}"><a
-                                        href="{{ route('about') }}">About</a></li>
+                                        href="{{ route('about') }}">À propos de nous</a></li>
                                 {{-- <li class="dropdown"><a href="blog.html">News</a>
                                     <ul>
                                         <li><a href="blog.html">Our Blog</a></li>

@@ -42,7 +42,7 @@
                         <div class="col-4">
                             <div class="form-group"> 
                                 <label for="destination_id">Localisation</label>
-                                <input type="text" value="{{$tour->destination->name}}" name="destination_id" class="form-control" id="destination_id" disabled>
+                                <input type="text" value="" name="destination_id" class="form-control" id="destination_id" disabled>
                             </div>
                         </div>
                         {{-- <div class="col-4">
@@ -100,6 +100,29 @@
                                 <input type="email" name="email" class="form-control" id="email">
                             </div>
                         </div>
+                        <div class="col-4">
+                            <div class="form-group">
+                                <label for="">Bébé ( 0-2 ans)</label>
+                                    <select name="field-name" class="custom-select">
+                                        <option>Nombre de bébé</option>
+                                        <option>0
+                                        </option>
+                                        
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="form-group">
+                                    <label for="">Enfant ( 2-12 ans)</label>
+                                        <select name="field-name" class="custom-select">
+                                            <option>Nombre d'enfant</option>
+                                            <option>
+                                                0
+                                            </option>
+                                           
+                                        </select>
+                                    </div>
+                                </div>
                     </div>
                 </div>
             </div>

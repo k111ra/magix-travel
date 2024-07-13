@@ -19,7 +19,7 @@
                             <div class="lower-box">
                                 <div class="p-icon"><img src="{{ asset('storage/' . json_decode($tour->images)[0]) }}"
                                         alt=""><span class="icon flaticon-family"></span></div>
-                                <div class="location">{{ $tour->destination->name }}</div>
+                                <div class="location"></div>
                                 <h5><a href="{{ route('single-tour', $tour->id) }}">{{ $tour->nom }}</a></h5>
                                 <div class="info clearfix">
                                     <div class="duration"><i class="fa-solid fa-clock"></i>{{ $tour->duree }} jour(s)

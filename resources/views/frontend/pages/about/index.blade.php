@@ -340,13 +340,13 @@
                 <div class="testi-block-one">
                     <div class="inner-box">
                         <div class="icon"><span class="flaticon-left-quote"></span></div>
-                        <div class="travilo-text">I can't thank the travel website enough for the seamless
-                            planning of my dream
-                            vacation to Italy. From the moment I inquired about Varenna to booking my flights
-                            and accommodations,
-                            their team was incredibly responsive and helpful. The detailed itineraries, insider
-                            tips; made my trip
-                            unforgettable.</div>
+                        <div class="travilo-text">Je ne peux pas remercier le site de voyage assez pour le seamless
+                            planification de mon rêve
+                            vacances en Italie. A partir du moment où je me suis renseigné sur Varenna pour réserver mes vols
+                            et l’hébergement,
+                            Leur équipe a été incroyablement réactive et serviable. Les itinéraires détaillés
+                            conseils; fait mon voyage
+                            inoubliable.</div>
                         <div class="info">
                             <div class="image"><img src="assets/images/resources/thumbnails/testi-1.jpg"
                                     alt="Testimonial 1"></div>
@@ -366,13 +366,13 @@
                 <div class="testi-block-one">
                     <div class="inner-box">
                         <div class="icon"><span class="flaticon-left-quote"></span></div>
-                        <div class="travilo-text">As an avid adventure seeker, I rely on the travel website for
-                            unique and
-                            off-the-beaten-path experiences. Their expertly curated hiking tour in the USA was
-                            everything I could
-                            have hoped for and more. The scenic trails, knowledgeable guides, and attention to
-                            safety made the
-                            trip both thrilling and enjoyable.</div>
+                        <div class="travilo-text">En tant que chercheur passionné d’aventure, je compte sur le site de voyage pour
+                            unique et
+                            des expériences hors des sentiers battus. Leur randonnée organisée avec expertise aux États-Unis était
+                            tout ce que je pouvais
+                            ont espéré et plus encore. Les sentiers pittoresques, les guides compétents et l’attention à
+                            sécurité a fait le
+                            Voyage à la fois passionnant et agréable.</div>
                         <div class="info">
                             <div class="image"><img src="{{asset('frontend/assets/images/resources/thumbnails/testi-7.jpg')}}"
                                     alt="Testimonial 2"></div>
@@ -392,13 +392,13 @@
                 <div class="testi-block-one">
                     <div class="inner-box">
                         <div class="icon"><span class="flaticon-left-quote"></span></div>
-                        <div class="travilo-text">We had the most magical getaway to Greece, all thanks to the
-                            travel website.
-                            Their personalized assistance for the perfect island-hopping itinerary and
-                            hand-picked luxury
-                            accommodations exceeded our expectations. All activities made every every moment
-                            unforgettable and
-                            amazing.</div>
+                        <div class="travilo-text">Nous avons eu l’escapade la plus magique en Grèce, tout cela grâce à la
+                            site de voyage.
+                            Leur assistance personnalisée pour un itinéraire d’île en île parfait et
+                            luxe trié sur le volet
+                            les hébergements ont dépassé nos attentes. Toutes les activités réalisées à chaque instant
+                            inoubliable et
+                            étonnant.</div>
                         <div class="info">
                             <div class="image"><img src="{{asset('frontend/assets/images/resources/thumbnails/testi-3.jpg')}}"
                                     alt="Testimonial 3"></div>
@@ -409,7 +409,7 @@
                                 </div>
                             </div>
                             <div class="name">Peter Parker</div>
-                            <div class="designation">Photographer</div>
+                            <div class="designation">Photographe</div>
                         </div>
                     </div>
                 </div>
@@ -418,13 +418,13 @@
                 <div class="testi-block-one">
                     <div class="inner-box">
                         <div class="icon"><span class="flaticon-left-quote"></span></div>
-                        <div class="travilo-text">Booking our dream vacation through the travel website was a
-                            breeze! The
-                            interface made it easy to compare various destinations and find the perfect
-                            itinerary for our family.
-                            From the flights to the accommodations, everything was seamless, and we received
-                            personalized support
-                            throughout.</div>
+                        <div class="travilo-text">Réserver nos vacances de rêve sur le site de voyage était un
+                            brise! Le
+                            Interface qui permet de comparer facilement les différentes destinations et de trouver le parfait
+                            itinéraire pour notre famille.
+                            Des vols à l’hébergement, tout était sans faille, et nous avons reçu
+                            accompagnement personnalisé
+                            tout au long.</div>
                         <div class="info">
                             <div class="image"><img src="{{asset('frontend/assets/images/resources/thumbnails/testi-4.jpg')}}"
                                     alt="Testimonial 4"></div>
@@ -435,7 +435,7 @@
                                 </div>
                             </div>
                             <div class="name">Clint River</div>
-                            <div class="designation">Audio Coordinator</div>
+                            <div class="designation">Coordonnateur audio</div>
                         </div>
                     </div>
                 </div>
@@ -444,13 +444,13 @@
                 <div class="testi-block-one">
                     <div class="inner-box">
                         <div class="icon"><span class="flaticon-left-quote"></span></div>
-                        <div class="travilo-text">I've been a frequent traveler for years, and this website has
-                            become my go-to
-                            resource for planning my adventures. The vast selection of destinations and the
-                            detailed information
-                            on attractions, hotels, and activities make it a one-stop-shop for all my travel
-                            needs. The customer
-                            service is top-notch.</div>
+                        <div class="travilo-text">Je suis un voyageur fréquent depuis des années, et ce site a
+                            devenir ma cible
+                            pour planifier mes aventures. La vaste sélection de destinations et
+                            information détaillée
+                            sur les attractions, les hôtels et les activités en font un guichet unique pour tous mes voyages
+                            besoins. Le client
+                            le service est de premier ordre.</div>
                         <div class="info">
                             <div class="image"><img src="{{asset('frontend/assets/images/resources/thumbnails/testi-5.jpg')}}"
                                     alt="Testimonial 5"></div>
@@ -470,13 +470,13 @@
                 <div class="testi-block-one">
                     <div class="inner-box">
                         <div class="icon"><span class="flaticon-left-quote"></span></div>
-                        <div class="travilo-text">As a solo traveler, safety is paramount, and the travel
-                            website exceeded my
-                            expectations. Their featured tours and excursions were carefully vetted, ensuring I
-                            could embark on
-                            thrilling experiences with peace of mind. Their blog posts also provided invaluable
-                            travel tips and
-                            destination insights.</div>
+                        <div class="travilo-text">En tant que voyageur solo, la sécurité est primordiale, et le voyage
+                            site Web a dépassé mon
+                            . Leurs visites et excursions ont été soigneusement examinées, en veillant à ce que
+                            pourrait se lancer
+                            Des expériences passionnantes en toute tranquillité. Leurs articles de blog ont également été précieux
+                            conseils de voyage et
+                            aperçu des destinations.</div>
                         <div class="info">
                             <div class="image"><img src="{{asset('frontend/assets/images/resources/thumbnails/testi-6.jpg')}}"
                                     alt="Testimonial 6"></div>
@@ -487,7 +487,7 @@
                                 </div>
                             </div>
                             <div class="name">Tim Robinson</div>
-                            <div class="designation">Adventurist</div>
+                            <div class="designation">Aventuriste</div>
                         </div>
                     </div>
                 </div>
@@ -496,13 +496,13 @@
                 <div class="testi-block-one">
                     <div class="inner-box">
                         <div class="icon"><span class="flaticon-left-quote"></span></div>
-                        <div class="travilo-text">Booking our group getaway through the travel website was a
-                            breeze. The group
-                            booking feature saved us time and effort, and the discounts we received were
-                            fantastic. We had a
-                            fantastic time exploring a new country together, and the website's recommended
-                            activities catered to
-                            everyone's interests.</div>
+                        <div class="travilo-text">Réserver notre escapade de groupe sur le site Web de voyage était un
+                            brise. Le groupe
+                            La fonctionnalité de réservation nous a fait gagner du temps et des efforts, et les réductions que nous avons reçues ont été
+                            fantastique. Nous avons eu un
+                            Un temps fantastique à explorer un nouveau pays ensemble, et le site recommandé
+                            activités destinées à
+                            intérêt de tous.</div>
                         <div class="info">
                             <div class="image"><img src="{{asset('frontend/assets/images/resources/thumbnails/testi-2.jpg')}}"
                                     alt="Testimonial 7"></div>
@@ -522,13 +522,13 @@
                 <div class="testi-block-one">
                     <div class="inner-box">
                         <div class="icon"><span class="flaticon-left-quote"></span></div>
-                        <div class="travilo-text">I recently used the travel website to plan a surprise
-                            honeymoon for my wife,
-                            and it was an absolute success! The honeymoon packages offered were romantic and
-                            luxurious, and the
-                            website's customer support team helped me customize the perfect trip. It was a
-                            magical experience from
-                            start to finish.</div>
+                        <div class="travilo-text">J’ai récemment utilisé le site de voyage pour planifier une surprise
+                            Lune de miel pour ma femme,
+                            et ce fut un succès absolu! Les forfaits de lune de miel offerts étaient romantiques et
+                            luxueux, et le
+                            L’équipe de support client du site m’a aidé à personnaliser le voyage parfait. C’était un
+                            expérience magique de
+                            bout en bout.</div>
                         <div class="info">
                             <div class="image"><img src="{{asset('frontend/assets/images/resources/thumbnails/testi-8.jpg')}}"
                                     alt="Testimonial 8"></div>
@@ -548,13 +548,13 @@
                 <div class="testi-block-one">
                     <div class="inner-box">
                         <div class="icon"><span class="flaticon-left-quote"></span></div>
-                        <div class="travilo-text">I stumbled upon this travel website while planning a
-                            last-minute weekend
-                            getaway, and I couldn't have been happier with my decision. The website's
-                            last-minute deals and
-                            exclusive offers saved me money without compromising on the quality of our stay. The
-                            booking process
-                            was plain smooth!</div>
+                        <div class="travilo-text">Je suis tombé sur ce site de voyage en planifiant un
+                            week-end de dernière minute
+                            Je n’aurais pas pu être plus heureux de ma décision. Le site
+                            offres de dernière minute et
+                            Les offres exclusives m’ont fait économiser de l’argent sans compromettre la qualité de notre séjour. Le
+                            processus de réservation
+                            était lisse!</div>
                         <div class="info">
                             <div class="image"><img src="{{asset('frontend/assets/images/resources/thumbnails/testi-9.jpg')}}"
                                     alt="Testimonial 9"></div>
