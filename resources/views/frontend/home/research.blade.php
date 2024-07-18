@@ -24,7 +24,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                                    <div class="field-label">Start</div>
+                                    <div class="field-label">Départ</div>
                                     <div class="field-inner">
                                         <input class="datepicker" type="text" name="field-name" value=""
                                             placeholder="Check in" required>
@@ -32,7 +32,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                                    <div class="field-label">End</div>
+                                    <div class="field-label">Arrivée</div>
                                     <div class="field-inner">
                                         <input class="datepicker" type="text" name="field-name" value=""
                                             placeholder="Check out" required>
@@ -40,7 +40,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                                    <div class="field-label">Guest</div>
+                                    <div class="field-label">Visiteur</div>
                                     <div class="field-inner">
                                         <input type="text" name="field-name" value="" placeholder="Guests"
                                             required>
@@ -68,7 +68,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                                    <div class="field-label">Start</div>
+                                    <div class="field-label">Départ</div>
                                     <div class="field-inner">
                                         <input class="datepicker" type="text" name="field-name" value=""
                                             placeholder="Check in" required>
@@ -76,7 +76,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                                    <div class="field-label">End</div>
+                                    <div class="field-label">Arrivée</div>
                                     <div class="field-inner">
                                         <input class="datepicker" type="text" name="field-name" value=""
                                             placeholder="Check out" required>
@@ -84,7 +84,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                                    <div class="field-label">Guest</div>
+                                    <div class="field-label">Visiteur</div>
                                     <div class="field-inner">
                                         <input type="text" name="field-name" value="" placeholder="Guests"
                                             required>
@@ -92,7 +92,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="theme-btn f-btn"><span>Search <i
+                            <button type="submit" class="theme-btn f-btn"><span>Recherche <i
                                         class="fa-solid fa-search"></i></span></button>
                         </form>
 
@@ -112,7 +112,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                                    <div class="field-label">Start</div>
+                                    <div class="field-label">Départ</div>
                                     <div class="field-inner">
                                         <input class="datepicker" type="text" name="field-name" value=""
                                             placeholder="Check in" required>
@@ -120,7 +120,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                                    <div class="field-label">End</div>
+                                    <div class="field-label">Arrivée</div>
                                     <div class="field-inner">
                                         <input class="datepicker" type="text" name="field-name" value=""
                                             placeholder="Check out" required>
@@ -128,7 +128,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                                    <div class="field-label">Guest</div>
+                                    <div class="field-label">Visiteur</div>
                                     <div class="field-inner">
                                         <input type="text" name="field-name" value="" placeholder="Guests"
                                             required>
@@ -136,7 +136,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="theme-btn f-btn"><span>Search <i
+                            <button type="submit" class="theme-btn f-btn"><span>Recherche <i
                                         class="fa-solid fa-search"></i></span></button>
                         </form>
 
@@ -156,7 +156,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                                    <div class="field-label">Start</div>
+                                    <div class="field-label">Départ</div>
                                     <div class="field-inner">
                                         <input class="datepicker" type="text" name="field-name" value=""
                                             placeholder="Check in" required>
@@ -164,7 +164,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                                    <div class="field-label">End</div>
+                                <div class="field-label">Arrivée</div>
                                     <div class="field-inner">
                                         <input class="datepicker" type="text" name="field-name" value=""
                                             placeholder="Check out" required>
@@ -172,7 +172,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                                    <div class="field-label">Guest</div>
+                                    <div class="field-label">Visiteur</div>
                                     <div class="field-inner">
                                         <input type="text" name="field-name" value="" placeholder="Guests"
                                             required>
@@ -180,7 +180,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="theme-btn f-btn"><span>Search <i
+                            <button type="submit" class="theme-btn f-btn"><span>Recherche <i
                                         class="fa-solid fa-search"></i></span></button>
                         </form>
 
@@ -200,7 +200,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                                    <div class="field-label">Start</div>
+                                    <div class="field-label">Départ</div>
                                     <div class="field-inner">
                                         <input class="datepicker" type="text" name="field-name" value=""
                                             placeholder="Check in" required>
@@ -208,7 +208,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                                    <div class="field-label">End</div>
+                                    <div class="field-label">Arrivée</div>
                                     <div class="field-inner">
                                         <input class="datepicker" type="text" name="field-name" value=""
                                             placeholder="Check out" required>
@@ -216,7 +216,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                                    <div class="field-label">Guest</div>
+                                    <div class="field-label">Visiteur</div>
                                     <div class="field-inner">
                                         <input type="text" name="field-name" value="" placeholder="Guests"
                                             required>
@@ -224,7 +224,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="theme-btn f-btn"><span>Search <i
+                            <button type="submit" class="theme-btn f-btn"><span>Recherche <i
                                         class="fa-solid fa-search"></i></span></button>
                         </form>
 
@@ -244,7 +244,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                                    <div class="field-label">Start</div>
+                                    <div class="field-label">Départ</div>
                                     <div class="field-inner">
                                         <input class="datepicker" type="text" name="field-name" value=""
                                             placeholder="Check in" required>
@@ -252,7 +252,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                                    <div class="field-label">End</div>
+                                    <div class="field-label">Arivée</div>
                                     <div class="field-inner">
                                         <input class="datepicker" type="text" name="field-name" value=""
                                             placeholder="Check out" required>
@@ -260,7 +260,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                                    <div class="field-label">Guest</div>
+                                    <div class="field-label">Client(e)</div>
                                     <div class="field-inner">
                                         <input type="text" name="field-name" value="" placeholder="Guests"
                                             required>
@@ -268,7 +268,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" class="theme-btn f-btn"><span>Search <i
+                            <button type="submit" class="theme-btn f-btn"><span>Recherche <i
                                         class="fa-solid fa-search"></i></span></button>
                         </form>
 

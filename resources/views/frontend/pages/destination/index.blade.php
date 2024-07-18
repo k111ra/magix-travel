@@ -10,7 +10,7 @@
 					<h1>Destinations</h1>
 					<div class="bread-crumb">
 						<ul class="clearfix">
-							<li><a href="{{route('home')}} ">Home</a></li>
+							<li><a href="{{route('home')}} ">Accueil</a></li>
 							<li class="current">Destinations</li>
 						</ul>
 					</div>

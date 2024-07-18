@@ -311,7 +311,7 @@
 										<div class="content-box">
 
 											<div class="loc-rat clearfix">
-												<div class="location">{{$tour->destination->name}}</div>
+												<div class="location">{{$tour->destinations->name}}</div>
 												<div class="rating"><a href="" class="theme-btn">
 														<strong></strong> &ensp;
 														<span class="count"> </span></a></div>

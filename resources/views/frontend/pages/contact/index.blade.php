@@ -10,7 +10,7 @@
 					<h1>Contact</h1>
 					<div class="bread-crumb">
 						<ul class="clearfix">
-							<li><a href="index-2.html">Home</a></li>
+							<li><a href="index-2.html">Accueil</a></li>
 							<li class="current">Contact</li>
 						</ul>
 					</div>

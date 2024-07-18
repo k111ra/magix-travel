@@ -159,6 +159,9 @@ Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 // Routes de Newsletter
 Route::post('/newsletter', [NewsletterController::class, 'subscribe']);
 
+Route::get('/alerte', [DevisController::class, 'index'])->name('devis.index');
+
+
 
 // Use Laravel helper functions for common authentication routes (optional)
 Auth::routes();

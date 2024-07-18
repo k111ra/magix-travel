@@ -5,11 +5,11 @@
     </div>
     <div class="auto-container">
         <div class="content-box">
-            <h1>About Us</h1>
+            <h1>À Propos De Nous</h1>
             <div class="bread-crumb">
                 <ul class="clearfix">
-                    <li><a href="{{route('home')}}">Home</a></li>
-                    <li class="current">About Us</li>
+                    <li><a href="{{route('home')}}">Accueil</a></li>
+                    <li class="current">À Propos De Nous</li>
                 </ul>
             </div>
         </div>
