@@ -357,12 +357,12 @@
                                         alt=""></a></div>
                             <div class="lower-box">
                                 <ul class="info clearfix">
-                                    <li><a href="#"><i class="fa-solid fa-folder"></i> Adventure</a></li>
-                                    <li><a href="#"><i class="fa-solid fa-clock"></i> June 17, 2022</a></li>
+                                    <li><a href="#"><i class="fa-solid fa-folder"></i> Aventure</a></li>
+                                    <li><a href="#"><i class="fa-solid fa-clock"></i> 17 juin 2022</a></li>
                                     <li><a href="#"><i class="fa-solid fa-comments"></i> 238</a></li>
                                 </ul>
-                                <h4><a href="blog-single.html">Tales of Adventure and Discovery from Around the
-                                        Globe</a></h4>
+                                <h4><a href="blog-single.html">Contes d’aventure et de découverte autour de la
+                                    Globe</a></h4>
                             </div>
                         </div>
                     </div>
@@ -375,12 +375,12 @@
                                         alt=""></a></div>
                             <div class="lower-box">
                                 <ul class="info clearfix">
-                                    <li><a href="#"><i class="fa-solid fa-folder"></i> Adventure</a></li>
-                                    <li><a href="#"><i class="fa-solid fa-clock"></i> August 1, 2021</a></li>
+                                    <li><a href="#"><i class="fa-solid fa-folder"></i> Aventure</a></li>
+                                    <li><a href="#"><i class="fa-solid fa-clock"></i> 1er août 2021</a></li>
                                     <li><a href="#"><i class="fa-solid fa-comments"></i> 129</a></li>
                                 </ul>
-                                <h4><a href="blog-single.html">Travel Smart, Travel Safe, Essential Tips for a
-                                        Worry-Free Journey</a>
+                                <h4><a href="blog-single.html">Travel Smart, Travel Safe, Conseils essentiels pour une
+                                    Voyage sans souci</a>
                                 </h4>
                             </div>
                         </div>
@@ -394,11 +394,11 @@
                                         alt=""></a></div>
                             <div class="lower-box">
                                 <ul class="info clearfix">
-                                    <li><a href="#"><i class="fa-solid fa-folder"></i> Adventure</a></li>
-                                    <li><a href="#"><i class="fa-solid fa-clock"></i> May 23, 2021</a></li>
+                                    <li><a href="#"><i class="fa-solid fa-folder"></i> Aventure</a></li>
+                                    <li><a href="#"><i class="fa-solid fa-clock"></i> 23 mai 2021</a></li>
                                     <li><a href="#"><i class="fa-solid fa-comments"></i> 566</a></li>
                                 </ul>
-                                <h4><a href="blog-single.html">Uncovering Hidden Gems in Popular Destinations</a>
+                                <h4><a href="blog-single.html">Découvrir des trésors cachés dans des destinations populaires</a>
                                 </h4>
                             </div>
                         </div>
@@ -569,7 +569,8 @@
                                     href="{{ asset('frontend/assets/images/resources/instagram/insta-15.jpg') }}"
                                     class="lightbox-image" data-fancybox="insta-gallery"><img
                                         src="{{ asset('frontend/assets/images/resources/instagram/insta-15-big-thumb.jpg') }}"
-                                        alt=""></a></span>
+                                        alt=""></a>
+                            </span>
                         </div>
                     </div>
 
