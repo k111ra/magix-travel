@@ -1,8 +1,8 @@
 <div class="upper-section">
     <div class="footer-subscribe">
         <div class="title-box centered">
-            <div class="subtitle">Get Regular Updates</div>
-            <h2>Subscribe to our Newsletter</h2>
+            <div class="subtitle">Obtenir des Informations Régulières</div>
+            <h2>Inscrivez-vous à notre newsletter</h2>
                 </div>
            <div class="container">
             @if (\Session::has('success'))
@@ -23,7 +23,7 @@
                     <div class="field-inner">
                         <input type="email" name="email" value="" placeholder="Entrez votre E-mail" required>
                     </div>
-                    <button type="submit" class="theme-btn"><span>Subscribe</span></button>
+                    <button type="submit" class="theme-btn"><span>S'abonner</span></button>
                 </div>
             </form>
         </div>
@@ -79,10 +79,10 @@
                                 <div class="links">
                                     <ul>
                                         <li><a href="#">A Propos</a></li>
-                                        <li><a href="#">Company Profile</a></li>
-                                        <li><a href="#">Team Members</a></li>
+                                        <li><a href="#">Profil d'entreprise</a></li>
+                                        <li><a href="#">Membres de l'équipe</a></li>
                                         <li><a href="#">Support</a></li>
-                                        <li><a href="#">Career</a></li>
+                                        <li><a href="#">Carrière</a></li>
                                     </ul>
                                 </div>
                             </div>

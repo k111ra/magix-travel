@@ -36,13 +36,13 @@
                         <div class="col-4">
                             <div class="form-group">
                                 <label for="tour_id">hotel</label>
-                                <input type="text"  name="hotel_id" class="form-control" id="hotel_id" value="{{ $hotel->name }}" readonly>
+                                <input type="text"  name="hotel_id" class="form-control" id="hotel_id" value="{{ $hotel->id }}" >
                             </div>
                         </div>
                         <div class="col-4">
                             <div class="form-group">
                                 <label for="destination_id">Localisation</label>
-                                 <input type="text"  name="destination_id" class="form-control" id="destination_id" value="{{  $hotel->localisation  }}" readonly>
+                                 <input type="text"  name="destination_id" class="form-control" id="destination_id" value="{{  $hotel->localisation  }}" >
                             </div>
                         </div>
                         {{-- <div class="col-4">
@@ -59,14 +59,14 @@
                             <div class="form-group">
                                 <label for="reservation_date">Date de réservation</label>
                                 <input type="date" name="reservation_date" class="form-control"
-                                    id="reservation_date" value="{{date('Y-m-d')}}" readonly>
+                                    id="reservation_date" value="{{date('Y-m-d')}}" >
                             </div>
                         </div>
                         <div class="col-4">
                             <div class="form-group">
                                 <label for="amount">Montant</label>
                                 
-                                <input type="number"  min="0" value="{{ $hotel->prix }}" name="amount" class="form-control" id="amount" readonly>
+                                <input type="number"  min="0" value="{{ $hotel->prix }}" name="amount" class="form-control" id="amount" >
                                
                             </div>
                         </div>
@@ -98,6 +98,35 @@
                             <div class="form-group">
                                 <label for="email">Email</label>
                                 <input type="email" name="email" class="form-control" id="email">
+                            </div>
+                        </div>
+                            <div class="col-4">
+                                <div class="form-group">
+                                        <label for="">Bébé ( 0-2 ans)</label>
+                                    <select name="nombre_bebe" id="nmbre_bebe" class="custom-select">
+                                        <option>Nombre de bébé</option>
+                                        <option>0
+                                        </option>
+                                        <option>
+                                            1
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                 <div class="form-group">
+                                        <label for="">Enfant ( 2-12 ans)</label>
+                                        <select name="nombre_enfant" id="nombre_enfant" class="custom-select">
+                                            <option>Nombre d'enfant</option>
+                                            <option>
+                                                0
+                                            </option> 
+                                            <option>
+                                                1
+                                            </option>
+                                           
+                                        </select>
+                                 </div>
                             </div>
                         </div>
                     </div>

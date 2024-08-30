@@ -4,10 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
 
 class Reservation extends Model
 {
-    use HasFactory;
+    use HasFactory, Notifiable;
 
     protected $fillable = [
         'tour_id',
@@ -20,6 +21,8 @@ class Reservation extends Model
         'last_name',
         'phone_number',
         'email',
+        'nombre_bebe',
+        'nombre_enfant',
     ];
 
     public function tour()

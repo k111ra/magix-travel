@@ -6,6 +6,7 @@ use App\Models\Tour;
 use App\Models\Destination;
 use App\Models\Reservation;
 use Illuminate\Http\Request;
+use App\Notifications\AlerteCommandes;
 
 class TourReservationController extends Controller
 {
@@ -30,6 +31,8 @@ class TourReservationController extends Controller
             'last_name' => 'required',
             'phone_number' => 'required',
             'email' => 'required|email',
+            'nombre_bebe' => 'nullable',
+            'nombre_enfant' => 'nullable',
             'reservation_date' => 'required|date',
             'amount' => 'required|numeric',
             'num_persons' => 'required|integer',
@@ -45,6 +48,8 @@ class TourReservationController extends Controller
         $reservation->last_name = $request->input('last_name');
         $reservation->phone_number = $request->input('phone_number');
         $reservation->email = $request->input('email');
+        $reservation->nombre_bebe = $request->input('nombre_bebe');
+        $reservation->nombre_enfant = $request->input('nombre_enfant');
         $reservation->reservation_date = $request->input('reservation_date');
         $reservation->amount = $request->input('amount');
         $reservation->num_persons = $request->input('num_persons');
@@ -53,10 +58,14 @@ class TourReservationController extends Controller
         $reservation->vol_id = $request->input('vol_id');
         $reservation->save();
 
+         //Envoie de notification de reservation
+         $reservation->notify(new AlerteCommandes($reservation));
+         dd($reservation);
         // Rediriger avec un message de succès
 
-        return redirect()->back()
-            ->with('success', 'Reservation créée avec succès.');
+
+        // return redirect()->back()
+        //     ->with('success', 'Reservation créée avec succès.');
     }
 
 

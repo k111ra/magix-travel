@@ -14,7 +14,7 @@ class DevisController extends Controller
     public function index()
     {
         //
-        return view('admin.devis.index');
+        return view('alerte.AlerteCommande');
     }
 
     /**

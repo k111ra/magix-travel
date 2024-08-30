@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Models\Reservation;
 use App\Models\Tour;
 use App\Models\Vol;
+use App\Notifications\AlerteCommandes;
 
 class ReservationController extends Controller
 {
@@ -52,6 +53,8 @@ class ReservationController extends Controller
             'last_name' => 'required',
             'phone_number' => 'required',
             'email' => 'required|email',
+            'age_bebe' => 'nullable',
+            'age_enfant' => 'nullable',
             'reservation_date' => 'required|date',
             'amount' => 'required|numeric',
             'num_persons' => 'required|integer',
@@ -67,6 +70,8 @@ class ReservationController extends Controller
         $reservation->last_name = $request->input('last_name');
         $reservation->phone_number = $request->input('phone_number');
         $reservation->email = $request->input('email');
+        $reservation->nombre_bebe = $request->input('nombre_bebe');
+        $reservation->nombre_enfant = $request->input('nombre_enfant');
         $reservation->reservation_date = $request->input('reservation_date');
         $reservation->amount = $request->input('amount');
         $reservation->num_persons = $request->input('num_persons');
@@ -76,8 +81,8 @@ class ReservationController extends Controller
         $reservation->save();
 
         // Rediriger avec un message de succès
-        return redirect()->route('reservations.index')
-            ->with('success', 'Reservation créée avec succès.');
+        // return redirect()->route('reservations.index')
+        //     ->with('success', 'Reservation créée avec succès.');
     }
 
 

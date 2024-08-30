@@ -31,7 +31,7 @@
 
 							<div class="sp-header">
 								<div class="loc-rat clearfix">
-									<div class="location">{{$tour->destination->name}}</div>
+									<div class="location">{{$tour->destinations->name}}</div>
 									<div class="rating"><a href="#" class="theme-btn"><i class="fa-solid fa-star"></i>
 											<strong>4.8</strong>   <span class="count">4233 Reviews</span></a></div>
 									<div class="add-fav"><div class="book-link"><a href="{{route('Reservation.tour',$tour->id) }}"

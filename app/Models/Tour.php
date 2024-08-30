@@ -12,7 +12,7 @@ class Tour extends Model
     //     'images' => 'array',
     // ];
 
-    public function destination()
+    public function destinations()
     {
         return $this->belongsTo(Destination::class, 'destinations_id');
     }

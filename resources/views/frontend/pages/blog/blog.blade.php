@@ -8,11 +8,11 @@
 			</div>
 			<div class="auto-container">
 				<div class="content-box">
-					<h1>Latest News</h1>
+					<h1>dernières Nouvelles</h1>
 					<div class="bread-crumb">
 						<ul class="clearfix">
-							<li><a href="{{route('home')}}">Home</a></li>
-							<li class="current">Latest News</li>
+							<li><a href="{{route('home')}}">Accueil</a></li>
+							<li class="current">Dernières Nouvelles</li>
 						</ul>
 					</div>
 				</div>
@@ -39,24 +39,23 @@
 													alt="Balloons"></a></div>
 										<div class="lower-box">
 											<ul class="info clearfix">
-												<li><a href="#"><i class="fa-solid fa-folder"></i> Adventure</a></li>
+												<li><a href="#"><i class="fa-solid fa-folder"></i> Aventure</a></li>
 												<li><a href="#"><i class="fa-solid fa-user"></i> Casey Writer</a></li>
-												<li><a href="#"><i class="fa-solid fa-clock"></i> July 17, 2023</a></li>
+												<li><a href="#"><i class="fa-solid fa-clock"></i> 17 juillet 2023</a></li>
 											</ul>
-											<h3><a href="blog-single.html">Soaring High: Riding Balloons in Turkey</a>
+											<h3><a href="blog-single.html">Voler en montgolfière en Turquie</a>
 											</h3>
-											<div class="travilo-text">Discover the magic of Cappadocia, Turkey, from a
-												bird's-eye view.
-												Experience the breathtaking landscapes and ancient rock formations as
-												you float gently above in
-												a hot air balloon. Our guide shares tips for the best time to fly and
-												what to expect during this
-												unforgettable adventure ...</div>
+											<div class="travilo-text">Découvrez la magie de la Cappadoce, en Turquie
+												vue plongeante.
+												Découvrez les paysages à couper le souffle et les formations rocheuses anciennes comme
+												vous flottez doucement au-dessus de
+												une montgolfière. Notre guide partage des conseils pour le meilleur moment pour voler et
+												à quoi s’attendre pendant cette
+												aventure inoubliable ...</div>
 											<div class="more-links clearfix">
 												<div class="more"><a href="blog-single.html"
-														class="theme-btn btn-style-two"><span>Read
-															More</span></a></div>
-												<div class="social"><strong>Share</strong> <a href="#"
+														class="theme-btn btn-style-two"><span>En savoir plus</span></a></div>
+												<div class="social"><strong>Partager</strong> <a href="#"
 														class="facebook"><i class="fab fa-facebook-f"></i></a> <a
 														href="#" class="twitter"><i class="fab fa-twitter"></i></a> <a
 														href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
@@ -77,23 +76,22 @@
 											<ul class="info clearfix">
 												<li><a href="#"><i class="fa-solid fa-folder"></i> Romance</a></li>
 												<li><a href="#"><i class="fa-solid fa-user"></i> Liam Nilson</a></li>
-												<li><a href="#"><i class="fa-solid fa-clock"></i> May 17, 2023</a></li>
+												<li><a href="#"><i class="fa-solid fa-clock"></i> 17 mai 2023</a></li>
 											</ul>
-											<h3><a href="blog-single.html">Lake Adventure in Canada, Exploring the Great
-													Outdoors</a>
+											<h3><a href="blog-single.html">Aventure au lac au Canada, Explorer les Grands
+												À l’extérieur</a>
 											</h3>
-											<div class="travilo-text">Immerse yourself in the tranquility of Canada's
-												pristine lakes and
-												wilderness. From kayaking on the emerald waters to fishing for native
-												species, this blog post is
-												a guide to experiencing the ultimate lake adventure. Unearth the hidden
-												gems and serenity that
-												await you in Canada's vast natural playground ...</div>
+											<div class="travilo-text">Plongez dans la tranquillité des
+												lacs vierges et
+												sauvage. Du kayak sur les eaux émeraude à la pêche pour les indigènes
+												Cette espèce, cet article de blog est
+												un guide pour vivre l’aventure ultime du lac. Déterrer le caché
+												gemmes et sérénité qui
+												vous attendent dans le vaste terrain de jeu naturel du Canada ...</div>
 											<div class="more-links clearfix">
 												<div class="more"><a href="blog-single.html"
-														class="theme-btn btn-style-two"><span>Read
-															More</span></a></div>
-												<div class="social"><strong>Share</strong> <a href="#"
+														class="theme-btn btn-style-two"><span>En savoir plus</span></a></div>
+												<div class="social"><strong>Partager</strong> <a href="#"
 														class="facebook"><i class="fab fa-facebook-f"></i></a> <a
 														href="#" class="twitter"><i class="fab fa-twitter"></i></a> <a
 														href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
@@ -114,24 +112,23 @@
 											<ul class="info clearfix">
 												<li><a href="#"><i class="fa-solid fa-folder"></i> Relaxation</a></li>
 												<li><a href="#"><i class="fa-solid fa-user"></i> Stacey Lang</a></li>
-												<li><a href="#"><i class="fa-solid fa-clock"></i> May 1, 2023</a></li>
+												<li><a href="#"><i class="fa-solid fa-clock"></i> 1er mai 2023</a></li>
 											</ul>
-											<h3><a href="blog-single.html">Beachfront Bliss, Exploring Thailand's
-													Coastal Gems</a>
+											<h3><a href="blog-single.html">Beachfront Bliss, découverte de la Thaïlande
+												Joyaux côtiers</a>
 											</h3>
-											<div class="travilo-text">Thailand's coastal beauty beckons with its idyllic
-												beaches and
-												crystal-clear waters. This post delves into the top beachfront
-												destinations, from the lively
-												Patong Beach to the serene Railay Beach. Get insider tips on water
-												sports, local cuisine, and
-												the vibrant beach culture that will leave you yearning for more ...
+											<div class="travilo-text">La beauté côtière de la Thaïlande attire avec son idyllique
+												plages et
+												Des eaux cristallines. Cet article explore le front de mer
+												Les destinations, au départ du
+												Patong Beach à la sereine Railay Beach. Obtenez des conseils d’initiés sur l’eau
+												sports, cuisine locale et
+												la culture dynamique de la plage qui vous laissera languir pour plus ...
 											</div>
 											<div class="more-links clearfix">
 												<div class="more"><a href="blog-single.html"
-														class="theme-btn btn-style-two"><span>Read
-															More</span></a></div>
-												<div class="social"><strong>Share</strong> <a href="#"
+														class="theme-btn btn-style-two"><span>En savoir plus</span></a></div>
+												<div class="social"><strong>Partager</strong> <a href="#"
 														class="facebook"><i class="fab fa-facebook-f"></i></a> <a
 														href="#" class="twitter"><i class="fab fa-twitter"></i></a> <a
 														href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
@@ -150,27 +147,26 @@
 													alt="Hiking"></a></div>
 										<div class="lower-box">
 											<ul class="info clearfix">
-												<li><a href="#"><i class="fa-solid fa-folder"></i> Hiking</a></li>
+												<li><a href="#"><i class="fa-solid fa-folder"></i> Randonnée</a></li>
 												<li><a href="#"><i class="fa-solid fa-user"></i> Rick Stanford</a></li>
-												<li><a href="#"><i class="fa-solid fa-clock"></i> June 17, 2022</a></li>
+												<li><a href="#"><i class="fa-solid fa-clock"></i> 17 juin 2022</a></li>
 											</ul>
-											<h3><a href="blog-single.html">Hiking in the USA, Exploring Nature's
-													Spectacular Trails</a>
+											<h3><a href="blog-single.html">Randonnée aux États-Unis, Exploration de la nature
+												Sentiers spectaculaires</a>
 											</h3>
-											<div class="travilo-text"> Lace up your hiking boots and set out to conquer
-												some of the most
-												breathtaking trails in the USA. From the towering peaks of the Rocky
-												Mountains to the dramatic
-												canyons of the Grand Canyon, this blog post is a hiker's guide to
-												unforgettable adventures.
-												Discover the best trails, tips for preparation, and the awe-inspiring
-												landscapes that await you
+											<div class="travilo-text"> Lacez vos bottes de randonnée et partez à la conquête
+												certains des plus
+												Des sentiers à couper le souffle aux Etats-Unis. Depuis les hauts sommets du Rocky
+												Montagnes à la dramatique
+												Dans les canyons du Grand Canyon, cet article de blog est un guide de randonnée pour
+												aventures inoubliables.
+												Découvrez les meilleurs sentiers, des conseils de préparation et l’impressionnant
+												paysages qui vous attendent
 												...</div>
 											<div class="more-links clearfix">
 												<div class="more"><a href="blog-single.html"
-														class="theme-btn btn-style-two"><span>Read
-															More</span></a></div>
-												<div class="social"><strong>Share</strong> <a href="#"
+														class="theme-btn btn-style-two"><span>En savoir plus</span></a></div>
+												<div class="social"><strong>Partager</strong> <a href="#"
 														class="facebook"><i class="fab fa-facebook-f"></i></a> <a
 														href="#" class="twitter"><i class="fab fa-twitter"></i></a> <a
 														href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
@@ -189,27 +185,26 @@
 													alt="Phillipines Beaches"></a></div>
 										<div class="lower-box">
 											<ul class="info clearfix">
-												<li><a href="#"><i class="fa-solid fa-folder"></i> Adventure</a></li>
+												<li><a href="#"><i class="fa-solid fa-folder"></i> Aventure</a></li>
 												<li><a href="#"><i class="fa-solid fa-user"></i> Stacey Writer</a></li>
-												<li><a href="#"><i class="fa-solid fa-clock"></i> April 25, 2023</a>
+												<li><a href="#"><i class="fa-solid fa-clock"></i> 25 avril 2023</a>
 												</li>
 											</ul>
-											<h3><a href="blog-single.html">Beach Paradise in the Philippines,
-													Island-Hopping Adventure</a>
+											<h3><a href="blog-single.html">Paradis de plage aux Philippines,
+												Aventure insulaire</a>
 											</h3>
-											<div class="travilo-text">Embark on a tropical journey through the
-												Philippines' paradisiacal
-												islands. From the pristine shores of Boracay to the secluded beauty of
-												Palawan's lagoons, this
-												post unveils the best beach destinations in the Philippines. Prepare to
-												be enchanted by the
-												diverse marine life, lush landscapes, and the warm hospitality of the
-												Filipino ...</div>
+											<div class="travilo-text">Embarquez pour un voyage tropical à travers le
+												Paradisiaque des Philippines
+												îles. Des rives vierges de Boracay à la beauté isolée de
+												Les lagunes de Palawan, cette
+												Le post dévoile les meilleures destinations de plage aux Philippines. Préparez-vous à
+												être enchanté par le
+												la diversité de la vie marine, les paysages luxuriants et l’hospitalité chaleureuse des
+												Philippine ...</div>
 											<div class="more-links clearfix">
 												<div class="more"><a href="blog-single.html"
-														class="theme-btn btn-style-two"><span>Read
-															More</span></a></div>
-												<div class="social"><strong>Share</strong> <a href="#"
+														class="theme-btn btn-style-two"><span>En savoir plus</span></a></div>
+												<div class="social"><strong>Partager</strong> <a href="#"
 														class="facebook"><i class="fab fa-facebook-f"></i></a> <a
 														href="#" class="twitter"><i class="fab fa-twitter"></i></a> <a
 														href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
@@ -239,7 +234,7 @@
 							<div class="sb-widget search-widget">
 								<div class="w-inner">
 									<div class="s-title"><i class="fa-solid fa-caret-right"></i>
-										<h4>Search</h4>
+										<h4>Recherche</h4>
 									</div>
 									<form method="post" action="https://jufailitech.com/envatoitems/travilo/html/contact.html">
 										<div class="form-group">
@@ -255,78 +250,78 @@
 							<div class="sb-widget posts-widget">
 								<div class="w-inner">
 									<div class="s-title"><i class="fa-solid fa-caret-right"></i>
-										<h4>Recent Posts</h4>
+										<h4>Posts Récents</h4>
 									</div>
 									<div class="posts">
 										<div class="post">
 											<div class="post-thumb"><a href="blog-single.html"><img
 														src="{{ asset('frontend/assets/images/resources/gallery/oman-12-thumb.jpg') }}"
 														alt="Salalah"></a></div>
-											<div class="travilo-text"><a href="blog-single.html">Salalah, A Tropical
-													Paradise in Oman</a>
+											<div class="travilo-text"><a href="blog-single.html">Salalah, un tropical
+												Paradis à Oman</a>
 											</div>
-											<div class="post-info">August 3 2023</div>
+											<div class="post-info">3 août 2023</div>
 										</div>
 										<div class="post">
 											<div class="post-thumb"><a href="blog-single.html"><img
 														src="{{ asset('frontend/assets/images/resources/gallery/gallery-thumb-1.jpg') }}"
 														alt="New York"></a></div>
-											<div class="travilo-text"><a href="blog-single.html">Exploring the New York
-													Architectural
-													Marvels</a></div>
-											<div class="post-info">July 28 2023</div>
+											<div class="travilo-text"><a href="blog-single.html">Explorer le New York
+												Architectural
+												Merveilles</a></div>
+											<div class="post-info">28 juillet 2023</div>
 										</div>
 										<div class="post">
 											<div class="post-thumb"><a href="blog-single.html"><img
 														src="{{ asset('frontend/assets/images/resources/gallery/gallery-thumb-2.jpg') }}"
 														alt="Sydney"></a></div>
-											<div class="travilo-text"><a href="blog-single.html">The Vibrant Harbor City
-													Down Under</a></div>
-											<div class="post-info">July 24 2023</div>
+											<div class="travilo-text"><a href="blog-single.html">La vibrante ville portuaire
+												Moins de</a></div>
+											<div class="post-info">24 juillet 2023</div>
 										</div>
 										<div class="post">
 											<div class="post-thumb"><a href="blog-single.html"><img
 														src="{{ asset('frontend/assets/images/resources/gallery/gallery-thumb-3.jpg') }}"
 														alt="India"></a></div>
-											<div class="travilo-text"><a href="blog-single.html">India's Majestic
-													Monument of Love</a></div>
-											<div class="post-info">July 24 2023</div>
+											<div class="travilo-text"><a href="blog-single.html">India Majestic
+												Monument de l’amour</a></div>
+											<div class="post-info">24 juillet 2023</div>
 										</div>
 										<div class="post">
 											<div class="post-thumb"><a href="blog-single.html"><img
 														src="{{ asset('frontend/assets/images/resources/gallery/gallery-thumb-4.jpg') }}"
 														alt="Morocco"></a></div>
 											<div class="travilo-text"><a href="blog-single.html">Morocco Beach Sun,
-													Sand, and Serenity</a>
+												Sable et sérénité</a>
 											</div>
-											<div class="post-info">July 22 2023</div>
+											<div class="post-info">22 juillet 2023</div>
 										</div>
 										<div class="post">
 											<div class="post-thumb"><a href="blog-single.html"><img
 														src="{{ asset('frontend/assets/images/resources/gallery/gallery-thumb-5.jpg') }}"
 														alt="Italy"></a></div>
 											<div class="travilo-text"><a href="blog-single.html">Lakeside Tranquility
-													and Italian Charm</a>
+												et charme italien</a>
 											</div>
-											<div class="post-info">July 12 2023</div>
+											<div class="post-info">12 juillet 2023</div>
 										</div>
 										<div class="post">
 											<div class="post-thumb"><a href="blog-single.html"><img
 														src="{{ asset('frontend/assets/images/resources/gallery/gallery-thumb-6.jpg') }}"
 														alt="India"></a></div>
-											<div class="travilo-text"><a href="blog-single.html">A Fusion of Cultures
-													and Wonders Await!</a>
+											<div class="travilo-text"><a href="blog-single.html">Une fusion des cultures
+												et des merveilles vous attendent!</a>
 											</div>
-											<div class="post-info">June 30 2023</div>
+											<div class="post-info">30 juin 2023</div>
 										</div>
 										<div class="post">
 											<div class="post-thumb"><a href="blog-single.html"><img
 														src="{{ asset('frontend/assets/images/resources/gallery/gallery-thumb-7.jpg') }}"
 														alt="London"></a></div>
-											<div class="travilo-text"><a href="blog-single.html">Discovering Historic
-													Landmarks in the UK</a>
+											<div class="travilo-text"><a href="blog-single.html">Découverte historique
+												Points de repère au Royaume-Uni</a>
 											</div>
-											<div class="post-info">June 29 2023</div>
+											<div class="post-info">29 juin 2023</div>
 										</div>
 									</div>
 								</div>
@@ -339,12 +334,12 @@
 										<h4>Categories</h4>
 									</div>
 									<ul>
-										<li><a href="#">Adventure</a></li>
-										<li><a href="#">Hiking</a></li>
+										<li><a href="#">Aventure</a></li>
+										<li><a href="#">Randonnée</a></li>
 										<li><a href="#">Romance</a></li>
 										<li><a href="#">Culture</a></li>
-										<li><a href="#">City Tour</a></li>
-										<li><a href="#">History</a></li>
+										<li><a href="#">Visite de la ville</a></li>
+										<li><a href="#">Histoire</a></li>
 										<li><a href="#">Beach Tour</a></li>
 										<li><a href="#">Sports Tour</a></li>
 										<li><a href="#">Relaxation</a></li>
@@ -359,15 +354,15 @@
 										<h4>Tags</h4>
 									</div>
 									<ul>
-										<li><a href="#">Fishing</a></li>
-										<li><a href="#">Cooking</a></li>
+										<li><a href="#">Pêche</a></li>
+										<li><a href="#">Gastronomie</a></li>
 										<li><a href="#">Art</a></li>
-										<li><a href="#">Mountain</a></li>
-										<li><a href="#">Family</a></li>
-										<li><a href="#">Bike</a></li>
-										<li><a href="#">Luxury</a></li>
+										<li><a href="#">Montagne</a></li>
+										<li><a href="#">Famille</a></li>
+										<li><a href="#">Vélo</a></li>
+										<li><a href="#">Prestige</a></li>
 										<li><a href="#">Sports</a></li>
-										<li><a href="#">Cycling</a></li>
+										<li><a href="#">Cyclisme</a></li>
 									</ul>
 								</div>
 							</div>
@@ -499,7 +494,7 @@
 							<div class="sb-widget social-widget">
 								<div class="w-inner">
 									<div class="s-title"><i class="fa-solid fa-caret-right"></i>
-										<h4>Follow Us</h4>
+										<h4>Suivez-nous</h4>
 									</div>
 									<ul class="social-links clearfix">
 										<li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a></li>

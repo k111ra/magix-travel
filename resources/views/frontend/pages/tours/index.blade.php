@@ -29,14 +29,14 @@
 							<div class="sb-widget s-widget">
 								<div class="w-inner">
 									<div class="s-title"><i class="fa-solid fa-caret-right"></i>
-										<h4>Search Packages</h4>
+										<h4>Rechercher des forfaits</h4>
 									</div>
 									<div class="form-box site-form">
 										<form method="post" action="https://jufailitech.com/envatoitems/travilo/html/index.html">
 											<div class="form-group">
 												<div class="field-inner">
 													<select name="field-name" class="custom-select">
-														<option>Tour</option>
+														{{-- <option>Tour</option>
 														<option>Enchanting Europe, A Journey through Time and Culture
 														</option>
 														<option>Unveiling the Idyllic Paradise of Southeast Asia
@@ -45,7 +45,7 @@
 														</option>
 														<option>An African Expedition into the Heart of the Savannah
 														</option>
-														<option>A Fascinating Expedition to Egypt and Jordan</option>
+														<option>A Fascinating Expedition to Egypt and Jordan</option> --}}
 													</select>
 												</div>
 											</div>
@@ -72,7 +72,7 @@
 											</div>
 											<div class="form-group">
 												<div class="field-inner">
-													<button type="submit" class="theme-btn f-btn"><span>Search <i
+													<button type="submit" class="theme-btn f-btn"><span>Recherche <i
 																class="fa-solid fa-search"></i></span></button>
 												</div>
 											</div>
@@ -87,18 +87,18 @@
 							<div class="sb-widget p-widget">
 								<div class="w-inner">
 									<div class="s-title"><i class="fa-solid fa-caret-right"></i>
-										<h4>Pricing</h4>
+										<h4>Prix</h4>
 									</div>
 									<div class="range-slider">
 										<div class="price-range-slider"></div>
 										<div class="clearfix">
 											<div class="pull-left">
-												<div class="input">$<input type="text"
+												<div class="input">F CFA<input type="text"
 														class="property-amount property-amount-1" name="field-name"
 														readonly></div>
 											</div>
 											<div class="pull-right">
-												<div class="input">$<input type="text"
+												<div class="input">F CFA<input type="text"
 														class="property-amount property-amount-2" name="field-name"
 														readonly></div>
 											</div>
@@ -111,7 +111,7 @@
 							<div class="sb-widget cbf-widget rating-widget">
 								<div class="w-inner">
 									<div class="s-title"><i class="fa-solid fa-caret-right"></i>
-										<h4>Rating</h4>
+										<h4>évaluation</h4>
 									</div>
 									<ul>
 										<li>
@@ -137,8 +137,7 @@
 															class="fa-solid fa-star"></i><i
 															class="fa-solid fa-star"></i><i
 															class="empty fa fa-star"></i><i
-															class="empty fa fa-star"></i></span><span class="txt">and
-														Above</span></label></div>
+															class="empty fa fa-star"></i></span><span class="txt">Et plus</span></label></div>
 										</li>
 										<li>
 											<div class="cb-block"><input type="checkbox" id="cb-4"> <label
@@ -146,8 +145,7 @@
 															class="fa-solid fa-star"></i><i
 															class="empty fa fa-star"></i><i
 															class="empty fa fa-star"></i><i
-															class="empty fa fa-star"></i></span><span class="txt">and
-														Above</span></label></div>
+															class="empty fa fa-star"></i></span><span class="txt">Et plus</span></label></div>
 										</li>
 										<li>
 											<div class="cb-block"><input type="checkbox" id="cb-5"> <label
@@ -155,8 +153,7 @@
 															class="empty fa fa-star"></i><i
 															class="empty fa fa-star"></i><i
 															class="empty fa fa-star"></i><i
-															class="empty fa fa-star"></i></span><span class="txt">and
-														Above</span></label></div>
+															class="empty fa fa-star"></i></span><span class="txt">Et plus</span></label></div>
 										</li>
 									</ul>
 								</div>
@@ -166,20 +163,20 @@
 							<div class="sb-widget cbf-widget">
 								<div class="w-inner">
 									<div class="s-title"><i class="fa-solid fa-caret-right"></i>
-										<h4>Tour Type</h4>
+										<h4>Type de tour</h4>
 									</div>
 									<ul>
 										<li>
 											<div class="cb-block"><input type="checkbox" id="cb-6"><label
-													for="cb-6"><span class="txt">Adventure</span></label></div>
+													for="cb-6"><span class="txt">Aventure</span></label></div>
 										</li>
 										<li>
 											<div class="cb-block"><input type="checkbox" id="cb-7"><label
-													for="cb-7"><span class="txt">Hiking</span></label></div>
+													for="cb-7"><span class="txt">Randonnée</span></label></div>
 										</li>
 										<li>
 											<div class="cb-block"><input type="checkbox" id="cb-8"><label
-													for="cb-8"><span class="txt">Romance</span></label></div>
+													for="cb-8"><span class="txt">Romantique</span></label></div>
 										</li>
 										<li>
 											<div class="cb-block"><input type="checkbox" id="cb-9"><label
@@ -187,25 +184,23 @@
 										</li>
 										<li>
 											<div class="cb-block"><input type="checkbox" id="cb-10"><label
-													for="cb-10"><span class="txt">City
-														Tour</span></label></div>
+													for="cb-10"><span class="txt">Visite de la ville</span></label></div>
 										</li>
 										<li>
 											<div class="cb-block"><input type="checkbox" id="cb-11"><label
-													for="cb-11"><span class="txt">History</span></label></div>
+													for="cb-11"><span class="txt">Historiques</span></label></div>
 										</li>
 										<li>
 											<div class="cb-block"><input type="checkbox" id="cb-12"><label
-													for="cb-12"><span class="txt">Beach
-														Tour</span></label></div>
+													for="cb-12"><span class="txt">Visite de la plage</span></label></div>
 										</li>
 										<li>
 											<div class="cb-block"><input type="checkbox" id="cb-13"><label
-													for="cb-13"><span class="txt">Sports Tour</span></label></div>
+													for="cb-13"><span class="txt">Voyage sportif</span></label></div>
 										</li>
 										<li>
 											<div class="cb-block"><input type="checkbox" id="cb-14"><label
-													for="cb-14"><span class="txt">Hiking</span></label></div>
+													for="cb-14"><span class="txt">Randonnée pédestre</span></label></div>
 										</li>
 									</ul>
 								</div>
@@ -215,7 +210,7 @@
 							<div class="sb-widget cbf-widget">
 								<div class="w-inner">
 									<div class="s-title"><i class="fa-solid fa-caret-right"></i>
-										<h4>Location</h4>
+										<h4>Lieu</h4>
 									</div>
 									<ul>
 										<li>
@@ -316,7 +311,7 @@
 										<div class="content-box">
 
 											<div class="loc-rat clearfix">
-												<div class="location">{{$tour->destination->name}}</div>
+												<div class="location">{{$tour->destinations->name}}</div>
 												<div class="rating"><a href="" class="theme-btn">
 														<strong></strong> &ensp;
 														<span class="count"> </span></a></div>
