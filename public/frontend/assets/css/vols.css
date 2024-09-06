@@ -1,0 +1,223 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 10px 20px;
+}
+
+.header h2 {
+    margin: 0;
+}
+
+.header .price {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.header .info {
+    font-size: 0.8em;
+    color: #888;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.option {
+    background-color: #f8f8f8;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.option .title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.option .details {
+    font-size: 0.8em;
+    color: #888;
+}
+
+.option .price {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.option .cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.option .cta a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.emirates-section {
+    background-color: #e00;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.emirates-section h2 {
+    margin: 0;
+}
+
+.emirates-section .cta {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #fff;
+    color: #007bff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.emirates-section .cta a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.flights {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.flight {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.flight .airline {
+    display: flex;
+    align-items: center;
+}
+
+.flight .airline img {
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.flight .details {
+    display: flex;
+    align-items: center;
+}
+
+.flight .details .time .depart{
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.flight .details .duration {
+    font-size: 0.8em;
+    color: #888;
+}
+
+.flight .details .destination .depart{
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.flight .price {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.flight .cta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.flight .cta a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.info-section {
+    background-color: #f0f0f0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.info-section .info {
+    font-size: 0.8em;
+    color: #888;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .header,
+    .options {
+        flex-direction: column;
+    }
+
+    .header .price,
+    .header .info {
+        margin-top: 5px;
+    }
+
+    .options .option {
+        margin-bottom: 10px;
+    }
+
+    .flights {
+        flex-direction: column;
+    }
+
+    .flight {
+        flex-direction: column;
+    }
+
+    .flight .airline,
+    .flight .details,
+    .flight .price {
+        margin-bottom: 5px;
+    }
+}

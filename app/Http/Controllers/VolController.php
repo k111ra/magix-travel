@@ -68,4 +68,28 @@ class VolController extends Controller
 
         return redirect()->route('vols.index')->with('success', 'Vol supprimé avec succès.');
     }
+
+
+    public function search(Request $request)
+    {
+        
+        $depart = $request->input('depart');
+        $arrivee = $request->input('arrivee');
+        
+        // Rechercher les vols correspondants avec deux jointures pour départ et arrivée
+        $vols = Vol::join('destinations as d1', 'vols.depart_id', '=', 'd1.id')  // pour le départ
+                   ->join('destinations as d2', 'vols.destination_id', '=', 'd2.id')    // pour l'arrivée
+                   ->where('d1.name', 'LIKE', "%{$depart}%") // destination de départ
+                   ->where('d2.name', 'LIKE', "%{$arrivee}%") // destination d'arrivée
+                   ->select('vols.*')
+                   ->get();
+        
+        
+            
+        
+        
+          
+        // Affichage des résultats
+        return view('frontend.pages.vols', compact('vols'));
+    }
 }

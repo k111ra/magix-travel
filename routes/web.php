@@ -54,6 +54,11 @@ Route::get('/detail-destination/{id}', [DestinationController::class, 'singleDes
 
 //Routes des hotels
 Route::get('/hotel-details/{id}', [HotelsController::class, 'hotelDetails'])->name('single-hotel');
+Route::get('/recherche-hotel', [HotelsController::class, 'search'])->name('hotel.search');
+
+//Route de recherche des vols
+Route::get('/recherche-vols', [VolController::class, 'search'])->name('vols');
+
 //hotel reservation
 Route::get('/hotel-reservation/{id}', [HotelReservationController::class, 'index'])->name('single-reservation');
 Route::get('/hotel-reservationShow/{id}', [HotelReservationController::class, 'show'])->name('single-reservationshow');
@@ -139,6 +144,7 @@ Route::get('/hotels', [HotelsController::class, 'hotelFrontend'])->name('hotels'
 Route::get('/Reservation-tour/{id}', [TourReservationController::class, 'index'])->name('Reservation.tour');
 Route::get('/Show-tour_resevation/{id}', [TourReservationController::class, 'show'])->name('Reservation.tourShow');
 Route::get('/tours', [ToursController::class, 'tourFrontend'])->name('tours');
+Route::get('/recherche', [ToursController::class, 'search'])->name('tour.search');
 Route::post('/tour-reservation-create', [TourReservationController::class, 'create'])->name('reservation.tour.create');
 Route::get('/detail-tour/{id}', [ToursController::class, 'tourDetails'])->name('single-tour');
 

@@ -12,7 +12,7 @@
                 <ul>
                     <li><strong>Durée:</strong> {{ $tour->duree }} jours</li>
                     <li><strong>Prix:</strong> {{ number_format($tour->prix, 0, ',', ' ') }} CFA </li>
-                    <li><strong>Destination:</strong> {{ $tour->destination->name }}</li>
+                    <li><strong>Destination:</strong> {{ $tour->destinations->name }}</li>
                     <li><strong>Places disponibles:</strong> {{ $tour->place }}</li>
                     <li><strong>Date de départ:</strong> {{ $tour->date_depart }}</li>
                     <li><strong>Moyen de transport:</strong> {{ $tour->moyen_transport }}</li>

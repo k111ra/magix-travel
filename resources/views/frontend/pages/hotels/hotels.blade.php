@@ -26,18 +26,21 @@
             <div class="outer">
                 <div class="search-title"><span>Recherchez l'hôtel de votre choix</span></div>
                 <div class="form-box site-form">
-                    <form method="post" action="https://jufailitech.com/envatoitems/travilo/html/index.html">
+                    <form method="GET" action="{{route('hotel.search')}}">
+                        @csrf
                         <div class="row clearfix">
-                            <div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                            <div class="form-group col-xl-8 col-lg-6 col-md-12 col-sm-12">
                                 <div class="field-label">Destination</div>
                                 <div class="field-inner">
-                                    <input type="text" name="field-name" value="" placeholder="Where to go?"
+                                    <input type="text" name="query" value="" placeholder="Où allerz-vous?"
                                         required>
                                     <i class="alt-icon fa fa-map-marker-alt"></i>
                                 </div>
+                                <button type="submit" class="theme-btn f-btn"><span>Recherche <i
+                                    class="fa-solid fa-search"></i></span></button></div>
                             </div>
-                            <div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                                <div class="field-label">Start</div>
+                            {{-- <div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                                <div class="field-label">Départ</div>
                                 <div class="field-inner">
                                     <input class="datepicker" type="text" name="field-name" value=""
                                         placeholder="Check in" required>
@@ -45,7 +48,7 @@
                                 </div>
                             </div>
                             <div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                                <div class="field-label">End</div>
+                                <div class="field-label">Arrivée</div>
                                 <div class="field-inner">
                                     <input class="datepicker" type="text" name="field-name" value=""
                                         placeholder="Check out" required>
@@ -53,16 +56,18 @@
                                 </div>
                             </div>
                             <div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                                <div class="field-label">Guest</div>
+                                <div class="field-label">Visiteur</div>
                                 <div class="field-inner">
-                                    <input type="text" name="field-name" value="" placeholder="Guests" required>
+                                    <input type="text" name="field-name" value="" placeholder="Guests"
+                                        required>
                                     <i class="alt-icon fa fa-user"></i>
                                 </div>
-                            </div>
-                        </div>
-                        <button type="submit" class="theme-btn f-btn"><span>Search <i
-                                    class="fa-solid fa-search"></i></span></button>
+                            </div> --}}
+                        
+                        {{-- <button type="submit" class="theme-btn f-btn"><span>Recherche <i
+                                    class="fa-solid fa-search"></i></span></button></div> --}}
                     </form>
+
 
                 </div>
             </div>
@@ -85,7 +90,7 @@
                             <div class="fav-btn"><a href="#"><span class="far fa-heart"></span></a></div>
                         </div>
                         <div class="lower-box">
-                            <div class="location">{{$hotel->localisation}} </div>
+                            <div class="location">{{$hotel->destinations->name}} </div>
                             <h5><a href="{{route('single-hotel',$hotel->id)}}">{{$hotel->name}} </a></h5>
                             <div class="bottom-box clearfix">
                                 <div class="rating"><a href="{{route('single-hotel',$hotel->id)}}" class="theme-btn"><i
@@ -102,14 +107,47 @@
                 @endforeach
                 
             </div>
-
+            
             <div class="styled-pagination centered">
-                <ul class="clearfix">
-                    <li class="active"><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#"><i class="fa-solid fa-angle-right"></i></a></li>
+                <ul class="pagination">
+                    <!-- Lien vers la page précédente -->
+                    @if ($hotels->onFirstPage())
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true"><i class="fa-solid fa-angle-left"></i></a>
+                        </li>
+                    @else
+                        <li class="page-item">
+                            <a class="page-link" href="{{ $hotels->previousPageUrl() }}"><i class="fa-solid fa-angle-left"></i></a>
+                        </li>
+                    @endif
+                
+                    <!-- Liens vers chaque page -->
+                    @foreach ($hotels->links()->elements[0] as $page => $url)
+                        @if ($page == $hotels->currentPage())
+                            <li class="page-item active">
+                                <span class="page-link">{{ $page }}</span>
+                            </li>
+                        @else
+                            <li class="page-item">
+                                <a class="page-link" href="{{ $url }}">{{ $page }}</a>
+                            </li>
+                        @endif
+                    @endforeach
+                
+                    <!-- Lien vers la page suivante -->
+                    @if ($hotels->hasMorePages())
+                        <li class="page-item">
+                            <a class="page-link" href="{{ $hotels->nextPageUrl() }}"><i class="fa-solid fa-angle-right"></i></a>
+                        </li>
+                    @else
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true"><i class="fa-solid fa-angle-right"></i></a>
+                        </li>
+                    @endif
                 </ul>
+                
+                
+                
             </div>
         </div>
     </div>

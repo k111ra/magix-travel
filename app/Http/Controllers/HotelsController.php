@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Destination;
 use App\Models\Hotel;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
@@ -16,7 +17,8 @@ class HotelsController extends Controller
 
     public function create()
     {
-        return view('admin.hotels.create');
+        $destinations = Destination::all();
+        return view('admin.hotels.create', compact('destinations'));
     }
 
     public function store(Request $request)
@@ -27,7 +29,7 @@ class HotelsController extends Controller
         $hotel = new Hotel([
             'name' => $request->input('name'),
             'description' => $request->input('description'),
-            'localisation' => $request->input('localisation'),
+            'destinations_id' => $request->input('destinations_id'),
             'etoiles' => $request->input('etoiles'),
             'prix' => $request->input('prix'),
             'images*' => $request->input('images[]'),
@@ -118,7 +120,7 @@ class HotelsController extends Controller
 
     public function hotelFrontend()
     {
-        $hotels = Hotel::orderby('created_at', 'DESC')->get();
+        $hotels = Hotel::Paginate(10);
         return view('frontend.pages.hotels.hotels', compact('hotels'));
     }
 
@@ -127,4 +129,16 @@ class HotelsController extends Controller
         $hotel = Hotel::findOrFail($id);
         return view('frontend.pages.hotels.hotel-details',compact('hotel'));
     }
-}
+
+    public function search(Request $request){
+        $destinations  = Destination::all();
+        $query = $request->input('query');
+        $hotels = Hotel::join('destinations', 'hotels.destinations_id', '=', 'destinations.id')
+                            ->where('destinations.name', 'LIKE', "%{$query}%")
+                            ->select('hotels.*') 
+                            ->simplePaginate(5);
+        return view('frontend.pages.hotels.search', compact('hotels', 'query', 'destinations'));
+
+    } 
+    }
+

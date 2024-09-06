@@ -24,8 +24,12 @@
 
                         <div class="form-group">
                             <label for="localisation">Localisation:</label>
-                            <input type="text" name="localisation" id="localisation" class="form-control" required>
-                            @error('localisation')
+                            <select name="destinations_id" class="form-control" id="destinations_id" >
+                                @foreach ($destinations as $destination)
+                                    <option value="{{ $destination->id }}">{{ $destination->name }}</option>
+                                @endforeach
+                            </select>
+                                @error('localisation')
                             <p class="text-danger">{{ $message }}</p>
                             @enderror
                         </div>

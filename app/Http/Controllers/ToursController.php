@@ -184,13 +184,30 @@ class ToursController extends Controller
 
     public function tourFrontend()
     {
-        $tours = Tour::orderby('created_at', 'DESC')->get();
-        return view('frontend.pages.tours.index', compact('tours'));
+        $tours = Tour::paginate(10);
+        $destinations  = Destination::all();
+        return view('frontend.pages.tours.index', compact('tours','destinations'));
     }
 
     public function tourDetails($id)
     {
         $tour = Tour::findOrFail($id);
-        return view('frontend.pages.tours.single-tour', compact('tour'));
+
+    // Récupérer les autres tours de la même ville
+        $relatedtours = Tour::where('destinations_id', $tour->destinations_id)
+                    ->where('id', '!=', $tour->id) // Exclure le tour actuel
+                    ->get();
+        return view('frontend.pages.tours.single-tour', compact('tour','relatedtours'));
     }
+
+    public function search(Request $request){
+        $destinations  = Destination::all();
+        $query = $request->input('query');
+        $tours = Tour::join('destinations', 'tours.destinations_id', '=', 'destinations.id')
+                            ->where('destinations.name', 'LIKE', "%{$query}%")
+                            ->select('tours.*') 
+                            ->simplePaginate(5);
+        return view('frontend.pages.tours.search', compact('tours', 'query', 'destinations'));
+
+    } 
 }
