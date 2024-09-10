@@ -17,6 +17,7 @@
                             <th>Nom</th>
                             <th>Description</th>
                             <th>Localisation</th>
+                            <th>Destination</th>
                             <th>Étoiles</th>
                             <th>Prix</th>
                             <th>Actions</th>
