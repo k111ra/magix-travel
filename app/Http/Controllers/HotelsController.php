@@ -29,6 +29,7 @@ class HotelsController extends Controller
         $hotel = new Hotel([
             'name' => $request->input('name'),
             'description' => $request->input('description'),
+            'localisation' => $request->input('localisation'),
             'destinations_id' => $request->input('destinations_id'),
             'etoiles' => $request->input('etoiles'),
             'prix' => $request->input('prix'),
@@ -74,6 +75,7 @@ class HotelsController extends Controller
             'name' => 'required|string|max:255',
             'description' => 'required|string',
             'localisation' => 'required|string',
+            'destinations_id' => 'required|string',
             'etoiles' => 'required|string',
             'prix' => 'required|numeric',
             'images.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
@@ -97,6 +99,7 @@ class HotelsController extends Controller
             'name' => $validatedData['name'],
             'description' => $validatedData['description'],
             'localisation' => $validatedData['localisation'],
+            'destinations_id' => $validatedData['destinations_id'],
             'etoiles' => $validatedData['etoiles'],
             'prix' => $validatedData['prix'],
         ]);
@@ -135,8 +138,9 @@ class HotelsController extends Controller
         $query = $request->input('query');
         $hotels = Hotel::join('destinations', 'hotels.destinations_id', '=', 'destinations.id')
                             ->where('destinations.name', 'LIKE', "%{$query}%")
+                            ->Orwhere('localisation', 'LIKE', "%{$query}%")
                             ->select('hotels.*') 
-                            ->simplePaginate(5);
+                            ->paginate(10);
         return view('frontend.pages.hotels.search', compact('hotels', 'query', 'destinations'));
 
     } 

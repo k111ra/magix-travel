@@ -90,6 +90,6 @@ class VolController extends Controller
         
           
         // Affichage des résultats
-        return view('frontend.pages.vols', compact('vols'));
+        return view('frontend.pages.vols.search', compact('vols'));
     }
 }

@@ -20,13 +20,19 @@
                         </div>
                     </div>
 
-                        <div class="col-sm-4">
+                    <div class="col-sm-4">
                     
-                            <div class="form-group">
-                                <label for="localisation">Localisation:</label>
-                                <input type="text" name="localisation" id="localisation" class="form-control" value="{{ $hotel->localisation }}">
-                            </div>
+                        <div class="form-group">
+                            <label for="localisation">Localisation:</label>
+                            <input type="text" name="localisation" id="localisation" class="form-control" value="{{ $hotel->localisation }}">
                         </div>
+                    </div><div class="col-sm-4">
+                    
+                        <div class="form-group">
+                            <label for="destination">destination:</label>
+                            <input type="text" name="destination" id="destination" class="form-control" value="{{ $hotel->destinations->name }}">
+                        </div>
+                    </div>
                     
 
                         <div class="col-sm-4">
@@ -36,19 +42,21 @@
                             </div>
                         </div>
 
-                    <div class="col-sm-6">
+                    <div class="col-sm-4">
                         <div class="form-group">
                             <label for="prix">Prix:</label>
                             <input type="number" name="prix" min="0" id="prix" class="form-control" value="{{ $hotel->prix }}" required>
                         </div>
                     </div>
-                    <div class="form-group">
+                    <div class="col-sm-4">
+                        <div class="form-group">
                             <label for="images">Images:</label>
                             <input type="file" name="images[]" id="images" multiple accept="image/*" class="form-control-file">
                             @error('images[]')
                                 <p class="text-danger">{{ $message }}</p>
                             @enderror
                         </div>
+                    </div>
                     
                     <div class="col-sm-12">
                         <div class="form-group">

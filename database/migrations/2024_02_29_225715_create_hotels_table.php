@@ -21,6 +21,7 @@ return new class extends Migration
             $table->integer('etoiles')->nullable();
             $table->decimal('prix', 10, 2)->nullable();
             $table->json('images')->nullable();
+            $table->unsignedBigInteger('destinations_id')->nullable();
             $table->timestamps();
         });
     }

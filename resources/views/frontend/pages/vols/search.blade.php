@@ -61,6 +61,7 @@
                         <div class="destination"> {{ $vol->destination->name }} </div>
                     </div>
                 </div>
+                <div class=""> {{$vol->date_depart}} </div>
                 <div class="price">{{ $vol->price }}  </div>
                 <div class="cta"><a href="#">Voir →</a></div>
             </div>
