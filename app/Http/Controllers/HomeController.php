@@ -6,6 +6,7 @@ use App\Models\Destination;
 use App\Models\Hotel;
 use App\Models\Reservation;
 use App\Models\Tour;
+use App\Models\Vol;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -22,7 +23,8 @@ class HomeController extends Controller
         $tours = Tour::latest()->take(9)->get();
         $destinations = Destination::latest()->take(10)->get();
         $hotels = Hotel::latest()->take(6)->get();
-        return view('home', compact('tours', 'destinations', 'hotels'));
+        $vols = Vol::all();
+        return view('home', compact('tours', 'destinations', 'hotels', 'vols'));
     }
 
     /**

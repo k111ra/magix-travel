@@ -27,4 +27,5 @@
 		<link href="{{asset('frontend/assets/css/lib/jquery.fancybox.min.css')}}" rel="stylesheet">
 		<link href="{{asset('frontend/assets/css/custom-animate.css')}}" rel="stylesheet">
 		<link href="{{asset('frontend/assets/css/style.css')}}" rel="stylesheet">
+		<link href="{{asset('frontend/assets/css/vols.css')}}" rel="stylesheet">
 		<link href="{{asset('frontend/assets/css/responsive.css')}}" rel="stylesheet">

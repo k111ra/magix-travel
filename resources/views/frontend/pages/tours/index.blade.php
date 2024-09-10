@@ -213,12 +213,14 @@
 										<h4>Lieu</h4>
 									</div>
 									<ul>
+										@foreach ($destinations as $destination)
+											
+										
 										<li>
-											<div class="cb-block"><input type="checkbox" id="cb-15"><label
-													for="cb-15"><span class="txt">New
-														York</span></label></div>
+											<div class="cb-block"><input type="checkbox" id="cb-{{$destination->id}}" value="{{$destination->id}}"><label
+													for="cb-{{$destination->id}}"><span class="txt">{{$destination->name}}</span></label></div>
 										</li>
-										<li>
+										{{-- <li>
 											<div class="cb-block"><input type="checkbox" id="cb-16"><label
 													for="cb-16"><span class="txt">London</span></label></div>
 										</li>
@@ -245,7 +247,8 @@
 										<li>
 											<div class="cb-block"><input type="checkbox" id="cb-22"><label
 													for="cb-22"><span class="txt">Dubai</span></label></div>
-										</li>
+										</li> --}}
+										@endforeach
 									</ul>
 								</div>
 							</div>
@@ -332,12 +335,45 @@
 							</div>
 
 							<div class="styled-pagination">
-								<ul class="clearfix">
-									<li class="active"><a href="#">1</a></li>
-									<li><a href="#">2</a></li>
-									<li><a href="#">3</a></li>
-									<li><a href="#"><i class="fa-solid fa-angle-right"></i></a></li>
+								<ul class="pagination">
+									<!-- Lien vers la page précédente -->
+									@if ($tours->onFirstPage())
+										<li class="page-item disabled">
+											<a class="page-link" href="#" tabindex="-1" aria-disabled="true"><i class="fa-solid fa-angle-left"></i></a>
+										</li>
+									@else
+										<li class="page-item">
+											<a class="page-link" href="{{ $tours->previousPageUrl() }}"><i class="fa-solid fa-angle-left"></i></a>
+										</li>
+									@endif
+								
+									<!-- Liens vers chaque page -->
+									@foreach ($tours->links()->elements[0] as $page => $url)
+										@if ($page == $tours->currentPage())
+											<li class="page-item active">
+												<span class="page-link">{{ $page }}</span>
+											</li>
+										@else
+											<li class="page-item">
+												<a class="page-link" href="{{ $url }}">{{ $page }}</a>
+											</li>
+										@endif
+									@endforeach
+								
+									<!-- Lien vers la page suivante -->
+									@if ($tours->hasMorePages())
+										<li class="page-item">
+											<a class="page-link" href="{{ $tours->nextPageUrl() }}"><i class="fa-solid fa-angle-right"></i></a>
+										</li>
+									@else
+										<li class="page-item disabled">
+											<a class="page-link" href="#" tabindex="-1" aria-disabled="true"><i class="fa-solid fa-angle-right"></i></a>
+										</li>
+									@endif
 								</ul>
+								
+									
+									
 							</div>
 
 						</div>

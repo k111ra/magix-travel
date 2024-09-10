@@ -1029,4 +1029,225 @@
 			</div>
 		</div>
 
+		<!--Similar Section-->
+		<div class="similar-section">
+			<div class="auto-container">
+				<div class="title-box">
+					<h2><span>Similar Hotels Like This</span></h2>
+				</div>
+				<div class="carousel-box">
+					<div class="packages-carousel">
+						<!--Block-->
+						<div class="package-block alt">
+							<div class="inner-box">
+								<div class="image-box">
+									<div class="image"><a href="hotel-single.html"><img
+												src="assets/images/resources/destinations/punta-cana-hotel.jpg"
+												alt="Punta Cana"></a>
+									</div>
+									<div class="b-title top-rated"><span>Top Rated</span></div>
+								</div>
+								<div class="lower-box">
+									<div class="location">Punta Cana</div>
+									<h5><a href="hotel-single.html">Punta Cana Hotel</a></h5>
+									<div class="bottom-box clearfix">
+										<div class="rating"><a href="#" class="theme-btn"><i
+													class="fa-solid fa-star"></i>
+												<strong>4.8</strong> &ensp; <span class="count">4900 Reviews</span></a>
+										</div>
+										<div class="price">Start from &ensp;<span class="amount">$459</span></div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						{{-- <!--Block-->
+						<div class="package-block alt">
+							<div class="inner-box">
+								<div class="image-box">
+									<div class="image"><a href="hotel-single.html"><img
+												src="assets/images/resources/destinations/the-bellagio-hotel.jpg"
+												alt="The Bellagio"></a></div>
+								</div>
+								<div class="lower-box">
+									<div class="location">Las Vegas</div>
+									<h5><a href="hotel-single.html">The Bellagio</a></h5>
+									<div class="bottom-box clearfix">
+										<div class="rating"><a href="#" class="theme-btn"><i
+													class="fa-solid fa-star"></i>
+												<strong>4.6</strong> &ensp; <span class="count">3210 Reviews</span></a>
+										</div>
+										<div class="price">Start from &ensp;<span class="amount">$480</span></div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!--Block-->
+						<div class="package-block alt">
+							<div class="inner-box">
+								<div class="image-box">
+									<div class="image"><a href="hotel-single.html"><img
+												src="assets/images/resources/destinations/avista-hideway-hotel.jpg"
+												alt="Avista Hideway"></a>
+									</div>
+									<div class="b-title featured"><span>Featured</span></div>
+								</div>
+								<div class="lower-box">
+									<div class="location">Phuket</div>
+									<h5><a href="hotel-single.html">Avista Hideway Hotel</a></h5>
+									<div class="bottom-box clearfix">
+										<div class="rating"><a href="#" class="theme-btn"><i
+													class="fa-solid fa-star"></i>
+												<strong>4.6</strong> &ensp; <span class="count">8711 Reviews</span></a>
+										</div>
+										<div class="price">Start from &ensp;<span class="amount">$439</span></div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!--Block-->
+						<div class="package-block alt">
+							<div class="inner-box">
+								<div class="image-box">
+									<div class="image"><a href="hotel-single.html"><img
+												src="assets/images/resources/destinations/palawan-hotel.jpg"
+												alt="Palawan Hotel"></a>
+									</div>
+									<div class="b-title top-rated"><span>Top Rated</span></div>
+								</div>
+								<div class="lower-box">
+									<div class="location">Palawan</div>
+									<h5><a href="hotel-single.html">Palawan Beach Hotel</a></h5>
+									<div class="bottom-box clearfix">
+										<div class="rating"><a href="#" class="theme-btn"><i
+													class="fa-solid fa-star"></i>
+												<strong>4.9</strong> &ensp; <span class="count">7900 Reviews</span></a>
+										</div>
+										<div class="price">Start from &ensp;<span class="amount">$650</span></div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!--Block-->
+						<div class="package-block alt">
+							<div class="inner-box">
+								<div class="image-box">
+									<div class="image"><a href="hotel-single.html"><img
+												src="assets/images/resources/destinations/one-eighty-bali-hotel.jpg"
+												alt="One Eighty"></a></div>
+								</div>
+								<div class="lower-box">
+									<div class="location">Bali</div>
+									<h5><a href="hotel-single.html">One Eighty Hotel</a></h5>
+									<div class="bottom-box clearfix">
+										<div class="rating"><a href="#" class="theme-btn"><i
+													class="fa-solid fa-star"></i>
+												<strong>4.7</strong> &ensp; <span class="count">4780 Reviews</span></a>
+										</div>
+										<div class="price">Start from &ensp;<span class="amount">$345</span></div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!--Block-->
+						<div class="package-block alt">
+							<div class="inner-box">
+								<div class="image-box">
+									<div class="image"><a href="hotel-single.html"><img
+												src="assets/images/resources/destinations/the-anam-vietnam-hotel.jpg"
+												alt="The Anam"></a></div>
+									<div class="b-title featured"><span>Featured</span></div>
+								</div>
+								<div class="lower-box">
+									<div class="location">Vietnam</div>
+									<h5><a href="hotel-single.html">The Anam</a></h5>
+									<div class="bottom-box clearfix">
+										<div class="rating"><a href="#" class="theme-btn"><i
+													class="fa-solid fa-star"></i>
+												<strong>4.8</strong> &ensp; <span class="count">2389 Reviews</span></a>
+										</div>
+										<div class="price">Start from &ensp;<span class="amount">$530</span></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!--Block-->
+						<div class="package-block alt">
+							<div class="inner-box">
+								<div class="image-box">
+									<div class="image"><a href="hotel-single.html"><img
+												src="assets/images/resources/destinations/istanbul-beach-hotel.jpg"
+												alt="Istanbul Beach Hotel"></a>
+									</div>
+									<div class="b-title top-rated"><span>Top Rated</span></div>
+								</div>
+								<div class="lower-box">
+									<div class="location">Istanbul</div>
+									<h5><a href="hotel-single.html">Istanbul Beach Hotel</a></h5>
+									<div class="bottom-box clearfix">
+										<div class="rating"><a href="#" class="theme-btn"><i
+													class="fa-solid fa-star"></i>
+												<strong>4.4</strong> &ensp; <span class="count">4094 Reviews</span></a>
+										</div>
+										<div class="price">Start from &ensp;<span class="amount">$615</span></div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!--Block-->
+						<div class="package-block alt">
+							<div class="inner-box">
+								<div class="image-box">
+									<div class="image"><a href="hotel-single.html"><img
+												src="assets/images/resources/destinations/maldives-hotel.jpg"
+												alt="Maldives Hotel"></a>
+									</div>
+								</div>
+								<div class="lower-box">
+									<div class="location">Maldives</div>
+									<h5><a href="hotel-single.html">Maldives Beach Hotel</a></h5>
+									<div class="bottom-box clearfix">
+										<div class="rating"><a href="#" class="theme-btn"><i
+													class="fa-solid fa-star"></i>
+												<strong>4.6</strong> &ensp; <span class="count">4912 Reviews</span></a>
+										</div>
+										<div class="price">Start from &ensp;<span class="amount">$565</span></div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!--Block-->
+						<div class="package-block alt">
+							<div class="inner-box">
+								<div class="image-box">
+									<div class="image"><a href="hotel-single.html"><img
+												src="assets/images/resources/destinations/istanbul-little-sofia-hotel.jpg"
+												alt="Little Sofia"></a></div>
+									<div class="b-title featured"><span>Featured</span></div>
+								</div>
+								<div class="lower-box">
+									<div class="location">Istanbul</div>
+									<h5><a href="hotel-single.html">Istanbul Little Sofia</a></h5>
+									<div class="bottom-box clearfix">
+										<div class="rating"><a href="#" class="theme-btn"><i
+													class="fa-solid fa-star"></i>
+												<strong>4.7</strong> &ensp; <span class="count">2450 Reviews</span></a>
+										</div>
+										<div class="price">Start from &ensp;<span class="amount">$677</span></div>
+									</div>
+								</div>
+							</div>
+						</div> --}}
+
+					</div>
+				</div>
+			</div>
+		</div>
+
 @endsection

@@ -165,7 +165,7 @@
 								</div>
 							</div>
 
-							<div class="t-plans">
+							 <div class="t-plans">
 								<h3>Tour Plans</h3>
 								<ul class="accordion-box tp-accordion clearfix">
 									<!--Block-->
@@ -307,7 +307,7 @@
 									</li>
 
 								</ul>
-							</div>
+							</div> 
 
 							<div class="location">
 								<h3>Map</h3>
@@ -321,7 +321,7 @@
 								</div>
 							</div>
 
-							<div class="t-faqs">
+							{{-- <div class="t-faqs">
 								<h3>Frequently Asked Questions</h3>
 								<ul class="accordion-box faqs-accordion clearfix">
 									<!--Block-->
@@ -423,7 +423,7 @@
 									</li>
 
 								</ul>
-							</div>
+							</div> --}}
 
 							<div class="t-gallery">
 								<h3>Media Gallery</h3>
@@ -755,14 +755,14 @@
 					<div class="sidebar-side col-xl-4 col-lg-8 col-md-12 col-sm-12">
 						<div class="sidebar-inner">
 							<!--Widget-->
-							{{-- <div class="dsp-widget t-book-widget alt-margin">
+							<div class="dsp-widget t-book-widget alt-margin">
 								<div class="inner-box">
 									<div class="t-book-header">
 										<span class="st-txt">Start <br>From</span>
 										<span class="amount">$120</span>
 										<span class="qty">/ Per Person</span>
 									</div>
-									<div class="lower-box">
+									{{-- <div class="lower-box">
 										<div class="form-box site-form">
 											<form method="post" action="https://jufailitech.com/envatoitems/travilo/html/tour-single.html">
 												<div class="fields">
@@ -865,9 +865,9 @@
 															Book</span></button></div>
 											</form>
 										</div>
-									</div>
+									</div> --}}
 								</div>
-							</div> --}}
+							</div>
 
 							<!--Widget-->
 							<div class="dsp-widget get-help-widget">
@@ -886,20 +886,25 @@
 							</div>
 
 							<!--Widget-->
+							@if($relatedtours->isEmpty())
+
+							@else
 							<div class="dsp-widget similar-widget">
 								<div class="inner">
-									<h3>You might also like</h3>
+									<h3>Vous pourriez aussi aimer</h3>
 									<!--Logo-->
 									<div class="posts">
+										@foreach ($relatedtours as $relatedtour)
 										<div class="post">
-											<div class="image"><a href="#"><img
-														src="{{asset('frontend/assets/images/resources/thumbnails/uk-thumb.jpg')}}"
+											<div class="image"><a href="{{route('single-tour', $relatedtour->id)}}"><img
+														src="{{ asset('storage/' . json_decode($relatedtour->images)[0]) }}"
 														alt="London Bridge"></a>
 											</div>
-											<h6><a href="#">Iconic Landmark Connecting History and Modernity</a></h6>
-											<div class="price">Starts from <span class="amount">$399</span></div>
+											<h6><a href="{{route('single-tour', $relatedtour->id)}}">{{$relatedtour->nom}}</a></h6>
+											<div class="price">À partir de <span class="amount">{{ number_format($relatedtour->prix, 0, ',', ' ') }} FCFA</span></div>
 										</div>
-										<div class="post">
+										@endforeach
+										{{-- <div class="post">
 											<div class="image"><a href="#"><img
 														src="{{asset('frontend/assets/images/resources/thumbnails/maldives-thumb.jpg')}}"
 														alt="Maldives"></a></div>
@@ -912,11 +917,11 @@
 														alt="Helsinki"></a></div>
 											<h6><a href="#">Vibrant Helsinki, A Fusion of Culture and Cuisine</a></h6>
 											<div class="price">Starts from <span class="amount">$565</span></div>
-										</div>
+										</div> --}}
 									</div>
 								</div>
 							</div>
-
+							@endif
 						</div>
 					</div>
 

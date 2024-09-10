@@ -26,5 +26,10 @@ class Destination extends Model
     {
         return $this->hasMany(Tour::class, 'tour_id');
     }
+
+    public function hotels()
+    {
+        return $this->hasMany(Hotel::class, 'hotel_id');
+    }
 }
 
