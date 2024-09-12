@@ -30,7 +30,11 @@
                     
                         <div class="form-group">
                             <label for="destination">destination:</label>
-                            <input type="text" name="destination" id="destination" class="form-control" value="{{ $hotel->destinations->name }}">
+                            <select name="destinations_id" class="form-control" id="destinations_id" >
+                                @foreach ($destinations as $destination)
+                                    <option value="{{ $destination->id }}" {{$hotel->destinations && $destination->id == $hotel->destinations->id ? 'selected':""}}>{{ $destination->name }}</option>
+                                @endforeach
+                            </select>
                         </div>
                     </div>
                     

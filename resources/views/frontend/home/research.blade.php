@@ -61,7 +61,7 @@
                 <!--Tab-->
                 <div class="tab" id="tab-2">
                     <div class="form-box site-form">
-                        <form method="post" action="{{route('tour.search')}}">
+                        <form method="get" action="{{route('tour.search')}}">
                             @csrf
                             <div class="row clearfix">
                                 <div class="form-group col-xl-8 col-lg-6 col-md-6 col-sm-12">
@@ -107,7 +107,7 @@
                 <!--Tab-->
                 <div class="tab" id="tab-3">
                     <div class="form-box site-form">
-                        <form method="post" action="{{route('tour.search')}}">
+                        <form method="get" action="{{route('tour.search')}}">
                             @csrf
                             <div class="row clearfix">
                                 <div class="form-group col-xl-8 col-lg-6 col-md-6 col-sm-12">

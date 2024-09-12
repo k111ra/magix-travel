@@ -355,21 +355,21 @@
                     <div class="styled-pagination">
                         <ul class="pagination">
                             <!-- Lien vers la page précédente -->
-                            @if ($hotels->onFirstPage())
+                            @if ($tours->onFirstPage())
                                 <li class="page-item disabled">
                                     <a class="page-link" href="#" tabindex="-1" aria-disabled="true"><i
                                             class="fa-solid fa-angle-left"></i></a>
                                 </li>
                             @else
                                 <li class="page-item">
-                                    <a class="page-link" href="{{ $hotels->previousPageUrl() }}"><i
+                                    <a class="page-link" href="{{ $tours->previousPageUrl() }}"><i
                                             class="fa-solid fa-angle-left"></i></a>
                                 </li>
                             @endif
 
                             <!-- Liens vers chaque page -->
-                            @foreach ($hotels->links()->elements[0] as $page => $url)
-                                @if ($page == $hotels->currentPage())
+                            @foreach ($tours->links()->elements[0] as $page => $url)
+                                @if ($page == $tours->currentPage())
                                     <li class="page-item active">
                                         <span class="page-link">{{ $page }}</span>
                                     </li>
@@ -381,9 +381,9 @@
                             @endforeach
 
                             <!-- Lien vers la page suivante -->
-                            @if ($hotels->hasMorePages())
+                            @if ($tours->hasMorePages())
                                 <li class="page-item">
-                                    <a class="page-link" href="{{ $hotels->nextPageUrl() }}"><i
+                                    <a class="page-link" href="{{ $tours->nextPageUrl() }}"><i
                                             class="fa-solid fa-angle-right"></i></a>
                                 </li>
                             @else

@@ -64,7 +64,8 @@ class HotelsController extends Controller
 
     public function edit(Hotel $hotel)
     {
-        return view('admin.hotels.edit', compact('hotel'));
+        $destinations = Destination::all();
+        return view('admin.hotels.edit', compact('hotel', 'destinations'));
     }
 
 

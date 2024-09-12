@@ -206,7 +206,7 @@ class ToursController extends Controller
         $tours = Tour::join('destinations', 'tours.destinations_id', '=', 'destinations.id')
                             ->where('destinations.name', 'LIKE', "%{$query}%")
                             ->select('tours.*') 
-                            ->simplePaginate(5);
+                            ->Paginate(10);
         return view('frontend.pages.tours.search', compact('tours', 'query', 'destinations'));
 
     } 

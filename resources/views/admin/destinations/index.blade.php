@@ -16,9 +16,9 @@
                             <th>#</th>
                             <th>Nom</th>
                             <th>Description</th>
-                            <th>Localisation</th>
+                            {{-- <th>Localisation</th>
                             <th>Étoiles</th>
-                            <th>Prix</th>
+                            <th>Prix</th> --}}
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -28,9 +28,9 @@
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $destination->name }}</td>
                                 <td>{{ $destination->description }}</td>
-                                <td>{{ $destination->localisation }}</td>
+                                {{-- <td>{{ $destination->localisation }}</td>
                                 <td>{{ $destination->etoiles }}</td>
-                                <td>{{ $destination->prix }}</td>
+                                <td>{{ $destination->prix }}</td> --}}
                                 <td>
                                     <a href="{{ route('destinations.show', $destination->id) }}" class="btn btn-info btn-sm">
                                         <i class="fas fa-eye"></i>

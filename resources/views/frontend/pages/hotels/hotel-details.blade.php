@@ -61,7 +61,7 @@
 
 								<div class="sp-header">
 									<div class="loc-rat clearfix">
-										<div class="location">{{$hotel->localisation}}</div>
+										<div class="location">{{$hotel->destinations->name}}</div>
 										<div class="rating"><a href="#" class="theme-btn"><i
 													class="fa-solid fa-star"></i>
 												<strong>{{$hotel->etoiles}}</strong><span class="count">8345 Reviews</span></a></div>
@@ -69,8 +69,7 @@
 									</div>
 									<h1>{{$hotel->name}}</h1>
 									<div class="info clearfix">
-										<div class="duration"><i class="fa-solid fa-map-marker-alt"></i> 150 Piccadilly,
-											London W1J 9BR, United Kingdom</div>
+										<div class="duration"><i class="fa-solid fa-map-marker-alt"></i>{{$hotel->localisation}}</div>
 									</div>
 								</div>
 
