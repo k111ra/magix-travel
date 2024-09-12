@@ -17,6 +17,7 @@
                             <th>Nom</th>
                             <th>Description</th>
                             <th>Localisation</th>
+                            <th>Destination</th>
                             <th>Étoiles</th>
                             <th>Prix</th>
                             <th>Actions</th>
@@ -28,6 +29,7 @@
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $hotel->name }}</td>
                                 <td>{{ $hotel->description }}</td>
+                                <td>{{ $hotel->localisation }}</td>
                                 <td>{{ $hotel->destinations->name }}</td>
                                 <td>{{ $hotel->etoiles }}</td>
                                 <td>{{ $hotel->prix }}</td>

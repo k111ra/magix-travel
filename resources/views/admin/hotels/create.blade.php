@@ -21,15 +21,22 @@
                         </div>
                     </div>
                     <div class="col-sm-4">
-
+                    
                         <div class="form-group">
                             <label for="localisation">Localisation:</label>
+                            <input type="text" name="localisation" id="localisation" class="form-control" value="">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+
+                        <div class="form-group">
+                            <label for="destination">Destination:</label>
                             <select name="destinations_id" class="form-control" id="destinations_id" >
                                 @foreach ($destinations as $destination)
                                     <option value="{{ $destination->id }}">{{ $destination->name }}</option>
                                 @endforeach
                             </select>
-                                @error('localisation')
+                                @error('destination')
                             <p class="text-danger">{{ $message }}</p>
                             @enderror
                         </div>
@@ -45,7 +52,7 @@
 
                         </div>
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-sm-4">
 
                         <!-- Group 2 -->
                         <div class="form-group">
@@ -57,7 +64,7 @@
                         </div>
                     </div>
                         <!-- Add other fields based on your migration -->
-
+                    <div class="col-sm-4">
                         <!-- Common Group -->
                         <div class="form-group">
                             <label for="images">Images:</label>

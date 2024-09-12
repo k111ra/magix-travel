@@ -81,8 +81,8 @@ class ReservationController extends Controller
         $reservation->save();
 
         // Rediriger avec un message de succès
-        // return redirect()->route('reservations.index')
-        //     ->with('success', 'Reservation créée avec succès.');
+        return redirect()->route('reservations.index')
+            ->with('success', 'Reservation créée avec succès.');
     }
 
 

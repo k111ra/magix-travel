@@ -19,6 +19,7 @@ class CreateToursTable extends Migration
             $table->date('date_depart')->nullable();
             $table->string('moyen_transport')->nullable();
             $table->json('images')->nullable();
+            $table->unsignedBigInteger('destinations_id')->nullable();
             $table->timestamps();
         });
     }
