@@ -20,7 +20,7 @@
                                     <div class="field-label">Destination</div>
                                     <div class="field-inner">
                                         
-                                        <input type="text" name="query" value="" placeholder="Où allerz-vous?"
+                                        <input type="text" name="query" value="" placeholder="Recherche... Hotel, Destination, localité"
                                             required>
                                         <i class="alt-icon fa fa-map-marker-alt"></i>
                                     </div>
@@ -67,7 +67,7 @@
                                 <div class="form-group col-xl-8 col-lg-6 col-md-6 col-sm-12">
                                     <div class="field-label">Destination</div>
                                     <div class="field-inner">
-                                        <input type="text" name="query" value="" placeholder="Où allerz-vous?"
+                                        <input type="text" name="query" value="" placeholder="Recherche,"
                                             required>
                                         <i class="alt-icon fa fa-map-marker-alt"></i>
                                     </div>
@@ -113,7 +113,7 @@
                                 <div class="form-group col-xl-8 col-lg-6 col-md-6 col-sm-12">
                                     <div class="field-label">Destination</div>
                                     <div class="field-inner">
-                                        <input type="text" name="query" value="" placeholder="Où allerz-vous?"
+                                        <input type="text" name="query" value="" placeholder="Recherche,"
                                             required>
                                         <i class="alt-icon fa fa-map-marker-alt"></i>
                                     </div>
@@ -158,7 +158,7 @@
                                 <div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
                                     <div class="field-label">Destination</div>
                                     <div class="field-inner">
-                                        <input type="text" name="field-name" value="" placeholder="Où allerz-vous?"
+                                        <input type="text" name="field-name" value="" placeholder="Recherche,"
                                             required>
                                         <i class="alt-icon fa fa-map-marker-alt"></i>
                                     </div>
@@ -202,7 +202,7 @@
                                 <div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
                                     <div class="field-label">Destination</div>
                                     <div class="field-inner">
-                                        <input type="text" name="field-name" value="" placeholder="Où allerz-vous?"
+                                        <input type="text" name="field-name" value="" placeholder="Recherche,"
                                             required>
                                         <i class="alt-icon fa fa-map-marker-alt"></i>
                                     </div>
@@ -247,7 +247,7 @@
                                 <div class="form-group col-xl-4 col-lg-6 col-md-6 col-sm-12">
                                     <div class="field-label">Départ</div>
                                     <div class="field-inner">
-                                        <input type="text" name="depart" value="" placeholder="Où allerz-vous?"
+                                        <input type="text" name="depart" value="" placeholder="Recherche,"
                                             >
                                         <i class="alt-icon fa fa-map-marker-alt"></i>
                                     </div>
@@ -256,7 +256,7 @@
                                  <div class="form-group col-xl-4 col-lg-6 col-md-6 col-sm-12">
                                     <div class="field-label">Arrivée</div>
                                     <div class="field-inner">
-                                        <input type="text" name="arrivee" value="" placeholder="Où allerz-vous?"
+                                        <input type="text" name="arrivee" value="" placeholder="Recherche,"
                                             >
                                         <i class="alt-icon fa fa-map-marker-alt"></i>
                                     </div> 

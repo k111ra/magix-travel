@@ -25,6 +25,7 @@
                     
                     <form action="{{ route('create-reservation') }}" method="post" enctype="multipart/form-data">
                         @csrf
+                        <input type="text" hidden name="hotel_id" class="form-control" id="hotel_id" value="{{ $hotel->id }}" >
                         {{-- <input type="hidden" name="client_id" value="2"> --}}
                         <div class="card-header">
                             <h4>Ajouter une réservation</h4>
@@ -33,16 +34,22 @@
                                 <div class="row">
                                     <div class="col-12">
                                         <div class="row">
+                                            {{-- <div class="col-4">
+                                                <div class="form-group">
+                                                    <label for="tour_id">hotel</label>
+                                                    <input type="text" hidden name="hotel_id" class="form-control" id="hotel_id" value="{{ $hotel->id }}" >
+                                                </div>
+                                            </div> --}}
                                             <div class="col-4">
                                                 <div class="form-group">
                                                     <label for="tour_id">hotel</label>
-                                                    <input type="text"  name="hotel_id" class="form-control" id="hotel_id" value="{{ $hotel->id }}" >
+                                                    <input type="text"  name="" class="form-control" id="" value="{{ $hotel->name }}" >
                                                 </div>
                                             </div>
                                             <div class="col-4">
                                                 <div class="form-group">
                                                     <label for="destination_id">Localisation</label>
-                                                    <input type="text"  name="destination_id" class="form-control" id="destination_id" value="{{  $hotel->localisation  }}" >
+                                                    <input type="text"  name="" disabled class="form-control" id="" value="{{  $hotel->localisation  }}" >
                                                 </div>
                                             </div>
                                             {{-- <div class="col-4">

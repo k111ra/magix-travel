@@ -46,6 +46,7 @@ class ReservationController extends Controller
      */
     public function store(Request $request)
     {
+      
         // Valider les données du formulaire
         $request->validate([
             // 'client_id' => 'required|exists:users,id',

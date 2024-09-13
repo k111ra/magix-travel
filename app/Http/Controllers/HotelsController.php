@@ -140,6 +140,7 @@ class HotelsController extends Controller
         $hotels = Hotel::join('destinations', 'hotels.destinations_id', '=', 'destinations.id')
                             ->where('destinations.name', 'LIKE', "%{$query}%")
                             ->Orwhere('localisation', 'LIKE', "%{$query}%")
+                            ->Orwhere('hotels.name', 'LIKE', "%{$query}%")
                             ->select('hotels.*') 
                             ->paginate(10);
         return view('frontend.pages.hotels.search', compact('hotels', 'query', 'destinations'));

@@ -303,7 +303,7 @@ form .form-group textarea,
 form .form-group select {
     position: relative;
     display: block;
-    height: 54px;
+    height: 100%;
     width: 100%;
     font-size: 16px;
     color: var(--dark-gray-gray);
