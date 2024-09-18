@@ -30,7 +30,7 @@
         </div>
     </div>
 @endsection
-@extends('admin.layout.layout')
+{{-- @extends('admin.layout.layout')
 
 @section('content')
     <div class="card">
@@ -71,4 +71,4 @@
             </form>
         </div>
     </div>
-@endsection
+@endsection --}}

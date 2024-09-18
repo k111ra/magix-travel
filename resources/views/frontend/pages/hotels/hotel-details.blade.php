@@ -56,16 +56,16 @@
 					<div class="row clearfix">
 
 						<!--Content Side-->
-						<div class="content-side col-xl-8 col-lg-12 col-md-12 col-sm-12">
+						<div class="content-side col-xl-6 col-lg-12 col-md-12 col-sm-12">
 							<div class="content-inner">
 
 								<div class="sp-header">
 									<div class="loc-rat clearfix">
-										<div class="location">{{$hotel->destinations->name}}</div>
+										<div class="location">{{$hotel->destination->name}}</div>
 										<div class="rating"><a href="#" class="theme-btn"><i
 													class="fa-solid fa-star"></i>
 												<strong>{{$hotel->etoiles}}</strong><span class="count">8345 Reviews</span></a></div>
-										<div class="add-fav"><a href="{{route('single-reservation',$hotel->id) }}"><i class="far fa-heart"></i> Save</a></div>
+										<div class="add-fav"><a href=""><i class="far fa-heart"></i> Save</a></div>
 									</div>
 									<h1>{{$hotel->name}}</h1>
 									<div class="info clearfix">
@@ -76,8 +76,8 @@
 								<div class="upper-content">
 									<div class="text-content">
 										<h3>À propos de cet hôtel</h3>
-										{{$hotel->description}}
-										<br>
+										<p>{{$hotel->description}}</p>
+										{{-- <br>
 										<h3>Équipement</h3>
 										<div class="facilities">
 											<div class="row clearfix">
@@ -163,7 +163,7 @@
 													</div>
 												</div>
 											</div>
-										</div>
+										</div> --}}
 
 									</div>
 								</div>
@@ -172,102 +172,15 @@
 						</div>
 
 						<!--Sidebar Side-->
-						<div class="sidebar-side col-xl-4 col-lg-8 col-md-12 col-sm-12">
+						<div class="sidebar-side col-xl-6 col-lg-8 col-md-12 col-sm-12">
 							<div class="sidebar-inner">
-								<!--Widget-->
-								 {{-- <div class="dsp-widget t-book-widget">
-									<div class="inner-box">
-										<div class="t-book-header">
-											<span class="st-txt">Start <br>From</span>
-											<span class="amount">$250</span>
-											<span class="qty">/ Per Person</span>
-										</div>
-										<div class="lower-box">
-											<div class="form-box site-form">
-												<form method="post" action="#">
-													<div class="fields">
-														<div class="form-group">
-															<div class="field-label">Check in</div>
-															<div class="field-inner">
-																<input class="datepicker" type="text" name="field-name"
-																	value="" placeholder="Select a date" required>
-																<i class="alt-icon fa fa-calendar-alt"></i>
-															</div>
-														</div>
-														<div class="form-group">
-															<div class="field-label">Check out</div>
-															<div class="field-inner">
-																<input class="datepicker" type="text" name="field-name"
-																	value="" placeholder="Select a date" required>
-																<i class="alt-icon fa fa-calendar-alt"></i>
-															</div>
-														</div>
-													</div>
-													<h6>Guests</h6>
-													<div class="tickets">
-														<div class="ticket-block clearfix">
-															<div class="tick-ttl">Room</div>
-															<div class="tick-sel">
-																<div class="quantity-box">
-																	<div class="item-quantity">
-																		<input class="qty-spinner" type="text" value="1"
-																			name="quantity">
-																	</div>
-																</div>
-															</div>
-														</div>
-														<div class="ticket-block clearfix">
-															<div class="tick-ttl">Adults (18+ years)</div>
-															<div class="tick-sel">
-																<div class="quantity-box">
-																	<div class="item-quantity">
-																		<input class="qty-spinner" type="text" value="1"
-																			name="quantity">
-																	</div>
-																</div>
-															</div>
-														</div>
-														<div class="ticket-block clearfix">
-															<div class="tick-ttl">Kids (12+ years)</div>
-															<div class="tick-sel">
-																<div class="quantity-box">
-																	<div class="item-quantity">
-																		<input class="qty-spinner" type="text" value="1"
-																			name="quantity">
-																	</div>
-																</div>
-															</div>
-														</div>
-													</div>
-													<div class="proceed-link"><button type="button"
-															class="theme-btn btn-style-two"><span>Check
-																Availability</span></button></div>
-												</form>
-											</div>
-										</div>
-									</div>
-								</div>  --}}
-
-								<!--Widget-->
-								<div class="dsp-widget get-help-widget">
-									<div class="inner">
-										<h6>Obtenir De L’aide</h6>
-										<h3>Besoin D’aide Pour Réserver ?</h3>
-										<div class="travilo-text">Si vous êtes impatient de découvrir la quintessence du luxe chez {{$hotel->name}}, notre équipe dédiée d’experts en voyages est là pour vous aider lors de votre réservation. Que vous planifiiez une escapade romantique, un vacances en famille, ou un voyage d’affaires, nous pouvons adapter votre séjour pour répondre à vos besoins préférences et besoins spécifiques.</div>
-										<div class="call-to">
-											<a href="tel:+96899999000"><i class="icon fa-solid fa-phone"></i> Appelez-nous
-												<span class="nmbr">+225 27 21 37 70 38</span></a>
-										</div>
-									</div>
-								</div>
-
 								<!--Widget-->
 								<div class="dsp-widget dsp-stat-widget">
 									<div class="inner">
-										<h3>Property Highlights</h3>
+										<h3>Reserver votre hotel ici</h3>
 										<!--Logo-->
 										<div class="stats">
-											<ul>
+											{{-- <ul>
 												<li class="clearfix"><span class="ttl">Established</span><span
 														class="dtl">1970</span></li>
 												<li class="clearfix"><span class="ttl">Renovation</span><span
@@ -284,18 +197,113 @@
 														class="dtl">5200</span></li>
 												<li class="clearfix"><span class="ttl">Total Branch</span><span
 														class="dtl">3</span></li>
-											</ul>
+											</ul> --}}
+										<form action="{{ route('create-reservation') }}" method="post" enctype="multipart/form-data">
+												@csrf
+											<div class="card-body">
+												<div class="row">
+													<input type="hidden" name="hotel_id" id="hotel_id" value="{{$hotel->id}}">
+													<input type="hidden" name="amount" id="amount" value="{{$hotel->prix}}">
+
+													<div class="col-12">
+															<div class="row">
+																<div class="col-6">
+																	<div class="form-group">
+																		<label for="first_name">Prénom</label>
+																		<input type="text" name="first_name" class="form-control" id="first_name">
+																	</div>
+																</div>
+																<div class="col-6">
+																	<div class="form-group">
+																		<label for="last_name">Nom</label>
+																		<input type="text" name="last_name" class="form-control" id="last_name">
+																	</div>
+																</div>
+																<div class="col-6">
+																	<div class="form-group">
+																		<label for="phone_number">téléphone</label>
+																		<input type="text" name="phone_number" class="form-control" id="phone_number">
+																	</div>
+																</div>
+																<div class="col-6">
+																	<div class="form-group">
+																		<label for="email">Email</label>
+																		<input type="email" name="email" class="form-control" id="email">
+																	</div>
+																</div>
+																<div class="col-6">
+																	<div class="form-group">
+																		<label for="reservation_date">Date de réservation</label>
+																		<input type="date" name="reservation_date" class="form-control"
+																			id="reservation_date" value="{{date('Y-m-d')}}" >
+																	</div>
+																</div>
+																<div class="col-6">
+																	<div class="form-group">
+																		<label for="num_persons">Nombre de personnes</label>
+																		<input type="number" min="0" value="0" name="num_persons" class="form-control" id="num_persons">
+																	</div>
+																</div>
+																<div class="col-6">
+																		<div class="form-group">
+																				<label for="">Bébé ( 0-2 ans)</label>
+																		<input type="number" min="0" value="0" name="nombre_bebe" class="form-control" id="nombre_bebe">
+
+																		</div>
+																	</div>
+																<div class="col-6">
+																<div class="form-group">
+																	<label for="">Enfant ( 2-12 ans)</label>
+																	<input type="number" min="0" value="0" name="nombre_enfant" class="form-control" id="nombre_enfant">
+																	
+																</div>
+															</div>
+															<div class="col-12">
+															<div class="form-group">
+																<button type="submit" class="btn-style-two"><span>Reserver maintenant</span></button>
+																
+																
+															</div>
+															</div>
+														</div>
+													</div>
+												</div>
+
+											</div>
+											
+										</form>
 										</div>
 									</div>
 								</div>
 
-								<div class="dsp-widget dsp-stat-widget">
+								<!--Widget-->
+								<div class="dsp-widget get-help-widget">
+									<div class="inner">
+										<h6>Obtenir De L’aide</h6>
+										<h3>Besoin D’aide Pour Réserver ?</h3>
+										<div class="travilo-text">Si vous êtes impatient de découvrir la quintessence du luxe chez {{$hotel->name}}, notre équipe dédiée d’experts en voyages est là pour vous aider lors de votre réservation. Que vous planifiiez une escapade romantique, un vacances en famille, ou un voyage d’affaires, nous pouvons adapter votre séjour pour répondre à vos besoins préférences et besoins spécifiques.</div>
+										<div class="call-to">
+											<a href="tel:+2252721377038"><i class="icon fa-solid fa-phone"></i> Appelez-nous
+												<span class="nmbr">+225 27 21 37 70 38</span></a>
+										</div>
+									</div>
+								</div>
+
+								<!--Widget-->
+								
+							</div>
+							
+						</div>
+						
+					
+
+								{{-- <div class="dsp-widget dsp-stat-widget">
 									<div class="inner">
 										<div class="book-link"><a href="{{route('single-reservation',$hotel->id) }}"
 											class="theme-btn btn-style-two"><span>Reserver maintenant</span></a></div>
 								
 									</div>
-								</div>
+								</div> --}}
 								
 
 							</div>
@@ -304,7 +312,7 @@
 					</div>
 				</div>
 
-				<div class="rooms-avail-box">
+				{{-- <div class="rooms-avail-box">
 					<h3>Available Rooms</h3>
 					<div class="art-outer">
 						<div class="ar-table">
@@ -503,7 +511,7 @@
 							</table>
 						</div>
 					</div>
-				</div>
+				</div> --}}
 
 				<!--Part Two-->
 				<div class="part-two">
@@ -513,20 +521,20 @@
 						<div class="content-side col-xl-8 col-lg-12 col-md-12 col-sm-12">
 							<div class="content-inner">
 
-								<div class="location">
+								<div class="location ">
 									<h3>Map</h3>
 									<div class="map-box">
 										<iframe
 											src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5222.559276807464!2d-0.14652169835693887!3d51.50644437092068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760529d30fc857%3A0x596135811e044014!2sThe%20Ritz%20London!5e0!3m2!1sen!2som!4v1691071567666!5m2!1sen!2som"
 											allowfullscreen="" loading="lazy"
-											referrerpolicy="no-referrer-when-downgrade"></iframe>
+											referrerpolicy="no-referrer-when-downgrade">
 
 										<div class="map-icon"><img src="{{ asset('frontend/assets/images/icons/map-marker-2.png')}}" alt="">
-										</div>
+										</div></iframe>
 									</div>
 								</div>
 
-								<div class="t-faqs">
+								{{-- <div class="t-faqs">
 									<h3>Frequently Asked Questions</h3>
 									<ul class="accordion-box faqs-accordion clearfix">
 										<!--Block-->
@@ -874,13 +882,13 @@
 
 										</div>
 									</div>
-								</div>
+								</div> --}}
 
 							</div>
 						</div>
 
 						<!--Sidebar Side-->
-						<div class="sidebar-side col-xl-4 col-lg-8 col-md-12 col-sm-12">
+						{{-- <div class="sidebar-side col-xl-4 col-lg-8 col-md-12 col-sm-12">
 							<div class="sidebar-inner">
 
 								<!--Widget-->
@@ -1020,7 +1028,7 @@
 								</div>
 
 							</div>
-						</div>
+						</div> --}}
 
 					</div>
 				</div>
@@ -1028,7 +1036,7 @@
 			</div>
 		</div>
 
-		<!--Similar Section-->
+	{{-- 	<!--Similar Section-->
 		<div class="similar-section">
 			<div class="auto-container">
 				<div class="title-box">
@@ -1060,7 +1068,7 @@
 							</div>
 						</div>
 
-						{{-- <!--Block-->
+						<!--Block-->
 						<div class="package-block alt">
 							<div class="inner-box">
 								<div class="image-box">
@@ -1242,11 +1250,11 @@
 									</div>
 								</div>
 							</div>
-						</div> --}}
+						</div> 
 
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> --}}
 
 @endsection

@@ -90,7 +90,7 @@
                             <div class="fav-btn"><a href="#"><span class="far fa-heart"></span></a></div>
                         </div>
                         <div class="lower-box">
-                            <div class="location">{{$hotel->destinations->name}} </div>
+                            <div class="location">{{$hotel->destination->name}} </div>
                             <h5><a href="{{route('single-hotel',$hotel->id)}}">{{$hotel->name}} </a></h5>
                             <div class="bottom-box clearfix">
                                 <div class="rating"><a href="{{route('single-hotel',$hotel->id)}}" class="theme-btn"><i

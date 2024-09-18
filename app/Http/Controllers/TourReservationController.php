@@ -60,12 +60,12 @@ class TourReservationController extends Controller
 
          //Envoie de notification de reservation
          $reservation->notify(new AlerteCommandes($reservation));
-         dd($reservation);
+        //  dd($reservation);
         // Rediriger avec un message de succès
 
 
-        // return redirect()->back()
-        //     ->with('success', 'Reservation créée avec succès.');
+        return redirect()->back()
+            ->with('success', 'Reservation créée avec succès.');
     }
 
 

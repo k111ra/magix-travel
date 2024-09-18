@@ -221,3 +221,16 @@ body {
         margin-bottom: 5px;
     }
 }
+.theme-btn .f-btn {
+    position: relative;
+    display: block;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 400;
+    text-transform: capitalize;
+    background: var(--primary-color);
+    padding: 12px 20px;
+    font-family: 'Gilroy_Bold', sans-serif;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 4px;}

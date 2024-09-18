@@ -32,7 +32,7 @@
 								<div class="form-group col-xl-8 col-lg-6 col-md-12 col-sm-12">
 									<div class="field-label">Destination</div>
 									<div class="field-inner">
-										<input type="text" name="query" value="" placeholder="Où allerz-vous?"
+										<input type="text" name="query" value="" placeholder="Recherche ici..."
 											required>
 										<i class="alt-icon fa fa-map-marker-alt"></i>
 									</div>
@@ -91,7 +91,7 @@
 								<div class="fav-btn"><a href="#"><span class="far fa-heart"></span></a></div>
 							</div>
 							<div class="lower-box">
-								<div class="location">{{$hotel->destinations->name}} </div>
+								<div class="location">{{$hotel->destination->name}} </div>
 								<h5><a href="{{route('single-hotel',$hotel->id)}}">{{$hotel->name}} </a></h5>
 								<div class="bottom-box clearfix">
 									<div class="rating"><a href="{{route('single-hotel',$hotel->id)}}" class="theme-btn"><i

@@ -79,4 +79,8 @@ class AboutController extends Controller
     {
         //
     }
+
+    public function test(){
+        return view('frontend.pages.test');
+    }
 }

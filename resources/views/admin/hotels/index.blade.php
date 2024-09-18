@@ -30,7 +30,7 @@
                                 <td>{{ $hotel->name }}</td>
                                 <td>{{ $hotel->description }}</td>
                                 <td>{{ $hotel->localisation }}</td>
-                                <td>{{ $hotel->destinations->name }}</td>
+                                <td>{{ $hotel->destination->name }}</td>
                                 <td>{{ $hotel->etoiles }}</td>
                                 <td>{{ $hotel->prix }}</td>
                                 <td>

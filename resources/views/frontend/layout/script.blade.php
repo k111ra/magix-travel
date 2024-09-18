@@ -12,3 +12,7 @@
 	<script src="{{asset('frontend/assets/js/lib/swiper.min.js')}}"></script>
 	<script src="{{asset('frontend/assets/js/custom-script.js')}}"></script>
 	<script src="{{asset('frontend/assets/js/lib/date-script.js')}}"></script>
+	<script src="{{asset('frontend/assets/js/vol.js')}}"></script>
+
+	<!-- Bootstrap JS with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>

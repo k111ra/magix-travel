@@ -34,8 +34,7 @@
 									<div class="location">{{$tour->destinations->name}}</div>
 									<div class="rating"><a href="#" class="theme-btn"><i class="fa-solid fa-star"></i>
 											<strong>4.8</strong>   <span class="count">4233 Reviews</span></a></div>
-									<div class="add-fav"><div class="book-link"><a href="{{route('Reservation.tour',$tour->id) }}"
-										class="theme-btn btn-style-two"><span>Reserver maintenant</span></a></div></div>
+									
 								</div>
 								<h1>{{$tour->nom}}</h1>
 								<div class="info clearfix">
@@ -49,7 +48,7 @@
 									<h3>Details Tour </h3>
 									<p>{{$tour->description}}</p>
 									
-									<br>
+									{{-- <br>
 									<h5>Highlights</h5>
 									<ul class="styled-list-one">
 										<li>Explore the best beaches of Phuket, from lively Patong to serene Kata and
@@ -72,9 +71,9 @@
 											and entertainment
 											venues.</li>
 									</ul>
-								</div>
-								<div class="basic-info">
-									<div class="i-block clearfix">
+									</div>
+									<div class="basic-info"> --}}
+									{{-- <div class="i-block clearfix">
 										<h5>Basic Information</h5>
 									</div>
 									<div class="i-block clearfix">
@@ -161,11 +160,11 @@
 													package.</li>
 											</ul>
 										</div>
-									</div>
+									</div> --}}
 								</div>
 							</div>
 
-							 <div class="t-plans">
+							 {{-- <div class="t-plans">
 								<h3>Tour Plans</h3>
 								<ul class="accordion-box tp-accordion clearfix">
 									<!--Block-->
@@ -307,19 +306,19 @@
 									</li>
 
 								</ul>
-							</div> 
+							</div>  --}}
 
-							<div class="location">
+							{{--<div class="location">
 								<h3>Map</h3>
 								<div class="map-box">
 									<iframe
-										{{-- src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63230.7149410174!2d98.29248065!3d7.903459599999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30503a96a80e1833%3A0x40223bc2c382480!2sPa%20Tong%2C%20Kathu%20District%2C%20Phuket%2C%20Thailand!5e0!3m2!1sen!2som!4v1690982895480!5m2!1sen!2som" --}}
+										 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63230.7149410174!2d98.29248065!3d7.903459599999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30503a96a80e1833%3A0x40223bc2c382480!2sPa%20Tong%2C%20Kathu%20District%2C%20Phuket%2C%20Thailand!5e0!3m2!1sen!2som!4v1690982895480!5m2!1sen!2som" 
 										allowfullscreen="" loading="lazy"
 										referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 									<div class="map-icon"><img src="{{asset('frontend/assets/images/icons/map-marker-2.png')}}" alt=""></div>
 								</div>
-							</div>
+							</div>--}}
 
 							{{-- <div class="t-faqs">
 								<h3>Frequently Asked Questions</h3>
@@ -424,7 +423,7 @@
 
 								</ul>
 							</div> --}}
-
+{{-- 
 							<div class="t-gallery">
 								<h3>Media Gallery</h3>
 								<div class="images">
@@ -494,9 +493,9 @@
 										</li>
 									</ul>
 								</div>
-							</div>
+							</div> --}}
 
-							<div class="t-reviews">
+							{{-- <div class="t-reviews">
 								<h3>Reviews</h3>
 								<div class="rev-info">
 									<div class="inner clearfix">
@@ -746,7 +745,7 @@
 
 									</div>
 								</div>
-							</div>
+							</div> --}}
 
 						</div>
 					</div>
@@ -758,10 +757,11 @@
 							<div class="dsp-widget t-book-widget alt-margin">
 								<div class="inner-box">
 									<div class="t-book-header">
-										<span class="st-txt">Start <br>From</span>
-										<span class="amount">$120</span>
-										<span class="qty">/ Per Person</span>
+										<span class="st-txt">Commence <br>à partir d</span>
+										<span class="amount">{{$tour->prix}}</span>
+										<span class="qty">/ Par personne</span>
 									</div>
+									
 									{{-- <div class="lower-box">
 										<div class="form-box site-form">
 											<form method="post" action="https://jufailitech.com/envatoitems/travilo/html/tour-single.html">
@@ -868,8 +868,95 @@
 									</div> --}}
 								</div>
 							</div>
+							<div class="sidebar-side col-xl-12 col-lg-12 col-md-12 col-sm-12">
+								<div class="sidebar-inner">
+									<div class="dsp-widget dsp-stat-widget">
+										<div class="inner">
+											<h3>Reserver votre tour ici</h3>
+											<!--Logo-->
+											<div class="stats">
+												
+											<form action="{{ route('reservation.tour.create') }}" method="post" enctype="multipart/form-data">
+													@csrf
+												<div class="card-body">
+													<div class="row">
+														<input type="hidden" name="tour_id" id="tour_id" value="{{$tour->id}}">
+														<input type="hidden" name="amount" id="amount" value="{{$tour->prix}}">
+	
+														<div class="col-12">
+																<div class="row">
+																	<div class="col-6">
+																		<div class="form-group">
+																			<label for="first_name">Prénom</label>
+																			<input type="text" name="first_name" class="form-control" id="first_name">
+																		</div>
+																	</div>
+																	<div class="col-6">
+																		<div class="form-group">
+																			<label for="last_name">Nom</label>
+																			<input type="text" name="last_name" class="form-control" id="last_name">
+																		</div>
+																	</div>
+																	<div class="col-6">
+																		<div class="form-group">
+																			<label for="phone_number">téléphone</label>
+																			<input type="text" name="phone_number" class="form-control" id="phone_number">
+																		</div>
+																	</div>
+																	<div class="col-6">
+																		<div class="form-group">
+																			<label for="email">Email</label>
+																			<input type="email" name="email" class="form-control" id="email">
+																		</div>
+																	</div>
+																	<div class="col-6">
+																		<div class="form-group">
+																			<label for="reservation_date">Date de réservation</label>
+																			<input type="date" name="reservation_date" class="form-control"
+																				id="reservation_date" value="{{date('Y-m-d')}}" >
+																		</div>
+																	</div>
+																	<div class="col-6">
+																		<div class="form-group">
+																			<label for="num_persons">Nombre de personnes</label>
+																			<input type="number" min="0" value="0" name="num_persons" class="form-control" id="num_persons">
+																		</div>
+																	</div>
+																	<div class="col-6">
+																			<div class="form-group">
+																					<label for="">Bébé ( 0-2 ans)</label>
+																			<input type="number" min="0" value="0" name="nombre_bebe" class="form-control" id="nombre_bebe">
+	
+																			</div>
+																		</div>
+																	<div class="col-6">
+																	<div class="form-group">
+																		<label for="">Enfant ( 2-12 ans)</label>
+																		<input type="number" min="0" value="0" name="nombre_enfant" class="form-control" id="nombre_enfant">
+																		
+																	</div>
+																</div>
+																<div class="col-12">
+																<div class="form-group">
+																	<button type="submit" class="btn-style-two"><span>Reserver maintenant</span></button>
+																	
+																	
+																</div>
+																</div>
+															</div>
+														</div>
+													</div>
+	
+												</div>
+												
+											</form>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
 
-							<!--Widget-->
+							{{-- <!--Widget-->
 							<div class="dsp-widget get-help-widget">
 								<div class="inner">
 									<h6>Get Help</h6>
@@ -883,7 +970,7 @@
 												9999 9000</span></a>
 									</div>
 								</div>
-							</div>
+							</div> --}}
 
 							<!--Widget-->
 							@if($relatedtours->isEmpty())
