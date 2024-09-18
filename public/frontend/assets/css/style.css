@@ -692,7 +692,7 @@ form label.error {
 }
 
 .site-form form .f-btn:hover {
-    background: var(--dark-gray-gray);
+    background: var(--blue-color);
     color: #fff;
     box-shadow: 0 0 5px 0 var(--primary-color);
 }

@@ -151,6 +151,7 @@ Route::get('/detail-tour/{id}', [ToursController::class, 'tourDetails'])->name('
 
 ////////////Les routes front pour about////////////////////////
 Route::get('/a-propos-de-nous', [AboutController::class, 'index'])->name('about');
+Route::get('/test', [AboutController::class, 'test'])->name('about');
 
 
 ////////////Les routes front de contact////////////////////////
