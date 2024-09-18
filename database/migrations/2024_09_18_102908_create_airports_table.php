@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('code');
             $table->string('stateCode');
-            $table->string('countryCode');
+            $table->string('countryCode')->nullable();
             $table->string('countryName');
             $table->softDeletes();
             $table->timestamps();
