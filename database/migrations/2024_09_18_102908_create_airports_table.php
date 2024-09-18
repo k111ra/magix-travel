@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('code');
-            $table->string('stateCode');
+            $table->string('stateCode')->nullable();
             $table->string('countryCode')->nullable();
             $table->string('countryName');
             $table->softDeletes();
