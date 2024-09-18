@@ -10,8 +10,10 @@
 
 		<!-- modal de recherche de vol  -->
 		<!-- Bootstrap CSS -->
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-		
+
 		<!-- Google Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com/">
 		<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
@@ -33,3 +35,5 @@
 		<link href="{{asset('frontend/assets/css/style.css')}}" rel="stylesheet">
 		<link href="{{asset('frontend/assets/css/vols.css')}}" rel="stylesheet">
 		<link href="{{asset('frontend/assets/css/responsive.css')}}" rel="stylesheet">
+
+		

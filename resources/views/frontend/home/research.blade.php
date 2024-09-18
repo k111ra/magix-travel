@@ -1,3 +1,13 @@
+<style>
+    .select2-container {
+        width: 75% !important;
+    }
+
+    .select2-selection {
+        min-height: 53px !important;
+    }
+
+</style>
 <div class="search-one">
     <div class="auto-container">
         <div class="tabs-box search-tabs">
@@ -164,30 +174,42 @@
                         </div>
                         <form method="post" action="{{route('tour.search')}}" id="oneWayForm" style="display: none;">
                             <div class="row clearfix">
+
                                 <div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
                                     <div class="field-label">Départ</div>
                                     <div class="field-inner">
-                                        <select name="destination_depart" class="custom-select">
-                                            <option>Destination de départ</option>
-                                                @foreach ($pays as $data)
-                                                    <option value="{{ $data->id }}">{{ $data->name . ', ' . $data->countryName}}</option>
-                                                @endforeach
+                                        <select id="destination-select-depart" name="destination" class="">
+                                            <option></option>
+                                            @foreach ($pays as $data)
+                                            <option value="{{ $data->id }}">{{ $data->name . ', ' . $data->countryName}}</option>
+                                            @endforeach
                                         </select>
-                                        <i class="alt-icon fa fa-map-marker-alt"></i>
                                     </div>
                                 </div>
+
+                                {{-- <div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                                    <div class="field-label">Destination</div>
+                                    <div class="field-inner">
+                                        <select id="destination-select-arrive" name="destination_final" class="">
+                                            <option></option>
+                                            @foreach ($pays as $data)
+                                            <option value="{{ $data->id }}">{{ $data->name . ', ' . $data->countryName}}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div> --}}
                                 <div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
                                     <div class="field-label">Destination</div>
                                     <div class="field-inner">
-                                        <select name="destination_final" class="custom-select">
-                                            <option>Destination de final</option>
-                                                @foreach ($pays as $data)
-                                                    <option value="{{ $data->id }}">{{ $data->name . ', ' . $data->countryName}}</option>
-                                                @endforeach
+                                       <select id="destination-select-arrive" name="destination_final" class="">
+                                            <option></option>
+                                            @foreach ($pays as $data)
+                                            <option value="{{ $data->id }}">{{ $data->name . ', ' . $data->countryName}}</option>
+                                            @endforeach
                                         </select>
-                                        <i class="alt-icon fa fa-map-marker-alt"></i>
                                     </div>
                                 </div>
+
                                 <div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
                                     <div class="field-label">Date de départ</div>
                                     <div class="field-inner">
