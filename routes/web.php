@@ -20,6 +20,7 @@ use App\Http\Controllers\MessageController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\TourReservationController;
+use App\Http\Controllers\TypeReservationController;
 use App\Http\Controllers\VolController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -68,6 +69,15 @@ Route::post('/hotel-reservation-create', [HotelReservationController::class, 'cr
 
 // Admin routes (use middleware for protection)
 Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function () {
+
+
+     //////////////// routes de type de programme
+     Route::get('/liste-type-reservation', [TypeReservationController::class, 'index'])->name('type.index');
+     Route::get('/create-type-reservation', [TypeReservationController::class, 'create'])->name('type.create');
+     Route::post('/store-type-reservation', [TypeReservationController::class, 'store'])->name('type.store');
+     Route::get('/edit-type-reservation/{id}', [TypeReservationController::class, 'edit'])->name('type.edit');
+     Route::post('/update-type-reservation/{id}', [TypeReservationController::class, 'update'])->name('type.update');
+     Route::delete('/destroy-type-reservation/{type}', [TypeReservationController::class, 'destroy'])->name('type.destroy');
 
     // Resource routes for common admin functionalities
     Route::resource('tours', ToursController::class);

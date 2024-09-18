@@ -43,4 +43,9 @@ class Reservation extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function typeReservation()
+    {
+        return $this->belongsTo(TypeReservation::class ,'type_reservations_id');
+    }
 }
