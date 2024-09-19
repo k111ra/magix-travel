@@ -221,16 +221,34 @@ body {
         margin-bottom: 5px;
     }
 }
-.theme-btn .f-btn {
-    position: relative;
-    display: block;
-    font-size: 14px;
+/* css pour la fenêtre modale.*/
+.passenger-modal {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    z-index: 10;
+    width: 100%;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+}
+
+.passenger-selection div {
+    margin-bottom: 10px;
+}
+
+button.plus, button.minus {
+    width: 30px;
+    height: 30px;
+    background-color: #ddd;
+    border: none;
+    cursor: pointer;
+}
+
+button#close-passenger-modal {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
     color: #fff;
-    font-weight: 400;
-    text-transform: capitalize;
-    background: var(--primary-color);
-    padding: 12px 20px;
-    font-family: 'Gilroy_Bold', sans-serif;
-    text-align: center;
-    line-height: 30px;
-    border-radius: 4px;}
+    border: none;
+    cursor: pointer;
+}
