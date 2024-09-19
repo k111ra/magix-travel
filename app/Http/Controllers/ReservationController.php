@@ -9,6 +9,7 @@ use App\Models\Reservation;
 use App\Models\Tour;
 use App\Models\Vol;
 use App\Notifications\AlerteCommandes;
+use Illuminate\Support\Facades\DB;
 
 class ReservationController extends Controller
 {
@@ -184,6 +185,7 @@ class ReservationController extends Controller
 
     public function insertReservationStep1Vols(Request $request)
     {
+
         // Valider les données
         $validatedData = $request->validate([
             'destination_depart' => 'required|string|max:255',
@@ -193,9 +195,18 @@ class ReservationController extends Controller
             'nombre_bebe' => 'nullable|integer', // Validation pour un nombre entier
             'nombre_enfant' => 'nullable|integer', // Validation pour un nombre entier
             'nombre_adultes' => 'nullable|integer', // Validation pour un nombre entier
-            'type_reservations_id' => 'required|integer',
+            // 'type_reservations_id' => 'required|integer',
             'ref_reservation' => 'string|max:255|nullable',
         ]);
+
+        // Rechercher l'ID du type de réservation pour "Vol"
+        $typeReservation = DB::table('type_reservations')->where('nom', 'Vol')->first();
+        if (!$typeReservation) {
+            return redirect()->back()->withErrors(['error' => 'Le type de réservation "Vol" est introuvable.']);
+        }
+
+        // Stocker l'ID du type de réservation dans les données validées
+        $validatedData['type_reservations_id'] = $typeReservation->id;
 
         // Calculer automatiquement le total des personnes
         $nombre_bebe = $validatedData['nombre_bebe'] ?? 0; // Si non défini, par défaut 0
@@ -205,7 +216,7 @@ class ReservationController extends Controller
         $validatedData['num_persons'] = $nombre_bebe + $nombre_enfant + $nombre_adultes;
 
 
-         // Générer automatiquement le numéro de référence de réservation
+        // Générer automatiquement le numéro de référence de réservation
         $jour = date('d');
         $mois = date('m');
         $annee = date('Y');
@@ -213,7 +224,8 @@ class ReservationController extends Controller
         // Récupérer le dernier numéro de réservation
         $num_count = Reservation::ref_reser();
         // Construire le numéro de réservation
-        $validatedData['ref_reservation']= $num_reservation . $jour . $mois . $annee . '00'. $num_count->count;
+        $validatedData['ref_reservation'] = $num_reservation . $jour . $mois . $annee . '00' . $num_count->count;
+        // dd($validatedData);
 
         // Stocker les données dans la session
         session()->put('step1', $validatedData);

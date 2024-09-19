@@ -15,7 +15,7 @@
                         </div>
                         <form method="post" action="{{route('step1.reservation.store')}}" id="oneWayForm" style="display: none;">
                             @csrf
-                        <input class="" type="hidden" name="type_reservations_id"  value="2" placeholder="" required>
+                            {{-- <input class="" type="hidden" name="type_reservations_id"  value="{{ $type->id ?? '' }}" placeholder="" required> --}}
                             <div class="row clearfix">
                                 <div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
                                     <div class="field-label">Départ</div>

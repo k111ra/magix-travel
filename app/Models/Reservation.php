@@ -20,6 +20,7 @@ class Reservation extends Model
         'nombre_enfant',
         'nombre_adultes',
         'ref_reservation',
+        'type_reservations_id',
 
         'nom',
         'prenoms',
