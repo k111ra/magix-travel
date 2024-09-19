@@ -14,18 +14,20 @@
                     <li><strong>Étoiles:</strong> {{ $destination->etoiles }} étoiles</li>
                     <li><strong>Prix:</strong> {{ number_format($destination->prix, 0, ',', ' ') }} CFA</li>
                 </ul>
-
                 <div class="mb-3">
                     <strong>Images:</strong>
-                    @if (is_array($destination->images) && count($destination->images) > 0)
-                        @foreach ($destination->images as $image)
-                            <img src="{{ asset('storage/' . $image) }}" width="200px" alt="destination Image">
+                    @php
+                    // Décoder les images stockées sous forme de JSON
+                    $images = json_decode($destination->images);
+                    @endphp
+                    @if (is_array($images) && count($images) > 0)
+                        @foreach ($images as $image)
+                        <img src="{{ asset('storage/' . $image) }}" width="200px" alt="Destination Image" class="img-thumbnail">
                         @endforeach
                     @else
-                        <p>Aucune image disponible pour ce tour.</p>
+                        <p>Aucune image disponible pour cette destination.</p>
                     @endif
                 </div>
-
                 <a href="{{ route('destinations.index') }}" class="btn btn-primary">Retour à la liste</a>
             </div>
         </div>

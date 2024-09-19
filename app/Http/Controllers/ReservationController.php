@@ -166,4 +166,19 @@ class ReservationController extends Controller
         return redirect()->route('reservations.index')
             ->with('success', 'Reservation supprimée avec succès.');
     }
+
+    public function reservationVols()
+    {
+        return view('admin.reservations.reservation-vol');
+    }
+
+    public function reservationTours()
+    {
+        return view('admin.reservations.reservation-tour');
+    }
+
+    public function reservationHotels()
+    {
+        return view('admin.reservations.reservation-hotel');
+    }
 }

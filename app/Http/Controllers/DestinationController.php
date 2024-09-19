@@ -60,7 +60,8 @@ class DestinationController extends Controller
                 $path = $image->store('destination', 'public');
                 $images[] = $path;
             }
-            $destination->images = $images;
+            // $destination->images = $images;
+            $destination->images = json_encode($images);
         }
 
         $destination->save();
@@ -77,6 +78,7 @@ class DestinationController extends Controller
      */
     public function show(Destination $destination)
     {
+        // dd($destination);
         return view('admin.destinations.show', compact('destination'));
     }
 

@@ -1,5 +1,12 @@
 @extends('admin.layout.layout')
 @section('content')
+<style>
+    .selected-row {
+        background-color: rgb(241, 180, 105);
+        /* Couleur de fond pour les lignes sélectionnées */
+    }
+
+</style>
     <div class="card">
         <div class="card-header">
             <div class="d-flex justify-content-between align-items-center">
@@ -26,7 +33,7 @@
                     </thead>
                     <tbody>
                         @foreach ($tours as $tour)
-                            <tr>
+                            <tr style="cursor: pointer;" onclick="selectRow(this)">
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $tour->nom }}</td>
                                 <td>{{ $tour->duree }} jour(s)</td>

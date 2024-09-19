@@ -63,20 +63,14 @@
                             @enderror
                         </div>
                     </div>
-                        <!-- Add other fields based on your migration -->
                     <div class="col-sm-4">
-                        <!-- Common Group -->
-                        <div class="form-group">
-                            <label for="images">Images:</label>
-                            <input type="file" name="images[]" id="images" multiple accept="image/*" class="form-control-file">
-                            @error('images[]')
-                            <p class="text-danger">{{ $message }}</p>
-                            @enderror
+                        <label for="images">Images</label>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="customFile" name="images[]" id="images" multiple accept="image/*">
+                            <label class="custom-file-label" for="customFile">Choisir les images</label>
                         </div>
                     </div>
              </div>
-
-        
         
           <div class="col-sm-12">
             <div class="form-group">

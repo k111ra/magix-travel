@@ -24,7 +24,7 @@ class Destination extends Model
 
     public function tours()
     {
-        return $this->hasMany(Tour::class, 'tour_id');
+        return $this->hasMany(Tour::class, 'destinations_id');
     }
 
     public function hotels()

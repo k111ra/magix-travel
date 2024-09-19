@@ -10,3 +10,5 @@
 <script src="{{ asset('admin/assets/js/custom.js') }}"></script>
 
 <script src="{{ asset('vendor/toastr/toastr.min.js') }}"></script>
+
+<script src="{{ asset('admin/assets/js/color-table.js') }}"></script>

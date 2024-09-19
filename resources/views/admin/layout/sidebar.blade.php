@@ -39,10 +39,24 @@
                         href="{{ route('hotels.index') }}">Hotels</a></li>
                 <li><a class="nav-link @if (request()->routeIs('destinations.index')) active @endif"
                         href="{{ route('destinations.index') }}">Destinations</a></li>
-                <li><a class="nav-link @if (request()->routeIs('vols.index')) active @endif"
-                        href="{{ route('vols.index') }}">Vols</a></li>
+                {{-- <li><a class="nav-link @if (request()->routeIs('vols.index')) active @endif"
+                        href="{{ route('vols.index') }}">Vols</a></li> --}}
                 <li><a class="nav-link @if (request()->routeIs('reservations.index')) active @endif"
                         href="{{ route('reservations.index') }}">Reservation</a></li>
+            </ul>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="menu-toggle nav-link has-dropdown">
+                <i data-feather="shopping-bag"></i>
+                <span>Reservations</span>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="nav-link @if (request()->routeIs('reservations.tours.reservationTours')) active @endif"
+                        href="{{ route('reservations.tours.reservationTours') }}">Tours</a></li>
+                <li><a class="nav-link @if (request()->routeIs('reservations.hotels.reservationHotels')) active @endif"
+                        href="{{ route('reservations.hotels.reservationHotels') }}">Hotels</a></li>
+                <li><a class="nav-link @if (request()->routeIs('reservation.vols.reservationVols')) active @endif"
+                        href="{{ route('reservation.vols.reservationVols') }}">Vols</a></li>
             </ul>
         </li>
 

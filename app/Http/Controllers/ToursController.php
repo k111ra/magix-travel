@@ -18,7 +18,9 @@ class ToursController extends Controller
     public function index()
     {
         $tours = Tour::orderby('created_at', 'DESC')->get();
-        return view('admin.tours.index')->with('tours', $tours);
+        return view('admin.tours.index')->with([
+            'tours'=> $tours
+        ]);
     }
 
     /**
@@ -110,8 +112,8 @@ class ToursController extends Controller
 
     public function edit(Tour $tour)
     {
-        $destinations = Destination::all();
-        return view('admin.tours.edit', compact('tour', 'destinations'));
+        $destination = Destination::orderBy('created_at', 'desc')->get();
+        return view('admin.tours.edit', compact('tour', 'destination'));
     }
 
     /**

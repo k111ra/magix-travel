@@ -32,13 +32,11 @@
                             <label for="destination">destination:</label>
                             <select name="destinations_id" class="form-control" id="destinations_id" >
                                 @foreach ($destinations as $destination)
-                                    <option value="{{ $destination->id }}" {{$hotel->destinations && $destination->id == $hotel->destinations->id ? 'selected':""}}>{{ $destination->name }}</option>
+                                    <option value="{{ $destination->id }}" {{$hotel->destination && $destination->id == $hotel->destination->id ? 'selected':""}}>{{ $destination->name }}</option>
                                 @endforeach
                             </select>
                         </div>
                     </div>
-                    
-
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="etoiles">Étoiles:</label>
@@ -52,16 +50,14 @@
                             <input type="number" name="prix" min="0" id="prix" class="form-control" value="{{ $hotel->prix }}" required>
                         </div>
                     </div>
-                    <div class="col-sm-4">
-                        <div class="form-group">
-                            <label for="images">Images:</label>
-                            <input type="file" name="images[]" id="images" multiple accept="image/*" class="form-control-file">
-                            @error('images[]')
-                                <p class="text-danger">{{ $message }}</p>
-                            @enderror
+                     <div class="col-sm-4">
+                        <label for="images">Images</label>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" value="{{ $hotel->images }}" id="customFile" name="images[]" id="images" multiple accept="image/*">
+                            <label class="custom-file-label" for="customFile">Choisir les images</label>
                         </div>
                     </div>
-                    
+                
                     <div class="col-sm-12">
                         <div class="form-group">
                             <label for="description">Description:</label>
