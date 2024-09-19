@@ -1,6 +1,6 @@
 <style>
     .select2-container {
-        width: 75% !important;
+        width: 250px !important;
     }
 
     .select2-selection {
@@ -174,7 +174,6 @@
                         </div>
                         <form method="post" action="{{route('tour.search')}}" id="oneWayForm" style="display: none;">
                             <div class="row clearfix">
-
                                 <div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
                                     <div class="field-label">Départ</div>
                                     <div class="field-inner">
@@ -210,14 +209,36 @@
                                     </div>
                                 </div>
 
-                                <div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
+                                <div class="form-group col-xl-2 col-lg-6 col-md-6 col-sm-12">
                                     <div class="field-label">Date de départ</div>
                                     <div class="field-inner">
                                         <input class="datepicker" type="text" name="date_depart" value="" placeholder="Check out" required>
                                         <i class="alt-icon fa fa-calendar-alt"></i>
                                     </div>
                                 </div>
-                                <div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
+
+                                <div class="form-group col-xl-1 col-lg-6 col-md-6 col-sm-12">
+                                    <div class="field-label">Enfants</div>
+                                    <div class="field-inner">
+                                        <input class="" type="number" name="date_depart" value="" placeholder="" min="0" required>
+                                    <i class="alt-icon fa fa-user"></i>
+                                    </div>
+                                </div>
+                                <div class="form-group col-xl-1 col-lg-6 col-md-6 col-sm-12">
+                                    <div class="field-label">Bébé(s)</div>
+                                    <div class="field-inner">
+                                        <input class="" type="number" name="date_depart" value="" min="0" placeholder="" required>
+                                        <i class="alt-icon fa fa-user"></i>
+                                    </div>
+                                </div>
+                                <div class="form-group col-xl-1 col-lg-6 col-md-6 col-sm-12">
+                                    <div class="field-label">Adulte(s)</div>
+                                    <div class="field-inner">
+                                        <input class="" type="number" name="date_depart" min="0" value="" placeholder="" required>
+                                       <i class="alt-icon fa fa-user"></i>
+                                    </div>
+                                </div>
+                                {{-- <div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
                                     <div class="field-label">Visiteur</div>
                                     <div class="field-inner">
                                         <input type="text" id="passenger-input" name="field-name" value="1 adulte" placeholder="Guests" readonly required>
@@ -248,7 +269,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> --}}
                                 
                             </div>
                             <button type="submit" class="theme-btn f-btn"><span>Recherche <i class="fa-solid fa-search"></i></span></button>
