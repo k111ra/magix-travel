@@ -188,12 +188,12 @@ class ReservationController extends Controller
         $validatedData = $request->validate([
             'destination_depart' => 'required|string|max:255',
             'destination_final' => 'required|string|max:255',
-            'date_part' => 'string|max:255',
+            'date_depart' => 'string|max:255',
             'date_retour' => 'string|max:255',
             'nombre_bebe' => 'nullable|integer', // Validation pour un nombre entier
             'nombre_enfant' => 'nullable|integer', // Validation pour un nombre entier
             'nombre_adultes' => 'nullable|integer', // Validation pour un nombre entier
-            'type_reservations_id' => 'required|integer|exists:type_reservations,id',
+            'type_reservations_id' => 'required|integer',
             'ref_reservation' => 'string|max:255|nullable',
         ]);
 
@@ -219,7 +219,7 @@ class ReservationController extends Controller
         session()->put('step1', $validatedData);
 
         // Rediriger vers la deuxième étape
-        // return redirect()->route('step2.show');
+        return redirect()->route('reservation-vols');
     }
 
     public function insertReservationStep2Vols(Request $request)
@@ -234,11 +234,13 @@ class ReservationController extends Controller
             'adresse' => 'string|max:255',
         ]);
 
+
         // Récupérer les données de la session de la première étape
         $step1Data = session()->get('step1');
 
         // Fusionner les données de toutes les étapes
         $finalData = array_merge($step1Data, $validatedData);
+        // dd($finalData);
 
         // Sauvegarder les données dans la base de données
         Reservation::create($finalData);

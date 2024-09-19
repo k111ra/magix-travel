@@ -8,6 +8,7 @@ use App\Models\Reservation;
 use App\Models\Tour;
 use App\Models\Vol;
 use App\Models\AirPort;
+use App\Models\TypeReservation;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -26,7 +27,8 @@ class HomeController extends Controller
         $hotels = Hotel::latest()->take(6)->get();
         $vols = Vol::all();
         $pays = AirPort::all();
-        return view('home', compact('tours', 'destinations', 'hotels', 'vols', 'pays'));
+        $type = TypeReservation::all();
+        return view('home', compact('type','tours', 'destinations', 'hotels', 'vols', 'pays'));
     }
 
     /**

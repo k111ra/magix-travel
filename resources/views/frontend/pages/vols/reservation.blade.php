@@ -74,47 +74,47 @@
 							<h3>Veillez saisir vos information ici </h3>
 							<div class="form-box site-form">
 								{{-- /Formulaire de contact/ --}}
-								<form method="post" action="{{route('envoi-message')}}" id="">
+								<form method="post" action="{{route('step2.reservation.store')}}" id="">
 									@csrf
 									<div class="row clearfix">
 										<div class="form-group col-xl-6 col-lg-6 col-md-12 col-sm-12">
 											<div class="field-inner">
 												<input type="text" name="nom" value="" placeholder="Votre nom"
-													required>
+													>
 											</div>
 										</div>
                                         
 										<div class="form-group col-xl-6 col-lg-6 col-md-12 col-sm-12">
 											<div class="field-inner">
 												<input type="text" name="prenoms" value="" placeholder="Votre Prenom"
-													required>
+													>
 											</div>
 										</div>
 
 										<div class="form-group col-xl-6 col-lg-6 col-md-12 col-sm-12">
 											<div class="field-inner">
-												<input type="text" name="phone" value="" placeholder="Votre numero de telephone"
-													required>
+												<input type="text" name="contact" value="" placeholder="Votre numero de telephone"
+													>
 											</div>
 										</div>
                                         
 										<div class="form-group col-xl-6 col-lg-6 col-md-12 col-sm-12">
 											<div class="field-inner">
 												<input type="text" name="numero_whatsapp" value="" placeholder="Votre numro whatsapp"
-													required>
+													>
 											</div>
 										</div>
 
 										<div class="form-group col-xl-6 col-lg-6 col-md-12 col-sm-12">
 											<div class="field-inner">
 												<input type="email" name="email" value="" placeholder="Votre adresse e-mail"
-													required>
+													>
 											</div>
 										</div>
 										<div class="form-group col-xl-6 col-lg-6 col-md-12 col-sm-12">
 											<div class="field-inner">
 												<input type="text" name="adresse" value="" placeholder="Votre Adresse"
-													required>
+													>
 											</div>
 										</div>
 										<div class="form-group col-xl-12 col-lg-12 col-md-12 col-sm-12">
@@ -126,13 +126,6 @@
 						</div>
 					</div>
 				</div>
-
-				{{-- <div class="map-box"> --}}
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.7615890428924!2d-4.00948032591216!3d5.299852894678455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfc1eb01294beb2d%3A0xbeed57f41e6f0d0c!2sMagix%20Travel!5e0!3m2!1sfr!2sci!4v1711447307834!5m2!1sfr!2sci" width="1200" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-					<div class="map-icon"><img src="assets/images/icons/map-marker.png" alt=""></div>
-				{{-- </div> --}}
-
 			</div>
 		</section>
         </section>

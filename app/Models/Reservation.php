@@ -11,18 +11,22 @@ class Reservation extends Model
     use HasFactory, Notifiable;
 
     protected $fillable = [
-        'tour_id',
-        'hotel_id',
-        'vol_id',
-        'reservation_date',
-        'amount',
         'num_persons',
-        'first_name',
-        'last_name',
-        'phone_number',
-        'email',
+        'destination_depart',
+        'destination_final',
+        'date_depart',
+        'date_retour',
         'nombre_bebe',
         'nombre_enfant',
+        'nombre_adultes',
+        'ref_reservation',
+
+        'nom',
+        'prenoms',
+        'email',
+        'contact',
+        'numero_whatsapp',
+        'adresse',
     ];
 
     public static function ref_reser()

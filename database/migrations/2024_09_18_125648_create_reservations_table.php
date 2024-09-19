@@ -34,7 +34,7 @@ return new class extends Migration
             $table->integer('num_persons');// ce champ recois la sommes de bébé + enfant +adulte(1 bébé + 2 enfants +2 adultes = 5)
             $table->string('destination_depart');//ou tu quittes
             $table->string('destination_final')->nullable();//ou tu vas
-            $table->date('date_part')->nullable();
+            $table->string('date_depart')->nullable();
             $table->date('date_retour')->nullable();//dans le cas ou c'est une reservation pour un vol aller-retour
             $table->integer('nombre_bebe')->nullable(); // age entre 0-2
             $table->integer('nombre_enfant')->nullable(); // age entre 2-12

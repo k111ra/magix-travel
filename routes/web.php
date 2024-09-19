@@ -58,13 +58,16 @@ Route::get('/hotel-details/{id}', [HotelsController::class, 'hotelDetails'])->na
 Route::get('/recherche-hotel', [HotelsController::class, 'search'])->name('hotel.search');
 
 //Route de recherche des vols
-Route::get('/reservation-vols', [VolController::class, 'reservation'])->name('vol.reservation');
+Route::get('/reservation-vols', [VolController::class, 'reservation'])->name('reservation-vols');
 
 //hotel reservation
 Route::get('/hotel-reservation/{id}', [HotelReservationController::class, 'index'])->name('single-reservation');
 Route::get('/hotel-reservationShow/{id}', [HotelReservationController::class, 'show'])->name('single-reservationshow');
 Route::post('/hotel-reservation-create', [HotelReservationController::class, 'create'])->name('create-reservation');
 
+
+Route::post('/vol-reservation-step1', [ReservationController::class, 'insertReservationStep1Vols'])->name('step1.reservation.store');
+Route::post('/vol-reservation-step2', [ReservationController::class, 'insertReservationStep2Vols'])->name('step2.reservation.store');
 
 
 // Admin routes (use middleware for protection)
@@ -130,10 +133,10 @@ Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function () {
     Route::get('/tours', [ToursController::class, 'index'])->name('tours.index');
 
     
-///Routes de message
-Route::get('/message', [MessageController::class, 'index'])->name('message');
-Route::get('/messages/{id}', [MessageController::class, 'show'])->name('message-vue');
-Route::patch('/messages/{message}', [MessageController::class, 'update']);
+    ///Routes de message
+    Route::get('/message', [MessageController::class, 'index'])->name('message');
+    Route::get('/messages/{id}', [MessageController::class, 'show'])->name('message-vue');
+    Route::patch('/messages/{message}', [MessageController::class, 'update']);
 
 
 });
