@@ -58,7 +58,7 @@ Route::get('/hotel-details/{id}', [HotelsController::class, 'hotelDetails'])->na
 Route::get('/recherche-hotel', [HotelsController::class, 'search'])->name('hotel.search');
 
 //Route de recherche des vols
-Route::get('/recherche-vols', [VolController::class, 'search'])->name('vols');
+Route::get('/reservation-vols', [VolController::class, 'reservation'])->name('vol.reservation');
 
 //hotel reservation
 Route::get('/hotel-reservation/{id}', [HotelReservationController::class, 'index'])->name('single-reservation');
