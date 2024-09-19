@@ -272,7 +272,7 @@
                                 </div> --}}
                                 
                             </div>
-                            <button type="submit" class="theme-btn f-btn"><span>Recherche <i class="fa-solid fa-search"></i></span></button>
+                           <a href="{{route('vol.reservation')}}"> <button type="button" class="theme-btn f-btn"><span>Reservation</span></button></a>
                         </form>
 
                         {{-- </div>
