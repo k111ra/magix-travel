@@ -46,7 +46,7 @@ class ReservationController extends Controller
      */
     public function store(Request $request)
     {
-      
+
         // Valider les données du formulaire
         $request->validate([
             // 'client_id' => 'required|exists:users,id',
@@ -180,5 +180,73 @@ class ReservationController extends Controller
     public function reservationHotels()
     {
         return view('admin.reservations.reservation-hotel');
+    }
+
+    public function insertReservationStep1Vols(Request $request)
+    {
+        // Valider les données
+        $validatedData = $request->validate([
+            'destination_depart' => 'required|string|max:255',
+            'destination_final' => 'required|string|max:255',
+            'date_part' => 'string|max:255',
+            'date_retour' => 'string|max:255',
+            'nombre_bebe' => 'nullable|integer', // Validation pour un nombre entier
+            'nombre_enfant' => 'nullable|integer', // Validation pour un nombre entier
+            'nombre_adultes' => 'nullable|integer', // Validation pour un nombre entier
+            'type_reservations_id' => 'required|integer|exists:type_reservations,id',
+            'ref_reservation' => 'string|max:255|nullable',
+        ]);
+
+        // Calculer automatiquement le total des personnes
+        $nombre_bebe = $validatedData['nombre_bebe'] ?? 0; // Si non défini, par défaut 0
+        $nombre_enfant = $validatedData['nombre_enfant'] ?? 0; // Si non défini, par défaut 0
+        $nombre_adultes = $validatedData['nombre_adultes'] ?? 0; // Si non défini, par défaut 0
+        // Additionner les valeurs
+        $validatedData['num_persons'] = $nombre_bebe + $nombre_enfant + $nombre_adultes;
+
+
+         // Générer automatiquement le numéro de référence de réservation
+        $jour = date('d');
+        $mois = date('m');
+        $annee = date('Y');
+        $num_reservation = "RES";
+        // Récupérer le dernier numéro de réservation
+        $num_count = Reservation::ref_reser();
+        // Construire le numéro de réservation
+        $validatedData['ref_reservation']= $num_reservation . $jour . $mois . $annee . '00'. $num_count->count;
+
+        // Stocker les données dans la session
+        session()->put('step1', $validatedData);
+
+        // Rediriger vers la deuxième étape
+        // return redirect()->route('step2.show');
+    }
+
+    public function insertReservationStep2Vols(Request $request)
+    {
+        // Valider les données
+        $validatedData = $request->validate([
+            'nom' => 'required|string|max:255',
+            'prenoms' => 'required|string|max:255',
+            'email' => 'string|email|max:255',
+            'contact' => 'string|max:255',
+            'numero_whatsapp' => 'string|max:255',
+            'adresse' => 'string|max:255',
+        ]);
+
+        // Récupérer les données de la session de la première étape
+        $step1Data = session()->get('step1');
+
+        // Fusionner les données de toutes les étapes
+        $finalData = array_merge($step1Data, $validatedData);
+
+        // Sauvegarder les données dans la base de données
+        Reservation::create($finalData);
+
+        // Vider la session après l'enregistrement
+        session()->forget('step1');
+
+        // Rediriger vers une page de confirmation
+        return redirect()->route('home')->with('success', 'Votre Reservation a bien été envoyée avec succès.');
     }
 }

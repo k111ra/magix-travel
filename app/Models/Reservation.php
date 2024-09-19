@@ -25,6 +25,11 @@ class Reservation extends Model
         'nombre_enfant',
     ];
 
+    public static function ref_reser()
+    {
+        return self::selectRaw('count(*) as count')->first();
+    }
+
     public function tour()
     {
         return $this->belongsTo(Tour::class);
