@@ -19,6 +19,7 @@ use App\Http\Controllers\HotelReservationController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\ReservationController;
+use App\Http\Controllers\SliderController;
 use App\Http\Controllers\TourReservationController;
 use App\Http\Controllers\TypeReservationController;
 use App\Http\Controllers\VolController;
@@ -84,6 +85,14 @@ Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function () {
      Route::get('/edit-type-reservation/{id}', [TypeReservationController::class, 'edit'])->name('type.edit');
      Route::post('/update-type-reservation/{id}', [TypeReservationController::class, 'update'])->name('type.update');
      Route::delete('/destroy-type-reservation/{type}', [TypeReservationController::class, 'destroy'])->name('type.destroy');
+
+     //////////////// routes des enfants
+     Route::get('/liste-slider', [SliderController::class, 'index'])->name('slider.index');
+     Route::get('/create-slider', [SliderController::class, 'create'])->name('slider.create');
+     Route::post('/store-slider', [SliderController::class, 'store'])->name('slider.store');
+     Route::get('/edit-slider/{id}', [SliderController::class, 'edit'])->name('slider.edit');
+     Route::post('/update-slider/{id}', [SliderController::class, 'update'])->name('slider.update');
+     Route::delete('/destroy-slider/{slider}', [SliderController::class, 'destroy'])->name('slider.destroy');
 
     // Resource routes for common admin functionalities
     Route::resource('tours', ToursController::class);
