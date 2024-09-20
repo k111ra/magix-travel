@@ -8,6 +8,7 @@ use App\Models\Reservation;
 use App\Models\Tour;
 use App\Models\Vol;
 use App\Models\AirPort;
+use App\Models\Slider;
 use App\Models\TypeReservation;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -28,7 +29,8 @@ class HomeController extends Controller
         $vols = Vol::all();
         $pays = AirPort::all();
         $type = TypeReservation::all();
-        return view('home', compact('type','tours', 'destinations', 'hotels', 'vols', 'pays'));
+        $sliders = Slider::where('status', 'activé')->orderBy('id', 'desc')->get();
+        return view('home', compact('type','tours', 'destinations', 'hotels', 'vols', 'pays','sliders'));
     }
 
     /**
