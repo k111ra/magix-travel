@@ -264,4 +264,51 @@ class ReservationController extends Controller
         // Rediriger vers une page de confirmation
         return redirect()->route('home')->with('success', 'Votre Reservation a bien été envoyée avec succès.');
     }
+
+    public function traitementReservation($id)
+    {
+        $reservation = Reservation::findOrFail($id);
+        // Mettre à jour le statut de la reservation
+        $reservation->status = 'traiter';
+        $reservation->date_debut_traitement = now();
+        $reservation->save();
+        return back()->with('success', 'Cette reservation marquée comme en traitement.');
+    }
+
+    public function validerReservation($id)
+    {
+        $reservation = Reservation::findOrFail($id);
+        // Mettre à jour le statut de la reservation
+        $reservation->status = 'valider';
+        $reservation->date_valider = now();
+        $reservation->date_fin_traitement = now();
+        $reservation->save();
+        return back()->with('success', 'Cette reservation marquée comme validé.');
+    }
+
+    public function annulerReservation($id)
+    {
+        $reservation = Reservation::findOrFail($id);
+        // Mettre à jour le statut de la reservation
+        $reservation->status = 'annuler';
+        $reservation->date_annuler = now();
+        $reservation->date_debut_traitement = null;
+        $reservation->date_valider = null;
+        $reservation->date_fin_traitement = null;
+        $reservation->save();
+        return back()->with('success', 'Cette reservation a été annullée avec succès.');
+    }
+
+    public function restaurerReservation($id)
+    {
+        $reservation = Reservation::findOrFail($id);
+        // Mettre à jour le statut de la reservation
+        $reservation->status = 'initialiser';
+        $reservation->date_annuler = null;
+        $reservation->date_debut_traitement = null;
+        $reservation->date_valider = null;
+        $reservation->date_fin_traitement = null;
+        $reservation->save();
+        return back()->with('success', 'Vous avez restaurer les status cette reservation');
+    }
 }

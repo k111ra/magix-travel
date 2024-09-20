@@ -61,6 +61,8 @@ Route::get('/recherche-hotel', [HotelsController::class, 'search'])->name('hotel
 //Route de recherche des vols
 Route::get('/reservation-vols', [VolController::class, 'reservation'])->name('reservation-vols');
 
+
+
 //hotel reservation
 Route::get('/hotel-reservation/{id}', [HotelReservationController::class, 'index'])->name('single-reservation');
 Route::get('/hotel-reservationShow/{id}', [HotelReservationController::class, 'show'])->name('single-reservationshow');
@@ -70,7 +72,10 @@ Route::post('/hotel-reservation-create', [HotelReservationController::class, 'cr
 Route::post('/vol-reservation-step1', [ReservationController::class, 'insertReservationStep1Vols'])->name('step1.reservation.store');
 Route::post('/vol-reservation-step2', [ReservationController::class, 'insertReservationStep2Vols'])->name('step2.reservation.store');
 
-
+Route::post('/annuler-reservation-vols/{id}', [ReservationController::class, 'annulerReservation'])->name('annuler.reservation.vols');
+Route::post('/traitement-reservation-vols/{id}', [ReservationController::class, 'traitementReservation'])->name('traitement.reservation.vols');
+Route::post('/valider-reservation-vols/{id}', [ReservationController::class, 'validerReservation'])->name('valider.reservation.vols');
+Route::post('/restaurer-reservation-vols/{id}', [ReservationController::class, 'restaurerReservation'])->name('restaurer.reservation.vols');
 // Admin routes (use middleware for protection)
 Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function () {
 
