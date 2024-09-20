@@ -16,32 +16,33 @@
                             <th>#</th>
                             <th>De</th>
                             <th>Vers</th>
-                            <th>Type</th>
+                            {{-- <th>Type</th> --}}
                             <th>Date de réservation</th>
-                            <th>Date depart</th>
+                            <th>Nom</th>
                             <th>Téléphone</th>
                             <th>Email</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
-                    {{-- @forelse ($reservations as $reservation)
+                    @forelse ($listesvols as $reservation)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
-                                <td>{{ optional($reservation->tour)->nom }}</td>
+                                {{-- <td>{{ optional($reservation->tour)->nom }}</td>
                                 <td>{{ optional($reservation->hotel)->name }}</td>
-                                <td>{{ optional($reservation->vol)->compagnie_aerienne }}</td>
-                                <td>{{ $reservation->reservation_date }}</td>
-                                <td> {{ number_format($reservation->amount, 0, ',', ' ') }} FCFA  </td>
-                                <td>{{ $reservation->num_persons }}</td>
-                                <td>{{ $reservation->first_name }} {{ $reservation->last_name }}</td>
-                                <td>{{ $reservation->phone_number }}</td>
+                                <td>{{ optional($reservation->vol)->compagnie_aerienne }}</td> --}}
+                                <td>{{ $reservation->destination_depart }}</td>
+                                <td>{{ $reservation->destination_final }}</td>
+                                {{-- <td> {{ number_format($reservation->amount, 0, ',', ' ') }} FCFA  </td> --}}
+                                <td>{{ $reservation->created_at }}</td> 
+                                <td>{{ $reservation->nom }} {{ $reservation->prenoms }}</td>
+                                <td>{{ $reservation->contact }}</td>
                                 <td>{{ $reservation->email }}</td>
                                 <td>
                                     <a href="{{ route('reservations.show', $reservation->id) }}" class="btn btn-info btn-sm">
                                         <i class="fas fa-eye"></i>
                                     </a>
-                                    <a href="{{ route('reservations.edit', $reservation->id) }}"
+                                    {{-- <a href="{{ route('reservations.edit', $reservation->id) }}"
                                         class="btn btn-warning btn-sm">
                                         <i class="fas fa-edit"></i>
                                     </a>
@@ -53,14 +54,14 @@
                                             onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette réservation?')">
                                             <i class="fas fa-trash-alt"></i>
                                         </button>
-                                    </form>
+                                    </form> --}}
                                 </td>
                             </tr>
                        @empty
                         <tr>
                             <td colspan="6" class="text-center text-danger">Aucune Données disponible pour le moment</td>
                         </tr>
-                    @endforelse --}}
+                    @endforelse
                     </tbody>
                 </table>
             </div>

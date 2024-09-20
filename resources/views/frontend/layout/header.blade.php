@@ -15,7 +15,7 @@
                 <div class="login">
 
                     @auth
-                        connected
+                    Connecté
                     @endauth
                     <a href="{{ route('login') }}">Login</a>
 

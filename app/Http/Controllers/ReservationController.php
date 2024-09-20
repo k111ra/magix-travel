@@ -170,7 +170,8 @@ class ReservationController extends Controller
 
     public function reservationVols()
     {
-        return view('admin.reservations.reservation-vol');
+        $listesvols =Reservation::all();
+        return view('admin.reservations.reservation-vol', compact('listesvols'));
     }
 
     public function reservationTours()
