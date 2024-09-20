@@ -158,9 +158,9 @@
                 <!--Tab-->
                 <div class="tab" id="tab-5">
                    @include('frontend.home.reservation-vol')
-                </div>
+                {{-- </div>
                 <!--Tab-->
-                <div class="tab" id="tab-6">
+                <div class="tab" id="tab-6"> --}}
                     <div class="form-box site-form">
                         <form method="post" action="" id="roundTripForm" style="display: none;">
                             <div class="row clearfix">

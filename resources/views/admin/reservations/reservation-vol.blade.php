@@ -49,7 +49,7 @@
                                     @endif
                                 </td>
                                 <td>
-                                    <a href="{{ route('reservations.show', $reservation->id) }}" class="btn btn-info btn-sm">
+                                    <a href="{{ route('reservation.vols.show', $reservation->id) }}" class="btn btn-info btn-sm">
                                         <i class="fas fa-eye"></i>
                                     </a>
                                     {{-- Traitement --}}

@@ -173,6 +173,12 @@ class ReservationController extends Controller
         $listesvols =Reservation::all();
         return view('admin.reservations.reservation-vol', compact('listesvols'));
     }
+    
+    public function showVol($id){
+        $showvol = Reservation::findOrFail($id);
+        return view('admin.reservations.show-vol', compact('showvol'));
+
+    }
 
     public function reservationTours()
     {
