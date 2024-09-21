@@ -40,3 +40,10 @@ Ce projet est une application de gestion de vols et de destinations construite a
 ## Auteur
 
 Ce projet a été développé par [sidik slims](https://github.com/k111ra).
+
+## Seeders
+    - php artisan db:seed --class=PermissionSeeder 
+    - php artisan db:seed --class=UserTableSeeder 
+    - php artisan db:seed --class=RoleTableSeeder
+    - php artisan db:seed --class=AirportTableSeeder
+    - php artisan db:seed --class=TypeReservationTableSeeder

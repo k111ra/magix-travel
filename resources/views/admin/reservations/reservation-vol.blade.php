@@ -16,10 +16,8 @@
                             <th>#</th>
                             <th>De</th>
                             <th>Vers</th>
-                            {{-- <th>Type</th> --}}
                             <th>Date de réservation</th>
                             <th>Téléphone</th>
-                            <th>Email</th>
                             <th>Status</th>
                             <th width="150px">Actions</th>
                         </tr>
@@ -28,15 +26,10 @@
                     @forelse ($listesvols as $reservation)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
-                                {{-- <td>{{ optional($reservation->tour)->nom }}</td>
-                                <td>{{ optional($reservation->hotel)->name }}</td>
-                                <td>{{ optional($reservation->vol)->compagnie_aerienne }}</td> --}}
                                 <td>{{ $reservation->destination_depart }}</td>
                                 <td>{{ $reservation->destination_final }}</td>
-                                {{-- <td> {{ number_format($reservation->amount, 0, ',', ' ') }} FCFA  </td> --}}
                                 <td>{{ $reservation->created_at }}</td> 
                                 <td>{{ $reservation->contact }}</td>
-                                <td>{{ $reservation->email }}</td>
                                 <td>
                                     @if ($reservation->status === 'initialiser')
                                     <span class="badge badge-secondary">Initialisation</span>

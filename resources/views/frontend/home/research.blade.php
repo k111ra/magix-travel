@@ -158,69 +158,10 @@
                 <!--Tab-->
                 <div class="tab" id="tab-5">
                    @include('frontend.home.reservation-vol')
-                {{-- </div>
-                <!--Tab-->
-                <div class="tab" id="tab-6"> --}}
-                    <div class="form-box site-form">
-                        <form method="post" action="" id="roundTripForm" style="display: none;">
-                            <div class="row clearfix">
-                                <div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                                    <div class="field-label">Départ</div>
-                                    <div class="field-inner">
-                                        <select name="field-name" class="custom-select">
-                                            <option>Destination de départ</option>
-                                            <option>Enchanting Europe, A Journey through Time and Culture
-                                            </option>
-                                            <option>Unveiling the Idyllic Paradise of Southeast Asia
-                                            </option>
-                                            <option>Exploring Nature's Best in the American National Parks
-                                            </option>
-                                            <option>An African Expedition into the Heart of the Savannah
-                                            </option>
-                                            <option>A Fascinating Expedition to Egypt and Jordan</option>
-                                        </select>
-                                        <i class="alt-icon fa fa-map-marker-alt"></i>
-                                    </div>
-                                </div>
-                                <div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                                    <div class="field-label">Arrivée</div>
-                                    <div class="field-inner">
-                                        <select name="field-name" class="custom-select">
-                                            <option>Destination d'arrivée</option>
-                                            <option>Enchanting Europe, A Journey through Time and Culture
-                                            </option>
-                                            <option>Unveiling the Idyllic Paradise of Southeast Asia
-                                            </option>
-                                            <option>Exploring Nature's Best in the American National Parks
-                                            </option>
-                                            <option>An African Expedition into the Heart of the Savannah
-                                            </option>
-                                            <option>A Fascinating Expedition to Egypt and Jordan</option>
-                                        </select>
-                                        <i class="alt-icon fa fa-map-marker-alt"></i>
-                                    </div>
-                                </div>
-                                <div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                                    <div class="field-label">Date de départ</div>
-                                    <div class="field-inner">
-                                        <input class="datepicker" type="text" name="date_depart" value="" placeholder="Check out" required>
-                                        <i class="alt-icon fa fa-calendar-alt"></i>
-                                    </div>
-                                </div>
-                                <div class="form-group col-xl-3 col-lg-6 col-md-6 col-sm-12">
-                                    <div class="field-label">Visiteur</div>
-                                    <div class="field-inner">
-                                        <input type="text" name="field-name" value="" placeholder="Guests" required>
-                                        <i class="alt-icon fa fa-user"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            <button type="submit" class="theme-btn f-btn"><span>Recherche <i class="fa-solid fa-search"></i></span></button>
-                        </form>
-
-                    </div>
+               
+                    {{-- <div class="form-box site-form">
+                    </div> --}}
                 </div>
-                <!--Tab-->
             </div>
         </div>
     </div>

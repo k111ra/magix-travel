@@ -39,5 +39,19 @@
             width: 'resolve'
         });
     });
+     $(document).ready(function() {
+        $('#destination-select-aller').select2({
+            placeholder: 'De',
+            allowClear: true,
+            width: 'resolve'
+        });
+    });
+     $(document).ready(function() {
+        $('#destination-select-retour').select2({
+            placeholder: 'Vers',
+            allowClear: true,
+            width: 'resolve'
+        });
+    });
 </script>
 

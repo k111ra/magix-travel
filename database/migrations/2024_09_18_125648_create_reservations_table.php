@@ -35,7 +35,7 @@ return new class extends Migration
             $table->string('destination_depart');//ou tu quittes
             $table->string('destination_final')->nullable();//ou tu vas
             $table->string('date_depart')->nullable();
-            $table->date('date_retour')->nullable();//dans le cas ou c'est une reservation pour un vol aller-retour
+            $table->string('date_retour')->nullable();//dans le cas ou c'est une reservation pour un vol aller-retour
             $table->integer('nombre_bebe')->nullable(); // age entre 0-2
             $table->integer('nombre_enfant')->nullable(); // age entre 2-12
             $table->integer('nombre_adultes')->nullable(); // age entre 12 - et plus

@@ -72,6 +72,10 @@ Route::post('/hotel-reservation-create', [HotelReservationController::class, 'cr
 Route::post('/vol-reservation-step1', [ReservationController::class, 'insertReservationStep1Vols'])->name('step1.reservation.store');
 Route::post('/vol-reservation-step2', [ReservationController::class, 'insertReservationStep2Vols'])->name('step2.reservation.store');
 
+//reservation d'un vol aller-retour
+Route::post('/vol-reservation-step1-aller-retour', [ReservationController::class, 'insertReservationStep1VolsAllerRetour'])->name('step1.reservation.aller.retour.store');
+
+
 Route::post('/annuler-reservation-vols/{id}', [ReservationController::class, 'annulerReservation'])->name('annuler.reservation.vols');
 Route::post('/traitement-reservation-vols/{id}', [ReservationController::class, 'traitementReservation'])->name('traitement.reservation.vols');
 Route::post('/valider-reservation-vols/{id}', [ReservationController::class, 'validerReservation'])->name('valider.reservation.vols');

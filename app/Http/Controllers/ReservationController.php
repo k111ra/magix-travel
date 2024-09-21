@@ -170,7 +170,7 @@ class ReservationController extends Controller
 
     public function reservationVols()
     {
-        $listesvols =Reservation::all();
+        $listesvols =Reservation::orderBy('id', 'desc')->get();
         return view('admin.reservations.reservation-vol', compact('listesvols'));
     }
     
@@ -207,7 +207,57 @@ class ReservationController extends Controller
         ]);
 
         // Rechercher l'ID du type de réservation pour "Vol"
-        $typeReservation = DB::table('type_reservations')->where('nom', 'Vol')->first();
+        $typeReservation = DB::table('type_reservations')->where('nom', 'Vol Simple')->first();
+        if (!$typeReservation) {
+            return redirect()->back()->withErrors(['error' => 'Le type de réservation "Vol" est introuvable.']);
+        }
+
+        // Stocker l'ID du type de réservation dans les données validées
+        $validatedData['type_reservations_id'] = $typeReservation->id;
+
+        // Calculer automatiquement le total des personnes
+        $nombre_bebe = $validatedData['nombre_bebe'] ?? 0; // Si non défini, par défaut 0
+        $nombre_enfant = $validatedData['nombre_enfant'] ?? 0; // Si non défini, par défaut 0
+        $nombre_adultes = $validatedData['nombre_adultes'] ?? 0; // Si non défini, par défaut 0
+        // Additionner les valeurs
+        $validatedData['num_persons'] = $nombre_bebe + $nombre_enfant + $nombre_adultes;
+
+
+        // Générer automatiquement le numéro de référence de réservation
+        $jour = date('d');
+        $mois = date('m');
+        $annee = date('Y');
+        $num_reservation = "RES";
+        // Récupérer le dernier numéro de réservation
+        $num_count = Reservation::ref_reser();
+        // Construire le numéro de réservation
+        $validatedData['ref_reservation'] = $num_reservation . $jour . $mois . $annee . '00' . $num_count->count;
+        // dd($validatedData);
+
+        // Stocker les données dans la session
+        session()->put('step1', $validatedData);
+
+        // Rediriger vers la deuxième étape
+        return redirect()->route('reservation-vols');
+    }
+
+    public function insertReservationStep1VolsAllerRetour(Request $request)
+    {
+
+        // Valider les données
+        $validatedData = $request->validate([
+            'destination_depart' => 'required|string|max:255',
+            'destination_final' => 'required|string|max:255',
+            'date_depart' => 'string|max:255',
+            'date_retour' => 'string|max:255',
+            'nombre_bebe' => 'nullable|integer', // Validation pour un nombre entier
+            'nombre_enfant' => 'nullable|integer', // Validation pour un nombre entier
+            'nombre_adultes' => 'nullable|integer', // Validation pour un nombre entier
+            'ref_reservation' => 'string|max:255|nullable',
+        ]);
+
+        // Rechercher l'ID du type de réservation pour "Vol"
+        $typeReservation = DB::table('type_reservations')->where('nom', 'Vol Aller-Retour')->first();
         if (!$typeReservation) {
             return redirect()->back()->withErrors(['error' => 'Le type de réservation "Vol" est introuvable.']);
         }

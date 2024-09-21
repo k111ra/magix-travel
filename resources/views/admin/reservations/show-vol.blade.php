@@ -82,6 +82,23 @@
                   </div>
                   <div class="card-body">
                     <div class="py-4">
+                          <p class="clearfix">
+                            <span class="float-left">
+                                Réference de réservation:
+                            </span>
+                            <span class="float-right text-white badge badge-success">
+                                {{ $showvol->ref_reservation }}
+                            </span>
+                          </p>
+
+                           <p class="clearfix">
+                            <span class="float-left">
+                                Type de réservation:
+                            </span>
+                            <span class="float-right text-white badge badge-primary">
+                                {{ $showvol->typeReservation->nom }}
+                            </span>
+                          </p>
                         <p class="clearfix">
                             <span class="float-left">
                                 Date de réservation:
