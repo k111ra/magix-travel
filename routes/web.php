@@ -18,6 +18,7 @@ use App\Http\Controllers\DestinationController;
 use App\Http\Controllers\HotelReservationController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\NewsletterController;
+use App\Http\Controllers\ParametreController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\TourReservationController;
@@ -157,6 +158,9 @@ Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function () {
     Route::get('/messages/{id}', [MessageController::class, 'show'])->name('message-vue');
     Route::patch('/messages/{message}', [MessageController::class, 'update']);
 
+    //Route for parametre 
+    Route::get('/parametre/generaux',[ParametreController::class,'create'])->name('create-info');
+    Route::post('/parametre/store',[ParametreController::class,'store'])->name('store-info');
 
 });
 

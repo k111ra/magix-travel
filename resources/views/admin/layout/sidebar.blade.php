@@ -80,6 +80,7 @@
                 <span>Parametre</span>
             </a>
             <ul class="dropdown-menu">
+                <li><a class="nav-link @if (request()->routeIs('Roles.index')) active @endif" href="{{ route('Roles.index') }}">Généraux</a></li>
                 <li><a class="nav-link @if (request()->routeIs('Roles.index')) active @endif" href="{{ route('Roles.index') }}">Rôle</a></li>
                 <li><a class="nav-link @if (request()->routeIs('type.index')) active @endif" href="{{ route('type.index') }}">Type Reservation</a></li>
                 <li><a class="nav-link @if (request()->routeIs('slider.index')) active @endif" href="{{ route('slider.index') }}">Sliders</a></li>
