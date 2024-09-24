@@ -161,6 +161,7 @@ Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function () {
     //Route for parametre 
     Route::get('/parametre/generaux',[ParametreController::class,'create'])->name('create-info');
     Route::post('/parametre/store',[ParametreController::class,'store'])->name('store-info');
+    Route::post('/parametre/reseaux',[ParametreController::class,'reseaux'])->name('reseaux-info');
 
 });
 

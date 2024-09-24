@@ -1,6 +1,5 @@
 <?php
 
-
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -14,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('reseaux', function (Blueprint $table) {
+        Schema::create('reseauxes', function (Blueprint $table) {
             $table->id();
             $table->string('facebook')->nullable();
             $table->string('linkedin')->nullable();
@@ -23,8 +22,6 @@ return new class extends Migration
             $table->string('youtube')->nullable();
             $table->timestamps();
         });
-
-       
     }
 
     /**
@@ -34,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('reseaux');
+        Schema::dropIfExists('reseauxes');
     }
 };

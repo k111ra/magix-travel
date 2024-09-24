@@ -78,7 +78,7 @@
     </div>
     <div class="container">
         <div class="card" id="add-reservation-card">
-            <form action="" method="post" enctype="multipart/form-data">
+            <form action="{{route('reseaux-info')}}" method="post" enctype="multipart/form-data">
                 @csrf
                 {{-- <input type="hidden" name="client_id" value="2"> --}}
                 <div class="card-header">
