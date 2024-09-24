@@ -44,7 +44,9 @@ class HomeController extends Controller
      */
     public function apropos()
     {
-        return view('frontend.pages.Apropos.index');
+        $information = Information::first();
+        $reseau = Reseaux::first();
+        return view('frontend.pages.Apropos.index',compact('information','reseau'));
     }
 
     /**
@@ -53,8 +55,9 @@ class HomeController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function contacts()
-    {
-        return view('frontend.pages.Contact.index');
+        { $information = Information::first();
+            $reseau = Reseaux::first();
+        return view('frontend.pages.Contact.index',compact('information','reseau'));
     }
 
     /**
@@ -64,7 +67,9 @@ class HomeController extends Controller
      */
     public function service()
     {
-        return view('frontend.pages.service.index');
+        $information = Information::first();
+        $reseau = Reseaux::first();
+        return view('frontend.pages.service.index',compact('information','reseau'));
     }
 
     /**

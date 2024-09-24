@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Destination;
 use App\Models\Tour;
-use Illuminate\Http\Request;
+use App\Models\Reseaux;
+use App\Models\Destination;
+use App\Models\Information;
 use Illuminate\Support\Arr;
+use Illuminate\Http\Request;
 use Yoeunes\Toastr\Facades\Toastr;
 
 class ToursController extends Controller
@@ -188,7 +190,9 @@ class ToursController extends Controller
     {
         $tours = Tour::paginate(10);
         $destinations  = Destination::all();
-        return view('frontend.pages.tours.index', compact('tours','destinations'));
+        $information = Information::first();
+        $reseau = Reseaux::first();
+        return view('frontend.pages.tours.index', compact('tours','destinations','information','reseau'));
     }
 
     public function tourDetails($id)
@@ -199,7 +203,9 @@ class ToursController extends Controller
         $relatedtours = Tour::where('destinations_id', $tour->destinations_id)
                     ->where('id', '!=', $tour->id) // Exclure le tour actuel
                     ->get();
-        return view('frontend.pages.tours.single-tour', compact('tour','relatedtours'));
+        $information = Information::first();
+        $reseau = Reseaux::first();
+        return view('frontend.pages.tours.single-tour', compact('tour','relatedtours','reseau','information'));
     }
 
     public function search(Request $request){
@@ -209,7 +215,9 @@ class ToursController extends Controller
                             ->where('destinations.name', 'LIKE', "%{$query}%")
                             ->select('tours.*') 
                             ->Paginate(10);
-        return view('frontend.pages.tours.search', compact('tours', 'query', 'destinations'));
+        $information = Information::first();
+        $reseau = Reseaux::first();
+        return view('frontend.pages.tours.search', compact('tours', 'query', 'destinations','information','reseau'));
 
     } 
 }

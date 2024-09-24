@@ -97,8 +97,8 @@
                                 </div>
                                 <div class="col-6">
                                     <div class="form-group">
-                                        <label for="linkedin">Linkdin</label>
-                                        <input type="text" value="{{ old('email', $reseaux->linkdin ?? '') }}" name="linkdin" class="form-control"
+                                        <label for="linkedin">linkedin</label>
+                                        <input type="text" value="{{ old('email', $reseaux->linkdin ?? '') }}" name="linkedin" class="form-control"
                                         id="linkdin">
                                     </div>
                                 </div>

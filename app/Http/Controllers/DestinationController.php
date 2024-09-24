@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Reseaux;
 use App\Models\Destination;
+use App\Models\Information;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
@@ -149,12 +151,16 @@ class DestinationController extends Controller
 
     public function destination(){
         $destinations = Destination::orderby('created_at', 'DESC')->get();
-        return view('frontend.pages.destination.index',compact('destinations'));
+        $information = Information::first();
+        $reseau = Reseaux::first();
+        return view('frontend.pages.destination.index',compact('destinations','information','reseau'));
     }
 
     public function singleDestination($id)
     {
         $destination = Destination::findOrFail($id);
-        return view('frontend.pages.destination.single-destination', compact('destination'));
+        $information = Information::first();
+        $reseau = Reseaux::first();
+        return view('frontend.pages.destination.single-destination', compact('destination','reseau','information'));
     }
 }

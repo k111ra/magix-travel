@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Reseaux;
+use App\Models\Information;
 use Illuminate\Http\Request;
 
 class AboutController extends Controller
@@ -11,7 +13,9 @@ class AboutController extends Controller
 
     public function index()
     {
-        return view('frontend.pages.about.index');
+        $information = Information::first();
+        $reseau = Reseaux::first();
+        return view('frontend.pages.about.index', compact('information', 'reseau'));
     }
 
 

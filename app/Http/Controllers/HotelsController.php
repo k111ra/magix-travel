@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Destination;
 use App\Models\Hotel;
+use App\Models\Reseaux;
+use App\Models\Destination;
+use App\Models\Information;
 use Illuminate\Http\Request;
 use RealRashid\SweetAlert\Facades\Alert;
 
@@ -125,13 +127,17 @@ class HotelsController extends Controller
     public function hotelFrontend()
     {
         $hotels = Hotel::Paginate(10);
-        return view('frontend.pages.hotels.hotels', compact('hotels'));
+        $information = Information::first();
+        $reseau = Reseaux::first();
+        return view('frontend.pages.hotels.hotels', compact('hotels','information','reseau'));
     }
 
     public function hotelDetails($id)
     {
         $hotel = Hotel::findOrFail($id);
-        return view('frontend.pages.hotels.hotel-details',compact('hotel'));
+        $information = Information::first();
+        $reseau = Reseaux::first();
+        return view('frontend.pages.hotels.hotel-details',compact('hotel','information','reseau'));
     }
 
     public function search(Request $request){
@@ -143,7 +149,9 @@ class HotelsController extends Controller
                             ->Orwhere('hotels.name', 'LIKE', "%{$query}%")
                             ->select('hotels.*') 
                             ->paginate(10);
-        return view('frontend.pages.hotels.search', compact('hotels', 'query', 'destinations'));
+        $information = Information::first();
+        $reseau = Reseaux::first();
+        return view('frontend.pages.hotels.search', compact('hotels', 'query', 'destinations','information','reseau'));
 
     } 
     }

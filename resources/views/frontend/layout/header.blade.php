@@ -119,7 +119,7 @@
 
                 <div class="links-box clearfix">
                     <div class="link call-to"> @if($information)
-                        <a href="tel:+96899999000"><i class="icon fa-solid fa-phone"></i> Appelez-nous <span
+                        <a href="tel:{{$information->contact}}"><i class="icon fa-solid fa-phone"></i> Appelez-nous <span
                                 class="nmbr">{{$information->contact}}</span></a>
                                 @endif
                     </div>

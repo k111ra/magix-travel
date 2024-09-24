@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Reseaux;
+use App\Models\Information;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
@@ -13,7 +15,9 @@ class ContactController extends Controller
      */
     public function index()
     {
-        return view('frontend.pages.contact.index');
+        $information = Information::first();
+        $reseau = Reseaux::first();
+        return view('frontend.pages.contact.index',compact('information','reseau'));
     }
 
     /**
