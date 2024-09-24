@@ -2,16 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Destination;
-use App\Models\Hotel;
-use App\Models\Reservation;
-use App\Models\Tour;
-use App\Models\Vol;
-use App\Models\AirPort;
-use App\Models\Slider;
-use App\Models\TypeReservation;
 use Carbon\Carbon;
+use App\Models\Vol;
+use App\Models\Tour;
+use App\Models\Hotel;
+use App\Models\Slider;
+use App\Models\AirPort;
+use App\Models\Destination;
+use App\Models\Information;
+use App\Models\Reseaux;
+use App\Models\Reservation;
 use Illuminate\Http\Request;
+use App\Models\TypeReservation;
 use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
@@ -30,7 +32,9 @@ class HomeController extends Controller
         $pays = AirPort::all();
         $type = TypeReservation::all();
         $sliders = Slider::where('status', 'activé')->orderBy('id', 'desc')->get();
-        return view('home', compact('type','tours', 'destinations', 'hotels', 'vols', 'pays','sliders'));
+        $information = Information::first();
+        $reseau = Reseaux::first();
+        return view('home', compact('type','tours', 'destinations', 'hotels', 'vols', 'pays','sliders','information','reseau'));
     }
 
     /**

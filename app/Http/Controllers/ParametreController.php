@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Reseau;
 use App\Models\Reseaux;
 use App\Models\Information;
 use Illuminate\Http\Request;
@@ -28,7 +27,9 @@ class ParametreController extends Controller
     public function create()
     {
         //
-        return view('admin.parametre.general.index');
+        $information = Information::first();
+        $reseaux = Reseaux::first();
+        return view('admin.parametre.general.index',compact('information','reseaux'));
     }
 
     /**

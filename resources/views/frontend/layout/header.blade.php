@@ -2,11 +2,12 @@
     <div class="auto-container">
         <div class="inner clearfix">
             <div class="top-left clearfix">
-                <ul class="info clearfix">
-                    <li><i class="icon fa fa-envelope"></i> <a href="mailto:info@magixtravel.com">info@magixtravel.com</a>
+                <ul class="info clearfix">@if($information)
+                    <li><i class="icon fa fa-envelope"></i> <a href="mailto:info@magixtravel.com">{{$information->email}}</a>
                     </li>
-                    <li><i class="icon fa fa-map-marker-alt"></i> <a href="#">Treichville, Abidjan, Côte
-                            d'Ivoire</a>
+                    
+                    <li><i class="icon fa fa-map-marker-alt"></i> <a href="#">{{$information->localisation}}</a>
+                        @endif
                     </li>
                 </ul>
             </div>
@@ -34,10 +35,12 @@
                 </div>
                 <div class="social">
                     <ul class="social-links clearfix">
-                        <li><a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="#" class="twitter"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a></li>
-                        <li><a href="#" class="youtube"><i class="fab fa-youtube"></i></a></li>
+                        @if($reseau)
+                        <li><a href="{{$reseau->facebook}}" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="{{$reseau->twitter}}" class="twitter"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="{{$reseau->linkedin}}" class="linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li><a href="{{$reseau->youtube}}" class="youtube"><i class="fab fa-youtube"></i></a></li>
+                    @endif
                     </ul>
                 </div>
             </div>
@@ -115,9 +118,10 @@
                 </div>
 
                 <div class="links-box clearfix">
-                    <div class="link call-to">
+                    <div class="link call-to"> @if($information)
                         <a href="tel:+96899999000"><i class="icon fa-solid fa-phone"></i> Appelez-nous <span
-                                class="nmbr">+225 27 21 37 70 38</span></a>
+                                class="nmbr">{{$information->contact}}</span></a>
+                                @endif
                     </div>
                 </div>
 
