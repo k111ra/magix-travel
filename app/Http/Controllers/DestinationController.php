@@ -43,6 +43,7 @@ class DestinationController extends Controller
         // Validez les données du formulaire
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
+            // 'status' => 'required|string|max:255',
             'description' => 'required|string',
             'images.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             // Ajoutez d'autres règles de validation selon votre schéma
@@ -51,6 +52,7 @@ class DestinationController extends Controller
         // Créez une nouvelle destination avec les données validées et les chemins d'accès aux images
         $destination = Destination::create([
             'name' => $validatedData['name'],
+            // 'status' => $validatedData['status'],
             'description' => $validatedData['description'],
             'slug' => Str::slug($validatedData['name'], '-')
         ]);
@@ -108,6 +110,7 @@ class DestinationController extends Controller
         // Validate the request
         $validatedData = $request->validate([
             'name' => 'required|string|max:255',
+            'status' => 'required|string|max:255',
             'description' => 'required|string',
             'slug' => 'string|max:255',
             'images.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
@@ -129,6 +132,7 @@ class DestinationController extends Controller
         // Mettre à jour les autres champs avec les données validées
         $destination->update([
             'name' => $validatedData['name'],
+            'status' => $validatedData['status'],
             'description' => $validatedData['description'],
             'slug' => Str::slug($validatedData['name'], '-')
         ]);

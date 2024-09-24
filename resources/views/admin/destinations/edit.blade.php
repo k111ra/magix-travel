@@ -1,8 +1,11 @@
 @extends('admin.layout.layout')
 @section('content')
 <div class="container">
+    @php
+    $status = ["activé", "désactivé"];
+    @endphp
     <h1>Modifier l'destination</h1>
-
+    
     <div class="card">
         <div class="card-body">
             <form action="{{ route('destinations.update', $destination->id) }}" method="post" enctype="multipart/form-data">
@@ -11,20 +14,27 @@
 
                 <!-- Add form fields for editing destination details -->
                 <div class="row">
-                    <div class="col-sm-6">
+                    <div class="col-sm-4">
                         <div class="form-group">
                             <label for="name">Nom:</label>
                             <input type="text" name="name" id="name" class="form-control" value="{{ $destination->name }}" required>
                         </div>
+                    </div><div class="col-sm-4">
+                        <label for="images">Status</label>
+                            <select name="status" class="form-control" id="status">
+                                @foreach ($status as $status)
+                                    <option value="{{ $status }}" {{ old('status',  $destination->status) == $status ? 'selected' : '' }}>{{ $status }}</option>
+                                @endforeach
+                            </select>
                     </div>
-                   <div class="col-sm-6">
+                   <div class="col-sm-4">
                         <label for="images">Images</label>
                         <div class="custom-file">
                             <input type="file" class="custom-file-input" id="customFile" value="{{ $destination->images }}" name="images[]" id="images" multiple accept="image/*">
                             <label class="custom-file-label" for="customFile">Choisir les images</label>
                         </div>
                     </div>
-
+                    
                     <div class="col-sm-12">
                         <div class="form-group">
                             <label for="description">Description:</label>

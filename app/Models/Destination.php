@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Destination extends Model
 {
-    protected $fillable = ['name', 'description', 'slug', 'images'];
+    protected $fillable = ['name', 'description', 'slug', 'images','status'];
 
     // protected $casts = [
     //     'images' => 'array',

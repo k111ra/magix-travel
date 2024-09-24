@@ -22,8 +22,8 @@
                             <th>#</th>
                             <th>Nom</th>
                             <th>Description</th>
-                            {{-- <th>Localisation</th>
-                            <th>Étoiles</th>
+                            <th>Status</th>
+                            {{--<th>Étoiles</th>
                             <th>Prix</th> --}}
                             <th>Actions</th>
                         </tr>
@@ -34,6 +34,11 @@
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $destination->name }}</td>
                                 <td>{{ $destination->description }}</td>
+                                <td>@if ($destination->status === 'activé')
+                                    <span class="badge badge-success">Activé</span>
+                                    @else
+                                    <span class="badge badge-danger">Désactivé</span>
+                                    @endif</td>
                                 {{-- <td>{{ $destination->localisation }}</td>
                                 <td>{{ $destination->etoiles }}</td>
                                 <td>{{ $destination->prix }}</td> --}}
