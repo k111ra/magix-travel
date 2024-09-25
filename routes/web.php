@@ -147,10 +147,10 @@ Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function () {
     Route::get('/commandes', [CommandesController::class, 'index'])->name('commandes.index');
 
     /////////Routes des produits//////////
-    Route::get('/produit', [ProduitsController::class, 'index'])->name('produits.index');
+    // Route::get('/produit', [ProduitsController::class, 'index'])->name('produits.index');
 
     /////////Routes des devis////////
-    Route::get('/devis', [DevisController::class, 'index'])->name('devis.index');
+    // Route::get('/devis', [DevisController::class, 'index'])->name('devis.index');
 
 
     /////////Routes des Tours////////
@@ -210,7 +210,7 @@ Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 // Routes de Newsletter
 Route::post('/newsletter', [NewsletterController::class, 'subscribe']);
 
-Route::get('/alerte', [DevisController::class, 'index'])->name('devis.index');
+Route::get('/alerte', [DevisController::class, 'index'])->name('alert.index');
 
 
 

@@ -232,7 +232,7 @@ class ReservationController extends Controller
         $num_count = Reservation::ref_reser();
         // Construire le numéro de réservation
         $validatedData['ref_reservation'] = $num_reservation . $jour . $mois . $annee . '00' . $num_count->count;
-        // dd($validatedData);
+         dd($validatedData);
 
         // Stocker les données dans la session
         session()->put('step1', $validatedData);
@@ -243,7 +243,6 @@ class ReservationController extends Controller
 
     public function insertReservationStep1VolsAllerRetour(Request $request)
     {
-
         // Valider les données
         $validatedData = $request->validate([
             'destination_depart' => 'required|string|max:255',
@@ -282,7 +281,6 @@ class ReservationController extends Controller
         $num_count = Reservation::ref_reser();
         // Construire le numéro de réservation
         $validatedData['ref_reservation'] = $num_reservation . $jour . $mois . $annee . '00' . $num_count->count;
-        // dd($validatedData);
 
         // Stocker les données dans la session
         session()->put('step1', $validatedData);

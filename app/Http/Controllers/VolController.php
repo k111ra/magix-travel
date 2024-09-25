@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Vol;
+use App\Models\Reseaux;
 use App\Models\Destination;
+use App\Models\Information;
 use Illuminate\Http\Request;
 
 class VolController extends Controller
@@ -90,6 +92,8 @@ class VolController extends Controller
         
           
         // Affichage des résultats
-        return view('frontend.pages.vols.reservation');
+        $information = Information::first();
+        $reseau = Reseaux::first();
+        return view('frontend.pages.vols.reservation',compact('information','reseau'));
     }
 }
