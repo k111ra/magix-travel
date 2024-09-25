@@ -198,13 +198,13 @@
 												<li class="clearfix"><span class="ttl">Total Branch</span><span
 														class="dtl">3</span></li>
 											</ul> --}}
-										<form action="{{ route('hotels.reservationHotel') }}" method="post" enctype="multipart/form-data">
+										<form action="{{ route('hotels.reservationHotel') }}" method="post">
 												@csrf
 											<div class="card-body">
 												<div class="row">
 													<input type="hidden" name="hotel_id" id="hotel_id" value="{{$hotel->id}}">
 													<input type="hidden" name="amount" id="amount" value="{{$hotel->prix}}">
-
+													<input type="hidden" name="num_persons" id="num_persons">
 													<div class="col-12">
 															<div class="row">
 																<div class="col-6">

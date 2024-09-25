@@ -381,8 +381,24 @@ class ReservationController extends Controller
 
         ]);
 
+        // Générer automatiquement le numéro de référence de réservation
+        $jour = date('d');
+        $mois = date('m');
+        $annee = date('Y');
+        $num_reservation = "RES";
+        $num_count = Reservation::ref_reser();// Récupérer le dernier numéro de réservation
+
+         // Rechercher l'ID du type de réservation pour "Vol"
+         $typeReservation = DB::table('type_reservations')->where('nom', 'Hotel')->first();
+         if (!$typeReservation) {
+             return redirect()->back()->withErrors(['error' => 'Le type de réservation "Vol" est introuvable.']);
+         }
+
+         // Stocker l'ID du type de réservation dans les données validées
+         $validatedData['type_reservations_id'] = $typeReservation->id;
+
         $reservationHotel = new Reservation();
-        // $reservation->client_id = $request->input('client_id');
+        $reservationHotel->type_reservations_id = $typeReservation->id;
         $reservationHotel->nom = $request->input('nom');
         $reservationHotel->prenoms = $request->input('prenoms');
         $reservationHotel->contact = $request->input('contact');
@@ -392,14 +408,13 @@ class ReservationController extends Controller
         $reservationHotel->date_depart = $request->input('date_depart');
         $reservationHotel->date_retour = $request->input('date_retour');
         $reservationHotel->hotel_id = $request->input('hotel_id');
-        $reservationHotel->num_persons = $request->input('num_persons');
-        $nombre_enfant = $validatedData['nombre_enfant'] ?? 0; // Si non défini, par défaut 0
-        $nombre_adultes = $validatedData['nombre_adultes'] ?? 0; // Si non défini, par défaut 0
+        $reservationHotel->nombre_enfant = $request->input('nombre_enfant') ?? 0;
+        $reservationHotel->nombre_adultes = $request->input('nombre_adultes') ?? 0;
         // Additionner les valeurs
-        $validatedData['num_persons'] =  $nombre_enfant + $nombre_adultes;
-        dd($reservationHotel);
-        $reservationHotel->save();
+        $reservationHotel->num_persons =  $reservationHotel->nombre_enfant + $reservationHotel->nombre_adultes;
+        $reservationHotel->ref_reservation= $num_reservation . $jour . $mois . $annee . '00' . $num_count->count;
 
+        $reservationHotel->save();
         return redirect()->route('home')->with('success', 'Votre Reservation a bien été envoyée avec succès.');
 
     }
