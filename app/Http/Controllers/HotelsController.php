@@ -81,6 +81,7 @@ class HotelsController extends Controller
             'destinations_id' => 'required|string',
             'etoiles' => 'required|string',
             'prix' => 'required|numeric',
+            'status' => 'required|string|max:255',
             'images.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
@@ -105,6 +106,7 @@ class HotelsController extends Controller
             'destinations_id' => $validatedData['destinations_id'],
             'etoiles' => $validatedData['etoiles'],
             'prix' => $validatedData['prix'],
+            'status' => $validatedData['status'],
         ]);
 
         // Redirect to the index page or show the updated hotel
@@ -145,7 +147,7 @@ class HotelsController extends Controller
         $query = $request->input('query');
         $hotels = Hotel::join('destinations', 'hotels.destinations_id', '=', 'destinations.id')
                             ->where('destinations.name', 'LIKE', "%{$query}%")
-                            ->Orwhere('localisation', 'LIKE', "%{$query}%")
+                            // ->Orwhere('localisation', 'LIKE', "%{$query}%")
                             ->Orwhere('hotels.name', 'LIKE', "%{$query}%")
                             ->select('hotels.*') 
                             ->paginate(10);

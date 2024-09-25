@@ -198,7 +198,7 @@
 												<li class="clearfix"><span class="ttl">Total Branch</span><span
 														class="dtl">3</span></li>
 											</ul> --}}
-										<form action="{{ route('create-reservation') }}" method="post" enctype="multipart/form-data">
+										<form action="{{ route('hotels.reservationHotel') }}" method="post" enctype="multipart/form-data">
 												@csrf
 											<div class="card-body">
 												<div class="row">
@@ -209,20 +209,20 @@
 															<div class="row">
 																<div class="col-6">
 																	<div class="form-group">
-																		<label for="first_name">Prénom</label>
-																		<input type="text" name="first_name" class="form-control" id="first_name">
+																		<label for="prenoms">Prénom</label>
+																		<input type="text" name="prenoms" class="form-control" id="prenoms">
 																	</div>
 																</div>
 																<div class="col-6">
 																	<div class="form-group">
-																		<label for="last_name">Nom</label>
-																		<input type="text" name="last_name" class="form-control" id="last_name">
+																		<label for="nom">Nom</label>
+																		<input type="text" name="nom" class="form-control" id="nom">
 																	</div>
 																</div>
 																<div class="col-6">
 																	<div class="form-group">
-																		<label for="phone_number">téléphone</label>
-																		<input type="text" name="phone_number" class="form-control" id="phone_number">
+																		<label for="contact">téléphone</label>
+																		<input type="text" name="contact" class="form-control" id="contact">
 																	</div>
 																</div>
 																<div class="col-6">
@@ -233,28 +233,29 @@
 																</div>
 																<div class="col-6">
 																	<div class="form-group">
-																		<label for="reservation_date">Date de réservation</label>
-																		<input type="date" name="reservation_date" class="form-control"
-																			id="reservation_date" value="{{date('Y-m-d')}}" >
+																		<label for="date_depart">Date d'arrivée</label>
+																		<input type="date" name="date_depart" class="form-control"
+																			id="date_depart" value="{{date('Y-m-d')}}" >
 																	</div>
 																</div>
 																<div class="col-6">
 																	<div class="form-group">
-																		<label for="num_persons">Nombre de personnes</label>
-																		<input type="number" min="0" value="0" name="num_persons" class="form-control" id="num_persons">
+																		<label for="date_retour">Date de départ</label>
+																		<input type="date" name="date_retour" class="form-control"
+																			id="date_retour" value="{{date('Y-m-d')}}" >
 																	</div>
 																</div>
 																<div class="col-6">
 																		<div class="form-group">
-																				<label for="">Bébé ( 0-2 ans)</label>
-																		<input type="number" min="0" value="0" name="nombre_bebe" class="form-control" id="nombre_bebe">
+																				<label for="nombre_enfant">Enfant(s) ( 2-17 ans)</label>
+																		<input type="number" min="0"  name="nombre_enfant" class="form-control" id="nombre_enfant">
 
 																		</div>
 																	</div>
 																<div class="col-6">
 																<div class="form-group">
-																	<label for="">Enfant ( 2-12 ans)</label>
-																	<input type="number" min="0" value="0" name="nombre_enfant" class="form-control" id="nombre_enfant">
+																	<label for="nombre_adultes">Adulte(s) ( +18 ans)</label>
+																	<input type="number" min="0"  name="nombre_adultes" class="form-control" id="nombre_adultes">
 																	
 																</div>
 															</div>

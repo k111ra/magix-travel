@@ -27,7 +27,7 @@
                             <th>Places disponibles</th>
                             <th>Date de départ</th>
                             <th>Moyen de transport</th>
-                            {{-- <th>Images</th> --}}
+                            <th>Status</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -42,6 +42,12 @@
                                 <td>{{ $tour->place }}</td>
                                 <td>{{ $tour->date_depart }}</td>
                                 <td>{{ $tour->moyen_transport }}</td>
+                                <td>@if ($tour->status === 'activé')
+                                    <span class="badge badge-success">Activé</span>
+                                    @else
+                                    <span class="badge badge-danger">Désactivé</span>
+                                    @endif</td>
+                                <td>
                                 {{-- <td>
                                     @if (is_array($tour->images))
                                         @foreach ($tour->images as $image)

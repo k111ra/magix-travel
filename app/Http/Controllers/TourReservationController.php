@@ -56,6 +56,7 @@ class TourReservationController extends Controller
         $reservation->tour_id = $request->input('tour_id');
         $reservation->hotel_id = $request->input('hotel_id');
         $reservation->vol_id = $request->input('vol_id');
+        
         $reservation->save();
 
          //Envoie de notification de reservation

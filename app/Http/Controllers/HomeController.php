@@ -25,9 +25,9 @@ class HomeController extends Controller
      */
     public function home()
     {
-        $tours = Tour::latest()->take(9)->get();
+        $tours = Tour::where('status', 'activé')->orderBy('id', 'desc')->get();
         $destinations = Destination::where('status', 'activé')->orderBy('id', 'desc')->get();
-        $hotels = Hotel::latest()->take(6)->get();
+        $hotels = Hotel::where('status', 'activé')->orderBy('id', 'desc')->get();
         $vols = Vol::all();
         $pays = AirPort::all();
         $type = TypeReservation::all();

@@ -16,6 +16,7 @@ class Hotel extends Model
         'destinations_id',
         'etoiles',
         'prix',
+        'status',
         'images'
     ];
 

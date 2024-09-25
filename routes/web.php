@@ -70,6 +70,10 @@ Route::get('/hotel-reservationShow/{id}', [HotelReservationController::class, 's
 Route::post('/hotel-reservation-create', [HotelReservationController::class, 'create'])->name('create-reservation');
 
 
+//reservation d'hotel
+Route::post('/reservations-hotels', [ReservationController::class, 'reserverHotel'])->name('hotels.reservationHotel');
+
+
 Route::post('/vol-reservation-step1', [ReservationController::class, 'insertReservationStep1Vols'])->name('step1.reservation.store');
 Route::post('/vol-reservation-step2', [ReservationController::class, 'insertReservationStep2Vols'])->name('step2.reservation.store');
 

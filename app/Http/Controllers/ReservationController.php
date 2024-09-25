@@ -367,4 +367,40 @@ class ReservationController extends Controller
         $reservation->save();
         return back()->with('success', 'Vous avez restaurer les status cette reservation');
     }
+
+    public function reserverHotel(Request $request){
+         $request->validate([
+            'nom' => 'required|string|max:255',
+            'prenoms' => 'required|string|max:255',
+            'contact' => 'required',
+            'email' => 'required|email',
+            'date_depart' => 'string|max:255',
+            'date_retour' => 'string|max:255',
+            'nombre_enfant' => 'nullable|integer', // Validation pour un nombre entier
+            'nombre_adultes' => 'nullable|integer', // Validation pour un nombre entier
+
+        ]);
+
+        $reservationHotel = new Reservation();
+        // $reservation->client_id = $request->input('client_id');
+        $reservationHotel->nom = $request->input('nom');
+        $reservationHotel->prenoms = $request->input('prenoms');
+        $reservationHotel->contact = $request->input('contact');
+        $reservationHotel->email = $request->input('email');
+        $reservationHotel->nombre_enfant = $request->input('nombre_enfant');
+        $reservationHotel->nombre_adultes = $request->input('nombre_adultes');
+        $reservationHotel->date_depart = $request->input('date_depart');
+        $reservationHotel->date_retour = $request->input('date_retour');
+        $reservationHotel->hotel_id = $request->input('hotel_id');
+        $reservationHotel->num_persons = $request->input('num_persons');
+        $nombre_enfant = $validatedData['nombre_enfant'] ?? 0; // Si non défini, par défaut 0
+        $nombre_adultes = $validatedData['nombre_adultes'] ?? 0; // Si non défini, par défaut 0
+        // Additionner les valeurs
+        $validatedData['num_persons'] =  $nombre_enfant + $nombre_adultes;
+        dd($reservationHotel);
+        $reservationHotel->save();
+
+        return redirect()->route('home')->with('success', 'Votre Reservation a bien été envoyée avec succès.');
+
+    }
 }
