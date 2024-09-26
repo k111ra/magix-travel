@@ -20,6 +20,7 @@
                             <th>Destination</th>
                             <th>Étoiles</th>
                             <th>Prix</th>
+                            <th>Status</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -33,6 +34,11 @@
                                 <td>{{ $hotel->destination->name }}</td>
                                 <td>{{ $hotel->etoiles }}</td>
                                 <td>{{ $hotel->prix }}</td>
+                                <td>@if ($hotel->status === 'activé')
+                                    <span class="badge badge-success">Activé</span>
+                                    @else
+                                    <span class="badge badge-danger">Désactivé</span>
+                                    @endif</td>
                                 <td>
                                     <a href="{{ route('hotels.show', $hotel->id) }}" class="btn btn-info btn-sm">
                                         <i class="fas fa-eye"></i>

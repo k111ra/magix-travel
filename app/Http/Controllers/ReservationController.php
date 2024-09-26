@@ -232,7 +232,7 @@ class ReservationController extends Controller
         $num_count = Reservation::ref_reser();
         // Construire le numéro de réservation
         $validatedData['ref_reservation'] = $num_reservation . $jour . $mois . $annee . '00' . $num_count->count;
-        // dd($validatedData);
+         dd($validatedData);
 
         // Stocker les données dans la session
         session()->put('step1', $validatedData);
@@ -243,7 +243,6 @@ class ReservationController extends Controller
 
     public function insertReservationStep1VolsAllerRetour(Request $request)
     {
-
         // Valider les données
         $validatedData = $request->validate([
             'destination_depart' => 'required|string|max:255',
@@ -282,7 +281,6 @@ class ReservationController extends Controller
         $num_count = Reservation::ref_reser();
         // Construire le numéro de réservation
         $validatedData['ref_reservation'] = $num_reservation . $jour . $mois . $annee . '00' . $num_count->count;
-        // dd($validatedData);
 
         // Stocker les données dans la session
         session()->put('step1', $validatedData);
@@ -366,5 +364,57 @@ class ReservationController extends Controller
         $reservation->date_fin_traitement = null;
         $reservation->save();
         return back()->with('success', 'Vous avez restaurer les status cette reservation');
+    }
+
+    public function reserverHotel(Request $request){
+        // dd($request->all());
+         $request->validate([
+            'nom' => 'required|string|max:255',
+            'prenoms' => 'required|string|max:255',
+            'contact' => 'required',
+            'email' => 'required|email',
+            'date_depart' => 'string|max:255',
+            'date_retour' => 'string|max:255',
+            'nombre_enfant' => 'nullable|integer', // Validation pour un nombre entier
+            'nombre_adultes' => 'nullable|integer', // Validation pour un nombre entier
+
+        ]);
+
+        // Générer automatiquement le numéro de référence de réservation
+        $jour = date('d');
+        $mois = date('m');
+        $annee = date('Y');
+        $num_reservation = "RES";
+        $num_count = Reservation::ref_reser();// Récupérer le dernier numéro de réservation
+
+         // Rechercher l'ID du type de réservation pour "Vol"
+         $typeReservation = DB::table('type_reservations')->where('nom', 'Hotel')->first();
+         if (!$typeReservation) {
+             return redirect()->back()->withErrors(['error' => 'Le type de réservation "Vol" est introuvable.']);
+         }
+
+         // Stocker l'ID du type de réservation dans les données validées
+         $validatedData['type_reservations_id'] = $typeReservation->id;
+
+        $reservationHotel = new Reservation();
+        $reservationHotel->type_reservations_id = $typeReservation->id;
+        $reservationHotel->nom = $request->input('nom');
+        $reservationHotel->prenoms = $request->input('prenoms');
+        $reservationHotel->contact = $request->input('contact');
+        $reservationHotel->email = $request->input('email');
+        $reservationHotel->nombre_enfant = $request->input('nombre_enfant');
+        $reservationHotel->nombre_adultes = $request->input('nombre_adultes');
+        $reservationHotel->date_depart = $request->input('date_depart');
+        $reservationHotel->date_retour = $request->input('date_retour');
+        $reservationHotel->hotel_id = $request->input('hotel_id');
+        $reservationHotel->nombre_enfant = $request->input('nombre_enfant') ?? 0;
+        $reservationHotel->nombre_adultes = $request->input('nombre_adultes') ?? 0;
+        // Additionner les valeurs
+        $reservationHotel->num_persons =  $reservationHotel->nombre_enfant + $reservationHotel->nombre_adultes;
+        $reservationHotel->ref_reservation= $num_reservation . $jour . $mois . $annee . '00' . $num_count->count;
+
+        $reservationHotel->save();
+        return redirect()->route('home')->with('success', 'Votre Reservation a bien été envoyée avec succès.');
+
     }
 }

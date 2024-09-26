@@ -19,7 +19,8 @@
                             <label for="name">Nom:</label>
                             <input type="text" name="name" id="name" class="form-control" value="{{ $destination->name }}" required>
                         </div>
-                    </div><div class="col-sm-4">
+                    </div>
+                    <div class="col-sm-4">
                         <label for="images">Status</label>
                             <select name="status" class="form-control" id="status">
                                 @foreach ($status as $status)

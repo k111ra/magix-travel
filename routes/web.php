@@ -70,6 +70,10 @@ Route::get('/hotel-reservationShow/{id}', [HotelReservationController::class, 's
 Route::post('/hotel-reservation-create', [HotelReservationController::class, 'create'])->name('create-reservation');
 
 
+//reservation d'hotel
+Route::post('/reservations-hotels', [ReservationController::class, 'reserverHotel'])->name('hotels.reservationHotel');
+
+
 Route::post('/vol-reservation-step1', [ReservationController::class, 'insertReservationStep1Vols'])->name('step1.reservation.store');
 Route::post('/vol-reservation-step2', [ReservationController::class, 'insertReservationStep2Vols'])->name('step2.reservation.store');
 
@@ -143,10 +147,10 @@ Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function () {
     Route::get('/commandes', [CommandesController::class, 'index'])->name('commandes.index');
 
     /////////Routes des produits//////////
-    Route::get('/produit', [ProduitsController::class, 'index'])->name('produits.index');
+    // Route::get('/produit', [ProduitsController::class, 'index'])->name('produits.index');
 
     /////////Routes des devis////////
-    Route::get('/devis', [DevisController::class, 'index'])->name('devis.index');
+    // Route::get('/devis', [DevisController::class, 'index'])->name('devis.index');
 
 
     /////////Routes des Tours////////
@@ -206,7 +210,7 @@ Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 // Routes de Newsletter
 Route::post('/newsletter', [NewsletterController::class, 'subscribe']);
 
-Route::get('/alerte', [DevisController::class, 'index'])->name('devis.index');
+Route::get('/alerte', [DevisController::class, 'index'])->name('alert.index');
 
 
 

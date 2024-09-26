@@ -31,8 +31,8 @@ return new class extends Migration
             $table->decimal('amount', 24, 2)->nullable();
 
             //element pour la reservation de vol
-            $table->integer('num_persons');// ce champ recois la sommes de bébé + enfant +adulte(1 bébé + 2 enfants +2 adultes = 5)
-            $table->string('destination_depart');//ou tu quittes
+            $table->integer('num_persons')->nullable();// ce champ recois la sommes de bébé + enfant +adulte(1 bébé + 2 enfants +2 adultes = 5)
+            $table->string('destination_depart')->nullable();//ou tu quittes
             $table->string('destination_final')->nullable();//ou tu vas
             $table->string('date_depart')->nullable();
             $table->string('date_retour')->nullable();//dans le cas ou c'est une reservation pour un vol aller-retour
