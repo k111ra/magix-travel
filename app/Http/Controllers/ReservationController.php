@@ -367,6 +367,7 @@ class ReservationController extends Controller
     }
 
     public function reserverHotel(Request $request){
+        // dd($request->all());
          $request->validate([
             'nom' => 'required|string|max:255',
             'prenoms' => 'required|string|max:255',
