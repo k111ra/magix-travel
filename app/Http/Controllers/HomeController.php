@@ -99,7 +99,26 @@ class HomeController extends Controller
         $newReservations = Reservation::whereBetween('created_at', [$startDate, $endDate])->count();
         $percentageIncreaseReservations = $this->calculatePercentageIncrease($totalReservations, $newReservations);
 
-        return view('admin.index', compact('totalTours', 'percentageIncrease', 'totalHotels', 'percentageIncreaseHotels', 'totalDestinations', 'percentageIncreaseDestinations', 'totalReservations', 'percentageIncreaseReservations'));
+        $reservationvols = Reservation::whereHas('typeReservation', function ($query) {
+            $query->whereIn('nom', ['Vol Simple', 'Vol Aller-Retour']);
+        })->orderBy('id', 'desc')->count();
+
+        $reservationhotels = Reservation::whereHas('typeReservation', function ($query) {
+            $query->whereIn('nom', ['Hotel']);
+        })->orderBy('id', 'desc')->count();
+
+        return view('admin.dashboard.index', compact(
+            'totalTours',
+             'percentageIncrease',
+              'totalHotels',
+               'percentageIncreaseHotels',
+                'totalDestinations',
+                 'percentageIncreaseDestinations',
+                  'totalReservations', 
+                  'percentageIncreaseReservations',
+                  'reservationvols',
+                  'reservationhotels',
+                ));
     }
 
     /**

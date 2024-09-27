@@ -196,9 +196,9 @@ class ReservationController extends Controller
         return view('admin.reservations.reservation-hotel',compact('listesHotels'));
     }
 
-    public function showH($id){
-        $showH = Reservation::findOrFail($id);
-        return view('admin.reservations.show-H', compact('showH'));
+    public function showHotel($id){
+        $showHotel = Reservation::findOrFail($id);
+        return view('admin.reservations.show-Hotel', compact('showHotel'));
 
     }
 
