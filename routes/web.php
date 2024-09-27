@@ -92,6 +92,7 @@ Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function () {
     Route::get('/liste-reservations-tours', [ReservationController::class, 'reservationTours'])->name('reservations.tours.reservationTours');
     Route::get('/liste-reservation-vols', [ReservationController::class, 'reservationVols'])->name('reservation.vols.reservationVols');
     Route::get('/vol/{id}', [ReservationController::class, 'showVol'])->name('reservation.vols.show');
+    Route::get('/hotel/{id}', [ReservationController::class, 'showHotel'])->name('reservation.hotel.show');
 
      //////////////// routes de type de programme
      Route::get('/liste-type-reservation', [TypeReservationController::class, 'index'])->name('type.index');

@@ -170,7 +170,10 @@ class ReservationController extends Controller
 
     public function reservationVols()
     {
-        $listesvols =Reservation::orderBy('id', 'desc')->get();
+        // $listesvols =Reservation::orderBy('id', 'desc')->get();
+        $listesvols = Reservation::whereHas('typeReservation', function ($query) {
+            $query->whereIn('nom', ['Vol Simple', 'Vol Aller-Retour']);
+        })->orderBy('id', 'desc')->get();
         return view('admin.reservations.reservation-vol', compact('listesvols'));
     }
     
@@ -187,7 +190,16 @@ class ReservationController extends Controller
 
     public function reservationHotels()
     {
-        return view('admin.reservations.reservation-hotel');
+        $listesHotels = Reservation::whereHas('typeReservation', function ($query) {
+            $query->whereIn('nom', ['Hotel']);
+        })->orderBy('id', 'desc')->get();
+        return view('admin.reservations.reservation-hotel',compact('listesHotels'));
+    }
+
+    public function showH($id){
+        $showH = Reservation::findOrFail($id);
+        return view('admin.reservations.show-H', compact('showH'));
+
     }
 
     public function insertReservationStep1Vols(Request $request)
