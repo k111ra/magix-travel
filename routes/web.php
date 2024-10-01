@@ -23,6 +23,7 @@ use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\TourReservationController;
 use App\Http\Controllers\TypeReservationController;
+use App\Http\Controllers\TypeTourController;
 use App\Http\Controllers\VolController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -109,6 +110,14 @@ Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function () {
      Route::get('/edit-slider/{id}', [SliderController::class, 'edit'])->name('slider.edit');
      Route::post('/update-slider/{id}', [SliderController::class, 'update'])->name('slider.update');
      Route::delete('/destroy-slider/{slider}', [SliderController::class, 'destroy'])->name('slider.destroy');
+
+     //////////////// routes des enfants
+     Route::get('/liste-type-tour', [TypeTourController::class, 'index'])->name('type.tour.index');
+     Route::get('/create-ype-tour', [TypeTourController::class, 'create'])->name('type.tour.create');
+     Route::post('/store-ype-tour', [TypeTourController::class, 'store'])->name('type.tour.store');
+     Route::get('/edit-ype-tour/{id}', [TypeTourController::class, 'edit'])->name('type.tour.edit');
+     Route::post('/update-ype-tour/{id}', [TypeTourController::class, 'update'])->name('type.tour.update');
+     Route::delete('/destroy-ype-tour/{type}', [TypeTourController::class, 'destroy'])->name('type.tour.destroy');
 
     // Resource routes for common admin functionalities
     Route::resource('tours', ToursController::class);

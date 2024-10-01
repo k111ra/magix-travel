@@ -174,14 +174,14 @@
                                             culture traditionnelle. L'attention portée aux détails et les recommandations
                                             personnalisées ont fait de ce voyage une expérience inoubliable.
                                         </p>
-                                        <div class="info">
+                                        {{-- <div class="info">
                                             <div class="image"><img
                                                     src="{{ asset('frontend/assets/images/resources/thumbnails/testi-1.jpg') }}"
                                                     alt="">
                                             </div>
                                             <div class="name">Farooq Diyaz</div>
                                             <div class="designation">Développeur Web</div>
-                                        </div>
+                                        </div> --}}
                                     </div>
                                 </div>
                                 <!--Block-->
@@ -199,14 +199,14 @@
                                             travers l'Europe a dépassé nos attentes. Des monuments emblématiques aux
                                             trésors cachés, chaque moment a été un délice.
                                         </p>
-                                        <div class="info">
+                                        {{-- <div class="info">
                                             <div class="image"><img
                                                     src="{{ asset('frontend/assets/images/resources/thumbnails/testi-2.jpg') }}"
                                                     alt="">
                                             </div>
                                             <div class="name">Karim Sonya</div>
                                             <div class="designation">Designer Graphique</div>
-                                        </div>
+                                        </div> --}}
                                     </div>
                                 </div>
                                 <!--Block-->
@@ -224,14 +224,14 @@
                                             rencontres culturelles avec des tribus locales. Nous nous sommes sentis en
                                             sécurité, bien informés et profondément immergés dans la beauté du continent.
                                         </p>
-                                        <div class="info">
+                                        {{-- <div class="info">
                                             <div class="image"><img
                                                     src="{{ asset('frontend/assets/images/resources/thumbnails/testi-3.jpg') }}"
                                                     alt="">
                                             </div>
                                             <div class="name">James Fernandez</div>
                                             <div class="designation">Photographe</div>
-                                        </div>
+                                        </div> --}}
                                     </div>
                                 </div>
                             </div>
@@ -253,7 +253,7 @@
 
 
     <!--Partners Section-->
-    <div class="partners-two alternate">
+    {{-- <div class="partners-two alternate">
         <div class="auto-container">
             <div class="carousel-box">
                 <div class="partners-carousel">
@@ -331,7 +331,7 @@
             </div>
 
         </div>
-    </div>
+    </div> --}}
 
     <!--News Section-->
     <div class="news-two">
@@ -352,16 +352,16 @@
                     <div class="news-block-two col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-duration="1500ms"
                         data-wow-delay="0ms">
                         <div class="inner-box">
-                            <div class="image-box"><a href="blog-single-2.html"><img
+                            <div class="image-box"><a href="{{route('home')}}"><img
                                         src="{{ asset('frontend/assets/images/resources/posts/post-5.jpg') }}"
                                         alt=""></a></div>
                             <div class="lower-box">
                                 <ul class="info clearfix">
                                     <li><a href="#"><i class="fa-solid fa-folder"></i> Aventure</a></li>
                                     <li><a href="#"><i class="fa-solid fa-clock"></i> 17 juin 2022</a></li>
-                                    <li><a href="#"><i class="fa-solid fa-comments"></i> 238</a></li>
+                                    {{-- <li><a href="#"><i class="fa-solid fa-comments"></i> 238</a></li> --}}
                                 </ul>
-                                <h4><a href="blog-single.html">Contes d’aventure et de découverte autour de la
+                                <h4><a href="{{route('home')}}">Contes d’aventure et de découverte autour de la
                                     Globe</a></h4>
                             </div>
                         </div>
@@ -370,16 +370,16 @@
                     <div class="news-block-two col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-duration="1500ms"
                         data-wow-delay="300ms">
                         <div class="inner-box">
-                            <div class="image-box"><a href="blog-single-2.html"><img
+                            <div class="image-box"><a href="{{route('home')}}"><img
                                         src="{{ asset('frontend/assets/images/resources/posts/post-6.jpg') }}"
                                         alt=""></a></div>
                             <div class="lower-box">
                                 <ul class="info clearfix">
                                     <li><a href="#"><i class="fa-solid fa-folder"></i> Aventure</a></li>
                                     <li><a href="#"><i class="fa-solid fa-clock"></i> 1er août 2021</a></li>
-                                    <li><a href="#"><i class="fa-solid fa-comments"></i> 129</a></li>
+                                    {{-- <li><a href="#"><i class="fa-solid fa-comments"></i> 129</a></li> --}}
                                 </ul>
-                                <h4><a href="blog-single.html">Travel Smart, Travel Safe, Conseils essentiels pour une
+                                <h4><a href="{{route('home')}}">Travel Smart, Travel Safe, Conseils essentiels pour une
                                     Voyage sans souci</a>
                                 </h4>
                             </div>
@@ -389,16 +389,16 @@
                     <div class="news-block-two col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-duration="1500ms"
                         data-wow-delay="600ms">
                         <div class="inner-box">
-                            <div class="image-box"><a href="blog-single-2.html"><img
+                            <div class="image-box"><a href="{{route('home')}}"><img
                                         src="{{ asset('frontend/assets/images/resources/posts/post-7.jpg') }}"
                                         alt=""></a></div>
                             <div class="lower-box">
                                 <ul class="info clearfix">
                                     <li><a href="#"><i class="fa-solid fa-folder"></i> Aventure</a></li>
                                     <li><a href="#"><i class="fa-solid fa-clock"></i> 23 mai 2021</a></li>
-                                    <li><a href="#"><i class="fa-solid fa-comments"></i> 566</a></li>
+                                    {{-- <li><a href="#"><i class="fa-solid fa-comments"></i> 566</a></li> --}}
                                 </ul>
-                                <h4><a href="blog-single.html">Découvrir des trésors cachés dans des destinations populaires</a>
+                                <h4><a href="{{route('home')}}">Découvrir des trésors cachés dans des destinations populaires</a>
                                 </h4>
                             </div>
                         </div>

@@ -12,12 +12,11 @@
     <div class="auto-container">
         <div class="tabs-box search-tabs">
             <ul class="tab-buttons clearfix">
-                <li class="tab-btn active-btn" data-tab="#tab-1"><span>Hotel</span></li>
+                <li class="tab-btn active-btn" data-tab="#tab-1"><span>Hôtel</span></li>
                 <li class="tab-btn" data-tab="#tab-2"><span>Tour</span></li>
-                <li class="tab-btn" data-tab="#tab-3"><span>Activité</span></li>
+                {{-- <li class="tab-btn" data-tab="#tab-3"><span>Activité</span></li> --}}
                 {{-- <li class="tab-btn" data-tab="#tab-4"><span>Véhicule</span></li>--}}
                 <li class="tab-btn" data-tab="#tab-5"><span>Vol</span></li>
-                {{-- <li class="tab-btn" data-tab="#tab-6"><span>Vol (Aller-retour)</span></li> --}}
             </ul>
             <div class="tabs-content">
                 <!--Tab-->

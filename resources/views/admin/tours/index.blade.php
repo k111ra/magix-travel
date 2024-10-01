@@ -24,6 +24,7 @@
                             <th>Durée</th>
                             <th>Prix</th>
                             <th>Destination</th>
+                            <th>Type Tour</th>
                             <th>Places disponibles</th>
                             <th>Date de départ</th>
                             <th>Moyen de transport</th>
@@ -39,23 +40,18 @@
                                 <td>{{ $tour->duree }} jour(s)</td>
                                 <td>{{ number_format($tour->prix, 0, ',', ' ') }} FCFA</td>
                                 <td>{{ $tour->destinations->name }}</td>
+                                <td>{{ $tour->typeTour->nom }}</td>
                                 <td>{{ $tour->place }}</td>
                                 <td>{{ $tour->date_depart }}</td>
                                 <td>{{ $tour->moyen_transport }}</td>
-                                <td>@if ($tour->status === 'activé')
-                                    <span class="badge badge-success">Activé</span>
-                                    @else
-                                    <span class="badge badge-danger">Désactivé</span>
-                                    @endif</td>
                                 <td>
-                                {{-- <td>
-                                    @if (is_array($tour->images))
-                                        @foreach ($tour->images as $image)
-                                            <img src="{{ asset('storage/' . $image) }}" width="50px" alt="Tour Image" class="img-thumbnail">
-                                        @endforeach
+                                    @if ($tour->status === 'activé')
+                                        <span class="badge badge-success">Activé</span>
+                                        @else
+                                        <span class="badge badge-danger">Désactivé</span>
                                     @endif
-                                </td> --}}
-                                <td>
+                                </td>
+                                <td  width ="120px">
                                     <a href="{{ route('tours.show', $tour->id) }}" class="btn btn-info btn-sm">
                                         <i class="fas fa-eye"></i>
                                     </a>

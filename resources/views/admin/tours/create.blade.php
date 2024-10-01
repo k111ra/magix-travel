@@ -65,6 +65,17 @@
 
             <div class="col-sm-12">
                 <div class="form-group">
+                    <label for="depart_id">Type de tour</label>
+                    <select name="type_tours_id" class="form-control" id="type_tours_id">
+                        @foreach ($types as $data)
+                        <option value="{{ $data->id }}">{{ $data->nom }}</option>
+                        @endforeach
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-sm-12">
+                <div class="form-group">
                     <label for="description">Description:</label>
                     <textarea name="description" id="description" class="form-control" required></textarea>
                 </div>

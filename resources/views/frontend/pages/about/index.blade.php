@@ -56,7 +56,7 @@
                                 <li>Un accompagnement et un accompagnement personnalisés</li>
                             </ul>
                         </div>
-                        <div class="link-box"><a href="about.html" class="theme-btn btn-style-one"><span>Lire Plus</span></a></div>
+                        <div class="link-box"><a href="{{route('destination')}}" class="theme-btn btn-style-one"><span>Nos destinations</span></a></div>
                     </div>
                 </div>
             </div>
@@ -73,7 +73,7 @@
                         <div class="image"><img src="{{asset('frontend/assets/images/resources/misc/man-hiking-2.jpg')}}" alt=""
                                 title=""></div>
                     </div>
-                    <div class="exp"><span class="count">12</span> Successful <br>Years</div>
+                    <div class="exp"><span class="count">10</span> années <br>de succès</div>
                 </div>
             </div>
         </div>
@@ -183,7 +183,7 @@
 </div>
 
 <!--Facts Section-->
-<div class="facts-section alt-padding">
+{{-- <div class="facts-section alt-padding">
     <div class="auto-container">
         <div class="fact-counter">
             <div class="row clearfix">
@@ -231,10 +231,10 @@
         </div>
 
     </div>
-</div>
+</div> --}}
 
 <!--Team Section-->
-<div class="team-section">
+{{-- <div class="team-section">
     <div class="auto-container">
         <div class="title-box centered wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
             <div class="subtitle">Membres de l’équipe</div>
@@ -323,7 +323,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 
 <!--Testimonials Section-->
 <div class="testimonials-section alt-bg">
@@ -348,8 +348,8 @@
                             conseils; fait mon voyage
                             inoubliable.</div>
                         <div class="info">
-                            <div class="image"><img src="assets/images/resources/thumbnails/testi-1.jpg"
-                                    alt="Testimonial 1"></div>
+                            {{-- <div class="image"><img src="././assets/images/resources/thumbnails/testi-1.jpg"
+                                    alt="Testimonial 1"></div> --}}
                             <div class="rating">
                                 <div class="stars"><i class="fa-solid fa-star"></i><i
                                         class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
@@ -374,8 +374,8 @@
                             sécurité a fait le
                             Voyage à la fois passionnant et agréable.</div>
                         <div class="info">
-                            <div class="image"><img src="{{asset('frontend/assets/images/resources/thumbnails/testi-7.jpg')}}"
-                                    alt="Testimonial 2"></div>
+                            {{-- <div class="image"><img src="{{asset('frontend/assets/images/resources/thumbnails/testi-7.jpg')}}"
+                                    alt="Testimonial 2"></div> --}}
                             <div class="rating">
                                 <div class="stars"><i class="fa-solid fa-star"></i><i
                                         class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
@@ -400,8 +400,8 @@
                             inoubliable et
                             étonnant.</div>
                         <div class="info">
-                            <div class="image"><img src="{{asset('frontend/assets/images/resources/thumbnails/testi-3.jpg')}}"
-                                    alt="Testimonial 3"></div>
+                            {{-- <div class="image"><img src="{{asset('frontend/assets/images/resources/thumbnails/testi-3.jpg')}}"
+                                    alt="Testimonial 3"></div> --}}
                             <div class="rating">
                                 <div class="stars"><i class="fa-solid fa-star"></i><i
                                         class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
@@ -426,8 +426,8 @@
                             accompagnement personnalisé
                             tout au long.</div>
                         <div class="info">
-                            <div class="image"><img src="{{asset('frontend/assets/images/resources/thumbnails/testi-4.jpg')}}"
-                                    alt="Testimonial 4"></div>
+                            {{-- <div class="image"><img src="{{asset('frontend/assets/images/resources/thumbnails/testi-4.jpg')}}"
+                                    alt="Testimonial 4"></div> --}}
                             <div class="rating">
                                 <div class="stars"><i class="fa-solid fa-star"></i><i
                                         class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
@@ -452,8 +452,8 @@
                             besoins. Le client
                             le service est de premier ordre.</div>
                         <div class="info">
-                            <div class="image"><img src="{{asset('frontend/assets/images/resources/thumbnails/testi-5.jpg')}}"
-                                    alt="Testimonial 5"></div>
+                            {{-- <div class="image"><img src="{{asset('frontend/assets/images/resources/thumbnails/testi-5.jpg')}}"
+                                    alt="Testimonial 5"></div> --}}
                             <div class="rating">
                                 <div class="stars"><i class="fa-solid fa-star"></i><i
                                         class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
@@ -478,8 +478,8 @@
                             conseils de voyage et
                             aperçu des destinations.</div>
                         <div class="info">
-                            <div class="image"><img src="{{asset('frontend/assets/images/resources/thumbnails/testi-6.jpg')}}"
-                                    alt="Testimonial 6"></div>
+                            {{-- <div class="image"><img src="{{asset('frontend/assets/images/resources/thumbnails/testi-6.jpg')}}"
+                                    alt="Testimonial 6"></div> --}}
                             <div class="rating">
                                 <div class="stars"><i class="fa-solid fa-star"></i><i
                                         class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
@@ -504,8 +504,8 @@
                             activités destinées à
                             intérêt de tous.</div>
                         <div class="info">
-                            <div class="image"><img src="{{asset('frontend/assets/images/resources/thumbnails/testi-2.jpg')}}"
-                                    alt="Testimonial 7"></div>
+                            {{-- <div class="image"><img src="{{asset('frontend/assets/images/resources/thumbnails/testi-2.jpg')}}"
+                                    alt="Testimonial 7"></div> --}}
                             <div class="rating">
                                 <div class="stars"><i class="fa-solid fa-star"></i><i
                                         class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
@@ -530,8 +530,8 @@
                             expérience magique de
                             bout en bout.</div>
                         <div class="info">
-                            <div class="image"><img src="{{asset('frontend/assets/images/resources/thumbnails/testi-8.jpg')}}"
-                                    alt="Testimonial 8"></div>
+                            {{-- <div class="image"><img src="{{asset('frontend/assets/images/resources/thumbnails/testi-8.jpg')}}"
+                                    alt="Testimonial 8"></div> --}}
                             <div class="rating">
                                 <div class="stars"><i class="fa-solid fa-star"></i><i
                                         class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
@@ -556,8 +556,8 @@
                             processus de réservation
                             était lisse!</div>
                         <div class="info">
-                            <div class="image"><img src="{{asset('frontend/assets/images/resources/thumbnails/testi-9.jpg')}}"
-                                    alt="Testimonial 9"></div>
+                            {{-- <div class="image"><img src="{{asset('frontend/assets/images/resources/thumbnails/testi-9.jpg')}}"
+                                    alt="Testimonial 9"></div> --}}
                             <div class="rating">
                                 <div class="stars"><i class="fa-solid fa-star"></i><i
                                         class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
@@ -577,7 +577,7 @@
 </div>
 
 <!--Partners Section-->
-<div class="partners-two">
+{{-- <div class="partners-two">
     <div class="auto-container">
         <div class="title-box centered">
             <div class="subtitle">Des partenaires précieux</div>
@@ -639,5 +639,5 @@
         </div>
 
     </div>
-</div>
+</div> --}}
 @endsection

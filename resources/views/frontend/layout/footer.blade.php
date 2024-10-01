@@ -117,7 +117,7 @@
 <div class="f-bottom">
     <div class="auto-container">
         <div class="inner clearfix">
-            <div class="copyright">All rights researved <strong>Planet Koncept</strong> &copy; 2024</div>
+            <div class="copyright">All rights researved <strong>Magix Travel</strong> &copy; 2024</div>
             <div class="bottom-links">
                 <ul class="clearfix">
                     <li><a href="#">Terms & Conditions</a></li>

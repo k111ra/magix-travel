@@ -166,11 +166,18 @@
 										<h4>Type de tour</h4>
 									</div>
 									<ul>
+										{{-- @foreach ($types as $type)
+											<li>
+												<div class="cb-block"><input type="checkbox" id="cb-6"><label for="cb-6"><span class="txt">Aventure</span></label></div>
+											</li>
+										@endforeach --}}
+										@foreach ($types as $type)
 										<li>
-											<div class="cb-block"><input type="checkbox" id="cb-6"><label
-													for="cb-6"><span class="txt">Aventure</span></label></div>
+										    <div class="cb-block"><input type="checkbox" id="cb-{{$type->id}}" value="{{$type->id}}"><label for="cb-{{$type->id}}"><span class="txt">{{$type->nom}}</span></label></div>
 										</li>
-										<li>
+										@endforeach
+
+										{{-- <li>
 											<div class="cb-block"><input type="checkbox" id="cb-7"><label
 													for="cb-7"><span class="txt">Randonnée</span></label></div>
 										</li>
@@ -201,7 +208,7 @@
 										<li>
 											<div class="cb-block"><input type="checkbox" id="cb-14"><label
 													for="cb-14"><span class="txt">Randonnée pédestre</span></label></div>
-										</li>
+										</li> --}}
 									</ul>
 								</div>
 							</div>
@@ -214,12 +221,12 @@
 									</div>
 									<ul>
 										@foreach ($destinations as $destination)
-											
-										
 										<li>
 											<div class="cb-block"><input type="checkbox" id="cb-{{$destination->id}}" value="{{$destination->id}}"><label
 													for="cb-{{$destination->id}}"><span class="txt">{{$destination->name}}</span></label></div>
 										</li>
+										@endforeach
+
 										{{-- <li>
 											<div class="cb-block"><input type="checkbox" id="cb-16"><label
 													for="cb-16"><span class="txt">London</span></label></div>
@@ -248,7 +255,6 @@
 											<div class="cb-block"><input type="checkbox" id="cb-22"><label
 													for="cb-22"><span class="txt">Dubai</span></label></div>
 										</li> --}}
-										@endforeach
 									</ul>
 								</div>
 							</div>

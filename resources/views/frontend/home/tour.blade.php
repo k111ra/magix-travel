@@ -22,7 +22,12 @@
                                 <div class="location"></div>
                                 <h5><a href="{{ route('single-tour', $tour->id) }}">{{ $tour->nom }}</a></h5>
                                 <div class="info clearfix">
-                                    <div class="duration"><i class="fa-solid fa-clock"></i>{{ $tour->duree }} jour(s)
+                                    
+                                    <div class="duration">
+                                        <i class="fa-solid fa-folder"></i>{{ $tour->typeTour->nom }}
+                                    </div>
+                                    <div class="duration" style="margin-left: 20px;">
+                                        <i class="fa-solid fa-clock"></i>{{ $tour->duree }} jour(s)
                                     </div>
                                     <div class="persons"><i class="fa-solid fa-user"></i>{{ $tour->place }} </div>
                                 </div>
@@ -30,7 +35,7 @@
                                     <div class="rating"><a href="#" class="theme-btn">
                                             <strong></strong> &ensp; <span class="count"></span></a>
                                     </div>
-                                    <div class="price">Prix &ensp;<span
+                                    <div class="price">Prix&ensp;<span
                                             class="amount">{{ number_format($tour->prix, 0, ',', ' ') }} FCFA</span>
                                     </div>
                                 </div>

@@ -6,6 +6,7 @@ use App\Models\Tour;
 use App\Models\Reseaux;
 use App\Models\Destination;
 use App\Models\Information;
+use App\Models\TypeTour;
 use Illuminate\Support\Arr;
 use Illuminate\Http\Request;
 use Yoeunes\Toastr\Facades\Toastr;
@@ -33,7 +34,8 @@ class ToursController extends Controller
     public function create()
     {
         $destinations = Destination::all();
-        return view('admin.tours.create', compact('destinations'));
+        $types = TypeTour::all();
+        return view('admin.tours.create', compact('destinations','types'));
     }
 
     /**
@@ -50,6 +52,7 @@ class ToursController extends Controller
         $rules = [
             'nom' => ['required', 'string', 'max:255'],
             'destinations_id' => ['required', 'integer'],
+            'type_tours_id' => ['required', 'integer'],
             'duree' => ['required', 'numeric'],
             'prix' => ['required', 'numeric'],
             'place' => ['required', 'numeric'],
@@ -69,6 +72,7 @@ class ToursController extends Controller
         $tour->duree = $validatedData['duree'];
         $tour->prix = $validatedData['prix'];
         $tour->destinations_id = $validatedData['destinations_id'];
+        $tour->type_tours_id = $validatedData['type_tours_id'];
         $tour->place = $validatedData['place'];
         $tour->date_depart = $validatedData['date_depart'];
         $tour->moyen_transport = $validatedData['moyen_transport'];
@@ -84,6 +88,7 @@ class ToursController extends Controller
             $tour->images = json_encode($images);
         }
 
+        // dd($tour);
         // Enregistrer le tour
         $tour->save();
 
@@ -115,7 +120,8 @@ class ToursController extends Controller
     public function edit(Tour $tour)
     {
         $destination = Destination::orderBy('created_at', 'desc')->get();
-        return view('admin.tours.edit', compact('tour', 'destination'));
+        $types = TypeTour::orderBy('created_at', 'desc')->get();
+        return view('admin.tours.edit', compact('tour', 'destination','types'));
     }
 
     /**
@@ -132,6 +138,7 @@ class ToursController extends Controller
         $validatedData = $request->validate([
             'nom' => 'required',
             'destinations_id' => 'required',
+            'type_tours_id' =>'required',
             'duree' => 'required',
             'prix' => 'required',
             'place' => 'required',
@@ -159,6 +166,7 @@ class ToursController extends Controller
         $tour->update([
             'nom' => $validatedData['nom'],
             'destinations_id' => $validatedData['destinations_id'],
+            'type_tours_id' => $validatedData['type_tours_id'],
             'duree' => $validatedData['duree'],
             'prix' => $validatedData['prix'],
             'place' => $validatedData['place'],
@@ -193,8 +201,9 @@ class ToursController extends Controller
         $tours = Tour::paginate(10);
         $destinations  = Destination::all();
         $information = Information::first();
+        $types = TypeTour::all();
         $reseau = Reseaux::first();
-        return view('frontend.pages.tours.index', compact('tours','destinations','information','reseau'));
+        return view('frontend.pages.tours.index', compact('types','tours','destinations','information','reseau'));
     }
 
     public function tourDetails($id)

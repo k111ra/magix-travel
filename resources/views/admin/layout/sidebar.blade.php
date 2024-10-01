@@ -83,7 +83,8 @@
                 <li><a class="nav-link @if (request()->routeIs('create-info')) active @endif" href="{{ route('create-info') }}">Généraux</a></li>
                 <li><a class="nav-link @if (request()->routeIs('Roles.index')) active @endif" href="{{ route('Roles.index') }}">Rôle</a></li>
                 <li><a class="nav-link @if (request()->routeIs('type.index')) active @endif" href="{{ route('type.index') }}">Type Reservation</a></li>
-                <li><a class="nav-link @if (request()->routeIs('slider.index')) active @endif" href="{{ route('slider.index') }}">Sliders</a></li>
+                <li><a class="nav-link @if (request()->routeIs('slider.index')) active @endif" href="{{ route('slider.index') }}">Sliders</a></li> 
+                <li><a class="nav-link @if (request()->routeIs('type.tour.index')) active @endif" href="{{ route('type.tour.index') }}">Type Tour</a></li>
 
 
                 {{-- <li><a class="nav-link @if (request()->routeIs('some_other_route')) active @endif" href="{{ route('some_other_route') }}">Some Other Route</a></li> --}}
