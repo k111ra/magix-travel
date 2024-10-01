@@ -28,6 +28,9 @@
                 
                 {{-- Reservations vol--}}
                 @include('admin.dashboard.reservations.reservation-hotel.hotel')
+                @include('admin.dashboard.reservations.reservation-hotel.hoteltraitement')
+                @include('admin.dashboard.reservations.reservation-hotel.hotelvalider')
+                @include('admin.dashboard.reservations.reservation-hotel.hotelannuler')
     
                  
                

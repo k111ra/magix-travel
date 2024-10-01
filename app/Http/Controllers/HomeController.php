@@ -106,19 +106,38 @@ class HomeController extends Controller
         $reservationhotels = Reservation::whereHas('typeReservation', function ($query) {
             $query->whereIn('nom', ['Hotel']);
         })->orderBy('id', 'desc')->count();
+        
 
-        return view('admin.dashboard.index', compact(
-            'totalTours',
-             'percentageIncrease',
-              'totalHotels',
-               'percentageIncreaseHotels',
-                'totalDestinations',
-                 'percentageIncreaseDestinations',
-                  'totalReservations', 
-                  'percentageIncreaseReservations',
-                  'reservationvols',
-                  'reservationhotels',
-                ));
+        //les status
+        $reservationsEnCoursHotels = Reservation::whereHas('typeReservation', function ($query) {
+            $query->where('nom', 'Hotel');
+        })->where('status', 'traiter')->count();
+
+        $reservationsValideesHotels = Reservation::whereHas('typeReservation', function ($query) {
+            $query->where('nom', 'Hotel');
+        })->where('status', 'valider')->count();
+
+        $reservationsAnnuleesHotels = Reservation::whereHas('typeReservation', function ($query) {
+            $query->where('nom', 'Hotel');
+        })->where('status', 'annuler')->count();
+
+
+        return view('admin.dashboard.index',[
+
+           'totalTours'=>$totalTours,
+            'percentageIncrease' =>$percentageIncrease,
+            'totalHotels'=>$totalHotels,
+               'percentageIncreaseHotels'=>$percentageIncreaseHotels,
+                'totalDestinations'=>$totalDestinations,
+                 'percentageIncreaseDestinations'=>$percentageIncreaseDestinations,
+                  'totalReservations'=>$totalReservations, 
+                  'percentageIncreaseReservations'=>$percentageIncreaseReservations,
+                  'reservationvols'=>$reservationvols,
+                  'reservationhotels'=>$reservationhotels,
+                  'reservationsEnCoursHotels'=>$reservationsEnCoursHotels,
+                  'reservationsValideesHotels'=>$reservationsValideesHotels,
+                  'reservationsAnnuleesHotels'=>$reservationsAnnuleesHotels,
+        ]);
     }
 
     /**
