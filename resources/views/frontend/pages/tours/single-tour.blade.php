@@ -1,54 +1,56 @@
 @extends('layouts.layout')
 @section('content')
-<div class="tour-single-banner">
-    <div class="image-layer" style="background-image: url({{asset('frontend/assets/images/resources/featured/featured-4.jpg')}})">
-    </div>
-    <div class="auto-container">
-        <div class="content-box">
-            <div class="content clearfix">
-                <div class="t-type">
-                    <div class="icon"><img src="{{asset('frontend/assets/images/icons/t-icon-1.png')}}" alt=""></div>
-                    Tour Type <br><strong>Adventure</strong>
-                </div>
-                <div class="links">
-                    <ul class="clearfix">
-                        <li><a href="#">Gallery <i class="far fa-images"></i></a></li>
-                        <li><a href="#">Video <i class="far fa-video-camera"></i></a></li>
-                    </ul>
+    <div class="tour-single-banner">
+        <div class="image-layer"
+            style="background-image: url({{ asset('frontend/assets/images/resources/featured/featured-4.jpg') }})">
+        </div>
+        <div class="auto-container">
+            <div class="content-box">
+                <div class="content clearfix">
+                    <div class="t-type">
+                        <div class="icon"><img src="{{ asset('frontend/assets/images/icons/t-icon-1.png') }}" alt="">
+                        </div>
+                        Tour Type <br><strong>Adventure</strong>
+                    </div>
+                    <div class="links">
+                        <ul class="clearfix">
+                            <li><a href="#">Gallery <i class="far fa-images"></i></a></li>
+                            <li><a href="#">Video <i class="far fa-video-camera"></i></a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-		<!--Default Single Container-->
-		<div class="dsp-container tour-single">
-			<div class="auto-container">
-				<div class="row clearfix">
+    <!--Default Single Container-->
+    <div class="dsp-container tour-single">
+        <div class="auto-container">
+            <div class="row clearfix">
 
-					<!--Content Side-->
-					<div class="content-side col-xl-8 col-lg-12 col-md-12 col-sm-12">
-						<div class="content-inner">
+                <!--Content Side-->
+                <div class="content-side col-xl-6 col-lg-12 col-md-12 col-sm-12">
+                    <div class="content-inner">
 
-							<div class="sp-header">
-								<div class="loc-rat clearfix">
-									<div class="location">{{$tour->destinations->name}}</div>
-									<div class="rating"><a href="#" class="theme-btn"><i class="fa-solid fa-star"></i>
-											<strong>4.8</strong>   <span class="count">4233 Reviews</span></a></div>
-									
-								</div>
-								<h1>{{$tour->nom}}</h1>
-								<div class="info clearfix">
-									<div class="duration"><i class="fa-solid fa-clock"></i> {{$tour->duree}} jour(s)</div>
-									<div class="persons"><i class="fa-solid fa-user"></i>{{$tour->place}} personnes</div>
-								</div>
-							</div>
+                        <div class="sp-header">
+                            <div class="loc-rat clearfix">
+                                <div class="location">{{ $tour->destinations->name }}</div>
+                                <div class="rating"><a href="#" class="theme-btn"><i class="fa-solid fa-star"></i>
+                                        <strong>4.8</strong>   <span class="count">4233 Reviews</span></a></div>
 
-							<div class="upper-content">
-								<div class="text-content">
-									<h3>Details Tour </h3>
-									<p>{{$tour->description}}</p>
-									
-									{{-- <br>
+                            </div>
+                            <h1>{{ $tour->nom }}</h1>
+                            <div class="info clearfix">
+                                <div class="duration"><i class="fa-solid fa-clock"></i> {{ $tour->duree }} jour(s)</div>
+                                <div class="persons"><i class="fa-solid fa-user"></i>{{ $tour->place }} personnes</div>
+                            </div>
+                        </div>
+
+                        <div class="upper-content">
+                            <div class="text-content">
+                                <h3>Details Tour </h3>
+                                <p>{{ $tour->description }}</p>
+
+                                {{-- <br>
 									<h5>Highlights</h5>
 									<ul class="styled-list-one">
 										<li>Explore the best beaches of Phuket, from lively Patong to serene Kata and
@@ -73,7 +75,7 @@
 									</ul>
 									</div>
 									<div class="basic-info"> --}}
-									{{-- <div class="i-block clearfix">
+                                {{-- <div class="i-block clearfix">
 										<h5>Basic Information</h5>
 									</div>
 									<div class="i-block clearfix">
@@ -161,10 +163,10 @@
 											</ul>
 										</div>
 									</div> --}}
-								</div>
-							</div>
+                            </div>
+                        </div>
 
-							 {{-- <div class="t-plans">
+                        {{-- <div class="t-plans">
 								<h3>Tour Plans</h3>
 								<ul class="accordion-box tp-accordion clearfix">
 									<!--Block-->
@@ -308,7 +310,7 @@
 								</ul>
 							</div>  --}}
 
-							{{--<div class="location">
+                        {{-- <div class="location">
 								<h3>Map</h3>
 								<div class="map-box">
 									<iframe
@@ -318,9 +320,9 @@
 
 									<div class="map-icon"><img src="{{asset('frontend/assets/images/icons/map-marker-2.png')}}" alt=""></div>
 								</div>
-							</div>--}}
+							</div> --}}
 
-							{{-- <div class="t-faqs">
+                        {{-- <div class="t-faqs">
 								<h3>Frequently Asked Questions</h3>
 								<ul class="accordion-box faqs-accordion clearfix">
 									<!--Block-->
@@ -423,7 +425,7 @@
 
 								</ul>
 							</div> --}}
-{{-- 
+                        {{-- 
 							<div class="t-gallery">
 								<h3>Media Gallery</h3>
 								<div class="images">
@@ -495,7 +497,7 @@
 								</div>
 							</div> --}}
 
-							{{-- <div class="t-reviews">
+                        {{-- <div class="t-reviews">
 								<h3>Reviews</h3>
 								<div class="rev-info">
 									<div class="inner clearfix">
@@ -747,22 +749,22 @@
 								</div>
 							</div> --}}
 
-						</div>
-					</div>
+                    </div>
+                </div>
 
-					<!--Sidebar Side-->
-					<div class="sidebar-side col-xl-4 col-lg-8 col-md-12 col-sm-12">
-						<div class="sidebar-inner">
-							<!--Widget-->
-							<div class="dsp-widget t-book-widget alt-margin">
-								<div class="inner-box">
-									<div class="t-book-header">
-										<span class="st-txt">Commence <br>à partir d</span>
-										<span class="amount">{{$tour->prix}}</span>
-										<span class="qty">/ Par personne</span>
-									</div>
-									
-									{{-- <div class="lower-box">
+                <!--Sidebar Side-->
+                <div class="sidebar-side col-xl-6 col-lg-8 col-md-12 col-sm-12">
+                    <div class="sidebar-inner">
+                        <!--Widget-->
+                        <div class="dsp-widget t-book-widget alt-margin">
+                            <div class="inner-box">
+                                <div class="t-book-header">
+                                    <span class="st-txt">Commence <br>à partir d</span>
+                                    <span class="amount">{{ $tour->prix }}</span>
+                                    <span class="qty">/ Par personne</span>
+                                </div>
+
+                                {{-- <div class="lower-box">
 										<div class="form-box site-form">
 											<form method="post" action="https://jufailitech.com/envatoitems/travilo/html/tour-single.html">
 												<div class="fields">
@@ -866,97 +868,111 @@
 											</form>
 										</div>
 									</div> --}}
-								</div>
-							</div>
-							<div class="sidebar-side col-xl-12 col-lg-12 col-md-12 col-sm-12">
-								<div class="sidebar-inner">
-									<div class="dsp-widget dsp-stat-widget">
-										<div class="inner">
-											<h3>Reserver votre tour ici</h3>
-											<!--Logo-->
-											<div class="stats">
-												
-											<form action="{{ route('reservation.tour.create') }}" method="post" enctype="multipart/form-data">
-													@csrf
-												<div class="card-body">
-													<div class="row">
-														<input type="hidden" name="tour_id" id="tour_id" value="{{$tour->id}}">
-														<input type="hidden" name="amount" id="amount" value="{{$tour->prix}}">
-	
-														<div class="col-12">
-																<div class="row">
-																	<div class="col-6">
-																		<div class="form-group">
-																			<label for="first_name">Prénom</label>
-																			<input type="text" name="first_name" class="form-control" id="first_name">
-																		</div>
-																	</div>
-																	<div class="col-6">
-																		<div class="form-group">
-																			<label for="last_name">Nom</label>
-																			<input type="text" name="last_name" class="form-control" id="last_name">
-																		</div>
-																	</div>
-																	<div class="col-6">
-																		<div class="form-group">
-																			<label for="phone_number">téléphone</label>
-																			<input type="text" name="phone_number" class="form-control" id="phone_number">
-																		</div>
-																	</div>
-																	<div class="col-6">
-																		<div class="form-group">
-																			<label for="email">Email</label>
-																			<input type="email" name="email" class="form-control" id="email">
-																		</div>
-																	</div>
-																	<div class="col-6">
-																		<div class="form-group">
-																			<label for="reservation_date">Date de réservation</label>
-																			<input type="date" name="reservation_date" class="form-control"
-																				id="reservation_date" value="{{date('Y-m-d')}}" >
-																		</div>
-																	</div>
-																	<div class="col-6">
-																		<div class="form-group">
-																			<label for="num_persons">Nombre de personnes</label>
-																			<input type="number" min="0" value="0" name="num_persons" class="form-control" id="num_persons">
-																		</div>
-																	</div>
-																	<div class="col-6">
+                            </div>
+                        </div>
+                        <div class="sidebar-side col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                            <div class="sidebar-inner">
+                                <div class="dsp-widget dsp-stat-widget">
+                                    <div class="inner">
+                                        <h3>Reserver votre tour ici</h3>
+                                        <!--Logo-->
+                                        <div class="stats">
+
+                                            <form action="{{ route('hotels.reservation.tour') }}" method="post"
+                                                enctype="multipart/form-data">
+                                                @csrf
+                                                <div class="card-body">
+                                                    <div class="row">
+                                                        <input type="hidden" name="tour_id" id="tour_id"
+                                                            value="{{ $tour->id }}">
+                                                        <input type="hidden" name="amount" id="amount"
+                                                            value="{{ $tour->prix }}">
+
+                                                        <div class="col-12">
+                                                            <div class="row">
+                                                                <div class="col-6">
+                                                                    <div class="form-group">
+                                                                        <label for="prenoms">Prénom</label>
+                                                                        <input type="text" name="prenoms"
+                                                                            class="form-control" id="prenoms">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <div class="form-group">
+                                                                        <label for="nom">Nom</label>
+                                                                        <input type="text" name="nom"
+                                                                            class="form-control" id="nom">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <div class="form-group">
+                                                                        <label for="contact">téléphone</label>
+                                                                        <input type="text" name="contact"
+                                                                            class="form-control" id="contact">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <div class="form-group">
+                                                                        <label for="email">Email</label>
+                                                                        <input type="email" name="email"
+                                                                            class="form-control" id="email">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <div class="form-group">
+                                                                        <label for="date_depart">Date de réservation</label>
+                                                                        <input type="date" name="date_depart"
+                                                                            class="form-control" id="date_depart"
+                                                                            value="{{ date('Y-m-d') }}">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-6">
+                                                                    <div class="form-group">
+                                                                        <label for="nombre_adultes">Adulte(s) (+18)</label>
+                                                                        <input type="number" min="0"
+                                                                            value="0" name="nombre_adultes"
+                                                                            class="form-control" id="nombre_adultes">
+                                                                    </div>
+                                                                </div>
+                                                                {{-- <div class="col-6">
 																			<div class="form-group">
 																					<label for="">Bébé ( 0-2 ans)</label>
 																			<input type="number" min="0" value="0" name="nombre_bebe" class="form-control" id="nombre_bebe">
 	
 																			</div>
-																		</div>
-																	<div class="col-6">
-																	<div class="form-group">
-																		<label for="">Enfant ( 2-12 ans)</label>
-																		<input type="number" min="0" value="0" name="nombre_enfant" class="form-control" id="nombre_enfant">
-																		
-																	</div>
-																</div>
-																<div class="col-12">
-																<div class="form-group">
-																	<button type="submit" class="btn-style-two"><span>Reserver maintenant</span></button>
-																	
-																	
-																</div>
-																</div>
-															</div>
-														</div>
-													</div>
-	
-												</div>
-												
-											</form>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
+																		</div> --}}
+                                                                <div class="col-6">
+                                                                    <div class="form-group">
+                                                                        <label for="">Enfant (0-17 ans)</label>
+                                                                        <input type="number" min="0"
+                                                                            value="0" name="nombre_enfant"
+                                                                            class="form-control" id="nombre_enfant">
 
-							{{-- <!--Widget-->
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-12">
+                                                                    <div class="form-group">
+                                                                        <button type="submit"
+                                                                            class="btn-style-two"><span>Reserver
+                                                                                maintenant</span></button>
+
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {{-- <!--Widget-->
 							<div class="dsp-widget get-help-widget">
 								<div class="inner">
 									<h6>Get Help</h6>
@@ -972,26 +988,30 @@
 								</div>
 							</div> --}}
 
-							<!--Widget-->
-							@if($relatedtours->isEmpty())
-
-							@else
-							<div class="dsp-widget similar-widget">
-								<div class="inner">
-									<h3>Vous pourriez aussi aimer</h3>
-									<!--Logo-->
-									<div class="posts">
-										@foreach ($relatedtours as $relatedtour)
-										<div class="post">
-											<div class="image"><a href="{{route('single-tour', $relatedtour->id)}}"><img
-														src="{{ asset('storage/' . json_decode($relatedtour->images)[0]) }}"
-														alt="London Bridge"></a>
-											</div>
-											<h6><a href="{{route('single-tour', $relatedtour->id)}}">{{$relatedtour->nom}}</a></h6>
-											<div class="price">À partir de <span class="amount">{{ number_format($relatedtour->prix, 0, ',', ' ') }} FCFA</span></div>
-										</div>
-										@endforeach
-										{{-- <div class="post">
+                        <!--Widget-->
+                        @if ($relatedtours->isEmpty())
+                        @else
+                            <div class="dsp-widget similar-widget">
+                                <div class="inner">
+                                    <h3>Vous pourriez aussi aimer</h3>
+                                    <!--Logo-->
+                                    <div class="posts">
+                                        @foreach ($relatedtours as $relatedtour)
+                                            <div class="post">
+                                                <div class="image"><a
+                                                        href="{{ route('single-tour', $relatedtour->id) }}"><img
+                                                            src="{{ asset('storage/' . json_decode($relatedtour->images)[0]) }}"
+                                                            alt="London Bridge"></a>
+                                                </div>
+                                                <h6><a
+                                                        href="{{ route('single-tour', $relatedtour->id) }}">{{ $relatedtour->nom }}</a>
+                                                </h6>
+                                                <div class="price">À partir de <span
+                                                        class="amount">{{ number_format($relatedtour->prix, 0, ',', ' ') }}
+                                                        FCFA</span></div>
+                                            </div>
+                                        @endforeach
+                                        {{-- <div class="post">
 											<div class="image"><a href="#"><img
 														src="{{asset('frontend/assets/images/resources/thumbnails/maldives-thumb.jpg')}}"
 														alt="Maldives"></a></div>
@@ -1005,14 +1025,14 @@
 											<h6><a href="#">Vibrant Helsinki, A Fusion of Culture and Cuisine</a></h6>
 											<div class="price">Starts from <span class="amount">$565</span></div>
 										</div> --}}
-									</div>
-								</div>
-							</div>
-							@endif
-						</div>
-					</div>
+                                    </div>
+                                </div>
+                            </div>
+                        @endif
+                    </div>
+                </div>
 
-				</div>
-			</div>
-		</div>
+            </div>
+        </div>
+    </div>
 @endsection

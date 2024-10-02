@@ -20,6 +20,9 @@
             
             {{-- Reservations vol--}}
             @include('admin.dashboard.reservations.reservation-vol.vol')
+            @include('admin.dashboard.reservations.reservation-vol.voltraitement')
+            @include('admin.dashboard.reservations.reservation-vol.volvalidee')
+            @include('admin.dashboard.reservations.reservation-vol.volannulee')
 
              
         </div>

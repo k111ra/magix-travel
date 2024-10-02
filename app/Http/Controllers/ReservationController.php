@@ -183,11 +183,23 @@ class ReservationController extends Controller
 
     }
 
+
+    //Vue tours
     public function reservationTours()
     {
-        return view('admin.reservations.reservation-tour');
+        $listestours = Reservation::whereHas('typeReservation', function ($query) {
+            $query->whereIn('nom', ['Tour']);
+        })->orderBy('id', 'desc')->get();
+        return view('admin.reservations.reservation-tour',compact('listestours'));
+    }
+    public function showtour($id){
+        $showtour = Reservation::findOrFail($id);
+        return view('admin.reservations.show-tour', compact('showtour'));
+
     }
 
+
+ //Vue hotels 
     public function reservationHotels()
     {
         $listesHotels = Reservation::whereHas('typeReservation', function ($query) {
@@ -425,6 +437,56 @@ class ReservationController extends Controller
         $reservationHotel->ref_reservation= $num_reservation . $jour . $mois . $annee . '00' . $num_count->count;
 
         $reservationHotel->save();
+        return redirect()->route('home')->with('success', 'Votre Reservation a bien été envoyée avec succès.');
+
+    }
+    public function reservertour(Request $request){
+        // dd($request->all());
+         $request->validate([
+            'nom' => 'required|string|max:255',
+            'prenoms' => 'required|string|max:255',
+            'contact' => 'required',
+            'email' => 'required|email',
+            'date_depart' => 'string|max:255',
+            'date_retour' => 'string|max:255',
+            'nombre_enfant' => 'nullable|integer', // Validation pour un nombre entier
+            'nombre_adultes' => 'nullable|integer', // Validation pour un nombre entier
+
+        ]);
+
+        // Générer automatiquement le numéro de référence de réservation
+        $jour = date('d');
+        $mois = date('m');
+        $annee = date('Y');
+        $num_reservation = "RES";
+        $num_count = Reservation::ref_reser();// Récupérer le dernier numéro de réservation
+
+         // Rechercher l'ID du type de réservation pour "Vol"
+         $typeReservation = DB::table('type_reservations')->where('nom', 'Tour')->first();
+         if (!$typeReservation) {
+             return redirect()->back()->withErrors(['error' => 'Le type de réservation "Vol" est introuvable.']);
+         }
+
+         // Stocker l'ID du type de réservation dans les données validées
+         $validatedData['type_reservations_id'] = $typeReservation->id;
+
+        $reservationtour = new Reservation();
+        $reservationtour->type_reservations_id = $typeReservation->id;
+        $reservationtour->nom = $request->input('nom');
+        $reservationtour->prenoms = $request->input('prenoms');
+        $reservationtour->contact = $request->input('contact');
+        $reservationtour->email = $request->input('email');
+        $reservationtour->nombre_enfant = $request->input('nombre_enfant');
+        $reservationtour->nombre_adultes = $request->input('nombre_adultes');
+        $reservationtour->date_depart = $request->input('date_depart');
+        $reservationtour->date_retour = $request->input('date_retour');
+        $reservationtour->tour_id = $request->input('tour_id');
+        $reservationtour->nombre_enfant = $request->input('nombre_enfant') ?? 0;
+        $reservationtour->nombre_adultes = $request->input('nombre_adultes') ?? 0;
+        // Additionner les valeurs
+        $reservationtour->num_persons =  $reservationtour->nombre_enfant + $reservationtour->nombre_adultes;
+        $reservationtour->ref_reservation= $num_reservation . $jour . $mois . $annee . '00' . $num_count->count;
+        $reservationtour->save();
         return redirect()->route('home')->with('success', 'Votre Reservation a bien été envoyée avec succès.');
 
     }

@@ -75,6 +75,10 @@ Route::post('/hotel-reservation-create', [HotelReservationController::class, 'cr
 Route::post('/reservations-hotels', [ReservationController::class, 'reserverHotel'])->name('hotels.reservationHotel');
 
 
+//reservation d'hotel
+Route::post('/reservations-tours', [ReservationController::class, 'reservertour'])->name('hotels.reservation.tour');
+
+
 Route::post('/vol-reservation-step1', [ReservationController::class, 'insertReservationStep1Vols'])->name('step1.reservation.store');
 Route::post('/vol-reservation-step2', [ReservationController::class, 'insertReservationStep2Vols'])->name('step2.reservation.store');
 
@@ -94,6 +98,7 @@ Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function () {
     Route::get('/liste-reservation-vols', [ReservationController::class, 'reservationVols'])->name('reservation.vols.reservationVols');
     Route::get('/vol/{id}', [ReservationController::class, 'showVol'])->name('reservation.vols.show');
     Route::get('/hotel/{id}', [ReservationController::class, 'showHotel'])->name('reservation.hotel.show');
+    Route::get('/tour/{id}', [ReservationController::class, 'showtour'])->name('reservation.tour.show');
 
      //////////////// routes de type de programme
      Route::get('/liste-type-reservation', [TypeReservationController::class, 'index'])->name('type.index');

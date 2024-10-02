@@ -107,6 +107,9 @@ class HomeController extends Controller
             $query->whereIn('nom', ['Hotel']);
         })->orderBy('id', 'desc')->count();
         
+        $reservationtours = Reservation::whereHas('typeReservation', function ($query) {
+            $query->whereIn('nom', ['Tour']);
+        })->orderBy('id', 'desc')->count();
 
         //les status
         $reservationsEnCoursHotels = Reservation::whereHas('typeReservation', function ($query) {
@@ -121,7 +124,32 @@ class HomeController extends Controller
             $query->where('nom', 'Hotel');
         })->where('status', 'annuler')->count();
 
+        //les status
+        $reservationsEnCoursTours = Reservation::whereHas('typeReservation', function ($query) {
+            $query->where('nom', 'Tour');
+        })->where('status', 'traiter')->count();
 
+        $reservationsValideesTours = Reservation::whereHas('typeReservation', function ($query) {
+            $query->where('nom', 'Tour');
+        })->where('status', 'valider')->count();
+
+        $reservationsAnnuleesTours = Reservation::whereHas('typeReservation', function ($query) {
+            $query->where('nom', 'Tour');
+        })->where('status', 'annuler')->count();
+
+         //les status
+         $reservationsEnCoursVols = Reservation::whereHas('typeReservation', function ($query) {
+            $query->where('nom', ['Vol Simple', 'Vol Aller-Retour']);
+        })->where('status', 'traiter')->count();
+
+        $reservationsValideesVols = Reservation::whereHas('typeReservation', function ($query) {
+            $query->where('nom', ['Vol Simple', 'Vol Aller-Retour']);
+        })->where('status', 'valider')->count();
+
+        $reservationsAnnuleesVols = Reservation::whereHas('typeReservation', function ($query) {
+            $query->where('nom', ['Vol Simple', 'Vol Aller-Retour']);
+        })->where('status', 'annuler')->count();
+        
         return view('admin.dashboard.index',[
 
            'totalTours'=>$totalTours,
@@ -133,6 +161,15 @@ class HomeController extends Controller
                   'totalReservations'=>$totalReservations, 
                   'percentageIncreaseReservations'=>$percentageIncreaseReservations,
                   'reservationvols'=>$reservationvols,
+                  'reservationsEnCoursVols'=>$reservationsEnCoursVols,
+                  'reservationsValideesVols'=>$reservationsValideesVols,
+                  'reservationsAnnuleesVols'=>$reservationsAnnuleesVols,
+                  
+                  'reservationvols'=>$reservationtours,
+                  'reservationsEnCoursTours'=>$reservationsEnCoursTours,
+                  'reservationsValideesTours'=>$reservationsValideesTours,
+                  'reservationsAnnuleesTours'=>$reservationsAnnuleesTours,
+
                   'reservationhotels'=>$reservationhotels,
                   'reservationsEnCoursHotels'=>$reservationsEnCoursHotels,
                   'reservationsValideesHotels'=>$reservationsValideesHotels,
