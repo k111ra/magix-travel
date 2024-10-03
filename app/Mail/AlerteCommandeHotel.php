@@ -9,7 +9,7 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class AlerteCommande extends Mailable
+class AlerteCommandeHotel extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -34,7 +34,7 @@ class AlerteCommande extends Mailable
     public function envelope()
     {
         return new Envelope(
-            subject: 'Réservation de tour',
+            subject: 'Réservation d\'hôtel',
         );
     }
 
@@ -46,8 +46,7 @@ class AlerteCommande extends Mailable
     public function content()
     {
         return new Content(
-            
-            view: 'alerte.reservationtour',
+            view: 'alerte.reservationhotel',
         );
     }
 

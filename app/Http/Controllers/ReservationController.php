@@ -2,14 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Destination;
-use App\Models\Hotel;
-use Illuminate\Http\Request;
-use App\Models\Reservation;
-use App\Models\Tour;
 use App\Models\Vol;
-use App\Notifications\AlerteCommandes;
+use App\Models\Tour;
+use App\Models\Hotel;
+use App\Models\Destination;
+use App\Models\Reservation;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Notifications\AlerteCommandes;
+use App\Notifications\AlerteCommandesVol;
+use App\Notifications\AlerteCommandesHotel;
 
 class ReservationController extends Controller
 {
@@ -332,8 +334,12 @@ class ReservationController extends Controller
         $finalData = array_merge($step1Data, $validatedData);
         // dd($finalData);
 
+        //Envoie de notification de reservation d'hôtel
+
+
         // Sauvegarder les données dans la base de données
-        Reservation::create($finalData);
+      $reservation =  Reservation::create($finalData);
+      $reservation->notify(new AlerteCommandesVol($validatedData));
 
         // Vider la session après l'enregistrement
         session()->forget('step1');
@@ -436,8 +442,12 @@ class ReservationController extends Controller
         $reservation->num_persons =  $reservation->nombre_enfant + $reservation->nombre_adultes;
         $reservation->ref_reservation= $num_reservation . $jour . $mois . $annee . '00' . $num_count->count;
 
+        //Envoie de notification de reservation d'hôtel
+        $reservation->notify(new AlerteCommandesHotel($reservation));
+
+        
         $reservation->save();
-        return redirect()->route('home')->with('success', 'Votre Reservation a bien été envoyée avec succès.');
+        return redirect()->back()->with('success', 'Votre Reservation a bien été envoyée avec succès.');
 
     }
     public function reservertour(Request $request){
@@ -487,12 +497,12 @@ class ReservationController extends Controller
         $reservation->num_persons =  $reservation->nombre_enfant + $reservation->nombre_adultes;
         $reservation->ref_reservation= $num_reservation . $jour . $mois . $annee . '00' . $num_count->count;
        
-          //Envoie de notification de reservation
+          //Envoie de notification de reservation de tour
           $reservation->notify(new AlerteCommandes($reservation));
             // dd($reservation);
           // Rediriger avec un message de succès
         $reservation->save();
-        return redirect()->route('home')->with('success', 'Votre Reservation a bien été envoyée avec succès.');
+        return redirect()->back()->with('success', 'Votre Reservation a bien été envoyée avec succès.');
 
     }
 }
