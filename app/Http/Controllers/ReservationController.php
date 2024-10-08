@@ -348,11 +348,13 @@ class ReservationController extends Controller
 
        // Envoi de l'email de confirmation au client
        Notification::route('mail', $customerEmail)
-           ->notify(new AlerteCommandesVol($validatedData, 'customer'));
+           ->notify(new AlerteCommandesVol($finalData, 'customer'));
 
        // Envoi de l'email au responsable du site
        Notification::route('mail', $adminEmail)
-           ->notify(new AlerteCommandesVol($validatedData, 'admin'));
+           ->notify(new AlerteCommandesVol($finalData, 'admin'));
+        //    dd($finalData);
+
         // Vider la session après l'enregistrement
         session()->forget('step1');
 

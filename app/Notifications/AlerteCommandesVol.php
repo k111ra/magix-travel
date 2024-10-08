@@ -47,11 +47,13 @@ class AlerteCommandesVol extends Notification
      */
     public function toMail($notifiable)
     {
+       
         if ($this->reception == 'customer') {
             return (new MailMessage)
                 ->subject('Nous avons bien reçu votre réservation')
                 ->view('alerte.reservationVol.client', ['reservation' => $this->reservation]);
         } elseif ($this->reception == 'admin') {
+            // dd($this->reservation);
             return (new MailMessage)
                 ->subject('Nouvelle réservation effectuée')
                 ->view('alerte.reservationVol.admin', ['reservation' => $this->reservation]);
