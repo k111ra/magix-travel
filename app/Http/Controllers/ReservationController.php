@@ -333,28 +333,25 @@ class ReservationController extends Controller
 
         // Fusionner les données de toutes les étapes
         $finalData = array_merge($step1Data, $validatedData);
-        // dd($finalData);
 
         //Envoie de notification de reservation d'hôtel
-
-
         // Sauvegarder les données dans la base de données
       $reservation =  Reservation::create($finalData);
+
        // Email du client saisi lors de la réservation
        $customerEmail = $reservation->email;
-
+       
        // Email du responsable (fixe)
        $adminEmail = env('MAIL_FROM_ADDRESS');
-
+        // dd($adminEmail);
        // Envoi de l'email de confirmation au client
-       Notification::route('mail', $customerEmail)
+        Notification::route('mail', $customerEmail)
            ->notify(new AlerteCommandesVol($finalData, 'customer'));
-
-       // Envoi de l'email au responsable du site
-       Notification::route('mail', $adminEmail)
+       
+           // Envoi de l'email au responsable du site
+        Notification::route('mail', $adminEmail)
            ->notify(new AlerteCommandesVol($finalData, 'admin'));
-        //    dd($finalData);
-
+           
         // Vider la session après l'enregistrement
         session()->forget('step1');
 
