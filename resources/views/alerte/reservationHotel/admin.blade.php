@@ -12,7 +12,7 @@
 
     <p>Vous pouvez voir la réservation en cliquant sur le lien ci-dessous :</p>
 
-    <a href="{{ url('/admin/liste-reservations-tours/'.$reservation['id']) }}">Voir la réservation</a>
+    <a href="{{ url('/admin/liste-reservations-hotels/'.$reservation['id']) }}">Voir la réservation</a>
 
     <p>Cordialement,<br>
     L'équipe de Magixtravel</p>
