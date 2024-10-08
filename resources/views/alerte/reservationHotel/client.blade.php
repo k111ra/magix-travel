@@ -5,7 +5,7 @@
 
     <ul>
         <li><strong>Numéro de Réservation :</strong> {{ $reservation['ref_reservation'] }}</li>
-        <li><strong>Destination :</strong> {{ $reservation['destination'] }}</li>
+        {{-- <li><strong>Destination :</strong> {{ $reservation['destination'] }}</li> --}}
         <li><strong>Date de départ :</strong> {{ $reservation['date_depart'] }}</li>
         <li><strong>Nombre de personnes :</strong> {{ $reservation['num_persons'] }}</li>
     </ul>

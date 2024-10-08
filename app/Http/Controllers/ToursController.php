@@ -224,6 +224,7 @@ class ToursController extends Controller
         $query = $request->input('query');
         $tours = Tour::join('destinations', 'tours.destinations_id', '=', 'destinations.id')
                             ->where('destinations.name', 'LIKE', "%{$query}%")
+                            ->Orwhere('tours.nom', 'LIKE', "%{$query}%")
                             ->select('tours.*') 
                             ->Paginate(10);
         $information = Information::first();
