@@ -13,15 +13,18 @@ class AlerteCommandesHotel extends Notification
     use Queueable;
 
     public $reservation;
+    public $reception;
+
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct($reservation)
+    public function __construct($reservation, $reception)
     {
-        //
-        $this->reservation =$reservation;
+        // 
+        $this->reservation = $reservation;
+        $this->reception = $reception;
     }
 
     /**
@@ -43,8 +46,15 @@ class AlerteCommandesHotel extends Notification
      */
     public function toMail($notifiable)
     {
-        return (new AlerteCommandeHotel($notifiable))
-        ->to($notifiable->email);      
+        if ($this->reception == 'customer') {
+            return (new MailMessage)
+                ->subject('Nous avons bien reçu votre réservation')
+                ->view('alerte.reservationHotel.client', ['reservation' => $this->reservation]);
+        } elseif ($this->reception == 'admin') {
+            return (new MailMessage)
+                ->subject('Nouvelle réservation effectuée')
+                ->view('alerte.reservationHotel.admin', ['reservation' => $this->reservation]);
+        }
     }
 
     /**
@@ -56,7 +66,7 @@ class AlerteCommandesHotel extends Notification
     public function toArray($notifiable)
     {
         return [
-            //
+            // Ajoute ici des données supplémentaires si nécessaire
         ];
     }
 }

@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\DB;
 use App\Notifications\AlerteCommandes;
 use App\Notifications\AlerteCommandesVol;
 use App\Notifications\AlerteCommandesHotel;
+use Illuminate\Support\Facades\Notification;
 
 class ReservationController extends Controller
 {
@@ -339,8 +340,19 @@ class ReservationController extends Controller
 
         // Sauvegarder les données dans la base de données
       $reservation =  Reservation::create($finalData);
-      $reservation->notify(new AlerteCommandesVol($validatedData));
+       // Email du client saisi lors de la réservation
+       $customerEmail = $reservation->email;
 
+       // Email du responsable (fixe)
+       $adminEmail = env('MAIL_FROM_ADDRESS');
+
+       // Envoi de l'email de confirmation au client
+       Notification::route('mail', $customerEmail)
+           ->notify(new AlerteCommandesVol($validatedData, 'customer'));
+
+       // Envoi de l'email au responsable du site
+       Notification::route('mail', $adminEmail)
+           ->notify(new AlerteCommandesVol($validatedData, 'admin'));
         // Vider la session après l'enregistrement
         session()->forget('step1');
 
@@ -443,8 +455,19 @@ class ReservationController extends Controller
         $reservation->ref_reservation= $num_reservation . $jour . $mois . $annee . '00' . $num_count->count;
 
         //Envoie de notification de reservation d'hôtel
-        $reservation->notify(new AlerteCommandesHotel($reservation));
+            // Email du client saisi lors de la réservation
+            $customerEmail = $reservation->email;
 
+            // Email du responsable (fixe)
+            $adminEmail = env('MAIL_FROM_ADDRESS');
+
+            // Envoi de l'email de confirmation au client
+            Notification::route('mail', $customerEmail)
+                ->notify(new AlerteCommandesHotel($reservation, 'customer'));
+
+            // Envoi de l'email au responsable du site
+            Notification::route('mail', $adminEmail)
+                ->notify(new AlerteCommandesHotel($reservation, 'admin'));
         
         $reservation->save();
         return redirect()->back()->with('success', 'Votre Reservation a bien été envoyée avec succès.');
@@ -498,7 +521,19 @@ class ReservationController extends Controller
         $reservation->ref_reservation= $num_reservation . $jour . $mois . $annee . '00' . $num_count->count;
        
           //Envoie de notification de reservation de tour
-          $reservation->notify(new AlerteCommandes($reservation));
+          // Email du client saisi lors de la réservation
+        $customerEmail = $reservation->email;
+
+        // Email du responsable (fixe)
+        $adminEmail = env('MAIL_FROM_ADDRESS');
+
+        // Envoi de l'email de confirmation au client
+        Notification::route('mail', $customerEmail)
+            ->notify(new AlerteCommandes($reservation, 'customer'));
+
+        // Envoi de l'email au responsable du site
+        Notification::route('mail', $adminEmail)
+            ->notify(new AlerteCommandes($reservation, 'admin'));
             // dd($reservation);
           // Rediriger avec un message de succès
         $reservation->save();

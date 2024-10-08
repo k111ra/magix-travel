@@ -5,7 +5,6 @@ namespace App\Notifications;
 use App\Mail\AlerteCommande;
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 
 class AlerteCommandes extends Notification
@@ -13,15 +12,18 @@ class AlerteCommandes extends Notification
     use Queueable;
 
     public $reservation;
+    public $reception;
+
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct($reservation)
+    public function __construct($reservation, $reception)
     {
-        //
-        $this->reservation =$reservation;
+        // 
+        $this->reservation = $reservation;
+        $this->reception = $reception;
     }
 
     /**
@@ -43,8 +45,15 @@ class AlerteCommandes extends Notification
      */
     public function toMail($notifiable)
     {
-        return (new AlerteCommande($notifiable))
-        ->to($notifiable->email);      
+        if ($this->reception == 'customer') {
+            return (new MailMessage)
+                ->subject('Nous avons bien reçu votre réservation')
+                ->view('alerte.reservationTour.client', ['reservation' => $this->reservation]);
+        } elseif ($this->reception == 'admin') {
+            return (new MailMessage)
+                ->subject('Nouvelle réservation effectuée')
+                ->view('alerte.reservationTour.admin', ['reservation' => $this->reservation]);
+        }
     }
 
     /**
@@ -56,7 +65,7 @@ class AlerteCommandes extends Notification
     public function toArray($notifiable)
     {
         return [
-            //
+            // Ajoute ici des données supplémentaires si nécessaire
         ];
     }
 }

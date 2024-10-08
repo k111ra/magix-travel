@@ -14,15 +14,18 @@ class AlerteCommandesVol extends Notification
     use Queueable;
 
     public $reservation;
+    public $reception;
+
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct($reservation)
+    public function __construct($reservation, $reception)
     {
-        //
-        $this->reservation =$reservation;
+        // 
+        $this->reservation = $reservation;
+        $this->reception = $reception;
     }
 
     /**
@@ -44,8 +47,15 @@ class AlerteCommandesVol extends Notification
      */
     public function toMail($notifiable)
     {
-        return (new AlerteCommandeVol($notifiable))
-        ->to($notifiable->email);      
+        if ($this->reception == 'customer') {
+            return (new MailMessage)
+                ->subject('Nous avons bien reçu votre réservation')
+                ->view('alerte.reservationVol.client', ['reservation' => $this->reservation]);
+        } elseif ($this->reception == 'admin') {
+            return (new MailMessage)
+                ->subject('Nouvelle réservation effectuée')
+                ->view('alerte.reservationVol.admin', ['reservation' => $this->reservation]);
+        }
     }
 
     /**
@@ -57,7 +67,7 @@ class AlerteCommandesVol extends Notification
     public function toArray($notifiable)
     {
         return [
-            //
+            // Ajoute ici des données supplémentaires si nécessaire
         ];
     }
 }
