@@ -58,11 +58,11 @@ class AlerteCommandes extends Notification
         if ($this->reception == 'customer') {
             return (new MailMessage)
                 ->subject('Nous avons bien reçu votre réservation')
-                ->view('alerte..client', ['reservation' => $this->reservation]);
+                ->view('alerte.reservationTour.client', ['reservation' => $this->reservation]);
         } elseif ($this->reception == 'admin') {
             return (new MailMessage)
                 ->subject('Nouvelle réservation effectuée')
-                ->view('alerte..admin', ['reservation' => $this->reservation]);
+                ->view('alerte.reservationTour.admin', ['reservation' => $this->reservation]);
         }
     }
 
