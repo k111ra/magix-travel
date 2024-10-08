@@ -2,14 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Destination;
-use App\Models\Hotel;
-use Illuminate\Http\Request;
-use App\Models\Reservation;
-use App\Models\Tour;
 use App\Models\Vol;
-use App\Notifications\AlerteCommandes;
+use App\Models\Tour;
+use App\Models\Hotel;
+use App\Models\Destination;
+use App\Models\Reservation;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Notifications\AlerteCommandes;
+use App\Notifications\AlerteCommandesVol;
+use App\Notifications\AlerteCommandesHotel;
+use Illuminate\Support\Facades\Notification;
 
 class ReservationController extends Controller
 {
@@ -330,11 +333,25 @@ class ReservationController extends Controller
 
         // Fusionner les données de toutes les étapes
         $finalData = array_merge($step1Data, $validatedData);
-        // dd($finalData);
 
+        //Envoie de notification de reservation d'hôtel
         // Sauvegarder les données dans la base de données
-        Reservation::create($finalData);
+      $reservation =  Reservation::create($finalData);
 
+       // Email du client saisi lors de la réservation
+       $customerEmail = $reservation->email;
+       
+       // Email du responsable (fixe)
+       $adminEmail = env('MAIL_FROM_ADDRESS');
+        // dd($adminEmail);
+       // Envoi de l'email de confirmation au client
+        Notification::route('mail', $customerEmail)
+           ->notify(new AlerteCommandesVol($finalData, 'customer'));
+       
+           // Envoi de l'email au responsable du site
+        Notification::route('mail', $adminEmail)
+           ->notify(new AlerteCommandesVol($finalData, 'admin'));
+           
         // Vider la session après l'enregistrement
         session()->forget('step1');
 
@@ -419,25 +436,40 @@ class ReservationController extends Controller
          // Stocker l'ID du type de réservation dans les données validées
          $validatedData['type_reservations_id'] = $typeReservation->id;
 
-        $reservationHotel = new Reservation();
-        $reservationHotel->type_reservations_id = $typeReservation->id;
-        $reservationHotel->nom = $request->input('nom');
-        $reservationHotel->prenoms = $request->input('prenoms');
-        $reservationHotel->contact = $request->input('contact');
-        $reservationHotel->email = $request->input('email');
-        $reservationHotel->nombre_enfant = $request->input('nombre_enfant');
-        $reservationHotel->nombre_adultes = $request->input('nombre_adultes');
-        $reservationHotel->date_depart = $request->input('date_depart');
-        $reservationHotel->date_retour = $request->input('date_retour');
-        $reservationHotel->hotel_id = $request->input('hotel_id');
-        $reservationHotel->nombre_enfant = $request->input('nombre_enfant') ?? 0;
-        $reservationHotel->nombre_adultes = $request->input('nombre_adultes') ?? 0;
+        $reservation = new Reservation();
+        $reservation->type_reservations_id = $typeReservation->id;
+        $reservation->nom = $request->input('nom');
+        $reservation->prenoms = $request->input('prenoms');
+        $reservation->contact = $request->input('contact');
+        $reservation->email = $request->input('email');
+        $reservation->nombre_enfant = $request->input('nombre_enfant');
+        $reservation->nombre_adultes = $request->input('nombre_adultes');
+        $reservation->date_depart = $request->input('date_depart');
+        $reservation->date_retour = $request->input('date_retour');
+        $reservation->hotel_id = $request->input('hotel_id');
+        $reservation->nombre_enfant = $request->input('nombre_enfant') ?? 0;
+        $reservation->nombre_adultes = $request->input('nombre_adultes') ?? 0;
         // Additionner les valeurs
-        $reservationHotel->num_persons =  $reservationHotel->nombre_enfant + $reservationHotel->nombre_adultes;
-        $reservationHotel->ref_reservation= $num_reservation . $jour . $mois . $annee . '00' . $num_count->count;
+        $reservation->num_persons =  $reservation->nombre_enfant + $reservation->nombre_adultes;
+        $reservation->ref_reservation= $num_reservation . $jour . $mois . $annee . '00' . $num_count->count;
 
-        $reservationHotel->save();
-        return redirect()->route('home')->with('success', 'Votre Reservation a bien été envoyée avec succès.');
+        //Envoie de notification de reservation d'hôtel
+            // Email du client saisi lors de la réservation
+            $customerEmail = $reservation->email;
+
+            // Email du responsable (fixe)
+            $adminEmail = env('MAIL_FROM_ADDRESS');
+
+            // Envoi de l'email de confirmation au client
+            Notification::route('mail', $customerEmail)
+                ->notify(new AlerteCommandesHotel($reservation, 'customer'));
+
+            // Envoi de l'email au responsable du site
+            Notification::route('mail', $adminEmail)
+                ->notify(new AlerteCommandesHotel($reservation, 'admin'));
+        
+        $reservation->save();
+        return redirect()->back()->with('success', 'Votre Reservation a bien été envoyée avec succès.');
 
     }
     public function reservertour(Request $request){
@@ -470,24 +502,41 @@ class ReservationController extends Controller
          // Stocker l'ID du type de réservation dans les données validées
          $validatedData['type_reservations_id'] = $typeReservation->id;
 
-        $reservationtour = new Reservation();
-        $reservationtour->type_reservations_id = $typeReservation->id;
-        $reservationtour->nom = $request->input('nom');
-        $reservationtour->prenoms = $request->input('prenoms');
-        $reservationtour->contact = $request->input('contact');
-        $reservationtour->email = $request->input('email');
-        $reservationtour->nombre_enfant = $request->input('nombre_enfant');
-        $reservationtour->nombre_adultes = $request->input('nombre_adultes');
-        $reservationtour->date_depart = $request->input('date_depart');
-        $reservationtour->date_retour = $request->input('date_retour');
-        $reservationtour->tour_id = $request->input('tour_id');
-        $reservationtour->nombre_enfant = $request->input('nombre_enfant') ?? 0;
-        $reservationtour->nombre_adultes = $request->input('nombre_adultes') ?? 0;
+        $reservation = new Reservation();
+        $reservation->type_reservations_id = $typeReservation->id;
+        $reservation->nom = $request->input('nom');
+        $reservation->prenoms = $request->input('prenoms');
+        $reservation->contact = $request->input('contact');
+        $reservation->email = $request->input('email');
+        $reservation->nombre_enfant = $request->input('nombre_enfant');
+        $reservation->nombre_adultes = $request->input('nombre_adultes');
+        $reservation->date_depart = $request->input('date_depart');
+        $reservation->date_retour = $request->input('date_retour');
+        $reservation->tour_id = $request->input('tour_id');
+        $reservation->nombre_enfant = $request->input('nombre_enfant') ?? 0;
+        $reservation->nombre_adultes = $request->input('nombre_adultes') ?? 0;
         // Additionner les valeurs
-        $reservationtour->num_persons =  $reservationtour->nombre_enfant + $reservationtour->nombre_adultes;
-        $reservationtour->ref_reservation= $num_reservation . $jour . $mois . $annee . '00' . $num_count->count;
-        $reservationtour->save();
-        return redirect()->route('home')->with('success', 'Votre Reservation a bien été envoyée avec succès.');
+        $reservation->num_persons =  $reservation->nombre_enfant + $reservation->nombre_adultes;
+        $reservation->ref_reservation= $num_reservation . $jour . $mois . $annee . '00' . $num_count->count;
+       
+          //Envoie de notification de reservation de tour
+          // Email du client saisi lors de la réservation
+        $customerEmail = $reservation->email;
+
+        // Email du responsable (fixe)
+        $adminEmail = env('MAIL_FROM_ADDRESS');
+
+        // Envoi de l'email de confirmation au client
+        Notification::route('mail', $customerEmail)
+            ->notify(new AlerteCommandes($reservation, 'customer'));
+
+        // Envoi de l'email au responsable du site
+        Notification::route('mail', $adminEmail)
+            ->notify(new AlerteCommandes($reservation, 'admin'));
+            // dd($reservation);
+          // Rediriger avec un message de succès
+        $reservation->save();
+        return redirect()->back()->with('success', 'Votre Reservation a bien été envoyée avec succès.');
 
     }
 }

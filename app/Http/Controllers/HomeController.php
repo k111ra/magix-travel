@@ -165,7 +165,7 @@ class HomeController extends Controller
                   'reservationsValideesVols'=>$reservationsValideesVols,
                   'reservationsAnnuleesVols'=>$reservationsAnnuleesVols,
                   
-                  'reservationvols'=>$reservationtours,
+                  'reservationtours'=>$reservationtours,
                   'reservationsEnCoursTours'=>$reservationsEnCoursTours,
                   'reservationsValideesTours'=>$reservationsValideesTours,
                   'reservationsAnnuleesTours'=>$reservationsAnnuleesTours,

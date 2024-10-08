@@ -2,12 +2,13 @@
 
 namespace App\Notifications;
 
-use App\Mail\AlerteCommande;
+use App\Mail\AlerteCommandeHotel;
 use Illuminate\Bus\Queueable;
 use Illuminate\Notifications\Notification;
+use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 
-class AlerteCommandes extends Notification
+class AlerteCommandesHotel extends Notification
 {
     use Queueable;
 
@@ -48,11 +49,11 @@ class AlerteCommandes extends Notification
         if ($this->reception == 'customer') {
             return (new MailMessage)
                 ->subject('Nous avons bien reçu votre réservation')
-                ->view('alerte.reservationTour.client', ['reservation' => $this->reservation]);
+                ->view('alerte.reservationHotel.client', ['reservation' => $this->reservation]);
         } elseif ($this->reception == 'admin') {
             return (new MailMessage)
                 ->subject('Nouvelle réservation effectuée')
-                ->view('alerte.reservationTour.admin', ['reservation' => $this->reservation]);
+                ->view('alerte.reservationHotel.admin', ['reservation' => $this->reservation]);
         }
     }
 
