@@ -39,9 +39,9 @@
                         <td>{{ $slider->description }}</td>
                         <td>
                             @if ($slider->status === 'activé')
-                            <span class="badge badge-success">Activé</span>
+                                <span class="badge badge-success">Activé</span>
                             @else
-                            <span class="badge badge-danger">Désactivé</span>
+                                <span class="badge badge-danger">Désactivé</span>
                             @endif
                         </td>
                         <td>{{ $slider->created_at }}</td>
