@@ -19,6 +19,11 @@
 </head>
 
 <body>
+    @if (session('success'))
+        <script>
+            toastr.success('{{ session('success') }}');
+        </script>
+    @endif
   <div class="loader"></div>
   <div id="app">
     <section class="section">

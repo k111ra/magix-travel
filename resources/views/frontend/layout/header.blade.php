@@ -36,11 +36,11 @@
                 <div class="social">
                     <ul class="social-links clearfix">
                         @if($reseau)
-                        <li><a href="{{$reseau->facebook}}" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="{{$reseau->twitter}}" class="twitter"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="{{$reseau->linkedin}}" class="linkedin"><i class="fab fa-linkedin-in"></i></a></li>
-                        <li><a href="{{$reseau->youtube}}" class="youtube"><i class="fab fa-youtube"></i></a></li>
-                    @endif
+                            <li><a href="{{$reseau->facebook}}" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="{{$reseau->twitter}}" class="twitter"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="{{$reseau->linkedin}}" class="linkedin"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href="{{$reseau->youtube}}" class="youtube"><i class="fab fa-youtube"></i></a></li>
+                        @endif
                     </ul>
                 </div>
             </div>

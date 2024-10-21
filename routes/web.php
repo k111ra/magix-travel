@@ -19,7 +19,9 @@ use App\Http\Controllers\HotelReservationController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\ParametreController;
+use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\ReservationController;
+use App\Http\Controllers\RoleController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\TourReservationController;
 use App\Http\Controllers\TypeReservationController;
@@ -92,6 +94,24 @@ Route::post('/valider-reservation-vols/{id}', [ReservationController::class, 'va
 Route::post('/restaurer-reservation-vols/{id}', [ReservationController::class, 'restaurerReservation'])->name('restaurer.reservation.vols');
 // Admin routes (use middleware for protection)
 Route::group(['middleware' => 'auth', 'prefix' => 'admin'], function () {
+
+    //////////////// routes des permissions
+    Route::get('/liste-permission', [PermissionController::class, 'index'])->name('index.permission');
+    Route::get('/create-permission', [PermissionController::class, 'create'])->name('create.permission');
+    Route::post('/store-permission', [PermissionController::class, 'store'])->name('store.permission');
+    Route::get('/edit-permission/{id}', [PermissionController::class, 'edit'])->name('edit.permission');
+    Route::post('/update-permission/{id}', [PermissionController::class, 'update'])->name('update.permission');
+    Route::delete('/destroy-permission/{permission}', [PermissionController::class, 'destroy'])->name('destroy.permission');
+ 
+    //////////////// routes des roles
+    Route::get('/liste-role', [RoleController::class, 'index'])->name('index.role');
+    Route::get('/create-role', [RoleController::class, 'create'])->name('create.role');
+    Route::post('/store-role', [RoleController::class, 'store'])->name('store.role');
+    Route::get('/edit-role/{id}', [RoleController::class, 'edit'])->name('edit.role');
+    Route::get('/show-role/{id}', [RoleController::class, 'show'])->name('show.role');
+    Route::post('/update-role/{id}', [RoleController::class, 'update'])->name('update.role');
+    Route::delete('/destroy-role/{role}', [RoleController::class, 'destroy'])->name('destroy.role');
+    Route::post('/roles/{id}/permissions', [RoleController::class, 'assignPermissionsToRole'])->name('role.assignPermissions');
 
     Route::get('/liste-reservations-hotels', [ReservationController::class, 'reservationHotels'])->name('reservations.hotels.reservationHotels');
     Route::get('/liste-reservations-tours', [ReservationController::class, 'reservationTours'])->name('reservations.tours.reservationTours');
