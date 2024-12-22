@@ -30,11 +30,13 @@ class HomeController extends Controller
         $hotels = Hotel::where('status', 'activé')->orderBy('id', 'desc')->get();
         $vols = Vol::all();
         $pays = AirPort::all();
+
         $type = TypeReservation::all();
         $sliders = Slider::where('status', 'activé')->orderBy('id', 'desc')->get();
         $information = Information::first();
         $reseau = Reseaux::first();
-        return view('home', compact('type','tours', 'destinations', 'hotels', 'vols', 'pays','sliders','information','reseau'));
+        // dd($pays);
+        return view('home', compact('type', 'tours', 'destinations', 'hotels', 'vols', 'pays', 'sliders', 'information', 'reseau'));
     }
 
     /**
@@ -46,7 +48,7 @@ class HomeController extends Controller
     {
         $information = Information::first();
         $reseau = Reseaux::first();
-        return view('frontend.pages.Apropos.index',compact('information','reseau'));
+        return view('frontend.pages.Apropos.index', compact('information', 'reseau'));
     }
 
     /**
@@ -55,9 +57,10 @@ class HomeController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function contacts()
-        { $information = Information::first();
-            $reseau = Reseaux::first();
-        return view('frontend.pages.Contact.index',compact('information','reseau'));
+    {
+        $information = Information::first();
+        $reseau = Reseaux::first();
+        return view('frontend.pages.Contact.index', compact('information', 'reseau'));
     }
 
     /**
@@ -69,7 +72,7 @@ class HomeController extends Controller
     {
         $information = Information::first();
         $reseau = Reseaux::first();
-        return view('frontend.pages.service.index',compact('information','reseau'));
+        return view('frontend.pages.service.index', compact('information', 'reseau'));
     }
 
     /**
@@ -106,7 +109,7 @@ class HomeController extends Controller
         $reservationhotels = Reservation::whereHas('typeReservation', function ($query) {
             $query->whereIn('nom', ['Hotel']);
         })->orderBy('id', 'desc')->count();
-        
+
         $reservationtours = Reservation::whereHas('typeReservation', function ($query) {
             $query->whereIn('nom', ['Tour']);
         })->orderBy('id', 'desc')->count();
@@ -137,8 +140,8 @@ class HomeController extends Controller
             $query->where('nom', 'Tour');
         })->where('status', 'annuler')->count();
 
-         //les status
-         $reservationsEnCoursVols = Reservation::whereHas('typeReservation', function ($query) {
+        //les status
+        $reservationsEnCoursVols = Reservation::whereHas('typeReservation', function ($query) {
             $query->where('nom', ['Vol Simple', 'Vol Aller-Retour']);
         })->where('status', 'traiter')->count();
 
@@ -149,31 +152,31 @@ class HomeController extends Controller
         $reservationsAnnuleesVols = Reservation::whereHas('typeReservation', function ($query) {
             $query->where('nom', ['Vol Simple', 'Vol Aller-Retour']);
         })->where('status', 'annuler')->count();
-        
-        return view('admin.dashboard.index',[
 
-           'totalTours'=>$totalTours,
-            'percentageIncrease' =>$percentageIncrease,
-            'totalHotels'=>$totalHotels,
-               'percentageIncreaseHotels'=>$percentageIncreaseHotels,
-                'totalDestinations'=>$totalDestinations,
-                 'percentageIncreaseDestinations'=>$percentageIncreaseDestinations,
-                  'totalReservations'=>$totalReservations, 
-                  'percentageIncreaseReservations'=>$percentageIncreaseReservations,
-                  'reservationvols'=>$reservationvols,
-                  'reservationsEnCoursVols'=>$reservationsEnCoursVols,
-                  'reservationsValideesVols'=>$reservationsValideesVols,
-                  'reservationsAnnuleesVols'=>$reservationsAnnuleesVols,
-                  
-                  'reservationtours'=>$reservationtours,
-                  'reservationsEnCoursTours'=>$reservationsEnCoursTours,
-                  'reservationsValideesTours'=>$reservationsValideesTours,
-                  'reservationsAnnuleesTours'=>$reservationsAnnuleesTours,
+        return view('admin.dashboard.index', [
 
-                  'reservationhotels'=>$reservationhotels,
-                  'reservationsEnCoursHotels'=>$reservationsEnCoursHotels,
-                  'reservationsValideesHotels'=>$reservationsValideesHotels,
-                  'reservationsAnnuleesHotels'=>$reservationsAnnuleesHotels,
+            'totalTours' => $totalTours,
+            'percentageIncrease' => $percentageIncrease,
+            'totalHotels' => $totalHotels,
+            'percentageIncreaseHotels' => $percentageIncreaseHotels,
+            'totalDestinations' => $totalDestinations,
+            'percentageIncreaseDestinations' => $percentageIncreaseDestinations,
+            'totalReservations' => $totalReservations,
+            'percentageIncreaseReservations' => $percentageIncreaseReservations,
+            'reservationvols' => $reservationvols,
+            'reservationsEnCoursVols' => $reservationsEnCoursVols,
+            'reservationsValideesVols' => $reservationsValideesVols,
+            'reservationsAnnuleesVols' => $reservationsAnnuleesVols,
+
+            'reservationtours' => $reservationtours,
+            'reservationsEnCoursTours' => $reservationsEnCoursTours,
+            'reservationsValideesTours' => $reservationsValideesTours,
+            'reservationsAnnuleesTours' => $reservationsAnnuleesTours,
+
+            'reservationhotels' => $reservationhotels,
+            'reservationsEnCoursHotels' => $reservationsEnCoursHotels,
+            'reservationsValideesHotels' => $reservationsValideesHotels,
+            'reservationsAnnuleesHotels' => $reservationsAnnuleesHotels,
         ]);
     }
 
