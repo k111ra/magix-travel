@@ -31,30 +31,31 @@
                                 <td>{{ optional($reservation->vol)->compagnie_aerienne }}</td> --}}
                                 <td>{{ optional($reservation->tour)->nom }}</td>
                                 <td>{{ $reservation->created_at }}</td>
-                                
+
                                 {{-- <td>{{ $reservation->num_persons }}</td> --}}
                                 <td>{{ $reservation->nom }} {{ $reservation->prenoms }}</td>
                                 <td>{{ $reservation->contact }}</td>
                                 {{-- <td>{{ $reservation->email }}</td> --}}
                                 <td>
                                     @if ($reservation->status === 'initialiser')
-                                    <span class="badge badge-secondary">Initialisation</span>
+                                        <span class="badge badge-secondary">Initialisation</span>
                                     @elseif ($reservation->status === 'traiter')
-                                    <span class="badge badge-primary">Traitement</span>
-                                     @elseif ($reservation->status === 'valider')
-                                    <span class="badge badge-success">Valider</span>
+                                        <span class="badge badge-primary">Traitement</span>
+                                    @elseif ($reservation->status === 'valider')
+                                        <span class="badge badge-success">Valider</span>
                                     @else
-                                    <span class="badge badge-danger">Annuler</span>
+                                        <span class="badge badge-danger">Annuler</span>
                                     @endif
                                 </td>
                                 <td>
-                                    <a href="{{route('reservation.tour.show',$reservation->id)}}" class="btn btn-info btn-sm">
+                                    <a href="{{ route('reservation.tour.show', $reservation->id) }}"
+                                        class="btn btn-info btn-sm">
                                         <i class="fas fa-eye"></i>
                                     </a>
                                     {{-- Traitement --}}
                                     @if ($reservation->status !== 'annuler' && $reservation->status !== 'valider' && $reservation->status !== 'traiter')
-                                        <form action="{{ route('traitement.reservation.vols', $reservation->id) }}" method="post"
-                                            style="display: inline;">
+                                        <form action="{{ route('traitement.reservation.vols', $reservation->id) }}"
+                                            method="post" style="display: inline;">
                                             @csrf
                                             <button type="submit" class="btn btn-primary btn-sm"
                                                 onclick="return confirm('Êtes-vous sûr de vouloir commencer le traitement de cette réservation?')">
@@ -62,11 +63,11 @@
                                             </button>
                                         </form>
                                     @endif
-                                    
+
                                     {{-- Valider --}}
                                     @if ($reservation->status == 'traiter')
-                                        <form action="{{ route('valider.reservation.vols', $reservation->id) }}" method="post"
-                                            style="display: inline;">
+                                        <form action="{{ route('valider.reservation.vols', $reservation->id) }}"
+                                            method="post" style="display: inline;">
                                             @csrf
                                             <button type="submit" class="btn btn-success btn-sm"
                                                 onclick="return confirm('Êtes-vous sûr de vouloir valider cette réservation?')">
@@ -77,8 +78,8 @@
 
                                     {{-- Annuller --}}
                                     @if ($reservation->status !== 'valider' && $reservation->status !== 'annuler')
-                                        <form action="{{ route('annuler.reservation.vols', $reservation->id) }}" method="post"
-                                            style="display: inline;">
+                                        <form action="{{ route('annuler.reservation.vols', $reservation->id) }}"
+                                            method="post" style="display: inline;">
                                             @csrf
                                             <button type="submit" class="btn btn-danger btn-sm"
                                                 onclick="return confirm('Êtes-vous sûr de vouloir annuler cette réservation?')">
@@ -89,8 +90,8 @@
 
                                     {{-- Restaurer --}}
                                     @if ($reservation->status == 'valider')
-                                        <form action="{{ route('restaurer.reservation.vols', $reservation->id) }}" method="post"
-                                            style="display: inline;">
+                                        <form action="{{ route('restaurer.reservation.vols', $reservation->id) }}"
+                                            method="post" style="display: inline;">
                                             @csrf
                                             <button type="submit" class="btn btn-warning btn-sm"
                                                 onclick="return confirm('Êtes-vous sûr de vouloir annuler cette réservation?')">
@@ -98,14 +99,15 @@
                                             </button>
                                         </form>
                                     @endif
-                                    
+
                                 </td>
                             </tr>
-                       @empty
-                        <tr>
-                            <td colspan="6" class="text-center text-danger">Aucune Données disponible pour le moment</td>
-                        </tr>
-                    @endforelse 
+                        @empty
+                            <tr>
+                                <td colspan="6" class="text-center text-danger">Aucune Données disponible pour le moment
+                                </td>
+                            </tr>
+                        @endforelse
                     </tbody>
                 </table>
             </div>

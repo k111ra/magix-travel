@@ -6,7 +6,7 @@
 
         <div class="card">
             <div class="card-body">
-                <h5 class="card-title">{{ $tour->nom }}</h5>
+                <h5 class="card-title">{{ $tour->nom ?? '' }}</h5>
                 <p class="card-text">{{ $tour->description }}</p>
 
                 <ul>
@@ -30,7 +30,7 @@
                         <p>Aucune image disponible pour ce tour.</p>
                     @endif
                 </div>
-                
+
                 {{-- <div class="mb-3">
                     <strong>Images:</strong>
                     @if (is_array($tour->images) && count($tour->images) > 0)

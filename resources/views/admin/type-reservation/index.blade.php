@@ -23,11 +23,10 @@
                         @foreach ($types as $type)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
-                                <td>{{ $type->nom }}</td>
+                                <td>{{ $type->nom ?? '' }}</td>
                                 <td>{{ $type->created_at }}</td>
                                 <td>
-                                    <a href="{{ route('type.edit', $type->id) }}"
-                                        class="btn btn-warning btn-sm">
+                                    <a href="{{ route('type.edit', $type->id) }}" class="btn btn-warning btn-sm">
                                         <i class="fas fa-edit"></i>
                                     </a>
                                     <form action="{{ route('type.destroy', $type->id) }}" method="post"

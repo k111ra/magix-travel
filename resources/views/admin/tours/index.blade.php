@@ -1,12 +1,11 @@
 @extends('admin.layout.layout')
 @section('content')
-<style>
-    .selected-row {
-        background-color: rgb(241, 180, 105);
-        /* Couleur de fond pour les lignes sélectionnées */
-    }
-
-</style>
+    <style>
+        .selected-row {
+            background-color: rgb(241, 180, 105);
+            /* Couleur de fond pour les lignes sélectionnées */
+        }
+    </style>
     <div class="card">
         <div class="card-header">
             <div class="d-flex justify-content-between align-items-center">
@@ -36,7 +35,7 @@
                         @foreach ($tours as $tour)
                             <tr style="cursor: pointer;" onclick="selectRow(this)">
                                 <td>{{ $loop->iteration }}</td>
-                                <td>{{ $tour->nom }}</td>
+                                <td>{{ $tour->nom ?? '' }}</td>
                                 <td>{{ $tour->duree }} jour(s)</td>
                                 <td>{{ number_format($tour->prix, 0, ',', ' ') }} FCFA</td>
                                 <td>{{ $tour->destinations->name }}</td>
@@ -47,11 +46,11 @@
                                 <td>
                                     @if ($tour->status === 'activé')
                                         <span class="badge badge-success">Activé</span>
-                                        @else
+                                    @else
                                         <span class="badge badge-danger">Désactivé</span>
                                     @endif
                                 </td>
-                                <td  width ="120px">
+                                <td width ="120px">
                                     <a href="{{ route('tours.show', $tour->id) }}" class="btn btn-info btn-sm">
                                         <i class="fas fa-eye"></i>
                                     </a>

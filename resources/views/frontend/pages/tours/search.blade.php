@@ -327,7 +327,7 @@
                                                             <strong></strong> &ensp;
                                                             <span class="count"> </span></a></div>
                                                 </div>
-                                                <h5><a href="{{ route('single-tour', $tour->id) }}">{{ $tour->nom }}
+                                                <h5><a href="{{ route('single-tour', $tour->id) }}">{{ $tour->nom ?? '' }}
                                                     </a></h5>
                                                 <p class="travilo-text">{{ $tour->description }} ...</p>
                                                 <div class="bottom-box clearfix">

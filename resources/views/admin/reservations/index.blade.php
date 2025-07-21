@@ -34,7 +34,7 @@
                                 <td>{{ optional($reservation->hotel)->name }}</td>
                                 <td>{{ optional($reservation->vol)->compagnie_aerienne }}</td>
                                 <td>{{ $reservation->reservation_date }}</td>
-                                <td> {{ number_format($reservation->amount, 0, ',', ' ') }} FCFA  </td>
+                                <td> {{ number_format($reservation->amount, 0, ',', ' ') }} FCFA </td>
                                 <td>{{ $reservation->num_persons }}</td>
                                 <td>{{ $reservation->first_name }} {{ $reservation->last_name }}</td>
                                 <td>{{ $reservation->phone_number }}</td>

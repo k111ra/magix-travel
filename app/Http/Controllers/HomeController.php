@@ -35,7 +35,7 @@ class HomeController extends Controller
         $sliders = Slider::where('status', 'activé')->orderBy('id', 'desc')->get();
         $information = Information::first();
         $reseau = Reseaux::first();
-        // dd($pays);
+        // dd($tours);
         return view('home', compact('type', 'tours', 'destinations', 'hotels', 'vols', 'pays', 'sliders', 'information', 'reseau'));
     }
 

@@ -1,4 +1,3 @@
-
 @extends('admin.layout.layout')
 @section('content')
     <div class="container">
@@ -13,17 +12,19 @@
                         <div class="col-sm-12">
                             <div class="form-group">
                                 <label for="nom">Nom:</label>
-                                <input type="text" name="nom" id="nom" class="form-control" value="{{ $type->nom }}" required>
+                                <input type="text" name="nom" id="nom" class="form-control"
+                                    value="{{ $type->nom ?? '' }}" required>
                             </div>
                         </div>
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-primary">Enregistrer les modifications</button>
-                                <a href="{{ route('type.index') }}" class="btn btn-secondary">Annuler</a>
-                            </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Enregistrer les modifications</button>
+                            <a href="{{ route('type.index') }}" class="btn btn-secondary">Annuler</a>
                         </div>
                     </div>
-                </form>
             </div>
+            </form>
         </div>
     </div>
+    </div>
+@endsection
 @endsection

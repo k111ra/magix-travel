@@ -38,7 +38,7 @@
                                         <strong>4.8</strong>   <span class="count">4233 Reviews</span></a></div>
 
                             </div>
-                            <h1>{{ $tour->nom }}</h1>
+                            <h1>{{ $tour->nom ?? '' }}</h1>
                             <div class="info clearfix">
                                 <div class="duration"><i class="fa-solid fa-clock"></i> {{ $tour->duree }} jour(s)</div>
                                 <div class="persons"><i class="fa-solid fa-user"></i>{{ $tour->place }} personnes</div>
@@ -314,7 +314,7 @@
 								<h3>Map</h3>
 								<div class="map-box">
 									<iframe
-										 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63230.7149410174!2d98.29248065!3d7.903459599999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30503a96a80e1833%3A0x40223bc2c382480!2sPa%20Tong%2C%20Kathu%20District%2C%20Phuket%2C%20Thailand!5e0!3m2!1sen!2som!4v1690982895480!5m2!1sen!2som" 
+										 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63230.7149410174!2d98.29248065!3d7.903459599999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30503a96a80e1833%3A0x40223bc2c382480!2sPa%20Tong%2C%20Kathu%20District%2C%20Phuket%2C%20Thailand!5e0!3m2!1sen!2som!4v1690982895480!5m2!1sen!2som"
 										allowfullscreen="" loading="lazy"
 										referrerpolicy="no-referrer-when-downgrade"></iframe>
 
@@ -425,7 +425,7 @@
 
 								</ul>
 							</div> --}}
-                        {{-- 
+                        {{--
 							<div class="t-gallery">
 								<h3>Media Gallery</h3>
 								<div class="images">
@@ -938,7 +938,7 @@
 																			<div class="form-group">
 																					<label for="">Bébé ( 0-2 ans)</label>
 																			<input type="number" min="0" value="0" name="nombre_bebe" class="form-control" id="nombre_bebe">
-	
+
 																			</div>
 																		</div> --}}
                                                                 <div class="col-6">
